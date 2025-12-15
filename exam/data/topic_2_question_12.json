@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT -<br/>You have a Fabric workspace that contains two lakehouses named Lakehouse1 and Lakehouse2. Lakehouse1 contains staging data in a Delta table named Orderlines. Lakehouse2 contains a Type 2 slowly changing dimension (SCD) dimension table named Dim_Customer.<br/>You need to build a query that will combine data from Orderlines and Dim_Customer to create a new fact table named Fact_Orders. The new table must meet the following requirements:<br/>Enable the analysis of customer orders based on historical attributes.<br/>Enable the analysis of customer orders based on the current attributes.<br/>How should you complete the statement? To answer, select the appropriate options in the answer area.<br/>NOTE: Each correct selection is worth one point.<br/><img src=\"images/dp-700_topic-2_question-12_html_1.png\" title=\"image46\"/>",
+  "question_images": [
+    "images/dp-700_topic-2_question-12_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/dp-700_topic-2_question-12_correct_1.png"
+  ],
+  "discussion": "Agree with the answers\n\nIs this correct? I would choose >= and <=.\n\nNo, the order has to be *before* the 'new costumer' takes effect.  Otherwise it could belong to two customers\n\nOf course that's not going to happen. Each order is linked to a customer (o.CustomerId = c.CustomerId). And new customer and old customer has different CustomerId value.\nThe answer is: >= and  <=\n\nBut don't you think, customer table are a dimensional table with a repeated customerId(non unique customerId)? that's why we need these conditions.\n\nI mean, the customer need to be valid To datetime\n\nIt depends on how you set the start/end dates of the customer dim. If the end date of a dim member equals the start date of the following member, then < end date is correct. If the end date of a member is start date -1 of the following dim member, then <= end date is correct.\n\nFirst dropdown: o.OrderDate >= c.valid_from_datetime\n\nSecond dropdown: o.OrderDate < c.valid_to_datetime\n\nit is ok",
+  "question_type": "image_only",
+  "exam": "dp-700",
+  "topic": 2,
+  "question_number": 12,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/154783-exam-dp-700-topic-2-question-12-discussion/"
+}

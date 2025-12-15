@@ -1,0 +1,23 @@
+{
+  "question_text": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.<br/>After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.<br/>You have a KQL database that contains two tables named Stream and Reference. Stream contains streaming data in the following format.<br/><br/><img src=\"images/dp-700_topic-2_question-20_html_1.png\" title=\"image63\"/><br/>Reference contains reference data in the following format.<br/><br/><img src=\"images/dp-700_topic-2_question-20_html_2.png\" title=\"image64\"/><br/>Both tables contain millions of rows.<br/>You have the following KQL queryset.<br/><br/><img src=\"images/dp-700_topic-2_question-20_html_3.png\" title=\"image65\"/><br/>You need to reduce how long it takes to run the KQL queryset.<br/>Solution: You move the filter to line 02.<br/><br/>Does this meet the goal?",
+  "question_images": [
+    "images/dp-700_topic-2_question-20_question_1.png",
+    "images/dp-700_topic-2_question-20_question_2.png",
+    "images/dp-700_topic-2_question-20_question_3.png"
+  ],
+  "answers": {
+    "A": "Yes",
+    "B": "No"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "A"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Yes. By applying the `where` clause early in the query, you reduce the number of rows processed in subsequent operations, which improves performance.\n\nBecause applying the filter before the join reduces the workload and speeds up query execution.\n\na is correct\n\nIn Kusto Query Language (KQL), the placement of the where (filter) clause significantly affects performance, especially with large datasets.\n\nreduce early the data",
+  "question_type": "multiple_choice",
+  "exam": "dp-700",
+  "topic": 2,
+  "question_number": 20,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/153742-exam-dp-700-topic-2-question-20-discussion/"
+}

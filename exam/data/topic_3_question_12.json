@@ -1,0 +1,21 @@
+{
+  "question_text": "You have a Fabric workspace that contains a warehouse named Warehouse1.<br/><br/>While monitoring Warehouse1, you discover that query performance has degraded during the last 60 minutes.<br/><br/>You need to isolate all the queries that were run during the last 60 minutes. The results must include the username of the users that submitted the queries and the query statements.<br/><br/>What should you use?",
+  "question_images": [],
+  "answers": {
+    "A": "the Microsoft Fabric Capacity Metrics app",
+    "B": "views from the queryinsights schema",
+    "C": "Query activity",
+    "D": "the sys.dm_exec_requests dynamic management view"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "B"
+  ],
+  "correct_answer_images": [],
+  "discussion": "B. views from the queryinsights schema\n\nOption\tWhy it’s not correct\nA. Microsoft Fabric Capacity Metrics app\tHigh-level view of capacity usage, not query-level detail.\nC. Query activity\tSurface-level monitoring, doesn't include query text or usernames.\nD. sys.dm_exec_requests\tOnly shows currently executing queries, not queries from the last 60 minutes.\n\nI thought it's B too, but IO just opened the Query Activity documentation and right here in the list of info you can check are both Query text and Submitter -> https://learn.microsoft.com/en-us/fabric/data-warehouse/query-activity\n\nB is correct\n\nqueryinsights.exec_requests_history\n\nB is the answer\nSELECT * FROM queryinsights.exec_requests_history \nWHERE start_time >= DATEADD(MINUTE, -30, GETUTCDATE())\nAND login_name = USER_NAME();\n\nSELECT * FROM queryinsights.exec_requests_history \nWHERE start_time >= DATEADD(MINUTE, -30, GETUTCDATE())\nAND login_name = USER_NAME();\n\nI think both [queryinsights].[exec_requests_history] and Query activity can match \"username of the users that submitted the queries and the query statements\". However, query activity just can set filter on \"last 24 hours\", \"last 7 days\" and \"last 30 days\", the question need filter it with last 60 minutes. [queryinsights].[exec_requests_history] is easy to set filter with where condition on submit time column.",
+  "question_type": "multiple_choice",
+  "exam": "dp-700",
+  "topic": 3,
+  "question_number": 12,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/302503-exam-dp-700-topic-3-question-12-discussion/"
+}

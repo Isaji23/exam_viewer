@@ -1,0 +1,21 @@
+{
+  "question_text": "You have a Fabric workspace that contains a warehouse named Warehouse1.<br/><br/>You have an on-premises Microsoft SQL Server database named Database1 that is accessed by using an on-premises data gateway.<br/><br/>You need to copy data from Database1 to Warehouse1.<br/><br/>Which item should you use?",
+  "question_images": [],
+  "answers": {
+    "A": "a data pipeline",
+    "B": "an Apache Spark job definition",
+    "C": "a streaming dataflow",
+    "D": "a notebook"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "A"
+  ],
+  "correct_answer_images": [],
+  "discussion": "A. Data Pipeline - correct\nB. Apache Spark job definition\tDesigned for data processing and transformation, not optimized for moving data via gateway.\nC. Streaming dataflow\tUsed for real-time streaming data, not batch data movement from SQL Server.\nD. Notebook\tCan connect using JDBC/ODBC, but it doesn't support the gateway natively. Also requires more code and less suitable for production data movement.\n\nA is correct\n\nthis question again? both add 1 point in the test?\n\nduplicate question\n\nData Pipeline",
+  "question_type": "multiple_choice",
+  "source": "direct_html",
+  "url": "https://www.examtopics.com/discussions/microsoft/view/302468-exam-dp-700-topic-2-question-33-discussion/",
+  "topic": 2,
+  "question_number": 33
+}

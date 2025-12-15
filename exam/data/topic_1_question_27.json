@@ -1,0 +1,18 @@
+{
+  "question_text": "DRAG DROP -<br/>Your company has a team of developers. The team creates Python libraries of reusable code that is used to transform data.<br/>You create a Fabric workspace name Workspace1 that will be used to develop extract, transform, and load (ETL) solutions by using notebooks.<br/>You need to ensure that the libraries are available by default to new notebooks in Workspace1.<br/>Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.<br/><img src=\"images/dp-700_topic-1_question-27_html_1.png\" title=\"image21\"/>",
+  "question_images": [
+    "images/dp-700_topic-1_question-27_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/dp-700_topic-1_question-27_correct_1.png"
+  ],
+  "discussion": "Seems correct.\n\nI go for the following steps - Also, Setting the default environment is optional and typically done after creating the environment.\nhttps://learn.microsoft.com/en-us/fabric/data-engineering/create-and-use-environment\n1) Create a pool → 2) Create an environment → 3) Install the libraries\n\nI tried this in the Fabric.\nFirst you should toggle ON \"Set the default environment\".\nThen you can create a new environment and set it as default.\nAnd only after that you can install additional libraries (if needed). \nSo, the answer is correct.\n\nWell, to be fair first you need to create the environment, then install libraries and then when you toggle you have the already made environment to choose form the drop-down. So the answer is correct, but the toggling i.e., the \"Set the defaulat environment\" is the last step not the first step.\n\n1) Create a pool\n2) Create an environment\n3) Set the default environment\n\nIn Microsoft Fabric warehouses, primary keys must be defined as NONCLUSTERED and NOT ENFORCED\n\nCorrect\n\ncorrect\n\nCreate an environment\n\nYou define a Spark environment that can hold runtime and library settings.\n\nInstall the libraries\n\nUpload or reference your custom Python libraries (e.g., .whl, .egg, or .py files) in this environment.\n\nSet the default environment\n\nAssign this environment as the default for the workspace so that every new notebook automatically uses it.\n\nSeems corret: Create (virtual) environment, install libraries, set the newly created environment as default from workspace settings\n\nThe answer is correct",
+  "question_type": "drag_drop",
+  "exam": "dp-700",
+  "topic": 1,
+  "question_number": 27,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/155338-exam-dp-700-topic-1-question-27-discussion/"
+}

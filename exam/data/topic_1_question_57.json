@@ -1,0 +1,21 @@
+{
+  "question_text": "You have a Fabric warehouse named DW1. DW1 contains a table that stores sales data and is used by multiple sales representatives.<br/><br/>You plan to implement row-level security (RLS).<br/><br/>You need to ensure that the sales representatives can see only their respective data.<br/><br/>Which warehouse object do you require to implement RLS?",
+  "question_images": [],
+  "answers": {
+    "A": "TRIGGER",
+    "B": "SCHEMA",
+    "C": "FUNCTION",
+    "D": "DATABASE ROLE"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "C"
+  ],
+  "correct_answer_images": [],
+  "discussion": "function is the the way to control filtering. Role control access permission to the table and database\n\nFUNCTION\t✅ Used to define the logic to filter rows based on user identity (predicate function)\t✅ Yes\nD. DATABASE ROLE\tCan assign permissions, but not used for filtering rows dynamically\t❌ No\n\nCorrect answer is function not database role\n\nFunction and Security Policy is used. So as per the options available it is Function.\n\nD. DATABASE ROLE",
+  "question_type": "multiple_choice",
+  "exam": "dp-700",
+  "topic": 1,
+  "question_number": 57,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/304634-exam-dp-700-topic-1-question-57-discussion/"
+}

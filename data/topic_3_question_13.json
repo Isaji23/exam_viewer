@@ -1,0 +1,21 @@
+{
+  "question_text": "You have a Fabric workspace that contains a semantic model named Model1.<br/><br/>You need to monitor the refresh history of Model1 and visualize the refresh history in a chart.<br/><br/>What should you use?",
+  "question_images": [],
+  "answers": {
+    "A": "the refresh history from the settings of Model1",
+    "B": "a notebook",
+    "C": "a Dataflow Gen2 dataflow",
+    "D": "a data pipeline"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "B"
+  ],
+  "correct_answer_images": [],
+  "discussion": "the question asks for visualize it in a chart. How can you do that with option A? I will go with B.\n\nThe answer is B. We can't visualize the refresh hitory of model 1 in the settings only in a notebook. (Or in FUAM)\n\nThe correct option is option A, notebooks are used to manipulate data and write code, a pipeline does not directly store or visualize the update history of semantic models, and the data flow is to transform data.\n\nNo it is a Microsoft sugestion, look at the end of this Learn:  https://learn.microsoft.com/en-us/power-bi/connect-data/refresh-data\n\nNotebook\n\nuse a notebook to pull in the data, process it, and create visualizations\n\nthe request is \"visualize it in a chart\". The setting option just show a table\n\nTo monitor the refresh history of a semantic model (such as Model1) in Microsoft Fabric (similar to Power BI models):\n\nYou can view the refresh history directly from the model's settings within the workspace.\n\nThis includes detailed logs such as refresh time, duration, status (success/failure), and error messages if any.\n\nThis is the most straightforward and built-in option for tracking model refreshes.\n\nFrom there, if you need to visualize the refresh metrics (e.g., in a chart), you can export the refresh logs (manually or via API) and then load them into a report for visualization. -- ChatGPT\n\nA. the refresh history from the settings of Model1\n\nOption\tReason\nB. A notebook\tNot designed for refresh tracking; better for ad hoc analysis or transformation.\nC. Dataflow Gen2\tUsed for data prep, not model refresh monitoring.\nD. A data pipeline\tHelps trigger refreshes, but doesn’t track refresh history or show charts.\n\nA is correct in the link below\n\nThe correct answer is A, because Semantic models in Fabric (Power BI models) include a built-in refresh history feature accessible through their settings.\nThis view provides detailed logs of past refresh operations, including:\n\t•\tStatus (Succeeded/Failed)\n\t•\tDuration\n\t•\tStart and end times\nYou can export this history (e.g., to Excel or Power BI) to create charts and visualizations.\n\nrequested \"visualize it in a chart\". Export to create a chart is not correct\n\nhttps://learn.microsoft.com/en-us/power-bi/connect-data/refresh-data\n\nThe correct answer is A\n\nThe correct answer should be B",
+  "question_type": "multiple_choice",
+  "source": "direct_html",
+  "url": "https://www.examtopics.com/discussions/microsoft/view/302546-exam-dp-700-topic-3-question-13-discussion/",
+  "topic": 3,
+  "question_number": 13
+}

@@ -1,0 +1,19 @@
+{
+  "question_text": "DRAG DROP<br/> -<br/><br/>You have a Fabric workspace that contains an eventhouse named Eventhouse1.<br/><br/>In Eventhouse1, you plan to create a table named DeviceStreamData in a KQL database. The table will contain data based on the following sample.<br/><br/><img src=\"images/dp-700_topic-2_question-32_html_1.png\"/><br/><br/>You need to use a KQL query to develop the solution for Eventhouse1.<br/><br/>Which three code segments should you run in sequence? To answer, move the appropriate code segments from the list of code segments to the answer area and arrange them in the correct order.<br/><br/><img src=\"images/dp-700_topic-2_question-32_html_2.png\"/>",
+  "question_images": [
+    "images/dp-700_topic-2_question-32_question_1.png",
+    "images/dp-700_topic-2_question-32_question_2.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/dp-700_topic-2_question-32_correct_1.png"
+  ],
+  "discussion": "Correct\n\nbased on the choices, it is correct but should be create table DeviceStreamData not EventStreamData as per question\n\nis correct\n\n1\t.create table EventStreamData (\n2\tTimeStamp:datetime, DeviceId:string\n3\tStreamData:dynamic )\n\nEventData\n\nextend Lab = EventData.StreamData\n\nmv-expand Lab",
+  "question_type": "drag_drop",
+  "exam": "dp-700",
+  "topic": 2,
+  "question_number": 32,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/302467-exam-dp-700-topic-2-question-32-discussion/"
+}

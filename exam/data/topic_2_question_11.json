@@ -1,0 +1,19 @@
+{
+  "question_text": "HOTSPOT -<br/>You are building a data loading pattern for Fabric notebook workloads.<br/>You have the following code segment:<br/><img src=\"images/dp-700_topic-2_question-11_html_1.png\" title=\"image43\"/><br/>For each of the following statements, select Yes if the statement is true. Otherwise, select No.<br/>NOTE: Each correct selection is worth one point.<br/><img src=\"images/dp-700_topic-2_question-11_html_2.png\" title=\"image44\"/>",
+  "question_images": [
+    "images/dp-700_topic-2_question-11_question_1.png",
+    "images/dp-700_topic-2_question-11_question_2.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/dp-700_topic-2_question-11_correct_1.png"
+  ],
+  "discussion": "No No Yes.\nIf anything goes wrong writing the existing table or when writing a new table (.targettable) the merge will not be executed.\n\nNNY is correct\n\nN N Y, but the last Y is far stretched - you cannot 'switch' with a parameter to fully reload the table - this happens only if the first try fails and delta table isn't found, in other cases we merge on specified columns\n\nNo Yes Yes\nMerge operation always runs, the table is not overwritten if condition not matched\n\nfirst return statement only is in exception part. that means if target table is not exist it will try to create it and load data to it, if it's not successful then it get to raise part which is stop the function and never get to merge part. if it successfully create target_table with overwrite data then then return statment execute and will exit the function and will never get to Merge operation.So in short the first return will be happen if target_table is not exist and it created successfully with overwrrite data from source.  so the answer No,No,Yes is correct.\n\nNo; Yes: Yes\nMerge operation will always run, the matching_condition is part of the merge operation. But target table may not be overwritten if condition not met.\n\nEven though the match_condition is part of the MERGE logic, that logic is skipped on the very first load because of the return inside the except block.",
+  "question_type": "image_only",
+  "exam": "dp-700",
+  "topic": 2,
+  "question_number": 11,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/155370-exam-dp-700-topic-2-question-11-discussion/"
+}

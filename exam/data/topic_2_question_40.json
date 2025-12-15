@@ -1,0 +1,19 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You are building a data loading pattern for Fabric notebook workloads.<br/><br/>You have the following code segment.<br/><br/><img src=\"images/dp-700_topic-2_question-40_html_1.png\"/><br/><br/>For each of the following statements, select Yes if the statement is true. Otherwise, select No.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/dp-700_topic-2_question-40_html_2.png\"/>",
+  "question_images": [
+    "images/dp-700_topic-2_question-40_question_1.png",
+    "images/dp-700_topic-2_question-40_question_2.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/dp-700_topic-2_question-40_correct_1.png"
+  ],
+  "discussion": "So... it's very simple:\n\n\"The target table will always be overwritten.\"\n-> No. Because it will only overwrite everything/create the table when it doesn't already exist. So it will TRY to get the delta table, and if it doesn't, then it will create the table.\n\n2. The merge operation will always run.\n-> No, this is basic python. \"In your code, any raised exceptions trigger the associated except clause. Note that where you have multiple except clauses, your program will run only the first one that triggers and then ignore the rest.\" So if your first exception is triggered, the second one will not succeed.\n\n3. The code supports incremental loading and the initial table creation.\n-> Yes. If the first try succeeds (and the first exception isn't triggered) it will execute the second try. In the second try, it will merge. The initial creation of the table is done when the first except is triggered (and the table doesn't exist).\n\nHope this helps more rather than some simple combination shouting\n\nN N Y is correct\n\nNo \nNo\nYes\n\nN, Y, Y\n\nI think it is Y Y N",
+  "question_type": "image_only",
+  "exam": "dp-700",
+  "topic": 2,
+  "question_number": 40,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/304593-exam-dp-700-topic-2-question-40-discussion/"
+}

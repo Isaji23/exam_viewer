@@ -1,0 +1,21 @@
+{
+  "question_text": "You have a Fabric workspace named Workspace1 that contains an Apache Spark job definition named Job1.<br/>You have an Azure SQL database named Source1 that has public internet access disabled.<br/>You need to ensure that Job1 can access the data in Source1.<br/>What should you create?",
+  "question_images": [],
+  "answers": {
+    "A": "an on-premises data gateway",
+    "B": "a managed private endpoint",
+    "C": "an integration runtime",
+    "D": "a data management gateway"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "B"
+  ],
+  "correct_answer_images": [],
+  "discussion": "To ensure that Job1 can access the data in Source1, you need to create a managed private endpoint. This will allow the Spark job to securely connect to the Azure SQL database without requiring public internet access.\n\ncorrect\nhttps://learn.microsoft.com/en-us/fabric/security/security-managed-private-endpoints-overview#supported-item-types\n\nCorrect\n\nB correct answer.\nManaged private endpoints are connections that workspace admins can create to access data sources that are behind a firewall or that are blocked from public internet access.\n\nB is correct\n\nProvided answer is correct",
+  "question_type": "multiple_choice",
+  "source": "direct_html",
+  "url": "https://www.examtopics.com/discussions/microsoft/view/153605-exam-dp-700-topic-1-question-17-discussion/",
+  "topic": 1,
+  "question_number": 17
+}

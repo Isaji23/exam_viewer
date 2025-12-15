@@ -1,0 +1,19 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You have a Fabric workspace that contains a warehouse named Warehouse1. Warehouse1 contains a table named Customer. Customer contains the following data.<br/><br/><img src=\"images/dp-700_topic-1_question-55_html_1.png\"/><br/><br/>You have an internal Microsoft Entra user named User1 that has an email address of <a class=\"__cf_email__\" data-cfemail=\"087d7b6d7a39486b67667c677b67266b6765\" href=\"/cdn-cgi/l/email-protection\">[email protected]</a>.<br/><br/>You need to provide User1 with access to the Customer table. The solution must prevent User1 from accessing the CreditCard column.<br/><br/>How should you complete the statement? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/dp-700_topic-1_question-55_html_2.png\"/>",
+  "question_images": [
+    "images/dp-700_topic-1_question-55_question_1.png",
+    "images/dp-700_topic-1_question-55_question_2.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/dp-700_topic-1_question-55_correct_1.png"
+  ],
+  "discussion": "answer should be GRANT SELECT ON Customers(CustomerID, FirstName, LastName, Phone) TO [ [email protected] ]\n\nhttps://learn.microsoft.com/en-us/fabric/data-warehouse/column-level-security\n\nGRANT SELECT ON Customers(CustomerID, FirstName, LastName, Phone) TO [ [email protected] ] is corrected. I tested\n\nGRANT SELECT\nmust be the complete email address [email protected]\n\nanswer should be GRANT SELECT ON Customers(CustomerID, FirstName, LastName, Phone) TO [ [email protected] ]\n\nCorrect, since Entra user: https://learn.microsoft.com/en-us/fabric/data-warehouse/column-level-security\n\nCorrect.\nGRANT SELECT ON Customers(CustomerID, FirstName, LastName, Phone) TO [User1]\nAlternatively:\nDENY SELECT ON Customers(CreditCard) TO [User1]",
+  "question_type": "image_only",
+  "exam": "dp-700",
+  "topic": 1,
+  "question_number": 55,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/302458-exam-dp-700-topic-1-question-55-discussion/"
+}

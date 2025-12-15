@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You plan to process the following three datasets by using Fabric:<br/><br/>Dataset1: This dataset will be added to Fabric and will have a unique primary key between the source and the destination. The unique primary key will be an integer and will start from 1 and have an increment of 1.<br/>Dataset2: This dataset contains semi-structured data that uses bulk data transfer. The dataset must be handled in one process between the source and the destination. The data transformation process will include the use of custom visuals to understand and work with the dataset in development mode.<br/>Dataset3: This dataset is in a lakehouse. The data will be bulk loaded. The data transformation process will include row-based windowing functions during the loading process.<br/><br/>You need to identify which type of item to use for the datasets. The solution must minimize development effort and use built-in functionality, when possible.<br/><br/>What should you identify for each dataset? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"https://img.examtopics.com/dp-700/image85.png\"/>",
+  "question_images": [
+    "https://img.examtopics.com/dp-700/image85.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "https://img.examtopics.com/dp-700/image86.png"
+  ],
+  "discussion": "Dataset1:\nWill be added to Fabric with a unique primary key (auto-incrementing).\nAnswer: Dataflow Gen2 dataflow\n\nDataset2:\nContains semi-structured data, uses bulk data transfer, and requires custom visuals during transformation in development mode.\nAnswer: A notebook\n\nDataset3:\nStored in a lakehouse, bulk loaded, and uses row-based windowing functions during transformation.\nAnswer: A T-SQL statement\n\nAgree. For dataset3 you need to use T-SQL, which is definitely supported in a lakehouse. You cannot use a Dataflow Gen2 as it does not support advanced T-SQL functions such as windowing.\n\nDataset1 -> Dataflow Gen2\nDataset2 -> Notebook\nDataset3 -> Dataflow Gen2 (the target is Lakehouse, we cannot use T-SQL)\n\nI'm agree w u but I change the first option to use all option\nDataset1 -> T-Sql\nDataset2 -> Notebook\nDataset3 -> Dataflow Gen2 (the target is Lakehouse, we cannot use T-SQL)\n\nT-SQL / Dataflow Gen2 / T-SQL\nDataset1 - T-SQL\nDonnées structurées avec clé primaire → création et gestion de table relationnelle (opérations DDL/DML en SQL).\n\nDataset2 - Dataflow Gen2\nDonnées semi-structurées, besoin de visualisation et faible effort → interface Power Query low-code pour ingestion + transformation en un seul flux.\n\nDataset3 - T-SQL\nDonnées Lakehouse nécessitant des window functions (ROW_NUMBER, OVER, etc.) → SQL analytique natif du Lakehouse.\n\nDataset1 -> T-Sql (only incremental process possible)\nDataset2 -> Notebook (Semistructured data)\nDataset3 -> Dataflow Gen2  (Works fine with Row Base Window)\n\nDataset1 - Dataflow Gen2 \nDataset2 - Notebook\nDataset3 -  T-SQL\n\nDataset3 answers must be a mistake, they doesn't make any sense\n\nthat being said the Dataflow Gen2 is the least bullshit answear\n\nDataset1 -> Dataflow Gen2 (Primary key is just transfers from source to destination)\nDataset2 -> Notebook\nDataset3 -> T-SQL (Lakehouse is a source, not destination, only T-SQL can work with row-based windowing functions. KQL has row-based windowing functions as well but can't work with Lakehouse)",
+  "question_type": "image_only",
+  "source": "direct_html",
+  "url": "https://www.examtopics.com/discussions/microsoft/view/302541-exam-dp-700-topic-2-question-26-discussion/",
+  "topic": 2,
+  "question_number": 26
+}

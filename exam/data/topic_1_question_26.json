@@ -1,0 +1,21 @@
+{
+  "question_text": "You have a Fabric workspace named Workspace1 that contains a data pipeline named Pipeline1 and a lakehouse named Lakehouse1.<br/>You have a deployment pipeline named deployPipeline1 that deploys Workspace1 to Workspace2.<br/>You restructure Workspace1 by adding a folder named Folder1 and moving Pipeline1 to Folder1.<br/>You use deployPipeline1 to deploy Workspace1 to Workspace2.<br/>What occurs to Workspace2?",
+  "question_images": [],
+  "answers": {
+    "A": "Folder1 is created, Pipeline1 moves to Folder1, and Lakehouse1 is deployed.",
+    "B": "Only Pipeline1 and Lakehouse1 are deployed.",
+    "C": "Folder1 is created, and Pipeline1 and Lakehouse1 move to Folder1.",
+    "D": "Only Folder1 is created and Pipeline1 moves to Folder1."
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "A"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Only Pipeline1 and Lakehouse1 are deployed. Only the artifacts themselves (Pipeline1, Lakehouse1) are deployed, not the folder hierarchy.\n\nNo reason for Lakehouse1 to be deployed when question only mentions a restructuring, meaning Lakehouse1 is already in workspace2\n\nWe've selected a deployment of Workspace A to B, it means that all the items are processed even if they had no changes - deployment pipelines rules are reapplied, connections are re-established etc.\n\nA is correct\n\nWouldn't it be D if Lakehouse1 is already in Workspace2 and wasn't changed? \nUsecase says, that only a restructure takes place.\n\nCorrect\n\nA is correct, I tested it in fabric\n\nhttps://learn.microsoft.com/en-us/fabric/cicd/deployment-pipelines/understand-the-deployment-process?tabs=new-ui#deploy-content-from-one-stage-to-another\n\n\"When content from the source stage is copied to the target stage, Fabric identifies existing content in the target stage and overwrites it. \"",
+  "question_type": "multiple_choice",
+  "exam": "dp-700",
+  "topic": 1,
+  "question_number": 26,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/155289-exam-dp-700-topic-1-question-26-discussion/"
+}

@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT -<br/>You have a Fabric workspace.<br/>You are debugging a statement and discover the following issues:<br/>Sometimes, the statement fails to return all the expected rows.<br/>The PurchaseDate output column is NOT in the expected format of mmm dd, yy.<br/>You need to resolve the issues. The solution must ensure that the data types of the results are retained. The results can contain blank cells.<br/>How should you complete the statement? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><img src=\"https://img.examtopics.com/dp-700/image49.png\" title=\"image54\"/>",
+  "question_images": [
+    "https://img.examtopics.com/dp-700/image49.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "https://img.examtopics.com/dp-700/image50.png"
+  ],
+  "discussion": "I'm curious how can people memorize the date format code for the exam lol.\n\nOf course I don't remember all the format codes, but in this specific case I remembered that 1xx codes generally refer to 4 digits years, so guessed 7\n\nfor me to remember I'm just adding the letters, I know it makes no sense but helps to remember :D mmmddyy\n\nYou're allowed to use documentation since a couple of years...\n\nFirst: try_cast(item_name as varchar(20))\nSecond: convert(varchar, purchase_date, 7)\n\nExplanation:\nI used pure SQL for testing, I assume it's very similar here, if not the same...\n\nWhen I execute the following commands on the SQL database,\nSELECT CONVERT(VARCHAR, GETDATE(), 7) AS PurchaseDate\nSELECT FORMAT(GETDATE(), 'MMM dd, yy') AS PurchaseDate\nI get this - both of commands give the same result:\nOct 10, 25\n\nThe other two give the following result:\nSELECT CONVERT(VARCHAR, GETDATE(), 109) AS PurchaseDate --> Oct 10 2025  9:48:40:933AM\nSELECT CONVERT(VARCHAR, GETDATE(), 112) AS PurchaseDate --> 20251010\n\nSo, I'm pretty sure the correct answer would be convert(varchar, purchase_date, 7)\nwhich is the same as what the format function gives us in the example mentioned above.\n\nSELECT \n  item_id AS ItemId,\n  TRY_CAST(item_name AS varchar(20)),\n  item_description AS ItemDescription,\n  CONVERT(varchar, purchase_date, 109)\nFROM Table1\nWHERE item_type = @itemType_parameter\n\ntry_cast\ntype 7: https://learn.microsoft.com/en-us/sql/t-sql/functions/cast-and-convert-transact-sql?view=sql-server-ver17#date-and-time-styles\n\n3rd and 1st. \nSELECT TRY_CAST('abc' AS INT) AS Result;          -- Returns NULL (no error)\nSELECT CONVERT(INT, 'abc') AS Result;             -- Throws an error!\nI think that is the reason for try_cast() in here\n\nAs a european I would not know it has to be 7, we never use that format and I do not know (or want to know) all formats by heart.....\n\ntry_cast: https://learn.microsoft.com/en-us/sql/t-sql/functions/try-cast-transact-sql?view=sql-server-ver16\n\nconvert: https://learn.microsoft.com/en-us/sql/t-sql/functions/cast-\nand-convert-transact-sql?view=sql-server-ver16\n\nBut 7 is a format smaller then 100 so the year-part =yy, so otherwise it would be yyyy",
+  "question_type": "image_only",
+  "source": "direct_html",
+  "url": "https://www.examtopics.com/discussions/microsoft/view/155696-exam-dp-700-topic-2-question-16-discussion/",
+  "topic": 2,
+  "question_number": 16
+}

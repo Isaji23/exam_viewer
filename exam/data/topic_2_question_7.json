@@ -1,0 +1,19 @@
+{
+  "question_text": "HOTSPOT -<br/>You have a Fabric workspace that contains a warehouse named Warehouse1. Warehouse1 contains the following tables and columns.<br/><img src=\"images/dp-700_topic-2_question-7_html_1.png\" title=\"image37\"/><br/><br/>You need to denormalize the tables and include the ContractType and StartDate columns in the Employee table. The solution must meet the following requirements:<br/>Ensure that the StartDate column is of the date data type.<br/>Ensure that all the rows from the Employee table are preserved and include any matching rows from the Contract table.<br/>Ensure that the result set displays the total number of employees per contract type for all the contract types that have more than two employees.<br/>How should you complete the statement? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><img src=\"images/dp-700_topic-2_question-7_html_2.png\" title=\"image38\"/>",
+  "question_images": [
+    "images/dp-700_topic-2_question-7_question_1.png",
+    "images/dp-700_topic-2_question-7_question_2.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/dp-700_topic-2_question-7_correct_1.png"
+  ],
+  "discussion": "First part is CONVERT and not CAST\n\nAgreed, based on the syntax of (<data type>, <column name>).\n\nis true as u say\n\nCONVERT, LEFT OUTER, HAVING\n\nCAST (is more clear, convert although isn´t portable in Fabric is accepted too), LEFT OUTER JOIN, HAVING\n\nWITH result AS (\n  SELECT \n    e.EmployeeID, \n    e.EmployeeName, \n    e.EmployeePosition, \n    c.ContractType, \n    CAST(c.StartDate AS date) AS StartDate  \n  FROM Employee AS e  \n  LEFT OUTER JOIN Contract AS c ON c.EmployeeID = e.EmployeeID\n)\nSELECT \n  COUNT(DISTINCT EmployeeID) AS TotalEmployees, \n  ContractType  \nFROM result  \nGROUP BY ContractType  \nHAVING COUNT(DISTINCT EmployeeID) > 2;\n\nCONVERT, LEFT OUTER, HAVING\nif we work with cast we use \"as\"\n\nAnswer is incorrect since the syntax for CAST is different, this is CONVERT syntax. So the correct answer is: CONVERT, LEFT OUTER JOIN, HAVING\n\nCONVERT,\nLEFT OUTER, HAVING\n\nCONVERT\nLEFT (Ensure that all the rows from the Employee table are preserved and include any matching rows from the Contract table.)\nHAVING\n\nSyntaxt for Cast is different. It does not fit here.\nCONVERT(DATE, c.startdate) AS startdate\nCAST(c.startdate AS DATE) AS startdate\n\nconvert, inner, having\nConvert: No doubt.\ninner: You only need contracttypes with more than 2 employees. So, why use left join? Inner join already filters out contracts and employees you won't need for aggregation.\nhaving: No doubt\n\nIf the question was only about the aggregated result, you won't need the join at all.\n\nCONVERT\nLEFT OUTER JOIN\nHAVING\n\nRight outer join and cast\n\nCAST(c.StartDate as date)\nvs \nCONVERT(date, c.StartDate)",
+  "question_type": "image_only",
+  "exam": "dp-700",
+  "topic": 2,
+  "question_number": 7,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/154776-exam-dp-700-topic-2-question-7-discussion/"
+}

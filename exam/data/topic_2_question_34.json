@@ -1,0 +1,21 @@
+{
+  "question_text": "You have a Fabric warehouse named DW1 that contains a Type 2 slowly changing dimension (SCD) dimension table named DimCustomer. DimCustomer contains 100 columns and 20 million rows. The columns are of various data types, including int, varchar, date, and varbinary.<br/><br/>You need to identify incoming changes to the table and update the records when there is a change. The solution must minimize resource consumption.<br/><br/>What should you use to identify changes to attributes?",
+  "question_images": [],
+  "answers": {
+    "A": "a hash function to compare the attributes in the source table.",
+    "B": "a direct attributes comparison across the attributes in the DimCustomer table.",
+    "C": "a direct attributes comparison for the attributes in the source table.",
+    "D": "a hash function to compare the attributes in the DimCustomer table."
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "A"
+  ],
+  "correct_answer_images": [],
+  "discussion": "The correct answer is: A. a hash function to compare the attributes in the source table.\n\nHere's why:\nContext: You are dealing with a Type 2 SCD table with 100 columns and 20 million rows. You need to detect changes to update the dimension appropriately, while minimizing resource consumption.\n\nOption A: \nA. a hash function to compare the attributes in the source table.\n\nThis is the most efficient and scalable approach.\n\nYou compute a hash (e.g., MD5, SHA-256) over a concatenation of all relevant (non-SCD metadata) columns in both the source and existing dimension table.\n\nBy comparing the hashes, you avoid comparing each column directly.\n\nThis minimizes CPU and memory usage, especially with many columns and large datasets.\n\nCommonly used in modern ETL/ELT tools for change detection in large datasets.\n\nIn my experience the source table doesn't have a hash stored and the target table does have a hash stored.\nSo we need a function to generate a hash for the source table and compare to the hash present in the target table.\n\nyeah is hash. but A or D?\nconcatenate the columns and apply hash in both tables not only source or Dim\n\nConcatenate all 100 fields into one long string.\n\nApply a hash function like SHA256 or MD5 to generate a single hash value.\n\nCompare the hash from the new data with the hash stored in the existing table.\n\nIf the hash values differ → a change occurred.\n\nA. a hash function to compare the attributes in the source table.\n\nA is best option specially in where there are too many columns those need to be checked.\n\nwhy don't use hash function on source side? the question lost many details. I just can guess they try to use incremental loading method. Normally we need keep Hask key values in target table column and use hash function to get changed imported rows from source side if their hash values cannot match with target hash value column.",
+  "question_type": "multiple_choice",
+  "exam": "dp-700",
+  "topic": 2,
+  "question_number": 34,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/302496-exam-dp-700-topic-2-question-34-discussion/"
+}

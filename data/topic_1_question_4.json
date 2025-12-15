@@ -1,0 +1,21 @@
+{
+  "question_text": "You have a Fabric workspace that contains a warehouse named Warehouse1.<br/>You have an on-premises Microsoft SQL Server database named Database1 that is accessed by using an on-premises data gateway.<br/>You need to copy data from Database1 to Warehouse1.<br/>Which item should you use?",
+  "question_images": [],
+  "answers": {
+    "A": "an Apache Spark job definition",
+    "B": "a data pipeline",
+    "C": "a Dataflow Gen1 dataflow",
+    "D": "an eventstream"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "B"
+  ],
+  "correct_answer_images": [],
+  "discussion": "B. \nNotebooks and eventstreams can’t go through a gateway, . Gen1 dataflows are deprecated. Data pipelines work through a datagateway and are fast\n\nData pipeline in Microsoft Fabric\n\nYou are copying data from:\nSource: On-premises SQL Server (Database1)\nDestination: A Microsoft Fabric warehouse (Warehouse1)\nConnectivity: Via on-premises data gateway\nYou need a solution that:\nSupports copying structured data\nCan connect through a gateway\nCan write to a warehouse\nSupports scheduling, error handling, and data flow control\n\notra vez?\n\nB.\nNotebooks and eventstreams can’t go through a gateway, . Gen1 dataflows are deprecated. Data pipelines work through a datagateway and are fast\n\nCorrect Answer is B\n\nIt’s B\n\nIn this case, a data pipeline can be used to transfer data from Database1 (the SQL Server database) to Warehouse1 (in the Fabric workspace).\n\nDataflow Gen 1 is deprecated.",
+  "question_type": "multiple_choice",
+  "source": "direct_html",
+  "url": "https://www.examtopics.com/discussions/microsoft/view/152698-exam-dp-700-topic-1-question-4-discussion/",
+  "topic": 1,
+  "question_number": 4
+}

@@ -1,0 +1,22 @@
+{
+  "question_text": "You have a Fabric notebook named Notebook1 that has been executing successfully for the last week.<br/>During the last run, Notebook1executed nine jobs.<br/>You need to view the jobs in a timeline chart.<br/>What should you use?",
+  "question_images": [],
+  "answers": {
+    "A": "Real-Time hub",
+    "B": "Monitoring hub",
+    "C": "the job history from the application run",
+    "D": "Spark History Server",
+    "E": "the run series from the details of the application run"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "E"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Correct. The Run series is where you will see a timeline vertical bar chart.\n\nI'm going with E, 'the run series from the details of the application run.' \nThis question is confusing, as we find the run series in the Monitoring hub\n\nThis is a non sense question , because monitor run series feature is inside of monitor Hub. So it is a little ambiguos for me.\n\nCompletely agree, although there is another way to access run series which doesn't start from Monitor hub, so maybe they meant that? Anyway, this link clearly shows to ways to access this info (and one is via Monitor hub): https://learn.microsoft.com/en-us/fabric/data-engineering/apache-spark-monitor-run-series\n\n\"The run series from the details of the application run\" mostra apenas uma execução específica,\nenquanto o Monitoring hub mostra um gráfico cronológico com todas as execuções, que é exatamente o que a questão pede.\n\nE is correct\n\nok, we can say E. but this is part of A\n\nRun series can be shown on the details of the application run as shown on the documentation: https://learn.microsoft.com/en-us/fabric/data-engineering/apache-spark-monitor-run-series\n\nThe Spark History Server is the most suitable option if you're looking for a graphical and detailed timeline of all jobs executed in a Spark environment, with statuses such as Succeeded, Failed, and Running. Additionally, it provides access to more specific details of each job, such as:\n\nPerformance information.\n\nDetailed execution logs.\n\nResource usage metrics during the process.\n\nno, Spark History Server does not show the timeline chart.\nhttps://learn.microsoft.com/en-us/fabric/data-engineering/apache-spark-history-server",
+  "question_type": "multiple_choice",
+  "exam": "dp-700",
+  "topic": 3,
+  "question_number": 9,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/153758-exam-dp-700-topic-3-question-9-discussion/"
+}

@@ -1,0 +1,21 @@
+{
+  "question_text": "You have a Fabric workspace that contains an eventstream named EventStream1. EventStream1 outputs events to a table in a lakehouse.<br/>You need to remove files that are older than seven days and are no longer in use.<br/>Which command should you run?",
+  "question_images": [],
+  "answers": {
+    "A": "VACUUM",
+    "B": "COMPUTE",
+    "C": "OPTIMIZE",
+    "D": "CLONE"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "A"
+  ],
+  "correct_answer_images": [],
+  "discussion": "The default retention period for the VACUUM command is 7 days, therefore it will remove files older than 7 days.\n\nVACUUM is the corrected answer\n\nA is correct\n\nvacuum\n\nhttps://learn.microsoft.com/en-us/fabric/data-engineering/lakehouse-table-maintenance",
+  "question_type": "multiple_choice",
+  "exam": "dp-700",
+  "topic": 3,
+  "question_number": 7,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/153756-exam-dp-700-topic-3-question-7-discussion/"
+}

@@ -1,0 +1,21 @@
+{
+  "question_text": "You are developing a data pipeline named Pipeline1.<br/>You need to add a Copy data activity that will copy data from a Snowflake data source to a Fabric warehouse.<br/>What should you configure?",
+  "question_images": [],
+  "answers": {
+    "A": "Degree of copy parallelism",
+    "B": "Fault tolerance",
+    "C": "Enable staging",
+    "D": "Enable logging"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "C"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Enable staging. https://learn.microsoft.com/en-us/fabric/data-factory/connector-snowflake-copy-activity\n\nI would say Degree of copy parallelism. \nThis controls how many parallel threads are used during the copy operation. Increasing parallelism improves throughput and reduces overall execution time, especially for large datasets.\n\nEnable staging  is the correct answer",
+  "question_type": "multiple_choice",
+  "source": "direct_html",
+  "url": "https://www.examtopics.com/discussions/microsoft/view/153840-exam-dp-700-topic-2-question-17-discussion/",
+  "topic": 2,
+  "question_number": 17
+}

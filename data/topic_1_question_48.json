@@ -1,0 +1,21 @@
+{
+  "question_text": "You have a Fabric workspace named Workspace1.<br/><br/>You plan to configure Git integration for Workspace1 by using an Azure DevOps Git repository.<br/><br/>An Azure DevOps admin creates the required artifacts to support the integration of Workspace1.<br/><br/>Which details do you require to perform the integration?",
+  "question_images": [],
+  "answers": {
+    "A": "the organization, project, Git repository, and branch",
+    "B": "the personal access token (PAT) for Git authentication and the Git repository URL",
+    "C": "the project, Git repository, branch, and Git folder",
+    "D": "the Git repository URL and the Git folder"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "A"
+  ],
+  "correct_answer_images": [],
+  "discussion": "A\nI've checked the Fabric: \norganization, project, Git repo, branch - mandatory, \nGit folder - optional\n\nCorrect is A\n\nfolder is important too, but option A is closer\n\nA is correct\nhttps://learn.microsoft.com/en-us/fabric/cicd/git-integration/git-get-started?tabs=azure-devops%2CAzure%2Ccommit-to-git#connect-to-a-workspace\n\nThis is correct\n\nSource: https://learn.microsoft.com/en-us/fabric/cicd/git-integration/git-get-started?tabs=azure-devops%2CAzure%2Ccommit-to-git#connect-to-a-workspace",
+  "question_type": "multiple_choice",
+  "source": "direct_html",
+  "url": "https://www.examtopics.com/discussions/microsoft/view/302441-exam-dp-700-topic-1-question-48-discussion/",
+  "topic": 1,
+  "question_number": 48
+}

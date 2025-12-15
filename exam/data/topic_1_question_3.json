@@ -1,0 +1,21 @@
+{
+  "question_text": "You have a Fabric workspace that contains a warehouse named Warehouse1.<br/>You have an on-premises Microsoft SQL Server database named Database1 that is accessed by using an on-premises data gateway.<br/>You need to copy data from Database1 to Warehouse1.<br/>Which item should you use?",
+  "question_images": [],
+  "answers": {
+    "A": "a Dataflow Gen1 dataflow",
+    "B": "a data pipeline",
+    "C": "a KQL queryset",
+    "D": "a notebook"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "B"
+  ],
+  "correct_answer_images": [],
+  "discussion": "B. \nNotebooks can’t go through a gateway, KQL isn’t appropriate for a sql db. Gen1 dataflows are deprecated. Data pipelines work through a datagateway and are fast\n\nWhy B. a data pipeline is correct:\n\nData Pipelines in Microsoft Fabric are used for data movement and orchestration, much like Azure Data Factory.\n\nThey support:\n\nOn-premises SQL Server as a source via the on-premises data gateway\n\nWarehouse as a sink (destination)\n\nPipelines are designed for copying data between sources and targets — perfect for your scenario.\n\nData pipeline in Microsoft Fabric\n\nCopy data is meant to ingest data from source systems to Landing zone (Bronze layer/ Raw Layer). Copy data is a capacity from Data Pipeline.\n\nPurpose-built for orchestrating data movement.\nSupports Copy Data activity, which works with:\nOn-prem SQL Server via gateway\nFabric warehouse as a sink\nProvides scheduling, retries, logging, etc.\nCorrect and most robust solution in Fabric for this task.\n\nis correct\n\nThe pipeline in Fabric works same way as pipeline n Data Dactory. It supports the use of self-hosted Integrated Runtime (IR) which is used to establish connection between a private network (on-prem) and Azure cloud.\n\nA data pipeline, since it has the \"Copy data\" activity, the most efficient way to copy data into fabric when there are no transformations to be done\n\nIt says, you need to copy data, dont specify if we need to do some transformations. In this case, a data pipeline with an activity \"copy data\" is enough and the best choice in terms of efficency and minimal effort.\n\nCheck this link:\n\nhttps://learn.microsoft.com/en-us/fabric/fundamentals/decision-guide-pipeline-dataflow-spark\n\nI attempted to use a **data pipeline** to load data directly from **on-premises** to the **warehouse**, but since the warehouse does not support external sources, I first loaded the data into a **Lakehouse** and then moved it to the **warehouse**.\n\nanswer is A\n\nA data pipeline, since it has the \"Copy data\" activity, the most efficient way to copy data into fabric when there are no transformations to be done (if there are a Dataflow Gen 2 might be better, depends on the amount of data to be copied).\n\n•  In this case, a data pipeline can be used to transfer data from Database1 (the SQL Server database) to Warehouse1 (in the Fabric workspace).\n\nDataflow Gen 1 is deprecated.",
+  "question_type": "multiple_choice",
+  "exam": "dp-700",
+  "topic": 1,
+  "question_number": 3,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/152696-exam-dp-700-topic-1-question-3-discussion/"
+}

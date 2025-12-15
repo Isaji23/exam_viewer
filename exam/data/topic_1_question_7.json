@@ -1,0 +1,27 @@
+{
+  "question_text": "You have a Fabric workspace that contains a lakehouse named Lakehouse1. Data is ingested into Lakehouse1 as one flat table. The table contains the following columns.<br/><img src=\"images/dp-700_topic-1_question-7_html_1.png\" title=\"image5\"/><br/>You plan to load the data into a dimensional model and implement a star schema. From the original flat table, you create two tables named FactSales and DimProduct. You will track changes in DimProduct.<br/>You need to prepare the data.<br/>Which three columns should you include in the DimProduct table? Each correct answer presents part of the solution.<br/>NOTE: Each correct selection is worth one point.",
+  "question_images": [
+    "images/dp-700_topic-1_question-7_question_1.png"
+  ],
+  "answers": {
+    "A": "Date",
+    "B": "ProductName",
+    "C": "ProductColor",
+    "D": "TransactionID",
+    "E": "SalesAmount",
+    "F": "ProductID"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "B",
+    "C",
+    "F"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Columns to Include in DimProduct\nProductID - This is the unique identifier for each product and acts as the primary key in the DimProduct table.\nProductName - Contains the name of the product, which is a descriptive attribute.\nProductColor - Contains the color description of the product, which is also a descriptive attribute.\n\nEverything about the products\n\nBCF seem to be correct, but it won't allow us to track changes so on a fence with these answer, some additional logic coming from Date column is required\n\nCorrect BCF\nIt is relation with a Dimension table of Products. The others are Fact items\n\n✔ F. ProductID\nPrimary/business key of the dimension.\nUsed to join with the fact table (FactSales).\n✔ B. ProductName\nDescriptive attribute of the product.\nTypically shown in reports.\n✔ C. ProductColor\nAnother descriptive attribute.\nUseful for slicing data and analysis.\n\nCorrect BCF\n\nProductID \nProductName \nProductColor\n\nFor dimension needs to be every information about the products like Color and name, also the key which is productID\n\nThe trabsactio the date and the sumbshould be the other table\n\n- ProductID acts as a unique identifier for each product (primary key).\n- ProductName provides a descriptive name, useful for reporting and analysis.\n- ProductColor adds valuable categorical information, potentially useful in filtering and segmentation.\nOther columns like Date, TransactionID, and SalesAmount are better suited for fact tables (FactSales), since they contain transaction-specific details rather than product attributes.\n\nThe dimension table has to track the changes also. Then date field is important for SCD.  So Product color takes second priority in this list\n\nin this case, the transaction date is referenced. you cannot use it as it is. If you have to track SCD, you have to create your own Date Column, and populate it differently, not from this table\n\nPlease also note that the Date column may not be the product modified date.\n\nBCF are the attributes of Product.  TranId , Date and SalesAmt quaify for fact table instead\n\nDate: Should be in the FactSales table\nProductName: Attribute of the product and belongs in DimProduct\nProductColour: Attribute of the product and belongs in DimProduct\nTransactionID: Belongs in the FactSales Table\nSales Amount: Belongs in the FactSales Table\nProductID: Will be the primary key for DimProduct\n\nI believe the provided answer is correct",
+  "question_type": "multiple_choice",
+  "exam": "dp-700",
+  "topic": 1,
+  "question_number": 7,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/152700-exam-dp-700-topic-1-question-7-discussion/"
+}

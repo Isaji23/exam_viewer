@@ -1,0 +1,21 @@
+{
+  "question_text": "You have an Azure event hub. Each event contains the following fields:<br/><br/>•\tBikepointID<br/>•\tStreet<br/>•\tNeighbourhood<br/>•\tLatitude<br/>•\tLongitude<br/>•\tNo_Bikes<br/>•\tNo_Empty_Docks<br/><br/>You need to ingest the events. The solution must only retain events that have a Neighbourhood value of Chelsea, and then store the retained events in a Fabric lakehouse.<br/><br/>Data retention in case of failure is required to be two days.<br/><br/>What should you use?",
+  "question_images": [],
+  "answers": {
+    "A": "an eventstream",
+    "B": "Apache Spark Structured Streaming",
+    "C": "a streaming dataset",
+    "D": "a KQL queryset"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "A"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Why Eventstream?\n- Filters data before ingestion: You can apply a filter processor to retain only events where Neighbourhood = 'Chelsea'.\n- Direct integration with Fabric lakehouse: Eventstream can send filtered data directly to the lakehouse.\n- Supports data retention: You can configure event retention for two days to handle failures.\n\nRepeated question\n\nA is Correct\n\nIt should be an Eventstream\n\nSe debe usar Eventstream porque los datos provienen de Azure Event Hub, que es una fuente de eventos en tiempo real. Además, se requiere filtrar eventos con un valor específico en el campo Neighbourhood (\"Chelsea\") antes de almacenarlos en un lakehouse, lo cual es una funcionalidad nativa y sin código de Eventstream. También permite configurar la retención de datos por fallo (en este caso, 2 días), lo que cumple con todos los requisitos del escenario. Esta opción minimiza el esfuerzo de desarrollo, tal como solicita el enunciado.\n\nEventstreams support configurable data retention policies. You can set the retention period to 2 days to meet the failure recovery requirement\n\nhttps://learn.microsoft.com/en-us/fabric/real-time-intelligence/event-streams/configure-settings#retention-setting\n\nMaximum retention days is 90\nhttps://learn.microsoft.com/en-us/fabric/real-time-intelligence/event-streams/configure-settings#retention-setting\n\nOption A : Best fit: Ingests from Event Hub, filters in real-time, stores to Fabric lakehouse, supports 2-day retention",
+  "question_type": "multiple_choice",
+  "exam": "dp-700",
+  "topic": 2,
+  "question_number": 41,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/304573-exam-dp-700-topic-2-question-41-discussion/"
+}

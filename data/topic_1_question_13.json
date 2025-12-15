@@ -1,0 +1,21 @@
+{
+  "question_text": "You have a Fabric workspace named Workspace1 that contains a warehouse named Warehouse1.<br/>You plan to deploy Warehouse1 to a new workspace named Workspace2.<br/>As part of the deployment process, you need to verify whether Warehouse1 contains invalid references. The solution must minimize development effort.<br/>What should you use?",
+  "question_images": [],
+  "answers": {
+    "A": "a database project",
+    "B": "a deployment pipeline",
+    "C": "a Python script",
+    "D": "a T-SQL script"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "B"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Microsoft Fabric's deployment pipelines provide a built-in mechanism to manage and validate the deployment of artifacts like warehouses. When you use a deployment pipeline to move Warehouse1 from one workspace (Workspace1) to another (Workspace2), the pipeline automatically checks for issues such as invalid references or missing dependencies during the deployment process.\n\nWhat kind of references may a Warehouse have? We don't have shortcuts in a warehouse. It seems to be an indepentent item, there is no possiblity to break a reference to anything external. Therfor I think this relates to internal references, i.e. stored procedure operating on non-existing table. In this case a database project (answer A) would be necessary, but I don't find it related to a Deployment Pipeline in any way.\n\nagreed with answer A. Here is the hint.\nhttps://community.fabric.microsoft.com/t5/Data-Engineering/Microsoft-fabric-WareHouse-migration-issue-via-deployment/td-p/4281976\n\nA\nhttps://learn.microsoft.com/en-us/fabric/cicd/deployment-pipelines/intro-to-deployment-pipelines?tabs=new-ui#supported-items\n\nB: Its preview like most of the things in Fabric but it does work. Read deployment with pipelines. Don't get distracted with git. https://learn.microsoft.com/en-us/fabric/data-warehouse/source-control#deployment-pipelines\n\nAnd believe me MS is still in Marketing mode, so even if it breaks sometimes. The feature is there and you must use it specially deployment pipeline :)\n\na database project is more relevant for traditional SQL Server development using tools like Visual Studio; not integrated with Fabric's deployment model.\nScripts are not minimizing effort.\n\nSince the question does not define any constraints regarding how the verification result should be presented or treated, according to the documentation, I'd go with deployment pipelines: They check dependencies https://learn.microsoft.com/en-us/fabric/cicd/deployment-pipelines/understand-the-deployment-process?utm_source=chatgpt.com&tabs=new-ui#autobinding-in-the-same-workspace\n\nDetects invalid references automatically during deployment.\n\nMinimal configuration needed — aligns directly with your goal to \"minimize development effort.\"\n\nB is correct\n\nT-SQL below:\nSELECT \n    referencing_object_name = OBJECT_NAME(referencing_id),\n    referenced_entity_name,\n    is_ambiguous,\n    is_missing_reference\nFROM \n    sys.sql_expression_dependencies\nWHERE \n    is_missing_reference = 1;\n\nA. a database project  for minimal effor\n\nQuestion is focusing on \"As part of the deployment process, you need to verify whether Warehouse1 contains invalid references\" for this python script can be written to identify invalid references and can add it as a notebook activity in pipeline. So answer is python script.\n\nPython script could be a lengthy solution, while the question asks for minimal effort.",
+  "question_type": "multiple_choice",
+  "source": "direct_html",
+  "url": "https://www.examtopics.com/discussions/microsoft/view/152991-exam-dp-700-topic-1-question-13-discussion/",
+  "topic": 1,
+  "question_number": 13
+}

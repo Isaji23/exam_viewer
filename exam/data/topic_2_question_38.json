@@ -1,0 +1,19 @@
+{
+  "question_text": "DRAG DROP<br/> -<br/><br/>You have a KQL database that contains a table named Readings.<br/><br/>You need to build a KQL query to compare the MeterReading value of each row to the previous row base on the Timestamp value.<br/><br/>A sample of the expected output is shown in the following table.<br/><br/><img src=\"images/dp-700_topic-2_question-38_html_1.png\"/><br/><br/>How should you complete the query? To answer, drag the appropriate values the correct targets. Each value may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/dp-700_topic-2_question-38_html_2.png\"/>",
+  "question_images": [
+    "images/dp-700_topic-2_question-38_question_1.png",
+    "images/dp-700_topic-2_question-38_question_2.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/dp-700_topic-2_question-38_correct_1.png"
+  ],
+  "discussion": "Here’s a sample script to test this behaviour:\n\n.create table MeterReadings (\n    City: string,\n    Area: string,\n    MeterReading: int,\n    Timestamp: datetime\n)\n\n.append MeterReadings <|\ndatatable(City:string, Area:string, MeterReading:int, Timestamp:datetime)\n[\n    \"Kansas\", \"Area1\", 1500, datetime(2024-07-30 10:00:00),\n    \"Kansas\", \"Area2\", 1520, datetime(2024-07-30 11:00:00),\n    \"Kansas\", \"Area1\", 1550, datetime(2024-07-30 12:00:00),\n    \"Kansas\", \"Area2\", 1580, datetime(2024-07-30 13:00:00)\n]\n\nMeterReadings \n| where City == \"Kansas\"\n| sort by Timestamp asc \n| extend PrevMeterReading = prev(MeterReading), PrevTimestamp = prev(Timestamp)\n| project City, Area, MeterReading, Timestamp, PrevMeterReading, PrevTimestamp\n\nCorrect - Sort / Extend / Project\n\nCorrect. sort / extend / project\n\nAnswer is correct. \nWill note that both Project and Extend can be used to rename columns. But Project will drop any unspecified columns.\nThus why extend needs to be used.\n\nSort-Extend-Project\n\nCorrect\n\nJust a heads-up for anyone working through KQL sample questions involving the sort by operator — the default sort order is descending, not ascending.\n\nSo if you're trying to use functions like prev() or next() and expect them to behave in chronological order, you must explicitly use asc in the sort by clause.\n\nSee official Microsoft documentation:\nhttps://learn.microsoft.com/en-us/kusto/query/sort-operator?view=microsoft-fabric",
+  "question_type": "drag_drop",
+  "exam": "dp-700",
+  "topic": 2,
+  "question_number": 38,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/302764-exam-dp-700-topic-2-question-38-discussion/"
+}

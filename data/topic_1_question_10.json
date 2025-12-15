@@ -1,0 +1,21 @@
+{
+  "question_text": "You have a Fabric warehouse named DW1. DW1 contains a table that stores sales data and is used by multiple sales representatives.<br/>You plan to implement row-level security (RLS).<br/>You need to ensure that the sales representatives can see only their respective data.<br/>Which warehouse object do you require to implement RLS?",
+  "question_images": [],
+  "answers": {
+    "A": "STORED PROCEDURE",
+    "B": "CONSTRAINT",
+    "C": "SCHEMA",
+    "D": "FUNCTION"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "D"
+  ],
+  "correct_answer_images": [],
+  "discussion": "To implement Row-Level Security (RLS) in a Fabric warehouse like DW1, need to use a FUNCTION to define the filtering logic. Specifically, a user-defined function (UDF) is created and associated with the RLS policy to determine which rows each user can access.\n\n-- Creating schema for Security\nCREATE SCHEMA Security;\nGO\n\n-- Creating a function for the SalesRep evaluation\nCREATE FUNCTION Security.tvf_securitypredicate(@UserName AS varchar(50))\n    RETURNS TABLE\nWITH SCHEMABINDING\nAS\n    RETURN SELECT 1 AS tvf_securitypredicate_result\nWHERE @UserName = USER_NAME()\nOR USER_NAME() = ' [email protected] ';\nGO\n\n-- Using the function to create a Security Policy\nCREATE SECURITY POLICY YourSecurityPolicy\nADD FILTER PREDICATE Security.tvf_securitypredicate(UserName_column)\nON sampleschema.sampletable\nWITH (STATE = ON);\nGO\n\nTo implement Row-Level Security (RLS) in a Microsoft Fabric warehouse (DW1), you need to define a security policy that uses a user-defined function to filter rows based on the current user.\n\nFunción or Security Policy\n\nyou create a predicate function which gets evaluated to filter user access to certain rows in a Yes or No manner\n\nhttps://learn.microsoft.com/en-us/fabric/data-warehouse/tutorial-row-level-security#2-define-security-policies",
+  "question_type": "multiple_choice",
+  "source": "direct_html",
+  "url": "https://www.examtopics.com/discussions/microsoft/view/152702-exam-dp-700-topic-1-question-10-discussion/",
+  "topic": 1,
+  "question_number": 10
+}

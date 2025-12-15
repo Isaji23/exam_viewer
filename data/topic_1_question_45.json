@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You have a Fabric workspace that contains a warehouse named Warehouse1. Warehouse1 contains a table named DimCustomers. DimCustomers contains the following columns:<br/><br/>•\tCustomerName<br/>•\tCustomerID<br/>•\tBirthDate<br/>•\tEmailAddress<br/><br/>You need to configure security to meet the following requirements:<br/><br/>•\tBirthDate in DimCustomer must be masked and display 1900-01-01.<br/>•\tEmailAddress in DimCustomer must be masked and display only the first leading character and the last five characters.<br/><br/>How should you complete the statement? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"https://img.examtopics.com/dp-700/image74.png\"/>",
+  "question_images": [
+    "https://img.examtopics.com/dp-700/image74.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "https://img.examtopics.com/dp-700/image75.png"
+  ],
+  "discussion": "default()\nPartial()\nare correct. verified. you can try it in azure sql too\n\nBirthDate: default() <- each datatype has a default\nEmailAddress: partial()\n\ndefault()\npartial(1,\"@\",5)\ndefault() is based on data type:\nStrings → 'XXXX'\nNumbers → 0\nDates → '1900-01-01 00:00:00.0000000'\nBinary → ASCII 0\n\nrandom() takes only 2 parameters (start, end) and is only for numeric data types\n\nemail() returns the first letter [email protected] (always .com), for ex, [email protected] > [email protected] .\npartial(prefix_length, \"padding_string\", suffix_length), where prefix_length: Number of characters to show from the beginning.\npadding_string: The string used to mask the middle portion.\nsuffix_length: Number of characters to show from the end.\n\ndefault\npartial\nRandom is only applicable to numeric and binary data types.\n\nDefault\nPartial\n\ndefault and partial\n\nBirthDate: 'default()'\n\nEmailAddress: 'partial(1,\"@\",5)'\n\n1. default() -\nFor date and time data types, use 1900-01-01 00:00:00.0000000\n2. email() -\nMasking method that exposes the first letter of an email address and the constant suffix \".com\", in the form of an email address. [email protected] .\n\nsorry, 2nd one should be partial()\n\nthe question is not very clear for datatype. However, DOB column should be date data type, then default() can match requirement which will be showed be '1900-01-01'\n\nfirst answer is default() for two reason: random is only for numbers and default for a date is 1900-01-01",
+  "question_type": "image_only",
+  "source": "direct_html",
+  "url": "https://www.examtopics.com/discussions/microsoft/view/302435-exam-dp-700-topic-1-question-45-discussion/",
+  "topic": 1,
+  "question_number": 45
+}

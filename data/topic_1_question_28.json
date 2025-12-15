@@ -1,0 +1,21 @@
+{
+  "question_text": "You have a Fabric workspace that contains a lakehouse and a notebook named Notebook1. Notebook1 reads data into a DataFrame from a table named Table1 and applies transformation logic. The data from the DataFrame is then written to a new Delta table named Table2 by using a merge operation.<br/>You need to consolidate the underlying Parquet files in Table1.<br/>Which command should you run?",
+  "question_images": [],
+  "answers": {
+    "A": "VACUUM",
+    "B": "BROADCAST",
+    "C": "OPTIMIZE",
+    "D": "CACHE"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "C"
+  ],
+  "correct_answer_images": [],
+  "discussion": "In Delta Lake, the OPTIMIZE command is used to consolidate small Parquet files into larger ones. This improves query performance by reducing the overhead of managing many small files.\n\nVACUUM command is used to clean up and remove files that are no longer needed (e.g., old versions of data files, deleted files)\n\nTo consolidate the underlying Parquet files in Table1, you should run the OPTIMIZE command.\n\nC is correct\n\nOptimise!\n\nOptimize solves the \"small file problem\" by consolidating multiple small files into larger parquet files\n\nOptimize: Consolidates multiple small Parquet files into large file. Big Data processing engines, and all Fabric engines, benefit from having larger files sizes. Having files of size above 128 MB, and optimally close to 1 GB, improves compression and data distribution, across the cluster nodes. It reduces the need to scan numerous small files for efficient read operations. It's a general best practice to run optimization strategies after loading large tables.\n\nLink: https://learn.microsoft.com/en-us/fabric/data-engineering/lakehouse-table-maintenance",
+  "question_type": "multiple_choice",
+  "source": "direct_html",
+  "url": "https://www.examtopics.com/discussions/microsoft/view/153656-exam-dp-700-topic-1-question-28-discussion/",
+  "topic": 1,
+  "question_number": 28
+}

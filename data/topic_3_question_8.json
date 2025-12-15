@@ -1,0 +1,21 @@
+{
+  "question_text": "You have a Fabric warehouse named DW1 that loads data by using a data pipeline named Pipeline1. Pipeline1 uses a Copy data activity with a dynamic SQL source. Pipeline1 is scheduled to run every 15 minutes.<br/>You discover that Pipeline1 keeps failing.<br/>You need to identify which SQL query was executed when the pipeline failed.<br/>What should you do?",
+  "question_images": [],
+  "answers": {
+    "A": "From Monitoring hub, select the latest failed run of Pipeline1, and then view the output JSON.",
+    "B": "From Monitoring hub, select the latest failed run of Pipeline1, and then view the input JSON.",
+    "C": "From Real-time hub, select Fabric events, and then review the details of Microsoft.Fabric.ItemReadFailed.",
+    "D": "From Real-time hub, select Fabric events, and then review the details of Microsoft. Fabric.ItemUpdateFailed."
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "B"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Correct the input JSON from the Copy data activity in the Pipeline will show the SQL query.\n\nHere is an example of how that JSON would look like, so \"sqlReaderQuery\" is obviously what the question is asking about -> \n\"source\": {\n    \"type\": \"AzureSqlSource\",\n    \"sqlReaderQuery\": {\n        \"value\": \"@concat('SELECT * FROM ', item().SchemaName, '.', item().TableName, ' WHERE LastModified > ''', vars('LastLoadDate'), '''')\",\n        \"type\": \"Expression\"\n    },\n    \"queryTimeout\": \"02:00:00\",\n    \"partitionOption\": \"None\"\n}\n\nB - to identify which SQL query was executed when the pipeline failed\nYou check A, when you want to check the result of pipeline run\n\nB is correct.\nInput JSON contains parameters and settings that used to execute activities.\nIn case of, dynamic SQL source, input JSON include, generated query dynamically.\n\nB is correct\n\nWhen a pipeline in Microsoft Fabric (or Azure Data Factory, which shares many concepts) fails, you can diagnose the issue by examining the input and output JSON of the activity run.\n\n-The input JSON shows the configuration and parameters sent into the activity at runtime—including dynamic SQL queries that were resolved from expressions.\n\n-The output JSON shows the result or error returned after the activity was executed.\n\nlog message is shown in output\n\nNo, the question asks for \"which SQL query\" (input), not the query result (output)\n\nFrom Monitoring hub, select the latest failed run of Pipeline1, and then view the output JSON.\n\nCorrect answer: A. From Monitoring hub, select the latest failed run of Pipeline1, and then view the output JSON.\n\nLorsque tu exécutes une activité Copy data dans un pipeline Fabric, le query SQL dynamique réellement exécuté est généré et injecté par le runtime du pipeline au moment de l’exécution. Cette requête finale se retrouve dans le Output JSON,\n\nL’input JSON contient :\n\nLes paramètres d’entrée tels que configurés dans le pipeline (souvent avant résolution dynamique).\n\nIl ne montre pas nécessairement la requête SQL complète après substitution des variables ou expression dynamique.\n\nhttps://learn.microsoft.com/fr-fr/fabric/data-factory/monitor-pipeline-runs\n\nSeems to be the correct answer.",
+  "question_type": "multiple_choice",
+  "source": "direct_html",
+  "url": "https://www.examtopics.com/discussions/microsoft/view/153757-exam-dp-700-topic-3-question-8-discussion/",
+  "topic": 3,
+  "question_number": 8
+}

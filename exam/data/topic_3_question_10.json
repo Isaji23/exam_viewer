@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT -<br/>You have a Fabric workspace that contains an eventstream named EventStream1.<br/>You discover that an EventStream1 transformation fails.<br/>You need to find the following error information:<br/>The error details, including the occurrence time<br/><br/>The total number of errors -<br/><br/>What should you use? To answer, select the appropriate options in the answer area.<br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/dp-700_topic-3_question-10_html_1.png\" title=\"image79\"/>",
+  "question_images": [
+    "images/dp-700_topic-3_question-10_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/dp-700_topic-3_question-10_correct_1.png"
+  ],
+  "discussion": "Runtime logs to find error details. \nData insights to get the total number of errors:\nhttps://learn.microsoft.com/en-us/fabric/data-engineering/apache-spark-monitor-run-series\n\nI agree.\nImages ⬇️\nRuntime logs:\nhttps://learn.microsoft.com/en-us/fabric/real-time-intelligence/event-streams/media/monitor/source-destination-runtime-logs.png\nData Insights:\nhttps://learn.microsoft.com/en-us/fabric/real-time-intelligence/event-streams/media/monitor/source-destination-metrics.png\nYou can filter by RuntimeErrors and in the Graph appears the Count.\n😉\n\nFor this scenario involving a failed transformation in EventStream1, here are the correct selections:\n\nTo find the error details, including the occurrence time:\n✅ Runtime logs\nRuntime logs provide detailed error messages and timestamps when the error occurred.\n\nTo find the total number of errors:\n✅ Data insights\nData insights summarize metrics such as the total number of errors, throughput, and performance statistics.\n\nRuntime logs \nData Insight\n\nRuntime logs\nData Insight\nhttps://learn.microsoft.com/en-us/fabric/real-time-intelligence/event-streams/monitor#data-insights\n\nTotal number of errors should be data insights. If you see this url https://learn.microsoft.com/en-us/fabric/real-time-intelligence/event-streams/monitor#data-insights\nIt provides the following: Runtime errors\tCount\tTotal number of errors related to event processing.\n\nThe tabs 'Data insights' and 'runtime logs' mentioned here no longer seem to be found in the evenstream\n\nhttps://learn.microsoft.com/en-us/fabric/real-time-intelligence/event-streams/monitor\n\nThey exist you should select a node to see the related tabs",
+  "question_type": "image_only",
+  "exam": "dp-700",
+  "topic": 3,
+  "question_number": 10,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/155699-exam-dp-700-topic-3-question-10-discussion/"
+}

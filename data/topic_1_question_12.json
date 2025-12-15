@@ -1,0 +1,20 @@
+{
+  "question_text": "You have a Fabric deployment pipeline that uses three workspaces named Dev, Test, and Prod.<br/>You need to deploy an eventhouse as part of the deployment process.<br/>What should you use to add the eventhouse to the deployment process?",
+  "question_images": [],
+  "answers": {
+    "A": "GitHub Actions",
+    "B": "a deployment pipeline",
+    "C": "an Azure DevOps pipeline"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "B"
+  ],
+  "correct_answer_images": [],
+  "discussion": "In Microsoft Fabric, deployment pipelines are the recommended and built-in method for managing and deploying artifacts (like eventhouses, lakehouses, datasets, and reports) across environments such as Dev, Test, and Prod.\n\nMicrosoft Fabric deployment pipelines now support eventhouses along with other Fabric items like:\n\t•\tLakehouses\n\t•\tWarehouses\n\t•\tNotebooks\n\t•\tDataflows Gen2\n\t•\tData pipelines\n\t•\tSemantic models\n\t•\tReports\n\t•\tEventhouses\n\nB- deployment pipeline or event stream\n\nB las otras opciones son repositorios externos no generan el movimiento\n\nB. a deployment pipeline\nHere’s why:\n\nMicrosoft Fabric deployment pipelines are designed for managing the deployment of resources (including eventhouses) across different environments (e.g., Dev, Test, Prod). You use a deployment pipeline to automate and control the deployment process across workspaces, ensuring that the eventhouse (along with other resources) is deployed correctly through the stages of your workflow.\n\nGitHub Actions and Azure DevOps pipelines could also be used for deployment, but the Fabric deployment pipeline is specifically built for this use case within Microsoft Fabric and integrates directly with the workspace and stage management.\n\nFor details, check the official documentation:\nGet started with deployment pipelines\nhttps://learn.microsoft.com/en-us/fabric/cicd/deployment-pipelines/get-started-with-deployment-pipelines?tabs=from-fabric%2Cnew-ui\n\nThis is a use case question. The company Contoso already has DevOps.for my is letter C.\n\nhttps://learn.microsoft.com/en-us/fabric/cicd/deployment-pipelines/get-started-with-deployment-pipelines?tabs=from-fabric%2Cnew%2Cstage-settings-new\n\nhttps://learn.microsoft.com/en-us/fabric/cicd/deployment-pipelines/understand-the-deployment-process?tabs=new",
+  "question_type": "multiple_choice",
+  "source": "direct_html",
+  "url": "https://www.examtopics.com/discussions/microsoft/view/152704-exam-dp-700-topic-1-question-12-discussion/",
+  "topic": 1,
+  "question_number": 12
+}

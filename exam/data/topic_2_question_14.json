@@ -1,0 +1,21 @@
+{
+  "question_text": "You have a Fabric workspace that contains a lakehouse named Lakehouse1.<br/>In an external data source, you have data files that are 500 GB each. A new file is added every day.<br/>You need to ingest the data into Lakehouse1 without applying any transformations. The solution must meet the following requirements<br/>Trigger the process when a new file is added.<br/>Provide the highest throughput.<br/>Which type of item should you use to ingest the data?",
+  "question_images": [],
+  "answers": {
+    "A": "Data pipeline",
+    "B": "Environment",
+    "C": "KQL queryset",
+    "D": "Dataflow Gen2"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "A"
+  ],
+  "correct_answer_images": [],
+  "discussion": "For high-throughput, event-triggered ingestion of large files into a lakehouse without transformations, Data pipeline is the most appropriate and efficient item in Fabric.\n\nI just took the exam. The options to choose from are different now:\nEventstream.\nDataflow\nActivator\nNotebook\n\nWich one do you guess is correct?\n\nEventstream.\n\nstreaming event - Eventstream\nlarge file - DataFlow , I guess\n\nis the same previous question\n\nsame as the previous question\n\nData Pipeline is not right as at 2025-Jan as the storage trigger is still in preview, so it doesn't satisfy the requirement. But it's probably the best option.",
+  "question_type": "multiple_choice",
+  "exam": "dp-700",
+  "topic": 2,
+  "question_number": 14,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/155411-exam-dp-700-topic-2-question-14-discussion/"
+}

@@ -1,0 +1,25 @@
+{
+  "question_text": "You have a Fabric workspace that contains a data pipeline named Pipeline1 as shown in the exhibit. (Click the Exhibit tab.)<br/><br/><img src=\"images/dp-700_topic-1_question-53_html_1.png\"/><br/><br/>What will occur the next time Pipeline1 runs?",
+  "question_images": [
+    "images/dp-700_topic-1_question-53_question_1.png"
+  ],
+  "answers": {
+    "A": "Copy_kdi will run first, and then Execute procedure1 will run.",
+    "B": "Execute procedure1 will run first, and then Copy_kdi will run.",
+    "C": "Execute procedure1 will run and Copy_kdi will be skipped.",
+    "D": "Copy_kdi will run and Execute procedure1 will be skipped.",
+    "E": "Both activities will run simultaneously.",
+    "F": "Both activities will be skipped."
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "D"
+  ],
+  "correct_answer_images": [],
+  "discussion": "I just tested this. If you set the activity state of any acitity to deactivated, it wwiwll show as inactive when run since it will be skipped over.\n\nMy first taught was E, because there is no connection between the activities and they should run both in parallel. \nHowever, Stored Procedure is deactivated, meaning it would not run.\nSo, the correct answer is D: the only copy activity would run, sp would be skipped\n\nNo need to complicate things , Stored procedure activity is inactive\n\nHere's what happens:\nIf one activity (e.g., a Copy activity) is active and connected, and another (like a Stored Procedure activity) is inactive and unconnected, only the active one runs.\nInactive activities do not execute, just like in Azure Data Factory.\nUnconnected activities are not part of the execution graph, so Fabric does not trigger them.\n\nBoth activities will run simultaneously.\n\nThe Execute procedure1 activity was inactive in the previous run, it does not mean that on the next one it will inactive again. There's no way of disabling an activity\n\nbuddy, what you see in the top left corner of Execute procedure1 - the crossed circle - it means that the activity is deactivated. It won't run unless you active it again\n\nIs that just the history showing inactive for copy_kdi? Isn't it active on the diagram? I was thinking they would both run(E)\n\nI incorrectly viewed this originally; D does look correct since the Stored Proc step appears disabled in the pipeline\n\n(D) Copy_kdi will run and Execute procedure1 will be skipped (because it's inactive).\nI do not see why both would be skipped?...\n\nor (E) Both would run simultaneously, even thou Stored Procedure is inactive\n\nIs that just the history showing inactive for copy_kdi?  Isn't it active on the diagram?  I was thinking they would both run(E)",
+  "question_type": "multiple_choice",
+  "exam": "dp-700",
+  "topic": 1,
+  "question_number": 53,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/302455-exam-dp-700-topic-1-question-53-discussion/"
+}

@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>Your company has three newly created data engineering teams named Team1, Team2, and Team3 that plan to use Fabric. The teams have the following personas:<br/><br/>•\tTeam1 consists of members who currently use Microsoft Power BI. The team wants to transform data by using by a low-code approach.<br/>•\tTeam2 consists of members that have a background in Python programming. The team wants to use PySpark code to transform data.<br/>•\tTeam3 consists of members who currently use Azure Data Factory. The team wants to move data between source and sink environments by using the least amount of effort.<br/><br/>You need to recommend tools for the teams based on their current personas.<br/><br/>What should you recommend for each team? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/dp-700_topic-2_question-25_html_1.png\"/>",
+  "question_images": [
+    "images/dp-700_topic-2_question-25_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/dp-700_topic-2_question-25_correct_1.png"
+  ],
+  "discussion": "Looks correct.\n\nAnswer looks correct to me:\nDataflow,\nNotebooks,\nData Pipelines.\n\nTeam1:Dataflow Gen2 dataflow\nTeam2:Notebooks\nTeam3:Data pipelines\n\nit is coorect\n\nT1 -> Dataflow Gen2 dataflow; That's just normal low/no code configuration. So checks's out\nT2 -> PySpark/Python: Notebooks\nT3 -> Focus on moving data (Datapipeline)",
+  "question_type": "image_only",
+  "exam": "dp-700",
+  "topic": 2,
+  "question_number": 25,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/302461-exam-dp-700-topic-2-question-25-discussion/"
+}

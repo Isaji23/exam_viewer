@@ -1,0 +1,24 @@
+{
+  "question_text": "You have five Fabric workspaces.<br/>You are monitoring the execution of items by using Monitoring hub.<br/>You need to identify in which workspace a specific item runs.<br/>Which column should you view in Monitoring hub?",
+  "question_images": [],
+  "answers": {
+    "A": "Start time",
+    "B": "Capacity",
+    "C": "Activity name",
+    "D": "Submitter",
+    "E": "Item type",
+    "F": "Job type",
+    "G": "Location"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "G"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Correct. The Location shows the Workspace.\n\nhttps://learn.microsoft.com/en-us/training/modules/monitor-fabric-items/3-use-monitor-hub\n\nI've checked Fabric. It is location.\n\nLooking at Fabric, the answer is Location = Workspace\n\nUbicación. Confirmado!\n\nLocation\n\n🔍 Explanation:\nIn Microsoft Fabric's Monitoring Hub, when you're tracking execution details (e.g., pipelines, notebooks, dataflows), each execution is associated with a Capacity — and each Fabric Capacity is linked to a specific workspace.\nThe Capacity column in the Monitoring Hub reflects the name of the workspace where the item ran, because each workspace operates under a specific capacity, and the Monitoring Hub shows this to help distinguish execution sources.\n\nI have gone into my Monitor in Fabric, it is Location, not Capacity. \nCapacity provides a GUID that is not unique to a Workspace.\n\nAnswer is correct\n\nLocation\n\nIn Monitoring Hub, Location = Workspace\n\nProvided answer \"Location\" is correct",
+  "question_type": "multiple_choice",
+  "source": "direct_html",
+  "url": "https://www.examtopics.com/discussions/microsoft/view/153657-exam-dp-700-topic-1-question-29-discussion/",
+  "topic": 1,
+  "question_number": 29
+}

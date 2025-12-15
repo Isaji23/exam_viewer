@@ -1,0 +1,23 @@
+{
+  "question_text": "You have two Fabric workspaces named Workspace1 and Workspace2.<br/>You have a Fabric deployment pipeline named deployPipeline1 that deploys items from Workspace1 to Workspace2. DeployPipeline1 contains all the items in Workspace1.<br/>You recently modified the items in Workspaces1.<br/>The workspaces currently contain the items shown in the following table.<br/><img src=\"https://img.examtopics.com/dp-700/image19.png\" title=\"image20\"/><br/>Items in Workspace1 that have the same name as items in Workspace2 are currently paired.<br/>You need to ensure that the items in Workspace1 overwrite the corresponding items in Workspace2. The solution must minimize effort.<br/>What should you do?",
+  "question_images": [
+    "https://img.examtopics.com/dp-700/image19.png"
+  ],
+  "answers": {
+    "A": "Delete all the items in Workspace2, and then run deployPipeline1.",
+    "B": "Rename each item in Workspace2 to have the same name as the items in Workspace1.",
+    "C": "Back up the items in Workspace2, and then run deployPipeline1.",
+    "D": "Run deployPipeline1 without modifying the items in Workspace2."
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "D"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Given minimal effort is required deploying the deploymentpipeline is enough\n\nThere is no information on whether the new items from Workspace1 should be deployed or not, but the only answer that does make sense is D, although some new objects will be created in Workspace2\n\nD is correct\n\nD is correct\n\nItem pairing\nPairing is the process by which an item in one stage of the deployment pipeline is associated with the same item in the adjacent stage. If items aren't paired, even if they have the same name and type, the item in the target stage isn't overwritten during a deploy. A deploy of an unpaired item is known as a clean deploy and creates a copy of that item in the adjacent stage.\n\nSimply deploying will overwrite the corresponding items in Workspace2 by those in Workspace 1\nhttps://learn.microsoft.com/en-us/fabric/cicd/deployment-pipelines/assign-pipeline?tabs=new-ui#item-pairing\n\nDeploy content from one stage to another\nThere are several ways to deploy content from one stage to another. You can deploy all the content, or you can select which items to deploy.\n\nYou can deploy content to any adjacent stage, in either direction.\n\nDeploying content from a working production pipeline to a stage that has an existing workspace, includes the following steps:\n\nDeploying new content as an addition to the content already there.\n\nDeploying updated content to replace some of the content already there.\n\nI interpret it as, the items in Workspace1 that are paired with Workspace2 need to be overwritten. Those that are not paired remain the same. Therefore just run the deployPipeline1 and everything should be good. If I delete everything in Workspace2 and then run deployPipeline1 then it would be the same as to sync Workspace1 to Workspace2\n\nhttps://learn.microsoft.com/en-us/fabric/cicd/deployment-pipelines/understand-the-deployment-process?tabs=new-ui#deployment-process\n\nDuring deployment, notenook2 will not be deleted from Workspace2. So, you need to delete all items (or at least those not in Workspace1) and then run the pipeline.\n\nI believe the provided answer 'D' is correct.\n\nThis requires minimal effort as it has no additional steps such as renaming of deleting items.",
+  "question_type": "multiple_choice",
+  "source": "direct_html",
+  "url": "https://www.examtopics.com/discussions/microsoft/view/153655-exam-dp-700-topic-1-question-25-discussion/",
+  "topic": 1,
+  "question_number": 25
+}

@@ -1,0 +1,21 @@
+{
+  "question_text": "You have a Fabric workspace named Workspace1 that contains a warehouse named Warehouse1.<br/><br/>You plan to deploy Warehouse 1 to a new workspace named Workspace2.<br/><br/>As part of the deployment process, you need to verify whether Warehouse1 contains invalid references. The solution must minimize development effort and provide detailed information about the invalid references.<br/><br/>What should you use?",
+  "question_images": [],
+  "answers": {
+    "A": "a dbt project",
+    "B": "a deployment pipeline",
+    "C": "a Python script",
+    "D": "a database project"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "B"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Q13 repetition\n\nAlmost but not quite. Here we have \"The solution must minimize development effort and provide detailed information about the invalid references.\" instead of \"The solution must minimize development effort.\" Does it change the answer?\n\nA Deployment pipeline: https://learn.microsoft.com/en-us/azure/data-factory/control-flow-validation-activity\n\nThe answer is correct but the provided link does not refer to deployment pipelines but to \"regular\" pipelines i.e., the Data Factory item in Fabric called \"pipeline\" (which also has the Validate feature built-in but it checks if all the activities of the pipeline are configured correctly and has nothing to do with deploying items from one WS to another WS)\n\nFor detecting invalid references in a Fabric warehouse with minimal effort and detailed diagnostics, use:\n\nB. a deployment pipeline \n\nIt’s the purpose-built solution in Microsoft Fabric for deployment, validation, and environment management.",
+  "question_type": "multiple_choice",
+  "exam": "dp-700",
+  "topic": 1,
+  "question_number": 60,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/304637-exam-dp-700-topic-1-question-60-discussion/"
+}

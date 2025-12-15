@@ -1,0 +1,19 @@
+{
+  "question_text": "DRAG DROP -<br/>You have a Fabric eventhouse that contains a KQL database. The database contains a table named TaxiData. The following is a sample of the data in TaxiData.<br/><br/><img src=\"images/dp-700_topic-3_question-3_html_1.png\" title=\"image71\"/><br/>You need to build two KQL queries. The solution must meet the following requirements:<br/>One of the queries must partition RunningTotalAmount by VendorID.<br/><br/>The other query must create a column named FirstPickupDateTime that shows the first value of each hour from tpep_pickup_datetime partitioned by payment_type.<br/>How should you complete each query? To answer, drag the appropriate values the correct targets. Each value may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content.<br/>NOTE: Each correct selection is worth one point.<br/><img src=\"images/dp-700_topic-3_question-3_html_2.png\" title=\"image72\"/>",
+  "question_images": [
+    "images/dp-700_topic-3_question-3_question_1.png",
+    "images/dp-700_topic-3_question-3_question_2.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/dp-700_topic-3_question-3_correct_1.png"
+  ],
+  "discussion": "The answers are correct!\nrow_cumsum\nrow_window_session\n\nRow_cumsum \nRow_windows_session\n\nis ok\nRow_cumsum\nRow_windows_session\n\nTaxiData\n| sort by VendorID asc\n| extend RunningTotalAmount = row_cumsum(total_amount, VendorID != prev(VendorID))\n\nTaxiData\n| sort by tpep_pickup_datetime asc, payment_type asc\n| extend FirstPickupDateTime = row_window_session(tpep_pickup_datetime, 1h, 0m, payment_type != prev(payment_type))\n\nwhy not row_rank_min?\n\nthe reason is row_rank_min only has one parameter but question give 3 parameters. Only row_window_session can match it.",
+  "question_type": "drag_drop",
+  "exam": "dp-700",
+  "topic": 3,
+  "question_number": 3,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/155698-exam-dp-700-topic-3-question-3-discussion/"
+}

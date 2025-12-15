@@ -1,0 +1,22 @@
+{
+  "question_text": "You have a Fabric workspace named Workspace1 that contains the following items:<br/><br/>•\tA Microsoft Power BI report named Report1<br/>•\tA Power BI dashboard named Dashboard1<br/>•\tA semantic model named Model1<br/>•\tA lakehouse name Lakehouse1<br/><br/>Your company requires that specific governance processes be implemented for the items.<br/><br/>Which items can you endorse in Fabric?",
+  "question_images": [],
+  "answers": {
+    "A": "Lakehouse1, Model1, and Dashboard1 only",
+    "B": "Lakehouse1, Model1, Report1 and Dashboard1",
+    "C": "Report1 and Dashboard1 only",
+    "D": "Model1, Report1, and Dashboard1 only",
+    "E": "Lakehouse1, Model1, and Report1 only"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "E"
+  ],
+  "correct_answer_images": [],
+  "discussion": "All Fabric items and Power BI items except Power BI dashboards can be promoted or certified.\n\nDashboard cannot be endorsed\n\nE\nDashboard cannot be endorsed\n\nE is correct\n\nPower BI dashboards cannot be promoted or certified.\n\nAll can be endorsed as a Master data\nhttps://learn.microsoft.com/en-us/fabric/governance/endorsement-overview#types-of-items-that-can-be-endorsed",
+  "question_type": "multiple_choice",
+  "source": "direct_html",
+  "url": "https://www.examtopics.com/discussions/microsoft/view/302436-exam-dp-700-topic-1-question-46-discussion/",
+  "topic": 1,
+  "question_number": 46
+}

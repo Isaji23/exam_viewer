@@ -1,0 +1,19 @@
+{
+  "question_text": "DRAG DROP<br/> -<br/><br/>You are building a data loading pattern by using a Fabric data pipeline. The source is an Azure SQL database that contains 25 tables. The destination is a lakehouse.<br/><br/>In a warehouse, you create a control table named Control.Object as shown in the exhibit. (Click the Exhibit tab.)<br/><br/><img src=\"https://img.examtopics.com/dp-700/image89.png\"/><br/><br/>You need to build a data pipeline that will support the dynamic ingestion of the tables listed in the control table by using a single execution.<br/><br/>Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.<br/><br/><img src=\"https://img.examtopics.com/dp-700/image90.png\"/>",
+  "question_images": [
+    "https://img.examtopics.com/dp-700/image89.png",
+    "https://img.examtopics.com/dp-700/image90.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "https://img.examtopics.com/dp-700/image91.png"
+  ],
+  "discussion": "I agree with the answer given\n\nYes, Its correct\n\nCorrect\n\ncorrect \nlook up\nforeach\ncopy activity\n\nCorrect:\n\n1. First, get the metadata (to see what you need to create). A  look up will do just fine.\n2. Add a foreach to loop over them, this is essential\n3. In the for each, add a copy activity",
+  "question_type": "drag_drop",
+  "source": "direct_html",
+  "url": "https://www.examtopics.com/discussions/microsoft/view/302715-exam-dp-700-topic-2-question-28-discussion/",
+  "topic": 2,
+  "question_number": 28
+}
