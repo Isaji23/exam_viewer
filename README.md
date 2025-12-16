@@ -65,4 +65,4 @@ Example question object:
 
 ## Notes
 
-* Educational and personal use only
+* Educational and personal use only.
