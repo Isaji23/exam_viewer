@@ -6,7 +6,9 @@ const listEl = document.getElementById("question-list");
 const viewer = document.getElementById("viewer");
 const collapsedTopics = new Set();
 
-let questions = [];
+const questionCache = new Map(); // cache por fichero
+let questionIndex = []; // metadata ligera
+
 let currentIndex = null;
 let activeTopic = null;
 
@@ -19,18 +21,38 @@ async function loadQuestions() {
     const res = await fetch(DATA_PATH + "index.json");
     const files = await res.json();
 
-    for (const file of files) {
-        const qRes = await fetch(DATA_PATH + file);
-        const qData = await qRes.json();
-        qData._file = file;
-        questions.push(qData);
-    }
+    // Construimos SOLO metadata desde el nombre del archivo
+    questionIndex = files.map((file, i) => {
+        const match = file.match(/topic_(\d+)_question_(\d+)/);
 
-    questions.sort(
+        return {
+            file,
+            topic: Number(match[1]),
+            question_number: Number(match[2]),
+            _globalIndex: i,
+        };
+    });
+
+    questionIndex.sort(
         (a, b) => a.topic - b.topic || a.question_number - b.question_number
     );
 
     renderList();
+}
+
+async function loadQuestionByIndex(index) {
+    const meta = questionIndex[index];
+
+    if (questionCache.has(meta.file)) {
+        return questionCache.get(meta.file);
+    }
+
+    const res = await fetch(DATA_PATH + meta.file);
+    const data = await res.json();
+    data._globalIndex = index;
+
+    questionCache.set(meta.file, data);
+    return data;
 }
 
 function groupByTopic(questions) {
@@ -53,7 +75,7 @@ function groupByTopic(questions) {
 function renderList() {
     listEl.innerHTML = "";
 
-    const grouped = groupByTopic(questions);
+    const grouped = groupByTopic(questionIndex);
 
     grouped.forEach((items, topic) => {
         const isCollapsed = collapsedTopics.has(topic);
@@ -114,7 +136,7 @@ function renderList() {
         "<p class='placeholder'>Selecciona una pregunta para verla</p>";
 }
 
-function selectQuestion(index) {
+async function selectQuestion(index) {
     currentIndex = index;
     // Estado activo en la sidebar
     document
@@ -124,7 +146,19 @@ function selectQuestion(index) {
     const active = document.querySelector(`.q-item[data-index="${index}"]`);
     if (active) active.classList.add("is-active");
 
-    const q = questions[index];
+    viewer.innerHTML = "<p class='placeholder'>Cargando pregunta...</p>";
+
+    const q = await loadQuestionByIndex(index);
+
+    // Prefetch siguiente
+    if (index + 1 < questionIndex.length) {
+        loadQuestionByIndex(index + 1);
+    }
+
+    if (index - 1 >= 0) {
+        loadQuestionByIndex(index - 1);
+    }
+
     // ===== Topic activo =====
     // ===== Topic activo (SOLO aquí se cambia) =====
     activeTopic = q.topic;
@@ -173,7 +207,7 @@ function selectQuestion(index) {
 
     const global = document.createElement("span");
     global.className = "question-global";
-    global.textContent = `${index + 1} / ${questions.length}`;
+    global.textContent = `${index + 1} / ${questionIndex.length}`;
 
     qHeader.appendChild(topic);
     qHeader.appendChild(number);
@@ -292,10 +326,10 @@ function selectQuestion(index) {
     const nextBtn = document.createElement("button");
     nextBtn.className = "nav-btn next";
     nextBtn.textContent = "Siguiente";
-    nextBtn.disabled = index === questions.length - 1;
+    nextBtn.disabled = index === questionIndex.length - 1;
 
     nextBtn.addEventListener("click", () => {
-        if (currentIndex < questions.length - 1) {
+        if (currentIndex < questionIndex.length - 1) {
             selectQuestion(currentIndex + 1);
         }
     });
