@@ -2,10 +2,11 @@ const EXAM_ROOT = "exam/";
 const DATA_PATH = EXAM_ROOT + "data/";
 const IMAGES_PATH = EXAM_ROOT + "images/";
 
-const listEl = document.getElementById("list");
+const listEl = document.getElementById("question-list");
 const viewer = document.getElementById("viewer");
 
 let questions = [];
+let currentIndex = null;
 
 function resolveExamPath(path) {
   if (!path) return "";
@@ -32,53 +33,80 @@ async function loadQuestions() {
 
 function renderList() {
   listEl.innerHTML = "";
+
   questions.forEach((q, idx) => {
     const li = document.createElement("li");
+    li.className = "q-item";
     li.textContent = `Topic ${q.topic} · Q${q.question_number}`;
-    li.onclick = () => selectQuestion(idx);
+    li.addEventListener("click", () => selectQuestion(idx));
     listEl.appendChild(li);
   });
 
-  viewer.innerHTML = "<p class='placeholder'>Selecciona una pregunta</p>";
+  viewer.innerHTML =
+    "<p class='placeholder'>Selecciona una pregunta para verla</p>";
 }
 
 function selectQuestion(index) {
+  currentIndex = index;
+  // Estado activo en la sidebar
   document
-    .querySelectorAll("aside li")
-    .forEach((li) => li.classList.remove("active"));
-  document.querySelectorAll("aside li")[index].classList.add("active");
+    .querySelectorAll(".q-item")
+    .forEach((li) => li.classList.remove("is-active"));
+  document.querySelectorAll(".q-item")[index].classList.add("is-active");
 
   const q = questions[index];
   viewer.innerHTML = "";
 
-  // Enunciado
+  const article = document.createElement("article");
+  article.className = "question";
+
+  /* ===== Header de la pregunta ===== */
+  const qHeader = document.createElement("header");
+  qHeader.className = "question-header";
+
+  const topic = document.createElement("span");
+  topic.className = "question-topic";
+  topic.textContent = `Topic ${q.topic}`;
+
+  const number = document.createElement("span");
+  number.className = "question-number";
+  number.textContent = `Question ${q.question_number}`;
+
+  const global = document.createElement("span");
+  global.className = "question-global";
+  global.textContent = `${index + 1} / ${questions.length}`;
+
+  qHeader.appendChild(topic);
+  qHeader.appendChild(number);
+  qHeader.appendChild(global);
+
+  article.appendChild(qHeader);
+
+  /* ===== Enunciado ===== */
   const qt = document.createElement("div");
   qt.className = "question-text";
-  qt.innerHTML = q.question_text.replaceAll("src=\"images", "src=\"exam/images") || "";
-  viewer.appendChild(qt);
+  qt.innerHTML =
+    q.question_text?.replaceAll(
+      'src="images',
+      'src="' + EXAM_ROOT + "images"
+    ) || "";
+  article.appendChild(qt);
 
-  // Imágenes adicionales del enunciado (hotspot, drag&drop, etc.)
-  // if (q.question_images && q.question_images.length) {
-  //   const imgContainer = document.createElement("div");
-  //   imgContainer.className = "question-images";
+  // ✅ Enganchar zoom a las imágenes embebidas en el HTML del enunciado
+  qt.querySelectorAll("img").forEach((img) => {
+    img.style.cursor = "zoom-in";
+    img.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      if (typeof openImageModal === "function") {
+        openImageModal(img.src, img.alt || "Question image");
+      } else {
+        console.warn("openImageModal no está disponible (¿carga zoom.js?)");
+      }
+    });
+  });
 
-  //   q.question_images.forEach(src => {
-  //     const resolvedSrc = resolveExamPath(src);
-
-  //     // Evita duplicar imágenes ya incluidas en el HTML
-  //     if (!qt.innerHTML.includes(src)) {
-  //       const img = document.createElement("img");
-  //       img.src = resolvedSrc;
-  //       img.alt = "Question image";
-  //       imgContainer.appendChild(img);
-  //     }
-  //   });
-
-  //   viewer.appendChild(imgContainer);
-  // }
-
-
-  // Respuestas
+  /* ===== Respuestas ===== */
   if (q.answers && Object.keys(q.answers).length) {
     const answersDiv = document.createElement("div");
     answersDiv.className = "answers";
@@ -93,22 +121,25 @@ function selectQuestion(index) {
 
       div.innerHTML = `<strong>${key}.</strong> ${text}`;
 
-      q.answer_images?.[key]?.forEach(src => {
+      // Imágenes de respuesta
+      q.answer_images?.[key]?.forEach((src) => {
         const img = document.createElement("img");
         img.src = resolveExamPath(src);
         img.alt = `Answer ${key} image`;
+        img.addEventListener("click", () => {
+          openImageModal(img.src, img.alt);
+        });
         div.appendChild(img);
       });
 
       answersDiv.appendChild(div);
     });
 
-    viewer.appendChild(answersDiv);
+    article.appendChild(answersDiv);
   }
 
-
-  // Respuesta correcta visual (hotspot, etc.)
-  if (q.correct_answer_images && q.correct_answer_images.length) {
+  /* ===== Respuesta correcta visual ===== */
+  if (q.correct_answer_images?.length) {
     const correctImgBlock = document.createElement("div");
     correctImgBlock.className = "correct-answer-images";
 
@@ -116,30 +147,71 @@ function selectQuestion(index) {
     title.textContent = "Respuesta correcta (visual):";
     correctImgBlock.appendChild(title);
 
-    q.correct_answer_images.forEach(src => {
+    q.correct_answer_images.forEach((src) => {
       const img = document.createElement("img");
       img.src = resolveExamPath(src);
       img.alt = "Correct answer image";
+      img.addEventListener("click", () => {
+        openImageModal(img.src, img.alt);
+      });
       correctImgBlock.appendChild(img);
     });
 
-    viewer.appendChild(correctImgBlock);
+    article.appendChild(correctImgBlock);
   }
 
-  // Enlace fuente
+  /* ===== Fuente ===== */
   if (q.url) {
     const source = document.createElement("div");
     source.className = "source";
-
     source.innerHTML = `
-		<strong>Fuente:</strong><br>
-		<a href="${q.url}" target="_blank" rel="noopener noreferrer">
-		${q.url}
-		</a>
-	`;
-
-    viewer.appendChild(source);
+      <strong>Fuente:</strong><br>
+      <a href="${q.url}" target="_blank" rel="noopener noreferrer">
+        ${q.url}
+      </a>
+    `;
+    article.appendChild(source);
   }
+
+  /* ===== Navegación Anterior / Siguiente ===== */
+  const nav = document.createElement("nav");
+  nav.className = "question-nav";
+
+  const prevBtn = document.createElement("button");
+  prevBtn.className = "nav-btn prev";
+  prevBtn.textContent = "← Anterior";
+  prevBtn.disabled = index === 0;
+
+  prevBtn.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      selectQuestion(currentIndex - 1);
+    }
+  });
+
+  const nextBtn = document.createElement("button");
+  nextBtn.className = "nav-btn next";
+  nextBtn.textContent = "Siguiente →";
+  nextBtn.disabled = index === questions.length - 1;
+
+  nextBtn.addEventListener("click", () => {
+    if (currentIndex < questions.length - 1) {
+      selectQuestion(currentIndex + 1);
+    }
+  });
+
+  nav.appendChild(prevBtn);
+  nav.appendChild(nextBtn);
+  article.appendChild(nav);
+
+  viewer.appendChild(article);
+
+  /* ===== UX móvil: cerrar sidebar ===== */
+  if (window.innerWidth <= 900) {
+    document.body.classList.remove("sidebar-open");
+    document.body.classList.add("sidebar-closed");
+  }
+
+  viewer.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 // 🚀 Arranque
