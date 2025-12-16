@@ -131,9 +131,6 @@ function renderList() {
 
         listEl.appendChild(wrapper);
     });
-
-    viewer.innerHTML =
-        "<p class='placeholder'>Selecciona una pregunta para verla</p>";
 }
 
 async function selectQuestion(index) {
@@ -146,7 +143,7 @@ async function selectQuestion(index) {
     const active = document.querySelector(`.q-item[data-index="${index}"]`);
     if (active) active.classList.add("is-active");
 
-    viewer.innerHTML = "<p class='placeholder'>Cargando pregunta...</p>";
+    viewer.innerHTML = "<p class='placeholder'>Loading question...</p>";
 
     const q = await loadQuestionByIndex(index);
 
@@ -300,7 +297,7 @@ async function selectQuestion(index) {
         const source = document.createElement("div");
         source.className = "source";
         source.innerHTML = `
-      <strong>Fuente:</strong>
+      <strong>Source:</strong>
       <a href="${q.url}" target="_blank" rel="noopener noreferrer">
         ${q.url}
       </a>

@@ -13,14 +13,13 @@
 
     <!-- HEADER -->
     <header class="header">
-        <button id="menu-btn" class="menu-toggle" aria-label="Mostrar u ocultar lista de preguntas"
+        <button id="menu-btn" class="menu-toggle" aria-label="Show or hide question list"
             aria-expanded="false">
             <span class="menu-toggle__icon"></span>
         </button>
 
         <div class="header__text">
             <h1 class="header__title">Exam Question Viewer</h1>
-            <p class="header__subtitle">Modo estudio</p>
         </div>
 
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
@@ -28,46 +27,35 @@
         </button>
     </header>
 
-    <!-- LAYOUT PRINCIPAL -->
     <main class="layout">
 
-        <!-- SIDEBAR: lista de preguntas (rellenada por JS) -->
         <aside class="sidebar" aria-label="Lista de preguntas">
             <div class="sidebar__header">
-                <h2 class="sidebar__title">Preguntas</h2>
+                <h2 class="sidebar__title">Questions</h2>
             </div>
 
             <nav class="sidebar__content">
-                <ul id="question-list" class="q-list">
-                    <!--
-            JS (app.js) genera aquí:
-            <li class="q-item">Pregunta 1</li>
-            <li class="q-item is-active">Pregunta 2</li>
-            ...
-          -->
-                </ul>
+                <ul id="question-list" class="q-list"></ul>
             </nav>
         </aside>
 
-        <!-- VISOR PRINCIPAL -->
         <section id="viewer" class="viewer" aria-label="Visor de pregunta">
             <p class="placeholder">
-                Selecciona una pregunta para verla
+                Select a question to see it
             </p>
         </section>
 
     </main>
 
-    <!-- Image Zoom Modal -->
     <div id="img-modal" class="img-modal" aria-hidden="true">
         <div class="img-modal__backdrop"></div>
 
         <figure class="img-modal__content" role="dialog" aria-modal="true">
-            <button class="img-modal__close" aria-label="Cerrar imagen" title="Cerrar">
+            <button class="img-modal__close" aria-label="Close image" title="Close">
                 ✕
             </button>
 
-            <img id="img-modal-target" alt="Imagen ampliada" />
+            <img id="img-modal-target" alt="Zoomed image" />
         </figure>
     </div>
 
