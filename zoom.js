@@ -16,12 +16,14 @@ if (!imgModal || !imgModalTarget) {
     };
 
     function closeImageModal() {
-        imgModal.setAttribute("aria-hidden", "true");
         // limpiar después de la animación
         setTimeout(() => {
             imgModalTarget.src = "";
         }, 200);
         document.body.style.overflow = "";
+
+        imgModalClose.blur(); // 🔑 quitar foco antes
+        imgModal.setAttribute("aria-hidden", "true");
     }
 
     imgModalBackdrop?.addEventListener("click", (e) => {

@@ -300,7 +300,7 @@ async function selectQuestion(index) {
         const source = document.createElement("div");
         source.className = "source";
         source.innerHTML = `
-      <strong>Fuente:</strong><br>
+      <strong>Fuente:</strong>
       <a href="${q.url}" target="_blank" rel="noopener noreferrer">
         ${q.url}
       </a>
