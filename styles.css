@@ -224,6 +224,42 @@ body.sidebar-open .menu-toggle__icon::after {
     white-space: normal;
 }
 
+/* ===== Topic headers colapsables ===== */
+.topic-header {
+  margin: 0;
+  padding: 6px 8px;
+
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  color: #475569;
+  opacity: 0.85;
+
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ===== Topic activo ===== */
+.topic-header.is-active-topic {
+  background: #eef2ff;
+  color: #3730a3;
+  border-radius: 8px;
+  opacity: 1;
+}
+
+.topic-header::before {
+  content: "▾";
+  font-size: 1rem;
+  transition: transform 0.15s ease;
+}
+
+.topic-header.collapsed::before {
+  transform: rotate(-90deg);
+}
+
 /* ===== Móvil ===== */
 @media (max-width: 900px) {
     .layout {
