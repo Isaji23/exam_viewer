@@ -73,35 +73,41 @@ function renderList() {
         }
 
         topicLi.addEventListener("click", () => {
-            if (collapsedTopics.has(topic)) {
-                collapsedTopics.delete(topic);
-            } else {
-                collapsedTopics.add(topic);
+            const wrapper = topicLi.nextElementSibling; // el <ul class="topic-items">
+
+            const willCollapse = !collapsedTopics.has(topic);
+
+            if (willCollapse) collapsedTopics.add(topic);
+            else collapsedTopics.delete(topic);
+
+            topicLi.classList.toggle("collapsed", willCollapse);
+            if (wrapper && wrapper.classList.contains("topic-items")) {
+                wrapper.classList.toggle("collapsed", willCollapse);
             }
-            renderList();
         });
 
         listEl.appendChild(topicLi);
 
-        /* ===== Preguntas del topic ===== */
-        if (!isCollapsed) {
-            items.forEach((q) => {
-                const li = document.createElement("li");
-                li.className = "q-item";
-                li.textContent = `Q${q.question_number}`;
-                li.dataset.index = q._globalIndex;
+        /* ===== Contenedor animable ===== */
+        const wrapper = document.createElement("ul");
+        wrapper.className = "topic-items";
 
-                li.addEventListener("click", () =>
-                    selectQuestion(q._globalIndex)
-                );
-
-                li.addEventListener("click", () => {
-                    renderList();
-                });
-
-                listEl.appendChild(li);
-            });
+        if (isCollapsed) {
+            wrapper.classList.add("collapsed");
         }
+
+        items.forEach((q) => {
+            const li = document.createElement("li");
+            li.className = "q-item";
+            li.textContent = `Question ${q.question_number}`;
+            li.dataset.index = q._globalIndex;
+
+            li.addEventListener("click", () => selectQuestion(q._globalIndex));
+
+            wrapper.appendChild(li);
+        });
+
+        listEl.appendChild(wrapper);
     });
 
     viewer.innerHTML =
@@ -120,9 +126,32 @@ function selectQuestion(index) {
 
     const q = questions[index];
     // ===== Topic activo =====
+    // ===== Topic activo (SOLO aquí se cambia) =====
     activeTopic = q.topic;
 
-    // Auto-expandir el topic activo
+    // Desactivar todos los topics
+    document.querySelectorAll(".topic-header").forEach((th) => {
+        th.classList.remove("is-active-topic");
+    });
+
+    // Activar SOLO el del topic de la pregunta
+    const activeHeader = document.querySelector(
+        `.topic-header[data-topic="${activeTopic}"]`
+    );
+
+    if (activeHeader) {
+        activeHeader.classList.add("is-active-topic");
+
+        // Auto-expandir si estaba colapsado
+        activeHeader.classList.remove("collapsed");
+
+        const wrapper = activeHeader.nextElementSibling;
+        if (wrapper && wrapper.classList.contains("topic-items")) {
+            wrapper.classList.remove("collapsed");
+        }
+    }
+
+    // Mantener coherencia del estado lógico
     collapsedTopics.delete(activeTopic);
 
     viewer.innerHTML = "";
@@ -251,7 +280,7 @@ function selectQuestion(index) {
 
     const prevBtn = document.createElement("button");
     prevBtn.className = "nav-btn prev";
-    prevBtn.textContent = "← Anterior";
+    prevBtn.textContent = "Anterior";
     prevBtn.disabled = index === 0;
 
     prevBtn.addEventListener("click", () => {
@@ -262,7 +291,7 @@ function selectQuestion(index) {
 
     const nextBtn = document.createElement("button");
     nextBtn.className = "nav-btn next";
-    nextBtn.textContent = "Siguiente →";
+    nextBtn.textContent = "Siguiente";
     nextBtn.disabled = index === questions.length - 1;
 
     nextBtn.addEventListener("click", () => {
