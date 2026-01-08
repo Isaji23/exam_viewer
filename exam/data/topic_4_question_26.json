@@ -1,0 +1,21 @@
+{
+  "question_text": "You have an Azure AI Search resource named Search1.<br/><br/>You have an app named App1 that uses Search1 to index content.<br/><br/>You need to add a custom skill to App1 to ensure that the app can recognize and retrieve properties from invoices by using Search1.<br/><br/>What should you include in the solution?",
+  "question_images": [],
+  "answers": {
+    "A": "Azure AI Immersive Reader",
+    "B": "Azure OpenAI",
+    "C": "Azure AI Document Intelligence",
+    "D": "Azure AI Custom Vision"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "C"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Document Intelligence , formerly Form Recognizer\n\nAzure AI Document Intelligence provides prebuilt and custom models specifically designed to extract structured data from documents, such as invoices. By integrating Azure AI Document Intelligence as a custom skill into Azure AI Search, App1 can recognize and retrieve properties like invoice numbers, dates, and totals from invoices, ensuring efficient indexing and search functionality.\n\nC is correct\n\nC, no doubts\n\nThe correct answer is:\n\nC. Azure AI Document Intelligence\n\nReasoning: To ensure the app can recognize and retrieve properties from invoices using Azure AI Search, you need a service that specializes in analyzing and extracting data from structured documents like invoices. Azure AI Document Intelligence (formerly known as Form Recognizer) provides pre-built models for processing invoices, extracting fields such as invoice numbers, dates, totals, and more.\n\nYou can integrate Azure AI Document Intelligence with Azure Cognitive Search by adding a custom skill to the search pipeline, allowing the app to extract and index specific properties from invoices. This ensures that App1 can retrieve relevant content from the invoices efficiently.",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 4,
+  "question_number": 26,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/150069-exam-ai-102-topic-4-question-26-discussion/"
+}

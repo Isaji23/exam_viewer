@@ -1,0 +1,21 @@
+{
+  "question_text": "You are building a solution in Azure that will use Azure Cognitive Service for Language to process sensitive customer data.<br/><br/>You need to ensure that only specific Azure processes can access the Language service. The solution must minimize administrative effort.<br/><br/>What should you include in the solution?",
+  "question_images": [],
+  "answers": {
+    "A": "IPsec rules",
+    "B": "Azure Application Gateway",
+    "C": "a virtual network gateway",
+    "D": "virtual network rules"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "D"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Correct.\nSource: https://learn.microsoft.com/en-us/azure/ai-services/cognitive-services-virtual-networks?tabs=portal\n\nD is correct\n\nvirtual network rules they allow you to restrict access to the Azure AI Language service to specific Azure resources within a virtual network. By configuring virtual network rules, you can ensure that only designated processes and services within your Azure infrastructure can access the Language service. This approach minimizes administrative effort by leveraging Azure's built-in network security capabilities.\n\nAnswer is D\n\nanswer is virtual network rules. why?\nbecause it helps configure IP range address to restrict access to an end point only to services deployed in those IP ranges. this way the access can be restricted. Gateway can work but too much of an effort, and IPsec is for securing an already established channel of communication between 2 points.\n\nI believe D is right answer.\n\nD is OK.\n\nThis question is more relevant to AZ104 (Azure Administration) rather than AI, but anyway, I reckon the answer is D.",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 1,
+  "question_number": 63,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/135106-exam-ai-102-topic-1-question-63-discussion/"
+}

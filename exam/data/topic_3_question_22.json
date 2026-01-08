@@ -1,0 +1,23 @@
+{
+  "question_text": "You have the following C# method.<br/><img class=\"in-exam-image\" src=\"images/ai-102_topic-3_question-22_html_1.png\"/><br/>You need to deploy an Azure resource to the East US Azure region. The resource will be used to perform sentiment analysis.<br/>How should you call the method?<br/>",
+  "question_images": [
+    "images/ai-102_topic-3_question-22_question_1.png"
+  ],
+  "answers": {
+    "A": "create_resource(\"res1\", \"ContentModerator\", \"S0\", \"eastus\")",
+    "B": "create_resource(\"res1\", \"TextAnalytics\", \"S0\", \"eastus\")",
+    "C": "create_resource(\"res1\", \"ContentModerator\", \"Standard\", \"East US\")",
+    "D": "create_resource(\"res1\", \"TextAnalytics\", \"Standard\", \"East US\")"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "B"
+  ],
+  "correct_answer_images": [],
+  "discussion": "The resource kind for performing sentiment analysis is \"TextAnalytics\" and the appropriate SKU for Azure Cognitive Services is \"S0\". Additionally, the region should be specified in lowercase with no spaces, which is \"eastus\".\n\nB is the answer\n\nB is right answer. TextAnalytics is justice.\n\nSKU is S0.\nRegion is eastus. \nSentiment analysis uses TextAnalytics\n\nfree tier==>S0, region eastus not East US, sentiment analysis=>TextAnalytics\n\nregion has to be in format of: eastus\nContentModerator cannot do sentimental Analsysis\n\nhttps://learn.microsoft.com/en-us/azure/synapse-analytics/machine-learning/tutorial-text-analytics-use-mmlspark\n\nIs there any way to get this entire Q & A for free? I'm unable to go past page #23, even though I've signed up for an account.\n\n@SaviB, did you found a solution? Accessed more than page #23?\n\nB is the answer.\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/language-service/sentiment-opinion-mining/overview\nSentiment analysis and opinion mining are features offered by Azure Cognitive Service for Language, a collection of machine learning and AI algorithms in the cloud for developing intelligent applications that involve written language. These features help you find out what people think of your brand or topic by mining text for clues about positive or negative sentiment, and can associate them with specific aspects of the text.\n\nB is correct\n\nCorrect answer is B. \ncreate_resource(\"res1\", \"TextAnalytics\", \"S0\", \"eastus\")\n\nNote TextAnalysis will be rebranded into Cognitive Services for Language Service\n\nWas on exam 7 Jun 2022\n\nAnswer is correct",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 22,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/75322-exam-ai-102-topic-3-question-22-discussion/"
+}

@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You have an Azure subscription.<br/><br/>You need to deploy an Azure AI Document Intelligence resource.<br/><br/>How should you complete the Azure Resource Manager (ARM) template? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-4_question-20_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-4_question-20_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-4_question-20_correct_1.png"
+  ],
+  "discussion": "Answer is correct.  Validated.\n1.  Create a FormRecognizer resource\n2.  On the resource screen, click Export Template under automation\n3.  Check the template created\n\nIn the era of AI, and in an AI exam, they expect people to remember this useless information\n\nMicrosoft.CognitiveServices is CORRECT because Azure AI Document Intelligence (formerly known as Form Recognizer) is part of the Cognitive Services suite. The correct resource type for deploying a Document Intelligence resource in an ARM template is Microsoft.CognitiveServices/accounts.\n\nFormRecognizer is CORRECT because Azure AI Document Intelligence (formerly known as Form Recognizer) is the correct \"kind\" value to use for deploying a Document Intelligence resource. This kind specifies that the resource being deployed is a Form Recognizer.\n\nI checked on portal. Given answer is correct\n\n\"kind\": \"FormRecognizer\"\n\nThe template specifies parameters like cognitiveServiceName, location, and sku.\nIt creates a Cognitive Services account of type CognitiveServices with the specified properties.",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 4,
+  "question_number": 20,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/135063-exam-ai-102-topic-4-question-20-discussion/"
+}

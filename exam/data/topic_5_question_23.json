@@ -1,0 +1,18 @@
+{
+  "question_text": "DRAG DROP<br/> -<br/><br/>You build a bot by using the Microsoft Bot Framework SDK.<br/><br/>You need to test the bot interactively on a local machine.<br/><br/>Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.<br/><br/>NOTE: More than one order of answer choices is correct. You will receive credit for any of the correct orders you select.<br/><br/><img src=\"images/ai-102_topic-5_question-23_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-5_question-23_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-5_question-23_correct_1.png"
+  ],
+  "discussion": "1. Build and run the bot\n2. Open Bot Framework Emulator\n3. Connect to bot endpoint\n\nhttps://learn.microsoft.com/en-us/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&tabs=csharp#run-a-bot-locally\nBefore connecting your bot to the Bot Framework Emulator, you need to run your bot locally.\n\nAnswer is correct.\n\nBuild and run the bot\nOpen the Bot Framework Emulator\nConnect to the bot endpoint\n\n1) Build and run the bot: This step compiles your bot's code and starts the bot application locally, making it accessible for testing.\n\n2) Open the Bot Framework Emulator: The Bot Framework Emulator is a desktop application that allows you to test and debug your bot locally. It simulates the bot's interactions as if it were live.\n\n3) Connect to the bot endpoint: You need to connect the Emulator to your running bot instance by specifying the bot's endpoint URL. This allows the Emulator to communicate with your bot and test it interactively.\n\n1. Build and run the bot\n2. Open Bot Framework Emulator\n3. Connect to bot endpoint\n\n1. Build and run the bot\n2. Open Bot Framework Emulator\n3. Connect to bot endpoint\n\n1. Build and run the bot\n2. Open Bot Framework Emulator\n3. Connect to bot endpoint\n\nGiven answer is correct and below is why:\n\n1: Build and run the bot: This step involves compiling the bot's code and starting it on your local machine to make it ready to accept connections.\n2: Open the Bot Framework Emulator: The Emulator is a desktop application that allows developers to test and debug their bots on localhost or remotely through a tunnel.\n3: Connect to the bot endpoint: Within the Bot Framework Emulator, you would connect to the bot's endpoint, usually something like http://localhost:3978/api/messages, to start interacting with your bot.\n\nI think the answer is correct. Because more than one order could be possible in this case I suppose another solution could be ordering the tasks inverting Build and Run with Open Bot Emulator:\n\n1. Open Bot Framework Emulator\n2. Build and run the bot\n3. Connect to bot endpoint",
+  "question_type": "drag_drop",
+  "exam": "ai-102",
+  "topic": 5,
+  "question_number": 23,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/111023-exam-ai-102-topic-5-question-23-discussion/"
+}

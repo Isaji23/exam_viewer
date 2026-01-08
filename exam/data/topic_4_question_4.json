@@ -1,0 +1,24 @@
+{
+  "question_text": "You need to implement a table projection to generate a physical expression of an Azure Cognitive Search index.<br/>Which three properties should you specify in the skillset definition JSON configuration table node? Each correct answer presents part of the solution.<br/>NOTE: Each correct selection is worth one point.<br/>",
+  "question_images": [],
+  "answers": {
+    "A": "tableName",
+    "B": "generatedKeyName",
+    "C": "dataSource",
+    "D": "dataSourceConnection",
+    "E": "source"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "A",
+    "B",
+    "E"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Answer is correct.  Below link shows the details\nhttps://docs.microsoft.com/en-us/azure/search/knowledge-store-projections-examples\n\nShinzo ABE!\n\nUS is wrong.\n\nhttps://learn.microsoft.com/en-us/azure/search/knowledge-store-projections-examples#define-a-table-projection\n\ntableName is CORRECT because it specifies the name of the table in the knowledge store where the projected data will be stored.\n\ngeneratedKeyName is CORRECT because it specifies the name of the key that uniquely identifies each row in the table.\n\nsource is CORRECT because it specifies the source fields from the enriched documents that are used to populate the table.\n\nABE are the answers\n\nthe skillset definition JSON configuration so tableName, generatedKeyName and source.\nABE is correct on this question in my personal opinion, which belongs to the hand-wringing squadron Turbo Rangers.\n\nFor implementing a table projection in a skillset definition for Azure Cognitive Search, the correct properties to specify in the JSON configuration are:\n\nA. tableName: Necessary for defining where the output data should be stored.\nB. generatedKeyName: Important for scenarios requiring unique identification of rows, though its necessity can vary.\nE. source: Essential for specifying the input data that will be processed and projected into the table.\nTherefore, the correct answers are A (tableName), B (generatedKeyName), and E (source), as they play direct roles in the configuration of a table projection within a skillset for Azure Cognitive Search.\n\nhttps://learn.microsoft.com/en-us/azure/search/knowledge-store-projections-examples#define-a-table-projection\n\ncorrect\n https://learn.microsoft.com/en-us/azure/search/knowledge-store-projections-examples#define-a-table-projection\n\nA, B and E are correct answers. \n\nTo define a table projection, use the tables array in the projections property. A table projection has three required properties:\n\ntableName: \tDetermines the name of a new table created in Azure Table Storage.\n\ngeneratedKeyName: \tColumn name for the key that uniquely identifies each row. The value is system-generated. If you omit this property, a column will be created automatically that uses the table name and \"key\" as the naming convention.\n\nsource: \tA path to a node in an enrichment tree. The node should be a reference to a complex shape that determines which columns are created in the table.\n\nhttps://docs.microsoft.com/en-us/azure/search/knowledge-store-projections-examples#define-a-table-projection",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 4,
+  "question_number": 4,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/75329-exam-ai-102-topic-4-question-4-discussion/"
+}

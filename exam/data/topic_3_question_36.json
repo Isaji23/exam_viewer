@@ -1,0 +1,21 @@
+{
+  "question_text": "You are building a social media extension that will convert text to speech. The solution must meet the following requirements:<br/><br/>•\tSupport messages of up to 400 characters.<br/>•\tProvide users with multiple voice options.<br/>•\tMinimize costs.<br/><br/>You create an Azure Cognitive Services resource.<br/><br/>Which Speech API endpoint provides users with the available voice options?",
+  "question_images": [],
+  "answers": {
+    "A": "https://uksouth.api.cognitive.microsoft.com/speechtotext/v3.0/models/base",
+    "B": "https://uksouth.customvoice.api.speech.microsoft.com/api/texttospeech/v3.0/longaudiosynthesis/voices",
+    "C": "https://uksouth.tts.speech.microsoft.com/cognitiveservices/voices/list",
+    "D": "https://uksouth.voice.speech.microsoft.com/cognitiveservices/v1?deploymentId={deploymentId}"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "C"
+  ],
+  "correct_answer_images": [],
+  "discussion": "The correct answer is C\nThe question is about providing users with all the available voice options.\nGet a list of voices\nYou can use the tts.speech.microsoft.com/cognitiveservices/voices/list endpoint to get a full list of voices for a specific region or endpoint.\nReference : https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/rest-text-to-speech?tabs=streaming\n\nAgreeing, as the only important question is: Which Speech API endpoint provides users with the available voice options? \n\nTherefor answer C should be correct for this one\n\nC is the answer.\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/rest-text-to-speech?tabs=streaming#get-a-list-of-voices\nou can use the tts.speech.microsoft.com/cognitiveservices/voices/list endpoint to get a full list of voices for a specific region or endpoint. Prefix the voices list endpoint with a region to get a list of voices for that region. For example, to get a list of voices for the westus region, use the https://westus.tts.speech.microsoft.com/cognitiveservices/voices/list endpoint.\n\nGotten this in Jul 2023 exam.\n\nEndpoint is used to retrieve a list of available voices for the Text-to-Speech (TTS) service. It provides users with multiple voice options, which is one of the requirements.\n\nC is correct\n\nNot A: endpoint has speechtotext, but we need text sto speech \nNot B: Customvoice.api, but we need to minimize costs \nNot D: does not provide users with multiple voice options \n--> C is the only reasonable answer\n\nSelected Answer: C\n\nI say this answer is C.\n\nC is answer.\n\nWhy C?\n\nC is right answer.\n\nonly C meets demand of minimum cost and support 400 characters with voice options\n\nA modified version of this was in the exam today.\n\nC is the correct answer\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/rest-text-to-speech?tabs=streaming\n\nThe answer is very clear at here https://learn.microsoft.com/en-us/azure/ai-services/speech-service/rest-text-to-speech?tabs=streaming#get-a-list-of-voices\n\nYou can use the tts.speech.microsoft.com/cognitiveservices/voices/list endpoint\n\n For example, to get a list of voices for the westus region, use the https://westus.tts.speech.microsoft.com/cognitiveservices/voices/list endpoint.\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/speech-service/regions\n\nEurope - UK South - uksouth\n\nChatGPT: The Speech API endpoint that provides users with the available voice options is B.",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 36,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/102574-exam-ai-102-topic-3-question-36-discussion/"
+}

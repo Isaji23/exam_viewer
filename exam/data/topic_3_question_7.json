@@ -1,21 +1,21 @@
 {
-  "question_text": "You have a Fabric workspace that contains an eventstream named EventStream1. EventStream1 outputs events to a table in a lakehouse.<br/>You need to remove files that are older than seven days and are no longer in use.<br/>Which command should you run?",
+  "question_text": "You are building a Conversational Language Understanding model for an e-commerce chatbot. Users can speak or type their billing address when prompted by the chatbot.<br/>You need to construct an entity to capture billing addresses.<br/>Which entity type should you use?<br/>",
   "question_images": [],
   "answers": {
-    "A": "VACUUM",
-    "B": "COMPUTE",
-    "C": "OPTIMIZE",
-    "D": "CLONE"
+    "A": "machine learned",
+    "B": "Regex",
+    "C": "list",
+    "D": "Pattern.any"
   },
   "answer_images": {},
   "correct_answer": [
     "A"
   ],
   "correct_answer_images": [],
-  "discussion": "The default retention period for the VACUUM command is 7 days, therefore it will remove files older than 7 days.\n\nVACUUM is the corrected answer\n\nA is correct\n\nvacuum\n\nhttps://learn.microsoft.com/en-us/fabric/data-engineering/lakehouse-table-maintenance",
+  "discussion": "The link provided mentions addresses under 'ML Entities with Structure'. Will be hard to identify all possible international addresses with RegEx.\n\nA - MAchine Learned\n\nin documentation\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/LUIS/concepts/entities#ml-entity-with-structure\n\n- ML Entity with Structure\nAn ML entity can be composed of smaller sub-entities, each of which can have its own properties. For example, an Address entity could have the following structure:\n    Address: 4567 Main Street, NY, 98052, USA\n    Building Number: 4567\n    Street Name: Main Street\n    State: NY\n    Zip Code: 98052\n    Country: USA\n\nFor the multiple-choice exam question you showed earlier, the correct answer is D. Pattern.any, because the scenario only asks to capture billing addresses — not to break them down into sub-entities.\n\nShould be pattern Any\n\nmachine learned is CORRECT because billing addresses can vary widely in format and content, making it difficult to capture them with predefined patterns or lists. A machine learned entity can be trained on a diverse set of examples to accurately capture and generalize the variations in billing addresses provided by users.\n\nAnswer is A\n\nAzure bot service no longer part of the exam, no need to revise this topic - https://trainingsupport.microsoft.com/en-us/mcp/forum/all/azure-ai102-chatbots-service/798c0cfa-3475-474e-b4ec-8ab7fc790e81#:~:text=Yes%2C%20Julian%20is%20correct%2C%20based,not%20appear%20in%20the%20exam.\n\nFor me e GPT 3.5: machine learned\n\nI know you don't know what I'm talking about, but if you think as Crossroads leads you, the answer is A.\n\nOK. Now I use A.\n\nAs per Gemini chatbot, the answer is B. Regex. The following is the explanation it gives:\nRegex offers a powerful and efficient way to define patterns for capturing specific text formats, making it ideal for structured data like billing addresses. You can design a regex pattern to capture elements like street address, city, state, zip code, and potentially country code.\n\n; and why the answer is not 'machine learned':\nWhile machine learning can be powerful for complex entity recognition, it might be overkill for a well-defined structure like billing addresses. Training a machine learning model could be time-consuming and resource-intensive compared to a simpler solution.\n\nIt must be A.\n\non exam, I selected machine learned\n\nRegex would be a good solution if the addresses were in a specific area (e.g, USA). But since that information is not given, you have to assume any type of address. So the correct answer in this case is A.\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/luis/concepts/entities#ml-entity-with-structure\n\nit should be A\n\nA. machine learned",
   "question_type": "multiple_choice",
-  "exam": "dp-700",
+  "exam": "ai-102",
   "topic": 3,
   "question_number": 7,
-  "url": "https://www.examtopics.com/discussions/microsoft/view/153756-exam-dp-700-topic-3-question-7-discussion/"
+  "url": "https://www.examtopics.com/discussions/microsoft/view/80186-exam-ai-102-topic-3-question-7-discussion/"
 }

@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You have an Azure subscription that contains an Azure AI Content Safety resource.<br/><br/>You are building a social media app that will enable users to share images.<br/><br/>You need to configure the app to moderate inappropriate content uploaded by the users.<br/><br/>How should you complete the code? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-8_question-9_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-8_question-9_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-8_question-9_correct_1.png"
+  ],
+  "discussion": "Answer is ContentSafetyClient and client.AnalyzeImage(request);\n\nCorrect, here is a link...\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/content-safety/quickstart-image?tabs=visual-studio%2Cwindows&pivots=programming-language-csharp\n\nContentSafetyClient is CORRECT. This class is part of the Azure AI Content Safety SDK and is used to interact with the content moderation service to analyze and moderate content such as images or text for inappropriate material. In this case, it allows the app to moderate the user-uploaded images for inappropriate content, which aligns with the goal of filtering and moderating content in a social media application.\n\nclient.AnalyzeImage(request) is CORRECT. This method uses the ContentSafetyClient to analyze images for inappropriate content based on the provided request. The method is specifically designed for image analysis, which aligns with the requirement to moderate images uploaded by users in your app.",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 8,
+  "question_number": 9,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/149970-exam-ai-102-topic-8-question-9-discussion/"
+}

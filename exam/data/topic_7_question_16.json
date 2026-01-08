@@ -1,0 +1,21 @@
+{
+  "question_text": "You have an Azure subscription.<br/><br/>You need to build an app that will compare documents for semantic similarity. The solution must meet the following requirements:<br/><br/>•\tReturn numeric vectors that represent the tokens of each document.<br/>•\tMinimize development effort.<br/><br/>Which Azure OpenAI model should you use?",
+  "question_images": [],
+  "answers": {
+    "A": "GPT-3.5",
+    "B": "GPT-4",
+    "C": "embeddings",
+    "D": "DALL-E"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "C"
+  ],
+  "correct_answer_images": [],
+  "discussion": "embeddings is CORRECT because it is designed to convert text into numeric vectors that represent the semantic meaning of tokens within a document. These embeddings can then be compared to assess the similarity between documents. This approach directly meets the requirement to return numeric vectors and minimizes development effort, as the embeddings model is specifically built for this purpose.\n\nC\n\nembeddings\n\nc for sure\n\nembeddings correct\n\nCopilot says Azure OpenAI Service embeddings.\n\ncorrect",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 7,
+  "question_number": 16,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/143644-exam-ai-102-topic-7-question-16-discussion/"
+}

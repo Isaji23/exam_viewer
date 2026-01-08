@@ -1,24 +1,21 @@
 {
-  "question_text": "You have five Fabric workspaces.<br/>You are monitoring the execution of items by using Monitoring hub.<br/>You need to identify in which workspace a specific item runs.<br/>Which column should you view in Monitoring hub?",
+  "question_text": "You have a Language Understanding resource named lu1.<br/>You build and deploy an Azure bot named bot1 that uses lu1.<br/>You need to ensure that bot1 adheres to the Microsoft responsible AI principle of inclusiveness.<br/>How should you extend bot1?<br/>",
   "question_images": [],
   "answers": {
-    "A": "Start time",
-    "B": "Capacity",
-    "C": "Activity name",
-    "D": "Submitter",
-    "E": "Item type",
-    "F": "Job type",
-    "G": "Location"
+    "A": "Implement authentication for bot1.",
+    "B": "Enable active learning for lu1.",
+    "C": "Host lu1 in a container.",
+    "D": "Add Direct Line Speech to bot1."
   },
   "answer_images": {},
   "correct_answer": [
-    "G"
+    "D"
   ],
   "correct_answer_images": [],
-  "discussion": "Correct. The Location shows the Workspace.\n\nhttps://learn.microsoft.com/en-us/training/modules/monitor-fabric-items/3-use-monitor-hub\n\nI've checked Fabric. It is location.\n\nLooking at Fabric, the answer is Location = Workspace\n\nUbicación. Confirmado!\n\nLocation\n\n🔍 Explanation:\nIn Microsoft Fabric's Monitoring Hub, when you're tracking execution details (e.g., pipelines, notebooks, dataflows), each execution is associated with a Capacity — and each Fabric Capacity is linked to a specific workspace.\nThe Capacity column in the Monitoring Hub reflects the name of the workspace where the item ran, because each workspace operates under a specific capacity, and the Monitoring Hub shows this to help distinguish execution sources.\n\nI have gone into my Monitor in Fabric, it is Location, not Capacity. \nCapacity provides a GUID that is not unique to a Workspace.\n\nAnswer is correct\n\nLocation\n\nIn Monitoring Hub, Location = Workspace\n\nProvided answer \"Location\" is correct",
+  "discussion": "I disagree with JTWang because Direct Line Speech lets the bot speak outloud. This supports Microsoft's goal of AI Inclusiveness because you can include people with disabilities.\n\nAgreed the answer should be D, which would people who don't text. \nActive learning would improve the overall quality, but not necessary make it more inclusive.\n\nTotally agree with you\n\nAnswer is B: user can participate the content of QnA knowledge base\nhttps://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/how-to/use-active-learning\nThe Active learning suggestions feature allows you to improve the quality of your knowledge base by suggesting alternative questions, based on user-submissions, to your question and answer pair. You review those suggestions, either adding them to existing questions or rejecting them.\n\nD is correct\n\nhttps://azure.microsoft.com/en-us/blog/direct-line-with-speech-now-available-in-preview/ - This will enable endusers to converse with bots without having to type.\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/direct-line-speech\n\n Direct Line Speech allows the bot to support speech input and output, making it more accessible to users with different abilities and preferences. This adheres to the Microsoft responsible AI principle of inclusiveness by providing a more inclusive user experience.\n\nD is correct\n\nAdd Direct Line Speech\n\nB. Enable active learning for lu1.\n\nExplanation:\n\nActive learning is a mechanism that allows the Language Understanding (LU) service to improve over time by actively seeking feedback from users.\nBy enabling active learning for lu1, the bot can continuously learn from interactions with users, improving its understanding and inclusiveness over time.\nWhile options like implementing authentication, hosting lu1 in a container, or adding Direct Line Speech may be relevant for other aspects of the bot's functionality, enabling active learning directly addresses the goal of improving inclusiveness through continuous learning and adaptation.\n\nD. Add Direct Line Speech to bot1.\nA, B, and C might be useful for other purposes, they do not directly contribute to the principle of inclusiveness. Authentication (A) is more about security, active learning (B) is about improving the bot’s understanding over time, and hosting in a container. (C) is about deployment flexibility. None of these directly enhance the inclusiveness of the bot.\n\nOther options apparently have nothing to do with \"inclusiveness\"\n\nIt was in today's exam -  Feb-04-2023\n\nThe correct answer is D because it can help include people who are unable to interact with limbs\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/direct-line-speech\n\nD is the answer.\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/direct-line-speech\nDirect Line Speech is a robust, end-to-end solution for creating a flexible, extensible voice assistant. It is powered by the Bot Framework and its Direct Line Speech channel, that is optimized for voice-in, voice-out interaction with bots.\n\nVoice assistants listen to users and take an action in response, often speaking back. They use speech to text to transcribe the user's speech, then take action on the natural language understanding of the text. This action frequently includes spoken output from the assistant generated with text to speech.\n\nGotten this in Jul 2023 exam.\n\nEnabling Direct Line Speech for bot1 would improve accessibility by providing users with the ability to interact with the bot using natural language and speech. Therefore, D is a valid option to ensure that bot1 adheres to the Microsoft responsible AI principle of inclusiveness.\n\nDirect line speech enables the bots to speak\n\nB is correct answer.\n\nNo, because even if enabling active learning could improve the bot answers over time with more accurate understanding of questions... it does not help people that are not able to use a textual bot.\n\nQuestion is about how to include larger audience, like blind users or others, not how to improve bot quality\n\nso D is the right one\n\nfrom JTWang's comment",
   "question_type": "multiple_choice",
-  "exam": "dp-700",
+  "exam": "ai-102",
   "topic": 1,
   "question_number": 29,
-  "url": "https://www.examtopics.com/discussions/microsoft/view/153657-exam-dp-700-topic-1-question-29-discussion/"
+  "url": "https://www.examtopics.com/discussions/microsoft/view/75222-exam-ai-102-topic-1-question-29-discussion/"
 }

@@ -1,21 +1,19 @@
 {
-  "question_text": "You are implementing a medallion architecture in a Fabric lakehouse.<br/><br/>You plan to create a dimension table that will contain the following columns:<br/><br/>•\tID<br/>•\tCustomerCode<br/>•\tCustomerName<br/>•\tCustomerAddress<br/>•\tCustomerLocation<br/>•\tValidFrom<br/>•\tValidTo<br/><br/>You need to ensure that the table supports the analysis of historical sales data by customer location at the time of each sale.<br/><br/>Which type of slowly changing dimension (SCD) should you use?",
-  "question_images": [],
-  "answers": {
-    "A": "Type 2",
-    "B": "Type 0",
-    "C": "Type 1",
-    "D": "Type 3"
-  },
-  "answer_images": {},
-  "correct_answer": [
-    "A"
+  "question_text": "HOTSPOT<br/> -<br/><br/>You develop a test method to verify the results retrieved from a call to the Computer Vision API. The call is used to analyze the existence of company logos in images. The call returns a collection of brands named brands.<br/><br/>You have the following code segment.<br/><br/><img src=\"images/ai-102_topic-2_question-29_html_1.png\"/><br/><br/>For each of the following statements, select Yes if the statement is true. Otherwise, select No.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-2_question-29_html_2.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-2_question-29_question_1.png",
+    "images/ai-102_topic-2_question-29_question_2.png"
   ],
-  "correct_answer_images": [],
-  "discussion": "In a Slowly Changing Dimension (SCD) Type 2, historical data is preserved by adding a new record each time an attribute (like CustomerLocation) changes. This makes it ideal when:\n\nYou need to track historical changes over time\nYou want to perform analysis as of the state at the time of the sale\n\nI agree, historical is type 2.\n\nA is correct\n\nhttps://learn.microsoft.com/en-us/fabric/data-warehouse/dimensional-modeling-dimension-tables#manage-historical-change",
-  "question_type": "multiple_choice",
-  "exam": "dp-700",
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-2_question-29_correct_1.png"
+  ],
+  "discussion": "YYN is the answer.\n\nhttps://learn.microsoft.com/en-us/rest/api/computervision/3.1/detect-objects/detect-objects?tabs=HTTP#boundingrect\nA bounding box for an area inside an image.\n- x\nX-coordinate of the top left point of the area, in pixels.\n- y\nY-coordinate of the top left point of the area, in pixels.\n- h\nHeight measured from the top-left point of the area, in pixels.\n- w\nWidth measured from the top-left point of the area, in pixels.\n\nSame as Question 14.\nhttps://www.examtopics.com/discussions/microsoft/view/55050-exam-ai-102-topic-2-question-14-discussion\n\nYes is CORRECT because the code will display the name of each detected brand with a confidence equal to or higher than 75 percent. The if condition checks if brand.Confidence is greater than or equal to 0.75, and if so, it prints the brand name along with its coordinates.\nYes is CORRECT. The properties brand.Rectangle.X and brand.Rectangle.Y represent the X and Y coordinates of the top-left point of the area, respectively.\nNo is CORRECT because the code does not directly display the coordinates for the bottom-right corner of the rectangle. It displays the coordinates for the top-left corner (brand.Rectangle.X, brand.Rectangle.Y) and the width (brand.Rectangle.W) and height (brand.Rectangle.H). The bottom-right corner coordinates are not explicitly calculated or displayed.\n\nYYN is the answer.\n\nThe answer is YYN.\n\nYes Yes No\n\nanswer is correct: Y Y N\nresponse only display the top left corner and width and height from this origin\n\nYYN: correct answer and duplicated question\n\nYYY - the last one is Y because all coordinates together give you top left and bottom right.\n\nYYN. not the bottom right\n\nno, you can calculate the bottom right corner coordinates but they aren't displyed in the code provided\n\nCorrect YYN. The last one is width and height.",
+  "question_type": "image_only",
+  "exam": "ai-102",
   "topic": 2,
   "question_number": 29,
-  "url": "https://www.examtopics.com/discussions/microsoft/view/302463-exam-dp-700-topic-2-question-29-discussion/"
+  "url": "https://www.examtopics.com/discussions/microsoft/view/108601-exam-ai-102-topic-2-question-29-discussion/"
 }

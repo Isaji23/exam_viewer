@@ -1,0 +1,24 @@
+{
+  "question_text": "You have an Azure subscription that contains an Azure AI Document Intelligence resource named AIdoc1 in the S0 tier.<br/><br/>You have the files shown in the following table.<br/><br/><img src=\"images/ai-102_topic-4_question-28_html_1.png\"/><br/><br/>You need to train a custom extraction model by using AIdoc1.<br/><br/>Which files can you upload to Document Intelligence Studio?",
+  "question_images": [
+    "images/ai-102_topic-4_question-28_question_1.png"
+  ],
+  "answers": {
+    "A": "File1, File2, and File4 only",
+    "B": "File2, and File5 only",
+    "C": "File2, File4, and File5 only",
+    "D": "File1, File2, File3, File4, and File5",
+    "E": "File1 and File2 only"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "E"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Given the updated information that the S0 tier now supports files up to 500 MB, let’s re-evaluate each file's compatibility with Azure AI Document Intelligence:\n\nFile1 (JPG, 400MB) - Supported format and within the 500MB limit (supported).\nFile2 (PDF, 250MB) - Supported format and within the 500MB limit (supported).\nFile3 (PNG, 600MB) - Supported format but exceeds the 500MB limit (not supported).\nFile4 (XLSX, 900MB) - Unsupported format (not supported).\nFile5 (PDF, 160MB, password-locked) - Password-protected, which is not supported (not supported).\nGiven this, the files that can be uploaded are:\n\nFile1 (JPG, 400MB)\nFile2 (PDF, 250MB)\nCorrect answer: E. File1 and File2 only\n\nAzure AI Document Intelligence in the S0 tier supports JPG, PNG, PDF, and Excel (XLSX) files. However, password-locked PDFs cannot be processed unless unlocked, which excludes File5. The max file size for anayzing supported documents is 500 MB so File3 and File4 are excluded.\n\nFile1 (JPG, 400 MB) is supported and under the size limit.\nFile2 (PDF, 250 MB, not password-locked) is supported and under the size limit.\n\nAnswer is E\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/service-limits?view=doc-intel-4.0.0\n\nAzure AI Document Intelligence operates on the raw content of the PDF to extract text, tables, and other elements. Encryption prevents the service from accessing the necessary data for processing.\n\nFile1 and File2 only",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 4,
+  "question_number": 28,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/150257-exam-ai-102-topic-4-question-28-discussion/"
+}

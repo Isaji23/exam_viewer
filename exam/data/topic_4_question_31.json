@@ -1,0 +1,18 @@
+{
+  "question_text": "DRAG DROP<br/> -<br/><br/>You have an Azure subscription that contains a storage account named sa1 and an Azure AI Document Intelligence resource named DI1.<br/><br/>You need to create and train a custom model in DI1 by using Document Intelligence Studio. The solution must minimize development effort.<br/><br/>Which four actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.<br/><br/><img src=\"images/ai-102_topic-4_question-31_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-4_question-31_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-4_question-31_correct_1.png"
+  ],
+  "discussion": "I think the answer is as follows.\n\nCreate a custom model project and link the project to sa1\nUpload five sample documents.\nApply labels to the sample documents.\nTrain and test the model.\n\nSince the upload of the documents is done to the storage account, which is already present before we create the custom model project, I think the order in the original answer given is correct.\n\nWhat you think isn't relevant compared to documentation. Read the documentation and find out Gadez is correct.\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/quickstarts/try-document-intelligence-studio?view=doc-intel-4.0.0\n\nGiven answer seems correct since documents would be uploaded in SA already. https://learn.microsoft.com/en-us/training/modules/work-form-recognizer/9-form-recognizer-studio\n\n1) Create a custom model project and link the project to sa1: This step initializes the custom model project in Document Intelligence Studio and links it to the storage account (sa1) to access the necessary training data.\n\n2) Upload five sample documents: Uploading a minimum of five documents is sufficient to train a basic custom model. This reduces development effort while meeting the minimum requirements for training.\n\n3) Apply labels to the sample documents: Label the uploaded documents to define the specific fields or data points that the custom model needs to extract. This step is essential for supervised learning.\n\n4) Train and test the model: Once labeling is complete, train the model to recognize patterns in the labeled data and test its performance to ensure it meets accuracy requirements.\n\nIf you did not create custom model project , where do you upload images ? so for me:\nCreate a custom model project and link the project to sa1\nUpload five sample documents.\nApply labels to the sample documents.\nTrain and test the model.\n\nTo the storage account, which has already been provisioned. The order of the two first actions is not relevant. However, better be on the safe side rather than having to challenge the answer...\n\nChristian is correct in the order.  The project needs to be created first because it defines the workspace and configuration that tells Document Intelligence Studio where to look for your documents, how to organize them, and how to manage the labeling and training process.",
+  "question_type": "drag_drop",
+  "exam": "ai-102",
+  "topic": 4,
+  "question_number": 31,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/149767-exam-ai-102-topic-4-question-31-discussion/"
+}

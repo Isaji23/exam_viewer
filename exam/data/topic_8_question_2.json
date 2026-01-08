@@ -1,0 +1,23 @@
+{
+  "question_text": "You have an Azure subscription that contains an Azure AI Content Safety resource named CS1.<br/><br/>You create a test image that contains a circle.<br/><br/>You submit the test image to CS1 by using the curl command and the following command-line parameters.<br/><br/><img src=\"images/ai-102_topic-8_question-2_html_1.png\"/><br/><br/>What should you expect as the output?",
+  "question_images": [
+    "images/ai-102_topic-8_question-2_question_1.png"
+  ],
+  "answers": {
+    "A": "0",
+    "B": "0.0",
+    "C": "7",
+    "D": "100"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "A"
+  ],
+  "correct_answer_images": [],
+  "discussion": "0 is CORRECT because the image being submitted contains only a simple circle, which does not contain any violent content. When using Azure AI Content Safety with the \"Violence\" category and the outputType set to \"EightSeverityLevels,\" the service evaluates the image for signs of violence. The \"EightSeverityLevels\" output ranges from 0 to 7, where 0 indicates \"Non-offensive\" and 7 represents \"Very High\" severity. Since a circle is considered harmless, the expected severity score is 0, indicating no detection of violent content.\n\nA is correct\n\nThe severity levels are from 0 - 7, with 0 being the lowest, if any form of offensive material, and 7 being very naughty/offensive.\n\nGiven this, A is the answer.\n\nA is correct.\n\nIn this scenario, you are submitting an image to an Azure AI Content Safety resource for evaluation, specifically looking for violent content using the \"EightSeverityLevels\" output type. The image you submitted contains a simple circle, which likely doesn't depict any violent or harmful content.\n\nGiven that the image is non-violent, the expected severity level for violence should be the lowest possible score. In the \"EightSeverityLevels\" configuration, the scores range from 0 to 7, with 0 representing the least severe and 7 representing the most severe.\n\nThus, the correct output in this case would be:\n\nA. 0\n\n0: Non-offensive\n1-2: Very Low\n3-4: Low\n5-6: Moderate\n7-8: High\n9-10: Very High\n\n0: Non-offensive\n1: Very Low\n2: Low\n3: Moderate-Low\n4: Moderate\n5: Moderate-High\n6: High\n7: Very High",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 8,
+  "question_number": 2,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/149577-exam-ai-102-topic-8-question-2-discussion/"
+}

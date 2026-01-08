@@ -1,18 +1,21 @@
 {
-  "question_text": "HOTSPOT<br/> -<br/><br/>Your company has three newly created data engineering teams named Team1, Team2, and Team3 that plan to use Fabric. The teams have the following personas:<br/><br/>•\tTeam1 consists of members who currently use Microsoft Power BI. The team wants to transform data by using by a low-code approach.<br/>•\tTeam2 consists of members that have a background in Python programming. The team wants to use PySpark code to transform data.<br/>•\tTeam3 consists of members who currently use Azure Data Factory. The team wants to move data between source and sink environments by using the least amount of effort.<br/><br/>You need to recommend tools for the teams based on their current personas.<br/><br/>What should you recommend for each team? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/dp-700_topic-2_question-25_html_1.png\"/>",
-  "question_images": [
-    "images/dp-700_topic-2_question-25_question_1.png"
-  ],
-  "answers": {},
+  "question_text": "You have an Azure subscription that contains an AI enrichment pipeline in Azure Cognitive Search and an Azure Storage account that has 10 GB of scanned documents and images.<br/><br/>You need to index the documents and images in the storage account. The solution must minimize how long it takes to build the index.<br/><br/>What should you do?",
+  "question_images": [],
+  "answers": {
+    "A": "From the Azure portal, configure parallel indexing.",
+    "B": "From the Azure portal, configure scheduled indexing.",
+    "C": "Configure field mappings by using the REST API.",
+    "D": "Create a text-based indexer by using the REST API."
+  },
   "answer_images": {},
-  "correct_answer": [],
-  "correct_answer_images": [
-    "images/dp-700_topic-2_question-25_correct_1.png"
+  "correct_answer": [
+    "A"
   ],
-  "discussion": "Looks correct.\n\nAnswer looks correct to me:\nDataflow,\nNotebooks,\nData Pipelines.\n\nTeam1:Dataflow Gen2 dataflow\nTeam2:Notebooks\nTeam3:Data pipelines\n\nit is coorect\n\nT1 -> Dataflow Gen2 dataflow; That's just normal low/no code configuration. So checks's out\nT2 -> PySpark/Python: Notebooks\nT3 -> Focus on moving data (Datapipeline)",
-  "question_type": "image_only",
-  "exam": "dp-700",
+  "correct_answer_images": [],
+  "discussion": "A is the answer.\n\nhttps://learn.microsoft.com/en-us/azure/search/search-howto-large-index#run-indexers-in-parallel\nIf you partition your data, you can create multiple indexer-data-source combinations that pull from each data source and write to the same search index. Because each indexer is distinct, you can run them at the same time, populating a search index more quickly than if you ran them sequentially.\n\nthanks for explanation\n\nParallel indexing allows you to process multiple documents simultaneously, thereby minimizing the time it takes to build the index. This approach is suitable for handling large volumes of documents and images efficiently. \n\nA is correct\n\nA is correct.\n\nThe answer to this question is A.\n\nA is right answer.\n\nanswer is correct\n\nTo minimize the time it takes to build the index for the documents and images in the Azure Storage account, the best approach would be to use parallel indexing.\nTherefore, the correct option is:\nA. From the Azure portal, configure parallel indexing.\n\nConfiguring parallel indexing allows you to process multiple documents or images simultaneously\n\nhttps://learn.microsoft.com/en-us/azure/search/search-howto-large-index\n\nseems logical",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
   "topic": 2,
   "question_number": 25,
-  "url": "https://www.examtopics.com/discussions/microsoft/view/302461-exam-dp-700-topic-2-question-25-discussion/"
+  "url": "https://www.examtopics.com/discussions/microsoft/view/108276-exam-ai-102-topic-2-question-25-discussion/"
 }

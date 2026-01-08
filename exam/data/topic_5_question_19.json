@@ -1,0 +1,16 @@
+{
+  "question_text": "SIMULATION -<br/>You need to create a QnA Maker service named QNA12345678 in the East US Azure region. QNA12345678 must contain a knowledge base that uses the questions and answers available at https://support.microsoft.com/en-us/help/12435/windows-10-upgrade-faq.<br/>To complete this task, sign in to the Azure portal and the QnA Maker portal.<br/>",
+  "question_images": [],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-5_question-19_correct_1.png"
+  ],
+  "discussion": "Simulation question will not appear on the actual exam as of May 26, 2024.\n\nIf the simulation question is not on the real exam, delete this question and the related simulation question.\n\nThe QnA Maker service is being retired and you can no longer creare a new QnA Marker resource. Instead as of March 2024:\n1. Create a Language service reosource in Azure AI services with Custom question answering selected\n2. Launch Language Studio, select Custom question answering\n3. Create a new Project and add the provided URL as a data source\n\nDeprecated service.\n1. Create the Question and answering service on the azure portal with the information provided in the question (name and location)\n2. Create a new project on the Language Studio portal\n3. Choose in the project the Question and Answering resource created previously\n4. Click on the project\n5. + Add source \n6. Choose URL\n7. Enter the provided url in the question\n8. Add",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 5,
+  "question_number": 19,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/125598-exam-ai-102-topic-5-question-19-discussion/"
+}

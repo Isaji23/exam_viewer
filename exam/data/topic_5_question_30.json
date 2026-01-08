@@ -1,0 +1,19 @@
+{
+  "question_text": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.<br/><br/>After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.<br/><br/>You are building a chatbot that will use question answering in Azure Cognitive Service for Language.<br/><br/>You have a PDF named Doc1.pdf that contains a product catalogue and a price list.<br/><br/>You upload Doc1.pdf and train the model.<br/><br/>During testing, users report that the chatbot responds correctly to the following question: What is the price of <product>?<br/><br/>The chatbot fails to respond to the following question: How much does <product> cost?<br/><br/>You need to ensure that the chatbot responds correctly to both questions.<br/><br/>Solution: From Language Studio, you add alternative phrasing to the question and answer pair, and then retrain and republish the model.<br/><br/>Does this meet the goal?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</product></product>",
+  "question_images": [],
+  "answers": {
+    "A": "Yes",
+    "B": "No"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "A"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Yes is CORRECT because adding alternative phrasing to the question and answer pair in Language Studio can help the model recognize different ways users might ask the same question. By providing alternative phrasings, you are effectively training the model to understand and respond to variations of the question, ensuring that it can handle both \"What is the price of?\" and \"How much does cost?\".\n\n\"From Language Studio, you add alternative phrasing to the question and answer pair, and then retrain and republish the model.\" is correct solution. HipHop!\n\nA is right answer.\n\nYes\n adding alternative phrasing to the question and answer pair in Azure Cognitive Service for Language, then retraining and republishing the model, meets the goal. This approach allows the model to understand and respond to variations in how questions are asked, improving its ability to correctly answer questions with similar meanings but different wordings.\n\nA modified version of this was in the exam today.\n\ncorrect\nhttps://learn.microsoft.com/en-us/azure/ai-services/language-service/question-answering/concepts/best-practices#when-should-you-add-alternate-questions-to-question-and-answer-pairs\n\n\"Question: What is the price of Microsoft Stock?\"\n\n\"How much does a Microsoft share cost?\"\n\nat https://learn.microsoft.com/en-us/azure/ai-services/language-service/question-answering/concepts/best-practices#when-should-you-add-alternate-questions-to-question-and-answer-pairs\n\nA is the answer.\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/language-service/question-answering/concepts/best-practices#when-should-you-add-alternate-questions-to-question-and-answer-pairs\n\nA from ChatGPT 3.5.",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 5,
+  "question_number": 30,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/111868-exam-ai-102-topic-5-question-30-discussion/"
+}

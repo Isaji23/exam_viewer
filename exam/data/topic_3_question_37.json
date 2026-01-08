@@ -1,0 +1,21 @@
+{
+  "question_text": "You develop a custom question answering project in Azure Cognitive Service for Language. The project will be used by a chatbot.<br/><br/>You need to configure the project to engage in multi-turn conversations.<br/><br/>What should you do?",
+  "question_images": [],
+  "answers": {
+    "A": "Add follow-up prompts.",
+    "B": "Enable active learning.",
+    "C": "Add alternate questions.",
+    "D": "Enable chit-chat."
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "A"
+  ],
+  "correct_answer_images": [],
+  "discussion": "A is the answer.\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/language-service/question-answering/overview#multi-turn-conversations\nQuestion answering provides multi-turn prompts and active learning to help you improve your basic question and answer pairs.\n\nMulti-turn prompts give you the opportunity to connect question and answer pairs. This connection allows the client application to provide a top answer and provides more questions to refine the search for a final answer.\n\nGotten this in Jul 2023 exam.\n\nHow does the quoted text point to follow-up-prompt. It could be active learning\n\nFollow-up prompts enable the question answering project to handle multi-turn conversations by providing contextually relevant follow-up questions and answers. This helps in maintaining the flow of a conversation and engaging users effectively.\n\nAnswer is A\n\nUse follow-up prompts and context to manage the multiple turns, known as multi-turn, for your bot from one question to another.\nhttps://learn.microsoft.com/en-us/azure/ai-services/qnamaker/how-to/multi-turn\n\nThe expected answer of Microsoft is active-learning. Not follow-up prompt. Chatgpt is not correct and it is going for the literal meaning of follow-up prompt and that is not right\n\nI'm wrong as per Microsoft documentation:\n\"Use follow-up prompts to create multiple turns of a conversation\"\nAnswer is follow-up prompts\n\nSelected Answer: A\n\nGot this in the exam, Jun 2024.\n\nI say this answer is A. The rising of the shield hero.\n\nA is answer.\n\nA. Add follow-up prompts.\n\nA is right answer.\n\nno doubt answer is A\n\nno doubt follow up prompt\n\nMulti-turn conversations in the context of chatbots or conversational AI refer to interactions where the dialogue between the user and the bot extends beyond a single question and response. In these conversations, the bot and the user exchange multiple messages, and the bot's responses are contextually dependent on the previous parts of the conversation.\n\nTo configure a project for multi-turn conversations in Azure Cognitive Services for Language, you should:\n\nA. Add follow-up prompts.\n\nAdding follow-up prompts allows your question answering model to engage in multi-turn conversations by providing responses and asking for clarifications or additional information when a user's query is ambiguous or incomplete. This is a key feature for enabling conversational interactions with the chatbot. (ChatGPT)\n\nanother evidence chatgpt cannot make sense of the bad naming from Microsoft. \"follow-up prompt\" is not a follow up. It is just additional details for a prompt. For example a \"see also\".\n\nRef: https://learn.microsoft.com/en-us/azure/cognitive-services/qnamaker/how-to/multi-turn\n\nChatGPT confirms :\nTo configure the project to engage in multi-turn conversations, you should add follow-up prompts. Follow-up prompts are a way to ask additional questions or provide more information to help the user clarify their intent. By adding follow-up prompts, the chatbot can engage in a back-and-forth conversation with the user to gather additional information and ultimately provide a better answer.\n\nTherefore, the correct answer is A. Add follow-up prompts.",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 37,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/102802-exam-ai-102-topic-3-question-37-discussion/"
+}

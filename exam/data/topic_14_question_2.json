@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT -<br/>You are developing the knowledgebase by using Azure Cognitive Search.<br/>You need to build a skill that will be used by indexers.<br/>How should you complete the code? To answer, select the appropriate options in the answer area.<br/>NOTE: Each correct selection is worth one point.<br/>Hot Area:<br/><img class=\"in-exam-image\" src=\"images/ai-102_topic-14_question-2_html_1.png\"/><br/>",
+  "question_images": [
+    "images/ai-102_topic-14_question-2_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-14_question-2_correct_1.png"
+  ],
+  "discussion": "Answer is correct however... the Entity Recognition skill is now discontinued replaced by Microsoft.Skills.Text.V3.EntityRecognitionSkill.  \n\nAlso categories will only allow \"Person\" as valid category type - not \"Persons\".\n\nThis (old) version allows output to be either \"entities\" or \"namedEntities\"\nNew version only allows \"namedEntities\" from answer list.\n\nhttps://docs.microsoft.com/en-us/azure/search/cognitive-search-skill-entity-reco\n\nthanks for your contribution\n\nSo, the second option should be nameEntities, isn't it ??\n\nIn the new V3 model you link to (https://learn.microsoft.com/en-us/azure/search/cognitive-search-skill-entity-recognition), namedEntities are not including any external source links like wiki. So namedEntities cannot be the answer. This functionality has been moved into a separate skill Entity Linking:\nhttps://learn.microsoft.com/en-us/azure/search/cognitive-search-skill-entity-linking-v3\nSo as it stands now, I would say the question would require alteration so that a second skill can be called to satisfy the requirement of supplying the sources in the output.\n\nI also got this on July 3 2023 exam, but it's changed to Skills.Text.V3.\n\nDropdown 1 is \"categories\": [\"Locations\", \"Person\", \"Organization\"] because it specifies the categories of entities that the EntityRecognitionSkill should extract from the text. This matches the outputs defined in the skill, which are \"person,\" \"locations,\" and \"organization.\"\n\nDropdown 2 is { \"name\": \"namedEntities\" } because it aligns with the standard naming convention used in Azure Cognitive Search for storing the results of entity recognition. Using \"namedEntities\" makes it clear that the output includes various types of recognized entities, which can include persons, locations, organizations, etc.\n\nperson and namedEntity\n\nThis question was in the test I took in August 2024\n\nIs this question still available on May 21, 2024?\n\nIs this question still available on May 21, 2024?\n\nThe document processing solution aims to extract information related to persons, locations, and organizations.\nAdditionally, it should recognize named entities and assign them to appropriate categories.\n\nA modified version of this was in the exam today.\n\nGotten this in Jul 2023 exam.\n\nAgreed",
+  "question_type": "hot_area",
+  "exam": "ai-102",
+  "topic": 14,
+  "question_number": 2,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/77702-exam-ai-102-topic-14-question-2-discussion/"
+}

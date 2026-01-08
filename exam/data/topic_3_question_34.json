@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You are building content for a video training solution.<br/><br/>You need to create narration to accompany the video content. The solution must use Custom Neural Voice.<br/><br/>What should you use to create a custom neural voice, and which service should you use to generate the narration? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct answer is worth one point.<br/><br/><img src=\"images/ai-102_topic-3_question-34_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-3_question-34_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-3_question-34_correct_1.png"
+  ],
+  "discussion": "1. Speech Studio portal\n2. Text-to-speech\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/custom-neural-voice#how-does-it-work\nTo create a custom neural voice, use Speech Studio to upload the recorded audio and corresponding scripts, train the model, and deploy the voice to a custom endpoint.\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/text-to-speech\nText to speech enables your applications, tools, or devices to convert text into humanlike synthesized speech. The text to speech capability is also known as speech synthesis. Use humanlike prebuilt neural voices out of the box, or create a custom neural voice that's unique to your product or brand.\n\nthanks for exaplanation\n\nFor Creating a Custom Neural Voice:\nUse: The Speech Studio Portal\nExplanation: The Speech Studio portal is part of Microsoft Azure's Cognitive Services and is specifically designed for speech-related applications, including the creation of Custom Neural Voices. \n\nFor Generating Narration:\nUse: Text-to-Speech (TTS) Service\nExplanation: Once you have created a Custom Neural Voice model in the Speech Studio portal, you can use Azure's Text-to-Speech service to generate narration. The Text-to-Speech service converts written text into spoken words in a natural-sounding voice, leveraging the custom voice model you've created.\n\ncustom neural voice --> Speech Studio portal is CORRECT because it is the dedicated platform for creating and managing custom neural voices in Azure. It provides tools for uploading training data, customizing voice models, and managing the entire process of creating a custom neural voice.\n\nnarration --> Text-to-speech is CORRECT because it is the Azure service specifically designed to convert text into spoken words. With Custom Neural Voice, you can create high-quality, natural-sounding narration to accompany your video content.\n\n1. Speech Studio portal\n2. Text-to-speech\n\n1. The Speech Studio portal\n2. Text-to-speech\n\nThe Speech Studio portal\nText-to-speech\n\nAbsolutely correct\n\nThe answer is correct. Speech Studio and text to speech.",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 34,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/102572-exam-ai-102-topic-3-question-34-discussion/"
+}

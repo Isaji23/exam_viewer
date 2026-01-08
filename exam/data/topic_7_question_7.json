@@ -1,0 +1,18 @@
+{
+  "question_text": "DRAG DROP<br/> -<br/><br/>You have an Azure subscription that contains an Azure OpenAI resource named AI1.<br/><br/>You plan to build an app named App1 that will write press releases by using AI1.<br/><br/>You need to deploy an Azure OpenAI model for App1. The solution must minimize development effort.<br/><br/>Which three actions should you perform in sequence in Azure OpenAI Studio? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.<br/><br/><img src=\"images/ai-102_topic-7_question-7_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-7_question-7_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-7_question-7_correct_1.png"
+  ],
+  "discussion": "1. Create deployment using GPT-3.5-Turbo\n2. Apply Market Writing Assistant template\n3. Deploy solution to a new web app\n\nvery clear\n\nTo deploy an Azure OpenAI model for the app \"Appl\" with minimized development effort, follow these steps in Azure OpenAI Studio:\n\n    Create a deployment that uses the GPT-35 Turbo model.\n\n    Drag \"Create a deployment that uses the GPT-35 Turbo model\" to the answer area.\n\n    Apply the Default system message template.\n\n    Drag \"Apply the Default system message template\" to the answer area.\n\n    Deploy the solution to a new web app.\n\n    Drag \"Deploy the solution to a new web app\" to the answer area.\n\nConsidering the fact that the question is about press releases, I would choose the marketing writing assistant template, like in the answer.\n\nhttps://microsoftlearning.github.io/mslearn-openai/Instructions/Exercises/01-get-started-azure-openai.html\n\n1) Create a deployment that uses the GPT-3.5 Turbo model: Start by deploying the GPT-3.5 Turbo model, which is well-suited for generating high-quality text content such as press releases.\n\n2) Apply the Marketing Writing Assistant system message template: This template provides pre-configured settings optimized for marketing and writing tasks, helping to streamline the configuration process and reduce development effort.\n\n3) Deploy the solution to a new web app: Finally, deploy the configured model to a new web app to make it accessible and ready for use by App1.\n\n\"Deploy the solution to a new web app\" << That does not mean anything in this context. Pure nonsense. But I guess that is what I have to select considering this is MIcrosoft exam\n\n\"Deploy solution to a new web app\" << What does that mean??\nBut because nothing else can be selected I have to select this.\n\nThis question was in the test I took in August 2024\n\n1. Create deployment using GPT-3.5-Turbo\n2. Apply Market Writing Assistant template\n3. Deploy solution to a new web app\n\nIn the Setup panel, under Use a system message template, select the Marketing Writing Assistant template and confirm that you want to update the system message.\nhttps://microsoftlearning.github.io/mslearn-openai/Instructions/Exercises/01-get-started-azure-openai.html",
+  "question_type": "drag_drop",
+  "exam": "ai-102",
+  "topic": 7,
+  "question_number": 7,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/135487-exam-ai-102-topic-7-question-7-discussion/"
+}

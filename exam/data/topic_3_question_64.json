@@ -1,0 +1,21 @@
+{
+  "question_text": "You have an Azure subscription that contains a multi-service Azure Cognitive Services Translator resource named Translator1.<br/><br/>You are building an app that will translate text and documents by using Translator1.<br/><br/>You need to create the REST API request for the app.<br/><br/>Which headers should you include in the request?",
+  "question_images": [],
+  "answers": {
+    "A": "the access control request, the content type, and the content length",
+    "B": "the subscription key and the client trace ID",
+    "C": "the resource ID and the content language",
+    "D": "the subscription key, the subscription region, and the content type"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "D"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Answer is correct\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/translator/reference/v3-0-translate\ncontent-type is required header\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/translator/reference/v3-0-reference\nWhen you use a multi-service secret key, you must include two authentication headers with your request. There are two headers that you need to call the Translator.\nOcp-Apim-Subscription-Key\tThe value is the Azure secret key for your multi-service resource.\nOcp-Apim-Subscription-Region\tThe value is the region of the multi-service resource.\nRegion is required for the multi-service Text API subscription. The region you select is the only region that you can use for text translation when using the multi-service key. It must be the same region you selected when you signed up for your multi-service subscription through the Azure portal.\nD is the only option with both the headers\n\nTo create the REST API request for your app that will translate text and documents using the Azure Cognitive Services Translator resource (Translator1), you should include the following headers:\n\nSubscription Key: This key serves as the authentication token to access the service.\nSubscription Region: The region where your Translator resource is deployed.\nContent Type: Specify the type of content you are sending (e.g., JSON, plain text).\nTherefore, the correct answer is D. the subscription key, the subscription region, and the content type. When making the API request, ensure that you include these headers to connect your application to the Translator service.\n\nD. Example for swiss:\n\ncurl -X POST \"https://my-swiss-n.cognitiveservices.azure.com/translator/text/v3.0/translate?to=fr\" \\\n-H \"Ocp-Apim-Subscription-Key: xxx\" \\\n-H \"Ocp-Apim-Subscription-Region: switzerlandnorth\" \\\n-H \"Content-Type: application/json\" \\\n-d \"[{'Text':'Hello'}]\" -v\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/translator/quickstart-text-rest-api?tabs=csharp#headers\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/translator/reference/v3-0-reference\n\nAnswer is D\n\nD for Copilot too\n\nI say this answer is D. Please hurry up and transport the meat.\n\nD is answer.\n\nthe subscription key, the subscription region, and the content type\n\nD.\nhttps://learn.microsoft.com/en-us/azure/ai-services/translator/quickstart-text-rest-api?tabs=csharp#headers",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 64,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/134939-exam-ai-102-topic-3-question-64-discussion/"
+}

@@ -1,0 +1,19 @@
+{
+  "question_text": "HOTSPOT -<br/>You are building a chatbot by using the Microsoft Bot Framework Composer.<br/>You have the dialog design shown in the following exhibit.<br/><img class=\"in-exam-image\" src=\"images/ai-102_topic-5_question-2_html_1.jpg\"/><br/>For each of the following statements, select Yes if the statement is true. Otherwise, select No.<br/>NOTE: Each correct selection is worth one point.<br/>Hot Area:<br/><img class=\"in-exam-image\" src=\"images/ai-102_topic-5_question-2_html_2.png\"/><br/>",
+  "question_images": [
+    "images/ai-102_topic-5_question-2_question_1.jpg",
+    "images/ai-102_topic-5_question-2_question_2.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-5_question-2_correct_1.png"
+  ],
+  "discussion": "I am not sure if the correct answer for third is yes - the fields are showing examples, not the actual values typed in the boxes.\n\nThat's what I thinking about..\n\nI also had this doubt but I don't want to think that Microsoft wants to confuse people's ideas in this way, that would be shameful. At this point the test would not be a way to assess people's skills but would become mere garbage\n\nanyway an example is represented with \"ex.\" at the beginning of the entered text. For the third field it does not, so I think the coalesce function is really applied\n\nThe answer is correct.\n\nI would go for \n\nNo (user.name from the diagram is a property so you are already given the answer from the qn)\nYes (pretty much what it is doing)\nYes (I am making the assumption that the user is going to make use of the coalesce function)\n\nNYY is the answer.\n\nMy answer is that\nNo\nYes\nYes\n\nNo\nYes\nYes\n\nNo Yes Yes\n\nThe third answer in this question is YES\nThe chatbot indeed attempts to extract relevant information from the user’s input. In this case, it looks for non-null values associated with the userName or personName entities and assigns those values to the user.name property. This process allows the chatbot to personalize its interactions and provide a more tailored experience for the user.\n\nNYY is the answer.\n\nhttps://learn.microsoft.com/en-us/composer/how-to-ask-for-user-input?tabs=v2x#create-a-text-input-action\n\nhttps://learn.microsoft.com/en-us/azure/bot-service/adaptive-expressions/adaptive-expressions-prebuilt-functions?view=azure-bot-service-4.0#coalesce\nReturn the first non-null value from one or more parameters. Empty strings, empty arrays, and empty objects are not null.\n\nthis was on exam 28/06\n\nThe answer is correct. The 3rd one is yes \nThe coalesce() function evaluates a list of expressions and returns the first non-null (or non-empty for string) expression.\n\nDisagreed.  The coaleasce() function uses comma to separate out a list of expressions.  However, in the question, the separator is a period. \n```coalesce(tolong(\"not a number\"), tolong(\"42\"), 33) == 42```\nRef: https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/coalescefunction\n\nI would agree with 2ez4Zane. Your link is a very good reference. I would consider the period in the question is a typo.\n\nI'd agree, perhaps userName is just missing the dot\n\nAnswers 1 and 2, I are correct in my eyes. But with the third answer, I am not sure. Especially it is referring to personName and I do not see that property anywhere. Usually that's a hint, if an answer should be wrong. What do you think or do I miss something here?\n\nI missed something indeed. There is a coalesce function for username and personname. I am still not sure, if the correct answer should actually be no.",
+  "question_type": "hot_area",
+  "exam": "ai-102",
+  "topic": 5,
+  "question_number": 2,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/56834-exam-ai-102-topic-5-question-2-discussion/"
+}

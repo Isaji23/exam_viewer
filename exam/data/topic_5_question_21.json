@@ -1,0 +1,16 @@
+{
+  "question_text": "SIMULATION -<br/>Use the following login credentials as needed:<br/>To enter your username, place your cursor in the Sign in box and click on the username below.<br/>To enter your password, place your cursor in the Enter password box and click on the password below.<br/><br/>Azure Username: <a class=\"__cf_email__\" data-cfemail=\"b9d8ddd4d0d7f9d8dbda97dad6d4\" href=\"/cdn-cgi/l/email-protection\">[email protected]</a> -<br/><br/>Azure Password: XXXXXXXXXXXX -<br/>The following information is for technical support purposes only:<br/><br/>Lab Instance: 12345678 -<br/><br/>Task -<br/>You have a bot that was developed by using the Microsoft Bot Framework SDK. The bot is available at an endpoint of https://bot.contoso.com/api/messages.<br/>You need to create an Azure Bot named bot12345678 that connects to the bet.<br/>To complete this task, sign in to the Azure portal.<br/>",
+  "question_images": [],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-5_question-21_correct_1.png"
+  ],
+  "discussion": "",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 5,
+  "question_number": 21,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/147571-exam-ai-102-topic-5-question-21-discussion/"
+}

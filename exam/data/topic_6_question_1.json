@@ -1,0 +1,18 @@
+{
+  "question_text": "DRAG DROP<br/> -<br/><br/>You have a monitoring solution that uses the Azure AI Anomaly Detector service.<br/><br/>You provision a server named Server1 that has intermittent internet access.<br/><br/>You need to deploy the Azure AI Anomaly Detector to Server1.<br/><br/>Which four actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.<br/><br/><img src=\"images/ai-102_topic-6_question-1_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-6_question-1_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-6_question-1_correct_1.png"
+  ],
+  "discussion": "1. Install\n2. From pull\n3. From run\n4. Query\n\nMemorize flag words!\n\n1) Install the Docker Engine on Server1: This is the first step to enable containerized applications to run on Server1.\n\n2) From Server1, run the docker pull command: This command pulls the Anomaly Detector image from the container registry.\n\n3) From Server1, run the docker run command: This command runs the container with the Anomaly Detector image.\n\n4) Query the prediction endpoint on Server1: Finally, you can query the prediction endpoint on Server1 to utilize the deployed Anomaly Detector service.\n\ncorrect 100 %\n\n1. Install\n2. From pull\n3. From run\n4. Query\n\n1. Install\n2. From pull\n3. From run\n4. Query\n\n1. Install\n2. From pull\n3. From run\n4. Query\n\nMemorize flags\n\ncorrect\nhttps://learn.microsoft.com/en-us/azure/ai-services/anomaly-detector/anomaly-detector-container-howto\n\nAnamoly Detector is deprecated and not in syllabus for the exam\n\nGiven answers look correct to ME",
+  "question_type": "drag_drop",
+  "exam": "ai-102",
+  "topic": 6,
+  "question_number": 1,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/135661-exam-ai-102-topic-6-question-1-discussion/"
+}

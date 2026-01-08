@@ -1,0 +1,21 @@
+{
+  "question_text": "You have an Azure subscription that contains an Azure OpenAI resource named AI1 and a user named User1.<br/><br/>You need to ensure that User1 can perform the following actions in Azure OpenAI Studio:<br/><br/>•\tIdentify resource endpoints.<br/>•\tView models that are available for deployment.<br/>•\tGenerate text and images by using the deployed models.<br/><br/>The solution must follow the principle of least privilege.<br/><br/>Which role should you assign to User1?",
+  "question_images": [],
+  "answers": {
+    "A": "Cognitive Services OpenAI User",
+    "B": "Cognitive Services Contributor",
+    "C": "Contributor",
+    "D": "Cognitive Services OpenAI Contributor"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "A"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Cognitive Services OpenAI User is CORRECT because this role grants users the minimum permissions needed to view and interact with Azure OpenAI resources. Specifically, it allows users to access resource endpoints, view available models for deployment, and use deployed models to generate text and images in Azure AI Studio. This aligns with the principle of least privilege by providing only the necessary permissions without allowing modification or management of the resource itself.\n\nAnswer is A\n\nA. Cognitive Services OpenAI User\n\nReasoning: The Cognitive Services OpenAI User role provides read-only access to the Azure OpenAI resource, allowing User1 to:\n\nIdentify resource endpoints\nView available models for deployment\nGenerate text and images using deployed models\nThis role follows the principle of least privilege by granting only the permissions needed to view and interact with deployed models, without allowing management or configuration changes. The other roles, such as Cognitive Services OpenAI Contributor and Cognitive Services Contributor, grant additional permissions that are unnecessary for User1’s requirements.\n\nA is correct. Cognitive Services OpenAI User permission: 1.View the resource endpoint under “Keys and Endpoint”. 2.View what models are available for deployment in Azure OpenAI Studio. 3. Use playground experiences with any models that have already been deployed to this Azure OpenAI resource\nRef：https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/role-based-access-control#cognitive-services-openai-contributor",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 7,
+  "question_number": 21,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/150033-exam-ai-102-topic-7-question-21-discussion/"
+}

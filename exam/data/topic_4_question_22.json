@@ -1,0 +1,21 @@
+{
+  "question_text": "You have the following data sources:<br/><br/>•\tFinance: On-premises Microsoft SQL Server database<br/>•\tSales: Azure Cosmos DB using the Core (SQL) API<br/>•\tLogs: Azure Table storage<br/>•\tHR: Azure SQL database<br/><br/>You need to ensure that you can search all the data by using the Azure AI Search REST API.<br/><br/>What should you do?",
+  "question_images": [],
+  "answers": {
+    "A": "Migrate the data in HR to Azure Blob storage.",
+    "B": "Migrate the data in HR to the on-premises SQL server.",
+    "C": "Export the data in Finance to Azure Data Lake Storage.",
+    "D": "Migrate the data in Sales to the MongoDB API."
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "C"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Another repeated qn\n\nAnswer is C\n\nC. migrate what is on-promises to Azure",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 4,
+  "question_number": 22,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/143493-exam-ai-102-topic-4-question-22-discussion/"
+}

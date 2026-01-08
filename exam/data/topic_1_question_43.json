@@ -1,19 +1,16 @@
 {
-  "question_text": "HOTSPOT<br/> -<br/><br/>You have a Fabric workspace named Workspace1 that contains a warehouse named Warehouse2.<br/><br/>A team of data analysts has Viewer role access to Workspace1.<br/><br/>You create a table by running the following statement.<br/><br/><img src=\"images/dp-700_topic-1_question-43_html_1.png\"/><br/><br/>You need to ensure that the team can view only the first two characters and the last four characters of the CreditCard attribute.<br/><br/>How should you complete the statement? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/dp-700_topic-1_question-43_html_2.png\"/>",
-  "question_images": [
-    "images/dp-700_topic-1_question-43_question_1.png",
-    "images/dp-700_topic-1_question-43_question_2.png"
-  ],
+  "question_text": "SIMULATION -<br/>Use the following login credentials as needed:<br/>To enter your username, place your cursor in the Sign in box and click on the username below.<br/>To enter your password, place your cursor in the Enter password box and click on the password below.<br/><br/>Azure Username: <a class=\"__cf_email__\" data-cfemail=\"6f0e0b0206012f0e0d0c410c0002\" href=\"/cdn-cgi/l/email-protection\">[email protected]</a> -<br/><br/>Azure Password: XXXXXXXXXXXX -<br/>The following information is for technical support purposes only:<br/><br/>Lab Instance: 12345678 -<br/><br/>Task -<br/>You plan to build an application that will use caption12345678. The application will be deployed to a virtual network named VNet1.<br/>You need to ensure that only virtual machines on VNet1 can access caption12345678.<br/>To complete this task, sign in to the Azure portal.<br/>",
+  "question_images": [],
   "answers": {},
   "answer_images": {},
   "correct_answer": [],
   "correct_answer_images": [
-    "images/dp-700_topic-1_question-43_correct_1.png"
+    "images/ai-102_topic-1_question-43_correct_1.png"
   ],
-  "discussion": "Correct\nALTER TABLE- to modify the tabel\nALTER COLUMN - to modify the column\nPARTIAL(prefix padding, padding string, suffix padding) - to expose first and last n characters, adding custom padding 'xxx' of a text field\n\nALTER / ALTER / PARTIAL\n\nThe answer is correct: ALTER - ALTER - PARTIAL",
-  "question_type": "image_only",
-  "exam": "dp-700",
+  "discussion": "This type of simulation question was not included in the real exam, which was taken on 12 June.\n\nSimulation questions will not appear on the actual exam as of May 25, 2024; ET should remove this type of question.\n\nNetworking > Firewalls and virtual networks > Selected networks and private endpoints > Add existing virtual network\n\nThis is a Custom vision resource > go to networking > you only need to configure the vnet1 only access. \n- there is no mention to force traffic over the backbone only and deny internet bound traffic > which would require you then to go another step and enable private endpoints. (unless this question is incomplete, so practice both steps for fun)\n\nportal > web app > networking > access restriction > \n#1 Inbound Traffic > private endpoints > add > express > name + subs + vnet + subnet + private DNS > OK,\n#2 Inbound Traffic > access restriction > uncheck Allow public access = uncheck > Save,\n#3 Verify > Inbound Traffic > Access Restriction ON >  Private Endpoint > ON\n\nignore this. there is no delete option :(\n\nSelect the resource -> Resource Management -> Networking -> Selected Networks and Private Endpoints\n\nCreate a virtual network by selecting Firewall and virtual networks\n\nPrivate endpoint is not the answer. Configure the service to allow access from selected network instead: https://learn.microsoft.com/en-us/azure/cognitive-services/cognitive-services-virtual-networks?tabs=portal#managing-virtual-network-rules\n\nagree with you",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
   "topic": 1,
   "question_number": 43,
-  "url": "https://www.examtopics.com/discussions/microsoft/view/302432-exam-dp-700-topic-1-question-43-discussion/"
+  "url": "https://www.examtopics.com/discussions/microsoft/view/91127-exam-ai-102-topic-1-question-43-discussion/"
 }

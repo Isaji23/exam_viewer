@@ -1,25 +1,21 @@
 {
-  "question_text": "You have a Fabric workspace that contains a lakehouse and a semantic model named Model1.<br/><br/>You use a notebook named Notebook1 to ingest and transform data from an external data source.<br/><br/>You need to execute Notebook1 as part of a data pipeline named Pipeline1. The process must meet the following requirements:<br/><br/>•\tRun daily at 07:00 AM UTC.<br/>•\tAttempt to retry Notebook1 twice if the notebook fails.<br/>•\tAfter Notebook1 executes successfully, refresh Model1.<br/><br/>Which three actions should you perform? Each correct answer presents part of the solution.<br/><br/>NOTE: Each correct selection is worth one point.",
+  "question_text": "You have an Azure subscription that contains a Language service resource named ta1 and a virtual network named vnet1.<br/><br/>You need to ensure that only resources in vnet1 can access ta1.<br/><br/>What should you configure?",
   "question_images": [],
   "answers": {
-    "A": "Place the Semantic model refresh activity after the Notebook activity and link the activities by using the On success condition.",
-    "B": "From the Schedule settings of Pipeline1, set the time zone to UTC.",
-    "C": "Set the Retry setting of the Notebook activity to 2.",
-    "D": "From the Schedule settings of Notebook1, set the time zone to UTC.",
-    "E": "Set the Retry setting of the Semantic model refresh activity to 2.",
-    "F": "Place the Semantic model refresh activity after the Notebook activity and link the activities by using an On completion condition."
+    "A": "a network security group (NSG) for vnet1",
+    "B": "Azure Firewall for vnet1",
+    "C": "the virtual network settings for ta1",
+    "D": "a Language service container for ta1"
   },
   "answer_images": {},
   "correct_answer": [
-    "A",
-    "B",
     "C"
   ],
   "correct_answer_images": [],
-  "discussion": "Correct\n\nABC are correct\n\nABC is correct\n\n@{pipeline().parameters.param1}\nThis syntax correctly references the parameter param1 and ensures that it is treated as an integer value within the pipeline expression.\n\nignore this as its part of next Q\n\nCorrect",
+  "discussion": "Correct \nhttps://learn.microsoft.com/en-us/azure/cognitive-services/cognitive-services-virtual-networks?tabs=portal\n\nAppeared on Oct/29/2023.\n\nthe virtual network settings for ta1 is CORRECT because configuring the virtual network settings for the Language service resource ta1 will ensure that it can only be accessed by resources within vnet1. This setup restricts access to the service based on the virtual network, providing a secure way to limit access.\n\nAnswer is C\n\nThe correct choice is C. the virtual network settings for ta1.\nTo ensure that only resources in vnet1 can access the Language service resource (ta1), you need to configure private endpoint access by setting up the virtual network settings for ta1. This will allow ta1 to be accessible only from resources within the specified virtual network, ensuring network isolation and security.\nA. Network Security Group (NSG) manages traffic rules within a virtual network but doesn't limit access to specific Azure resources like Language services.\nB. Azure Firewall can filter traffic but is not needed for restricting access to a single resource in this scenario.\nD. A Language service container is not relevant to restricting access via virtual networks.\n\nI went with C and got 100% so that's definitely correct.\n\nWe can use virtual network.\n\nC is right.\n\nC. the virtual network settings for ta1\n\nconfigure vent1 as \"trustworthy network\" for Language service Ta1, so no resource except from trustworthy network Vnet1 can access ta1.\n\ncorrect answer\n\nC is the answer.\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/cognitive-services-virtual-networks?tabs=portal#grant-access-from-a-virtual-network\nYou can configure Cognitive Services resources to allow access only from specific subnets. The allowed subnets may belong to a VNet in the same subscription, or in a different subscription, including subscriptions belonging to a different Azure Active Directory tenant.",
   "question_type": "multiple_choice",
-  "exam": "dp-700",
+  "exam": "ai-102",
   "topic": 1,
   "question_number": 49,
-  "url": "https://www.examtopics.com/discussions/microsoft/view/302442-exam-dp-700-topic-1-question-49-discussion/"
+  "url": "https://www.examtopics.com/discussions/microsoft/view/108848-exam-ai-102-topic-1-question-49-discussion/"
 }

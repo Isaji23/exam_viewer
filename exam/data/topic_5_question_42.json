@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You have a chatbot.<br/><br/>You need to ensure that the bot conversation resets if a user fails to respond for 10 minutes.<br/><br/>How should you complete the code? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-5_question-42_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-5_question-42_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-5_question-42_correct_1.png"
+  ],
+  "discussion": "1. send_activity\n2. clear_state\n\nhttps://learn.microsoft.com/en-us/azure/bot-service/bot-builder-howto-expire-conversation?view=azure-bot-service-4.0&tabs=python#user-interaction-expiration\n# Notify the user that the conversation is being restarted.\n- await turn_context.send_activity(\n# Clear state.\n- await self.conversation_state.clear_state(turn_context)\n\nthanks again for your contribution\n\nsend_activity is CORRECT because it is the method used to send a message to the user in the Bot Framework. In this context, it will be used to send the message \"Welcome back! Let's start over from the beginning.\"\n\nclear_state is CORRECT because it is used to reset the state associated with the current conversation, effectively clearing any stored data and allowing the conversation to start over from the beginning.\n\nIn summary, send_activities is the standard method for sending messages to users. on_send_activities is not typically used for sending messages directly. send_trace_activity is for debugging, and update_activity is for modifying existing messages.\n\nThe answer seems correct.\nhttps://learn.microsoft.com/en-us/azure/bot-service/bot-builder-howto-expire-conversation?view=azure-bot-service-4.0&tabs=python\n\nIt is true.",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 5,
+  "question_number": 42,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/112146-exam-ai-102-topic-5-question-42-discussion/"
+}

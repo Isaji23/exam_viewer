@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You have an Azure subscription.<br/><br/>You need to create a new resource that will generate fictional stories in response to user prompts. The solution must ensure that the resource uses a customer-managed key to protect data.<br/><br/>How should you complete the script? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-7_question-12_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-7_question-12_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-7_question-12_correct_1.png"
+  ],
+  "discussion": "1. OpenAI\n2. --encryption\n\nAgree with you\n\n1. Open AI\n2. --encryption\n\nThis question was asked in September 2025 exam\n\nOpenAI is CORRECT because you need to create a resource that will generate fictional stories in response to user prompts, which aligns with the capabilities provided by the OpenAI service in Azure.\n\n--encryption is CORRECT because it is used to specify encryption settings for the Azure Cognitive Services account, allowing you to configure customer-managed keys for data protection, which meets the requirement to use a customer-managed key.\n\n--encryption is correct:\n\nhttps://learn.microsoft.com/en-us/cli/azure/cognitiveservices/account?view=azure-cli-latest\naz cognitiveservices account create -n myresource -g myResourceGroup --assign-identity --kind TextAnalytics --sku S -l WestEurope --yes\n    --encryption '{\n      \"keySource\": \"Microsoft.KeyVault\",\n      \"keyVaultProperties\": {\n        \"keyName\": \"KeyName\",\n        \"keyVersion\": \"secretVersion\",\n        \"keyVaultUri\": \"https://issue23056kv.vault.azure.net/\"\n      }\n    }'\n\naz cognitiveservices account create \\\n    --name myresource \\\n    --resource-group myResourceGroup \\\n    --kind OpenAI \\\n    --sku S1 \\\n    --location WestEurope \\\n\nAnswer is correct.\n\nAzure OpenAI Service models can do everything from generating original stories to performing complex text an\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/openai/encrypt-data-at-rest\nhttps://learn.microsoft.com/en-us/cli/azure/cognitiveservices/account?view=azure-cli-latest#az-cognitiveservices-account-create",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 7,
+  "question_number": 12,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/135219-exam-ai-102-topic-7-question-12-discussion/"
+}

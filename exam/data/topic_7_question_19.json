@@ -1,0 +1,21 @@
+{
+  "question_text": "You have an Azure subscription that contains an Azure OpenAI resource named OpenAI1 and a user named User1.<br/><br/>You need to ensure that User1 can upload datasets to OpenAI1 and finetune the existing models. The solution must follow the principle of least privilege.<br/><br/>Which role should you assign to User1?",
+  "question_images": [],
+  "answers": {
+    "A": "Cognitive Services OpenAI Contributor",
+    "B": "Cognitive Services Contributor",
+    "C": "Cognitive Services OpenAI User",
+    "D": "Contributor"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "A"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Cognitive Services OpenAI Contributor is CORRECT because this role grants the necessary permissions to upload datasets and fine-tune models specifically for Azure OpenAI resources. This role adheres to the principle of least privilege, ensuring User1 has just the required access to perform these tasks without unnecessary permissions.\n\nA it is\n\nA, verified with chatGPT\n\nThe correct answer is:\n\nA. Cognitive Services OpenAI Contributor\n\nReasoning: The Cognitive Services OpenAI Contributor role provides the necessary permissions to manage the Azure OpenAI resource, including uploading datasets and fine-tuning models. This role is specific to OpenAI and offers the least privilege required for User1 to complete the tasks without granting additional permissions that are unnecessary for their role.\n\nA is correct. Cognitive Services OpenAI Contributor permission: Upload datasets for fine-tuning.\nRef：https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/role-based-access-control#cognitive-services-openai-contributor",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 7,
+  "question_number": 19,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/150032-exam-ai-102-topic-7-question-19-discussion/"
+}

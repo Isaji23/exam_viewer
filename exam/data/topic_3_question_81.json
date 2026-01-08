@@ -1,0 +1,21 @@
+{
+  "question_text": "You have an Azure subscription.<br/><br/>You need to deploy an Azure AI Search resource that will recognize geographic locations.<br/><br/>Which built-in skill should you include in the skillset for the resource?",
+  "question_images": [],
+  "answers": {
+    "A": "AzureOpenAIEmbeddingSkill",
+    "B": "DocumentExtractionSkill",
+    "C": "EntityRecognitionSkill",
+    "D": "EntityLinkingSkill"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "C"
+  ],
+  "correct_answer_images": [],
+  "discussion": "https://learn.microsoft.com/en-us/azure/search/cognitive-search-skill-entity-recognition\n\nEntityRecognitionSkill is CORRECT because this built-in skill in Azure AI Search is specifically designed to identify and extract named entities, such as geographic locations, from unstructured text. By including this skill in the skillset, the resource can effectively recognize geographic locations and other named entities, making the data more useful for search and analysis.\n\nAnswer is C\n\nC is the correct answer.\n\nThe correct answer is C. EntityRecognitionSkill.\n\nExplanation:\n\nThe EntityRecognitionSkill in Azure Cognitive Search is a built-in skill designed to identify and recognize specific types of entities within text, including geographic locations (such as cities, countries, and landmarks), as well as other entities like people and organizations. This makes it the appropriate choice for a skillset intended to recognize geographic locations.\n\nEntity Recognition skill",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 81,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/150396-exam-ai-102-topic-3-question-81-discussion/"
+}

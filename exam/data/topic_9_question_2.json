@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT -<br/>You need to develop code to upload images for the product creation project. The solution must meet the accessibility requirements.<br/>How should you complete the code? To answer, select the appropriate options in the answer area.<br/>NOTE: Each correct selection is worth one point.<br/>Hot Area:<br/><img class=\"in-exam-image\" src=\"images/ai-102_topic-9_question-2_html_1.png\"/><br/>",
+  "question_images": [
+    "images/ai-102_topic-9_question-2_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-9_question-2_correct_1.png"
+  ],
+  "discussion": "1. string\n2. VisualFeatureTypes.Description\n3. results.Description.Captions[0]\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/computer-vision/concept-describing-images#use-the-api\nThe image description feature is part of the Analyze Image API. You can call this API through a native SDK or through REST calls. Include Description in the visualFeatures query parameter. Then, when you get the full JSON response, parse the string for the contents of the \"description\" section.\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/computer-vision/use-case-alt-text#what-languages-are-image-captions-available-in\nImage captions are available in English, Chinese, Portuguese, Japanese, and Spanish in Image Analysis 3.2 API. In the Image Analysis 4.0 API (preview), image captions are only available in English.\n\nthanks for explanation\n\nthe correct choice between Stream and string depends on the source of the image:\n\nIf you have the image file and want to upload it directly from the client or server where the request is being made, you should use a Stream. This approach is direct and efficient for handling binary data without the need for encoding or hosting the image externally.\n\nIf the image is already hosted online and accessible via a URL, you use a string containing the URL to let the API fetch the image for analysis.\n\nYes given the previous questions answers, the files are uploaded in blob storage. So string is the correct answer\n\ncredit to zellck\n\n1. string\n2. VisualFeatureTypes.Description\n3. results.Description.Captions[0]\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/computer-vision/concept-describing-images#use-the-api\n\nMicrosoft employees has bad naming convention. So they try to trick you with that. String image? Nope, I will not write it but it should have been String imageUrl. Who wants to remember these api calls in this age of copilots (ignore google and documentations).\n\nThe given answer is correct because this is the requirement - All images must have relevant alt text.\n\ngiven answer is correct\n\nAnalyzeImageSample\nhttps://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/blob/master/samples/ComputerVision/AnalyzeImage/Program.cs\n\nCorrect!",
+  "question_type": "hot_area",
+  "exam": "ai-102",
+  "topic": 9,
+  "question_number": 2,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/62731-exam-ai-102-topic-9-question-2-discussion/"
+}

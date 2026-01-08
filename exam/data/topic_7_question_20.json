@@ -1,0 +1,21 @@
+{
+  "question_text": "You have an Azure subscription and 10,000 ASCII files.<br/><br/>You need to identify files that contain specific phrases. The solution must use cosine similarity.<br/><br/>Which Azure OpenAI model should you use?",
+  "question_images": [],
+  "answers": {
+    "A": "text-embedding-ada-002",
+    "B": "GPT-4",
+    "C": "GPT-35 Turbo",
+    "D": "GPT-4-32k"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "A"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Answer is A, models that use mathematical-based searches are always related to embeddings.\n\nChatGPT answer:\nThe correct answer is:\n\nA. text-embedding-ada-002\n\nReasoning: To identify files that contain specific phrases using cosine similarity, you should use an embedding model. The text-embedding-ada-002 model is specifically designed to create embeddings (numerical representations of text) that can be used for similarity searches, such as cosine similarity. This model is efficient and optimized for tasks that involve finding similarity between pieces of text, making it ideal for identifying files with specific phrases.\n\nThe other options (GPT-4, GPT-3.5 Turbo, and GPT-4-32k) are primarily designed for text generation and do not specialize in embedding-based similarity tasks.\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/openai/tutorials/embeddings?tabs=python-new%2Ccommand-line&pivots=programming-language-powershell\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/understand-embeddings\n\nAnswer is A",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 7,
+  "question_number": 20,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/150420-exam-ai-102-topic-7-question-20-discussion/"
+}

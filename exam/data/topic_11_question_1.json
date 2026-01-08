@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT -<br/>You are planning the product creation project.<br/>You need to build the REST endpoint to create the multilingual product descriptions.<br/>How should you complete the URI? To answer, select the appropriate options in the answer area.<br/>NOTE: Each correct selection is worth one point.<br/>Hot Area:<br/><img class=\"in-exam-image\" src=\"images/ai-102_topic-11_question-1_html_1.png\"/><br/>",
+  "question_images": [
+    "images/ai-102_topic-11_question-1_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-11_question-1_correct_1.png"
+  ],
+  "discussion": "first drop-down should instead be: api-nam.cognitive.microsofttranslator.com this is because the case study specifically states under Business Requirements \"Data storage and processing must occur in datacenters located in the United States.\"\n\nsee reference documentation for base urls per geo region:\n\nhttps://docs.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-reference\n\nAgreed\n\nagree with you\n\nWhere do you read that? This is the question I see:\n\"HOTSPOT -\nYou are planning the product creation project.\nYou need to build the REST endpoint to create the multilingual product descriptions.\nHow should you complete the URI? To answer, select the appropriate options in the answer area.\nNOTE: Each correct selection is worth one point.\nHot Area:\"\n\nCheck description\n\nGovernance and Security Requirements\nWide World Importers identifies the following governance and security requirements:\nData storage and processing must occur in datacenters located in the United States.\nAzure Cognitive Services must be inaccessible directly from the internet.\n\n1. api-nam.cognitive.microsofttranslator.com\n2. /translate\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-reference#base-urls\nRequests to Translator are, in most cases, handled by the datacenter that is closest to where the request originated. If there's a datacenter failure when using the global endpoint, the request may be routed outside of the geography.\n\nTo force the request to be handled within a specific geography, use the desired geographical endpoint. All requests are processed among the datacenters within the geography.\n- United States\napi-nam.cognitive.microsofttranslator.com\n\nagree with you\n\nGotten this in Jul 2023 exam.\n\nFrom that wall of text who has the eye sight to pick \"united states\".\n\n1. api-nam.cognitive.microsofttranslator.com\n2. /translate\n\nIs this question still available on May 21, 2024?\n\n1. api-nam.cognitive.microsofttranslator.com\n2. /translate\n\nA modified version of this was in the exam today.\n\nDoes the exam for AI 102 includes labs or its multiple choice only.\n\napi-nam\ntranslate\n\nin the \"existing environment\" there is \nAn Azure Cognitive Services resource named wwics\nso it should be \"resource name\".cognitiveservices.azure.com :  wwics.cognitiveservices.azure.com/translator/ \nRef. https://docs.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-reference\n\nbut this for Customers with a resource located in Switzerland North or Switzerland West",
+  "question_type": "hot_area",
+  "exam": "ai-102",
+  "topic": 11,
+  "question_number": 1,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/60817-exam-ai-102-topic-11-question-1-discussion/"
+}

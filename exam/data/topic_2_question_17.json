@@ -1,21 +1,21 @@
 {
-  "question_text": "You are developing a data pipeline named Pipeline1.<br/>You need to add a Copy data activity that will copy data from a Snowflake data source to a Fabric warehouse.<br/>What should you configure?",
+  "question_text": "You have the following Python function for creating Azure Cognitive Services resources programmatically. def create_resource (resource_name, kind, account_tier, location) : parameters = CognitiveServicesAccount(sku=Sku(name=account_tier), kind=kind, location=location, properties={}) result = client.accounts.create(resource_group_name, resource_name, parameters)<br/>You need to call the function to create a free Azure resource in the West US Azure region. The resource will be used to generate captions of images automatically.<br/>Which code should you use?<br/>",
   "question_images": [],
   "answers": {
-    "A": "Degree of copy parallelism",
-    "B": "Fault tolerance",
-    "C": "Enable staging",
-    "D": "Enable logging"
+    "A": "create_resource(\"res1\", \"ComputerVision\", \"F0\", \"westus\")",
+    "B": "create_resource(\"res1\", \"CustomVision.Prediction\", \"F0\", \"westus\")",
+    "C": "create_resource(\"res1\", \"ComputerVision\", \"S0\", \"westus\")",
+    "D": "create_resource(\"res1\", \"CustomVision.Prediction\", \"S0\", \"westus\")"
   },
   "answer_images": {},
   "correct_answer": [
-    "C"
+    "A"
   ],
   "correct_answer_images": [],
-  "discussion": "Enable staging. https://learn.microsoft.com/en-us/fabric/data-factory/connector-snowflake-copy-activity\n\nI would say Degree of copy parallelism. \nThis controls how many parallel threads are used during the copy operation. Increasing parallelism improves throughput and reduces overall execution time, especially for large datasets.\n\nEnable staging  is the correct answer",
+  "discussion": "Computer vision provide automatic vision solutions including captions. The key-phrase is \"automatic\". Therefore this answer should be obvious to everyone. I would expect more professionalism from people who request money for services like this one. Many questions here have incorrect and even contradictory answers... Shame!\n\nI agree.\nTo me it looks like many answers are being deliberately set to incorrect answers. Not sure why, though.\n\nThis is the best answer as per MS documentation.\n\nRepeat qn\n\nAnswer is A\n\nComputerVision and F0.\n\nduplicate question\n\nSet 1 question 9.\n\nThe answer is A\n\nSeems to be duplicated question. Anyway to me the correct answer is A.\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/computer-vision/concept-describing-images\n\nAppeared on Oct/29/2023.\n\nVery confusion, Does Computer Vision provide captions in Free? I think Custom Vision Do:\nComputer Vision Free tire:\nInstance | Features | Price\nFree - Web/Container 20 transactions per minute |  - |5,000 transactions free per month\n\nCustom Vision Free Tire:\nInstance\t| Transactions Per Second (TPS) | Features | Price\nFree\t | 2 TPS | Upload, training and prediction transactions, Up to 2 projects, Up to 1 hour training per month | 5,000 training images free per project, 10,000 predictions per month\n\nSame as Topic 1 Question 9.\nhttps://www.examtopics.com/discussions/microsoft/view/57153-exam-ai-102-topic-1-question-9-discussion\n\nA is the answer.\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account-client-library?pivots=programming-language-python#create-a-cognitive-services-resource-python\nTo create and subscribe to a new Cognitive Services resource, use the Create function. This function adds a new billable resource to the resource group you pass in. When you create your new resource, you'll need to know the \"kind\" of service you want to use, along with its pricing tier (or SKU) and an Azure location. The following function takes all of these arguments and creates a resource.\n\nGotten this in Jul 2023 exam.\n\nThis was on exam 28/06\n\nAsked in 28/06/2023 exam\n\ncomputer vision can generate captions for images\n\nComputer Vision has generate captions feature\n\nThis question was asked for free azure service. Do we have the generate caption feature supports this with free tier? \nReference -  https://azure.microsoft.com/en-us/pricing/details/cognitive-services/computer-vision/\n\nA because computer vision provides tags",
   "question_type": "multiple_choice",
-  "exam": "dp-700",
+  "exam": "ai-102",
   "topic": 2,
   "question_number": 17,
-  "url": "https://www.examtopics.com/discussions/microsoft/view/153840-exam-dp-700-topic-2-question-17-discussion/"
+  "url": "https://www.examtopics.com/discussions/microsoft/view/81643-exam-ai-102-topic-2-question-17-discussion/"
 }

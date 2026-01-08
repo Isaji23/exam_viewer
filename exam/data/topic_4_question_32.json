@@ -1,0 +1,18 @@
+{
+  "question_text": "DRAG DROP<br/> -<br/><br/>You have an Azure subscription that contains an Azure AI Document Intelligence resource named DI1 and a storage account named sa1. The sa1 account contains a blob container named blob1 and an Azure Files share named share1.<br/><br/>You plan to build a custom model named Model1 in DI1.<br/><br/>You create sample forms and JSON files for Model1.<br/><br/>You need to train Model1 and retrieve the ID of the model.<br/><br/>Which four actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.<br/><br/>NOTE: More than one order of answer choices is correct. You will receive credit for any of the correct orders you select.<br/><br/><img src=\"images/ai-102_topic-4_question-32_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-4_question-32_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-4_question-32_correct_1.png"
+  ],
+  "discussion": "Microsoft copilot:\n\nUpload the forms and JSON files to blob1: Ensure that your sample forms and JSON files are uploaded to the blob container named blob1 in the storage account sa1.\n\nCreate a shared access signature (SAS) URL for blob1: Generate a SAS URL for the blob container to provide secure access to the files.\n\nCall the Build model REST API function: Use the SAS URL to call the Build model REST API function in DI1 to start the training process.\n\nCall the Get model REST API function: After the training is complete, call the Get model REST API function to retrieve the ID of Model1.\n\nLooks like you're right :\nhttps://learn.microsoft.com/en-us/rest/api/aiservices/document-models/build-model?view=rest-aiservices-v4.0%20(2024-07-31-preview)&tabs=HTTP#tabpanel_1_HTTP\n\nChatGPT:\n\n1. Upload the forms and JSON files to blob1\nAzure AI Document Intelligence only supports blob containers (not Azure Files shares) for custom model training data. Store your sample forms and JSON label files in blob1.\n\n2. Create a shared access signature (SAS) URL for blob1\nGenerate a read/list SAS token for the blob container to grant Document Intelligence temporary access to your training data. Use the Azure portal, Azure CLI, or Storage Explorer to create this SAS URL.\n\n3. Call the Build model REST API function\n\n4. Call the Get model REST API function\nAfter training completes (typically minutes to hours), retrieve Model1's ID and metadata.\n\nWhy Not These Actions?\nRetrieve the access key for sa1: Unnecessary for SAS-based access.\nUpload to share1: Azure Files shares are not supported for Document Intelligence training.\nGet info REST API: Generic resource info call, not model-specific.\n\nChristian_garcia_martin's answers are correct\n\nWe can connect to Azure Blob Storage using either an access key or a SAS token.",
+  "question_type": "drag_drop",
+  "exam": "ai-102",
+  "topic": 4,
+  "question_number": 32,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/150444-exam-ai-102-topic-4-question-32-discussion/"
+}

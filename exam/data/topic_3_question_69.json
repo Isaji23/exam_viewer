@@ -1,0 +1,21 @@
+{
+  "question_text": "You are developing an app that will use the text-to-speech capability of the Azure AI Speech service. The app will be used in motor vehicles.<br/><br/>You need to optimize the quality of the synthesized voice output.<br/><br/>Which Speech Synthesis Markup Language (SSML) attribute should you configure?",
+  "question_images": [],
+  "answers": {
+    "A": "the style attribute of the mstts:express-as element",
+    "B": "the effect attribute of the voice element",
+    "C": "the pitch attribute of the prosody element",
+    "D": "the level attribute of the emphasis element"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "B"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Answer is correct:\n\nThe audio effect processor that's used to optimize the quality of the synthesized speech output for specific scenarios on devices.\n\nFor some scenarios in production environments, the auditory experience might be degraded due to the playback distortion on certain devices. For example, the synthesized speech from a car speaker might sound dull and muffled due to environmental factors such as speaker response, room reverberation, and background noise. The passenger might have to turn up the volume to hear more clearly. To avoid manual operations in such a scenario, the audio effect processor can make the sound clearer by compensating the distortion of playback.\n\nThe following values are supported:\neq_car – Optimize the auditory experience when providing high-fidelity speech in cars, buses, and other enclosed automobiles.\neq_telecomhp8k – Optimize the auditory experience for narrowband speech in telecom or telephone scenarios. You should use a sampling rate of 8 kHz. If the sample rate isn't 8 kHz, the auditory quality of the output speech isn't optimized.\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup-voice\n\nThe effect attribute of the voice element allows you to specify audio effects to optimize the quality of synthesized speech for specific environments, such as car interiors. Using the effect attribute, you can apply predefined audio effects like eq_car to enhance clarity and compensate for distortions caused by environmental factors.\n\nAnswer is B\n\nAnswer is correct\nThe Microsoft guy read the following text:\n\"The audio effect processor that's used to optimize the quality of the synthesized speech output for specific scenarios on devices.\n\nFor some scenarios in production environments, the auditory experience might be degraded due to the playback distortion on certain devices. For example, the synthesized speech from a car speaker might sound dull \"\n\nCopilot:\nTo optimize the quality of the synthesized voice output for an app used in motor vehicles, you should configure B. the effect attribute of the voice element. This attribute allows you to apply audio effects that enhance the auditory experience in specific environments, such as cars, by compensating for playback distortions.\n\nSelected Answer: B\n\nCopilot says:\n\nA. the style attribute of the mstts:express-as element\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup-voice\nThe audio effect processor that's used to optimize the quality of the synthesized speech output for specific scenarios on devices.\n\nvoice element\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup-voice\n\ncorrect\nsource: https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup-voice:\n\"Optimize the auditory experience when providing high-fidelity speech in cars, buses, and other enclosed automobiles.\"",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 69,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/135068-exam-ai-102-topic-3-question-69-discussion/"
+}

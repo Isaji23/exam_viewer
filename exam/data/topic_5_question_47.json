@@ -1,0 +1,21 @@
+{
+  "question_text": "You are building a flight booking bot by using the Microsoft Bot Framework SDK.<br/><br/>The bot will ask users for the departure date. The bot must repeat the question until a valid date is given, or the users cancel the transaction.<br/><br/>Which type of dialog should you use?",
+  "question_images": [],
+  "answers": {
+    "A": "prompt",
+    "B": "adaptive",
+    "C": "waterfall",
+    "D": "action"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "A"
+  ],
+  "correct_answer_images": [],
+  "discussion": "A is the answer.\n\nhttps://learn.microsoft.com/en-us/azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0#dialog-types\nThe dialogs library provides a few types of dialogs to make your bot's conversations easier to manage.\n- prompt dialogs\nAsk the user for input and return the result. A prompt will repeat until it gets valid input or it's canceled. They're designed to work with waterfall dialogs.\n\nPrompts are used to ask the user for a specific piece of information and can include validation to ensure the response meets certain criteria. In this case, you can use a DateTimePrompt to ask for the departure date and repeat the question until a valid date is provided or the user cancels the transaction.\n\nA is correct\n\nA is the correct answer for this.\nLe A est la bonne réponse à cette question.\n\nA is answer.\n\nThe same question has appeared more than once, please choose \"prompt\"\n\nAccording to Windows Copilot:\nTo create a flight booking bot that repeatedly prompts users for the departure date until a valid date is provided or the transaction is canceled, you should use a waterfall dialog.\n\nHere’s why:\n\nWaterfall Dialogs:\nA waterfall dialog is a type of container dialog that guides the conversation through a series of steps or prompts.\nIt allows you to define a sequence of actions or questions that occur in a linear order.\nYou can easily manage the flow of conversation by chaining multiple steps together.\nIn your case, the bot can start by asking for the departure date, validate the input, and repeat the question if an invalid date is provided.\nOnce a valid date is obtained, the waterfall dialog can proceed to the next step or end the conversation.\n\nOther Options:\nPrompt Dialogs: These are useful for asking a single question and collecting a specific type of input (e.g., asking for a date). However, they don’t handle multi-turn conversations as effectively as waterfall dialogs.\nAdaptive Dialogs: While adaptive dialogs provide more flexibility, they are better suited for complex scenarios involving dynamic branching and adaptive behavior. For a straightforward task like collecting a departure date, a waterfall dialog is simpler and more appropriate.\nAction Dialogs: Action dialogs are not specifically designed for managing conversation flow. They are more focused on executing specific actions based on user input.\n\nEXTREMELY important to understand here:\nA waterfall dialog will, like you said, allow for you to PROMPT users for the departure date until a valid date is provided.\nHOWEVER, you should refer to this documentation from Microsoft:\nhttps://learn.microsoft.com/en-us/azure/bot-service/bot-builder-concept-waterfall-dialogs?view=azure-bot-service-4.0\nTake a look at this part:\n--\n\"At each step, the bot prompts the user for input (or can begin a child dialog, but that it's often a prompt), waits for a response, and then passes the result to the next step. The result of the first function is passed as an argument into the next function, and so on.\"\n--\nIMO, this key part referring to a child dialog is exactly what this question is asking. Therefore, the answer should be A. This is an example of that child dialog, which Microsoft deliberately states is \"often a prompt\". Like evangelist's comment below, anything that needs repeated until a valid response is given is always a Prompt\n\nfor anything that needs repeated until a valid response is given, it leads to \" Prompt\"\n\nCorrect but maybe repeated question?\n\nC. Waterfall\nsame question 22 of topic5\n\nA.\nSame Question.",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 5,
+  "question_number": 47,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/112151-exam-ai-102-topic-5-question-47-discussion/"
+}

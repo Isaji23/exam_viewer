@@ -1,0 +1,19 @@
+{
+  "question_text": "HOTSPOT -<br/>You are developing a text processing solution.<br/>You develop the following method.<br/><img class=\"in-exam-image\" src=\"images/ai-102_topic-4_question-1_html_1.jpg\"/><br/>You call the method by using the following code.<br/>GetKeyPhrases(textAnalyticsClient, \"the cat sat on the mat\");<br/>For each of the following statements, select Yes if the statement is true. Otherwise, select No.<br/>NOTE: Each correct selection is worth one point.<br/>Hot Area:<br/><img class=\"in-exam-image\" src=\"images/ai-102_topic-4_question-1_html_2.png\"/><br/>",
+  "question_images": [
+    "images/ai-102_topic-4_question-1_question_1.jpg",
+    "images/ai-102_topic-4_question-1_question_2.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-4_question-1_correct_1.png"
+  ],
+  "discussion": "I think the answer is correct\n\nCan someone tell me why it wont display confidence level?\n\nYNN is the answer.\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/language-service/key-phrase-extraction/overview\nKey phrase extraction is one of the features offered by Azure Cognitive Service for Language, a collection of machine learning and AI algorithms in the cloud for developing intelligent applications that involve written language. Use key phrase extraction to quickly identify the main concepts in text. For example, in the text \"The food was delicious and the staff were wonderful.\", key phrase extraction will return the main topics: \"food\" and \"wonderful staff\".\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/language-service/key-phrase-extraction/quickstart?pivots=programming-language-csharp#output\n\nGotten this in Jul 2023 exam.\n\nrepeat qn\n\nYes\nNo\nNo\n\nYNN the way forward\n\nYes\nNo\nNo\n\nSame Question 67, Topic 3\n\ncorrect answer\n\nAnswer is correct. \nYes\nNo\nNo\n\nThe answer is correct\n\nThe response is correct.\nCheck the sample code at https://github.com/Azure/azure-sdk-for-net/blob/master/sdk/textanalytics/Azure.AI.TextAnalytics/samples/Sample3_ExtractKeyPhrases.md\n\nThe First option is also NO.\nThe code doesn't function, because \"response\" is of Type \"KeyPhraseCollection\", and this Class is a ReadOnlyCollection<string> and does not have a definition for: \"Value\"\n\nresponse is of type Response<KeyPhraseCollection>, so value is the field with the result collection https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/quickstarts/client-libraries-rest-api?tabs=version-3-1&pivots=programming-language-csharp#key-phrase-extraction",
+  "question_type": "hot_area",
+  "exam": "ai-102",
+  "topic": 4,
+  "question_number": 1,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/55451-exam-ai-102-topic-4-question-1-discussion/"
+}

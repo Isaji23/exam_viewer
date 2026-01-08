@@ -1,0 +1,23 @@
+{
+  "question_text": "You have the following data sources:<br/>✑ Finance: On-premises Microsoft SQL Server database<br/>✑ Sales: Azure Cosmos DB using the Core (SQL) API<br/>✑ Logs: Azure Table storage<br/><br/>HR: Azure SQL database -<br/><img class=\"in-exam-image\" src=\"images/ai-102_topic-4_question-7_html_1.png\"/><br/>You need to ensure that you can search all the data by using the Azure Cognitive Search REST API.<br/>What should you do?<br/>",
+  "question_images": [
+    "images/ai-102_topic-4_question-7_question_1.png"
+  ],
+  "answers": {
+    "A": "Configure multiple read replicas for the data in Sales.",
+    "B": "Mirror Finance to an Azure SQL database.",
+    "C": "Ingest the data in Logs into Azure Data Explorer.",
+    "D": "Ingest the data in Logs into Azure Sentinel."
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "B"
+  ],
+  "correct_answer_images": [],
+  "discussion": "B is correct answer : Mirror Finance to an Azure SQL database.\n\nhttps://docs.microsoft.com/en-us/azure/search/search-indexer-overview#supported-data-sources\n\nAzure AI Search (formerly known as \"Azure Cognitive Search\") can natively index data from Azure SQL Database. Mirroring the on-premises Microsoft SQL Server database to Azure SQL Database ensures that the data from the Finance source is available for indexing and searching using Azure AI Search.\n\nB is correct\n\nSelected Answer: B\n\nMany similar questions are registered; I'm not sure why only Finance is on-premise.\n\nMostly for security concerns most of the time\n\nB is right answer.\n\nA modified version of this was in the exam today.\n\ncorrect, a similar question was already present before\n\nAgreed is B",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 4,
+  "question_number": 7,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/77620-exam-ai-102-topic-4-question-7-discussion/"
+}

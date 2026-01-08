@@ -1,0 +1,19 @@
+{
+  "question_text": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.<br/><br/>After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.<br/><br/>You are building a chatbot that will use question answering in Azure Cognitive Service for Language.<br/><br/>You have a PDF named Doc1.pdf that contains a product catalogue and a price list.<br/><br/>You upload Doc1.pdf and train the model.<br/><br/>During testing, users report that the chatbot responds correctly to the following question: What is the price of <product>?<br/><br/>The chatbot fails to respond to the following question: How much does <product> cost?<br/><br/>You need to ensure that the chatbot responds correctly to both questions.<br/><br/>Solution: From Language Studio, you create an entity for price, and then retrain and republish the model.<br/><br/>Does this meet the goal?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</product></product>",
+  "question_images": [],
+  "answers": {
+    "A": "Yes",
+    "B": "No"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "B"
+  ],
+  "correct_answer_images": [],
+  "discussion": "here the issue is not the price that could be an entity, but very different utterances that need to be considered\n\nB. No\n\nCreating an entity for price and retraining the model in Language Studio is not the correct approach to solve the issue with Azure Cognitive Service for Language's question-answering capabilities.\n\nInstead, you should use Language Studio to create and train a synonym for the term \"price\" or build a more comprehensive list of question variations that the chatbot should be able to handle. For example, you can include phrases like \"How much does it cost?\" or \"What is the cost of?\" to ensure the model can properly recognize and respond to different ways users might ask about the price. Retrain and republish the model after making these changes to improve the chatbot's ability to answer both questions correctly.\n\nNo is CORRECT because the proposed solution does not directly address the issue of the chatbot not responding correctly to variations in question phrasing. Instead, you should consider adding alternative question phrasings to the training data to ensure the model can recognize and respond to different ways users might ask about prices.\n\nB is the answer.\n\nB is the answer.\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/language-service/question-answering/concepts/best-practices#when-should-you-add-alternate-questions-to-question-and-answer-pairs",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 5,
+  "question_number": 32,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/111024-exam-ai-102-topic-5-question-32-discussion/"
+}

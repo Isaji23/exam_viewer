@@ -1,0 +1,21 @@
+{
+  "question_text": "You have an Azure AI service model named Model1 that identifies the intent of text input.<br/><br/>You develop a Python app named App1.<br/><br/>You need to configure App1 to use Model1.<br/><br/>Which package should you add to App1?",
+  "question_images": [],
+  "answers": {
+    "A": "azure-cognitiveservices-language-textanalytics",
+    "B": "azure-ai-language-conversations",
+    "C": "azure-mgmt-cognitiveservices",
+    "D": "azure-cognitiveservices-speech"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "B"
+  ],
+  "correct_answer_images": [],
+  "discussion": "The correct package for working with Azure AI service for text intent identification, like Model1, is:\n\nA. azure-cognitiveservices-language-textanalytics\n\nTherefore, you should add the azure-cognitiveservices-language-textanalytics package to App1 for configuring it to use Model1. This package provides functionalities for working with the Language API in Azure Cognitive Services, which includes text analytics capabilities, such as identifying language and sentiment, and can be used for processing text input to determine intent.\n\nanswer is B.\n\"Conversation App: It's used in extracting intents and entities in conversations\"\n- https://learn.microsoft.com/ko-kr/python/api/overview/azure/ai-language-conversations-readme?view=azure-python\n\n\"The (Text Analytics) API can be used to analyze unstructured text for tasks such as sentiment analysis, key phrase extraction and language detection.\"\nhttps://learn.microsoft.com/en-us/python/api/azure-cognitiveservices-language-textanalytics/azure.cognitiveservices.language.textanalytics.textanalyticsclient?view=azure-python-previous\n\nAgree 100%\n\nhttps://pypi.org/project/azure-ai-language-conversations\n\nAzure-AI-language-conversations package is specifically designed for working with Azure AI services that handle language understanding and intent recognition. Since Model1 is used to identify the intent of text input, this package will provide the necessary tools and APIs to integrate your Python app, App1, with Model1.\n\nAnswer is B\n\nOption A, azure-cognitiveservices-language-textanalytics, is focused on text analytics capabilities such as sentiment analysis, key phrase extraction, and language detection. While it provides valuable tools for text analysis, it doesn't specifically cater to intent recognition within conversational contexts, which is what you're looking for in Model1.\n\nOn the other hand, Option B, azure-ai-language-conversations, is designed specifically for handling conversational AI tasks, including intent recognition. This makes it the most appropriate package for configuring App1 to use Model1 for identifying the intent of text input.\n\nA is correct\n\nWhat an e v i l question from Microsoft. It depends on the text.\n\nThe answer they expect is conversational language understanding. But asking the name of the library instead of a service, just an additional step to trip people, \nCLU is all about what you do with the intent. If you are going to map it to an action or decision it is CLU. But for example intent can be used in the context of opinion mining. But do not over think these questions are from Microsoft employees.\n\nShould be B:\nthis package is specifically designed for conversational language understanding, which includes intent recognition.\n\nSelected Answer: B\n\nI say this answer is B.\n\nazure-cognitiveservices-speech.\n\nB is answer.\n\nB is right answer.\n\nWhen identifying text input intent, it is usually aggregated to cognitiveservices. not just Microsoft, but mega cloud products and solutions have too many similar names and should be aggregated.\n\nB is correct\n\nMust be B\n\nB. azure-ai-language-conversations\nThis package is part of the Azure AI SDK for Python and contains functionality for building applications that can understand user intent using language models.\n\nShould be B.\nSource: https://pypi.org/project/azure-ai-language-conversations/\n\"Conversation App: It's used in extracting intents and entities in conversations\"",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 72,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/135048-exam-ai-102-topic-3-question-72-discussion/"
+}

@@ -1,0 +1,21 @@
+{
+  "question_text": "You have an Azure OpenAI model named AI1.<br/><br/>You are building a web app named App1 by using the Azure OpenAI SDK.<br/><br/>You need to configure App1 to connect to AI1.<br/><br/>What information must you provide?",
+  "question_images": [],
+  "answers": {
+    "A": "the endpoint, key, and model name",
+    "B": "the deployment name, key, and model name",
+    "C": "the deployment name, endpoint, and key",
+    "D": "the endpoint, key, and model type"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "C"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Deployment name: This specifies which deployment of the model you want to use. In Azure OpenAI, you might have multiple deployments of the same model optimized for different tasks.\n\nEndpoint: This is the URL where your AI1 model is hosted. It directs the API requests to the correct Azure service instance.\n\nKey: This is the authentication key that allows your web app to access the Azure OpenAI service securely. It ensures that only authorized applications can use the service.\n\nC is the answer\n\n\"AI1\" is deployment name.\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/openai/quickstart?tabs=command-line%2Cpython-new&pivots=rest-api#retrieve-key-and-endpoint\n\nDEPLOYMENT-NAME\tThis value will correspond to the custom name you chose for your deployment when you deployed a model.\n\nC. the deployment name, endpoint, and key .\nEndpoint should include model name\n\nCorrect, remember that Model Name and Type aren't relevant, we only need the deployment details and key.\n\nCorrect answer.\n\nCorrect.\n\nWhen you access the model via the API you will need to refer to the deployment name rather than the underlying model name in API calls. \nhttps://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource?pivots=web-portal\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/openai/quickstart?tabs=command-line%2Cpython-new&pivots=rest-api\n\nTo connect to an Azure OpenAI model using the Azure OpenAI SDK, you need to provide:\nThe deployment name of the model that you want to use. This is the name that you assigned to the model when you deployed it.\nThe endpoint of your Azure OpenAI resource. This is the URL that you can find in the Overview section of your resource in the Azure portal or by using the Azure CLI.\nThe key of your Azure OpenAI resource. This is the API key that you can find in the Keys and Endpoint section of your resource in the Azure portal or by using the Azure CLI.\n\nIt is the name of the deployed model, that means it is \"model name\", not \"deployment name\"\n\nIgnore my comment\n\nAnswer seems to be correct",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 1,
+  "question_number": 62,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/135059-exam-ai-102-topic-1-question-62-discussion/"
+}

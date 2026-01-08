@@ -1,21 +1,19 @@
 {
-  "question_text": "You have a Fabric workspace that contains a lakehouse and a notebook named Notebook1. Notebook1 reads data into a DataFrame from a table named Table1 and applies transformation logic. The data from the DataFrame is then written to a new Delta table named Table2 by using a merge operation.<br/>You need to consolidate the underlying Parquet files in Table1.<br/>Which command should you run?",
+  "question_text": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.<br/>After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.<br/>You create a web app named app1 that runs on an Azure virtual machine named vm1. Vm1 is on an Azure virtual network named vnet1.<br/>You plan to create a new Azure Cognitive Search service named service1.<br/>You need to ensure that app1 can connect directly to service1 without routing traffic over the public internet.<br/>Solution: You deploy service1 and a private endpoint to vnet1.<br/>Does this meet the goal?<br/>",
   "question_images": [],
   "answers": {
-    "A": "VACUUM",
-    "B": "BROADCAST",
-    "C": "OPTIMIZE",
-    "D": "CACHE"
+    "A": "Yes",
+    "B": "No"
   },
   "answer_images": {},
   "correct_answer": [
-    "C"
+    "A"
   ],
   "correct_answer_images": [],
-  "discussion": "In Delta Lake, the OPTIMIZE command is used to consolidate small Parquet files into larger ones. This improves query performance by reducing the overhead of managing many small files.\n\nVACUUM command is used to clean up and remove files that are no longer needed (e.g., old versions of data files, deleted files)\n\nTo consolidate the underlying Parquet files in Table1, you should run the OPTIMIZE command.\n\nC is correct\n\nOptimise!\n\nOptimize solves the \"small file problem\" by consolidating multiple small files into larger parquet files\n\nOptimize: Consolidates multiple small Parquet files into large file. Big Data processing engines, and all Fabric engines, benefit from having larger files sizes. Having files of size above 128 MB, and optimally close to 1 GB, improves compression and data distribution, across the cluster nodes. It reduces the need to scan numerous small files for efficient read operations. It's a general best practice to run optimization strategies after loading large tables.\n\nLink: https://learn.microsoft.com/en-us/fabric/data-engineering/lakehouse-table-maintenance",
+  "discussion": "Yes is CORRECT because deploying the Azure Cognitive Search service (service1) with a private endpoint to the same virtual network (vnet1) as the virtual machine (vm1) ensures that app1 can connect directly to service1 without routing traffic over the public internet. A private endpoint provides a private IP address for the service within the virtual network, enabling secure and private connectivity.\n\n\"deploy service1 and a private endpoint to vnet1.\" is correct.\n\nA is the correct answer.\n\nThe best answer is:\n• A. Yes\nReason for choosing this option:\nThe solution meets the goal because deploying the Azure Cognitive Search service (service1) and a private endpoint to the Azure virtual network (vnet1) allows the web app (app1) on the virtual machine (vm1) to connect directly to service1. This setup ensures that the traffic between app1 and service1 does not route over the public internet, enhancing security and performance.\n\nthis is the right solution to the scenario\n\nA is the answer.\n\nhttps://learn.microsoft.com/en-us/azure/search/service-create-private-endpoint#why-use-a-private-endpoint-for-secure-access\nPrivate Endpoints for Azure Cognitive Search allow a client on a virtual network to securely access data in a search index over a Private Link. The private endpoint uses an IP address from the virtual network address space for your search service. Network traffic between the client and the search service traverses over the virtual network and a private link on the Microsoft backbone network, eliminating exposure from the public internet.\n\nBy deploying a private endpoint to vnet1, the traffic between app1 and service1 can be routed through the Azure backbone network instead of over the public internet, providing a more secure and reliable connection.\n\nPrivate Endpoint is the right solution to avoid public internet access\n\nHow would the solution work without Azure Private Link?\n\nA is correct answer : yes.",
   "question_type": "multiple_choice",
-  "exam": "dp-700",
+  "exam": "ai-102",
   "topic": 1,
   "question_number": 28,
-  "url": "https://www.examtopics.com/discussions/microsoft/view/153656-exam-dp-700-topic-1-question-28-discussion/"
+  "url": "https://www.examtopics.com/discussions/microsoft/view/77541-exam-ai-102-topic-1-question-28-discussion/"
 }

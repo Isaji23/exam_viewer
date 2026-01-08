@@ -1,0 +1,26 @@
+{
+  "question_text": "You have a custom Azure OpenAI model.<br/><br/>You have the files shown in the following table.<br/><br/><img src=\"images/ai-102_topic-7_question-18_html_1.png\"/><br/><br/>You need to prepare training data for the model by using the OpenAI CLI data preparation tool.<br/><br/>Which files can you upload to the tool?",
+  "question_images": [
+    "images/ai-102_topic-7_question-18_question_1.png"
+  ],
+  "answers": {
+    "A": "File1.tsv only",
+    "B": "File2.xml only",
+    "C": "File3.pdf only",
+    "D": "File4.xlsx only",
+    "E": "File1.tsv and File4.xslx only",
+    "F": "File1.tsv, File2.xml and File4.xslx only",
+    "G": "File1.tsv, File2.xml, File3.pdf and File4.xslx"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "A"
+  ],
+  "correct_answer_images": [],
+  "discussion": "tsv or csv only\n\nJSON also can...\n\nMaximum file size for assistants and fine-tuning\t512 MB\n200 MB via the Azure AI Foundry portal.\nref: https://learn.microsoft.com/en-us/azure/ai-foundry/openai/quotas-limits\n\nA correct\n\n200 MB is to big\n\nAt the moment, file uploads are limited to 100MB per file, so a 200MB .xlsx file exceeds the upload limit.\n\nFile\tAccepted?\tReason\nFile1.tsv\t        ✅\tTSV is supported and file size is 80MB (acceptable).\nFile2.xml\t❌\tXML is NOT supported.\nFile3.pdf\t        ❌\tPDF is NOT supported.\nFile4.xlsx\t❌\tXLSX is supported format-wise, but the file is 200MB — too large for most uploads (Azure OpenAI max is often 100MB per file).\n\nAgree:\nNo, you cannot upload a 200MB .xlsx file directly to the OpenAI CLI data preparation tool.\n\nThe maximum file size for uploads via the OpenAI CLI is typically 100MB for .jsonl files used in fine-tuning and batch processing 1.\nWhile .xlsx is a supported input format, it must be converted to .jsonl, and the converted file must also stay within the 100MB limit.\n\nhttps://stackoverflow.com/questions/75559672/openai-gpt-3-api-which-file-formats-can-be-used-for-fine-tuning\n\nAnswer is E\n\nOption E\n\nOption E\nhttps://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/fine-tuning?tabs=azure-openai%2Ccompletionfinetuning%2Cpython-new&pivots=programming-language-studio#openai-cli-data-preparation-tool\n\nThis tool accepts files in the following data formats, if they contain a prompt and a completion column/key:\n\n    Comma-separated values (CSV)\n    Tab-separated values (TSV)\n    Microsoft Excel workbook (XLSX)\n    JavaScript Object Notation (JSON)\n    JSON Lines (JSONL)\nhttps://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/fine-tuning?tabs=azure-openai%2Ccompletionfinetuning%2Cpython-new&pivots=programming-language-studio#openai-cli-data-preparation-tool\n\nData must be in JSONL format. The OpenAI CLI data preparation tool helps to convert the data. It's clearly A and E => https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/fine-tuning?tabs=azure-openai%2Ccompletionfinetuning%2Cpython-new&pivots=programming-language-studio#openai-cli-data-preparation-tool\n\nSorry! Its clearly E!\n\nyes xlsx is allowed format but size must be less than 200MB. So the answer is A.\n\nAnswer is A. The OpenAI CLI data preparation tool currently supports the following file formats:\n\nJSONL: This is the preferred format for fine-tuning data. Each line in the file should be a valid JSON object representing a training example.\nCSV: Comma-separated values files can be used, but they might require some preprocessing to convert them into the correct JSONL format.\nTXT: Plain text files can be used, but they will likely need significant preprocessing to extract the relevant information and structure it as JSONL.\nTherefore, the answer is A. File1.tsv only.\n\nAnswer is E, File 1 and 4, according to this link, file format (whether a CSV, JSON, XLSX, TSV or JSONL) is allowed as long as it's represented as a JSONL training example of a prompt-completion pair.",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 7,
+  "question_number": 18,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/149574-exam-ai-102-topic-7-question-18-discussion/"
+}

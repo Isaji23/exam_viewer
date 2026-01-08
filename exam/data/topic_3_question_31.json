@@ -1,0 +1,16 @@
+{
+  "question_text": "SIMULATION -<br/>Use the following login credentials as needed:<br/>To enter your username, place your cursor in the Sign in box and click on the username below.<br/>To enter your password, place your cursor in the Enter password box and click on the password below.<br/><br/>Azure Username: <a class=\"__cf_email__\" data-cfemail=\"147570797d7a547576773a777b79\" href=\"/cdn-cgi/l/email-protection\">[email protected]</a> -<br/><br/>Azure Password: XXXXXXXXXXXX -<br/>The following information is for technical support purposes only:<br/><br/>Lab Instance: 12345678 -<br/><br/>Task -<br/>You need to create a version of the 1u12345678 Language Understanding (classic) model. The new version must have a version name of 1.0 and must be active.<br/>To complete this task, sign in to the Language Understanding portal at https://www.luis.ai/.<br/>",
+  "question_images": [],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-3_question-31_correct_1.png"
+  ],
+  "discussion": "",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 31,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/200006-exam-ai-102-topic-3-question-31-discussion/"
+}

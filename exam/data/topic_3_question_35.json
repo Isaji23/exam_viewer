@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You are building a call handling system that will receive calls from French-speaking and German-speaking callers. The system must perform the following tasks:<br/><br/>•\tCapture inbound voice messages as text.<br/>•\tReplay messages in English on demand.<br/><br/>Which Azure Cognitive Services services should you use? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-3_question-35_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-3_question-35_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-3_question-35_correct_1.png"
+  ],
+  "discussion": "1. Speech-to-text\n2. Text-to-speech and Translator\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/speech-to-text\nWith real-time speech to text, the audio is transcribed as speech is recognized from a microphone or file.\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/text-to-speech\next to speech enables your applications, tools, or devices to convert text into humanlike synthesized speech. The text to speech capability is also known as speech synthesis. Use humanlike prebuilt neural voices out of the box, or create a custom neural voice that's unique to your product or brand.\n\nagree. The answer is correct\n\n1. Speech-to-text\n2. Text-to-speech and Translator\n\nThis question was asked in Sep 2025 exam\n\nSpeech-to-text is CORRECT because it is the service designed to convert spoken language into written text. This is exactly what is needed to capture inbound voice messages as text from French-speaking and German-speaking callers.\n\nText-to-speech and Translator is CORRECT because the Translator service can be used to translate the captured text from French or German to English, and the Text-to-speech service can then convert the translated text into spoken English to replay the messages.\n\n1. Speech-to-text\n2. Text-to-speech and Translator\n\n1. Speech-to-text\n2. Text-to-speech and Translator\n\nSpeech-to-text\nText-to-speech and Translator\n\nA modified version of this was in the exam today.\n\nanswer is correct",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 35,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/111618-exam-ai-102-topic-3-question-35-discussion/"
+}

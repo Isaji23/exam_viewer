@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You are building an app that will automatically translate speech from English to French, German, and Spanish by using Azure AI service.<br/><br/>You need to define the output languages and configure the Azure AI Speech service.<br/><br/>How should you complete the code? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-3_question-78_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-3_question-78_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-3_question-78_correct_1.png"
+  ],
+  "discussion": "repeat qn\n\nfr de es\ntranslationrecognizer\n\nbox1: 3\nbox2: 4\n\nCorrect, rewording of a old question.",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 78,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/145783-exam-ai-102-topic-3-question-78-discussion/"
+}

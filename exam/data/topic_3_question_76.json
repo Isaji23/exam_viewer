@@ -1,0 +1,21 @@
+{
+  "question_text": "You are building an internet-based training solution. The solution requires that a user's camera and microphone remain enabled.<br/><br/>You need to monitor a video stream of the user and verify that the user is alone and is not collaborating with another user. The solution must minimize development effort.<br/><br/>What should you include in the solution?",
+  "question_images": [],
+  "answers": {
+    "A": "speech-to-text in the Azure AI Speech service",
+    "B": "object detection in Azure AI Custom Vision",
+    "C": "Spatial Analysis in Azure AI Vision",
+    "D": "object detection in Azure AI Custom Vision"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "C"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Spatial Analysis in Azure AI Vision allows you to analyze video streams and detect the presence of people and their movements within a defined space. This service can help you determine if a user is alone or if others are present, which is crucial for ensuring compliance in a training environment where collaboration is not allowed.\n\nC for correct\n\nHowever, On 30 March 2025, Azure AI Vision Spatial Analysis will be retired.\nhttps://learn.microsoft.com/en-us/azure/ai-services/computer-vision/spatial-analysis-operations\n\nA speech solution makes no sense because you can collaborate and cheat visually without sound. Object detection requires a lot of effort and does not entirely meet the goal.\n\nmust be A.  look at Question \" user's camera and microphone remain enabled\" . According to Q,  I expect that these are laptop's camera and microphone. so, this camera can not watch entire roop view.  Detect Voice then STT must be right answear.\n\nroom view\n\nThis must be speech to text.\n\nSpatial is right answer , option b and d is the same option , if this is a real MS exam it could get better a lot.\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/computer-vision/spatial-analysis-operations\nBelow is the description for cognitiveservices.vision.spatialanalysis-personcount\n\"Counts people in a designated zone in the camera's field of view. The zone must be fully covered by a single camera in order for PersonCount to record an accurate total.\"\n\nChatGPT, Gemini and Claude is also voting for C.\n\nRisky to use Artificial intelligence on intelligence-free Microsoft questions\n\nBut this is indeed correct. Spatial Analysis is what Microsoft is looking for\n\nBut I wonder why not speech as well, but why over think\n\nand what if the another person is out of the camera and is talking ?\n\n\"How does Azure AI Vision analyze people in a physical space? The spatial analysis AI models detect and track movements in the video feed based on algorithms that identify the presence of one or more humans by a body bounding box.\"\n\nAnswer: C. Spatial Analysis\n\n\"How does Azure AI Vision analyze people in a physical space? The spatial analysis AI models detect and track movements in the video feed based on algorithms that identify the presence of one or more humans by a body bounding box.\"\n\nbut why B and D are equal?\n\nTo monitor a video stream of the user and verify that the user is alone and not collaborating with another user, you should include Spatial Analysis in Azure AI Vision in your solution. This service can analyze the spatial relationships between people, movements, and interactions in a physical space using video data. So, the correct answer is:\n\nC. Spatial Analysis in Azure AI Vision\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/computer-vision/intro-to-spatial-analysis-public-preview?tabs=sa\n\nFor the specific scenario of monitoring a video stream to verify that a user is alone and not collaborating with another user, object detection using Azure AI Custom Vision is a more suitable choice. Object detection can identify and track objects or people within the video stream, allowing you to determine if multiple individuals are present. It aligns better with your goal and minimizes development effort.\n\nThe selected answer should be B",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 76,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/143318-exam-ai-102-topic-3-question-76-discussion/"
+}

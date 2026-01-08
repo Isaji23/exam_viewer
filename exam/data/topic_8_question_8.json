@@ -1,0 +1,19 @@
+{
+  "question_text": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.<br/><br/>After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.<br/><br/>You have an Azure subscription that contains an Azure OpenAI resource named AI1 and an Azure AI Content Safety resource named CS1.<br/><br/>You build a chatbot that uses AI1 to provide generative answers to specific questions and CS1 to check input and output for objectionable content.<br/><br/>You need to optimize the content filter configurations by running tests on sample questions.<br/><br/>Solution: From Content Safety Studio, you use the Safety metaprompt feature to run the tests.<br/><br/>Does this meet the requirement?",
+  "question_images": [],
+  "answers": {
+    "A": "Yes",
+    "B": "No"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "B"
+  ],
+  "correct_answer_images": [],
+  "discussion": "The Safety metaprompt feature in Content Safety Studio is used to guide AI models in generating safer responses by providing safety-related instructions within prompts. However, it is not designed for testing and optimizing content filter configurations by analyzing sample inputs and outputs for objectionable content.\n\nYes is CORRECT. The Safety metaprompt feature in Content Safety Studio allows you to run tests on how the content moderation filters behave with specific sample inputs, helping you optimize the configurations for objectionable content detection in your chatbot. This feature is designed for testing and adjusting safety prompts to ensure they align with the content filtering requirements.\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/content-safety/overview#product-features\n\nThe answer is B. No.\n\nExplanation:\n\nThe Safety metaprompt feature is generally used to enhance safety by adding specific guidance to the model’s responses. However, it is not designed for directly testing or optimizing content filter configurations with sample questions in Content Safety Studio.\n\nTo meet the requirement of testing content filters on sample questions, you should use the Moderate text content feature, as it specifically allows you to check for objectionable content in text input and output. Therefore, using the Safety metaprompt feature does not fulfill the requirement.",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 8,
+  "question_number": 8,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/150482-exam-ai-102-topic-8-question-8-discussion/"
+}

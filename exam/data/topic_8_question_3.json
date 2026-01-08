@@ -1,0 +1,23 @@
+{
+  "question_text": "You have an Azure subscription.<br/><br/>You are building a social media app that will enable users to share images.<br/><br/>You need to ensure that inappropriate content uploaded by the users is blocked. The solution must minimize development effort.<br/><br/>What are two tools that you can use? Each correct answer presents a complete solution.<br/><br/>NOTE: Each correct selection is worth one point.",
+  "question_images": [],
+  "answers": {
+    "A": "Azure AI Document Intelligence",
+    "B": "Microsoft Defender for Cloud Apps",
+    "C": "Azure AI Content Safety",
+    "D": "Azure AI Vision",
+    "E": "Azure AI Custom Vision"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "C",
+    "D"
+  ],
+  "correct_answer_images": [],
+  "discussion": "The question mentions \"must minimize development effort\". That means you should lean away from anything custom.\n\nAnswers are C and D.\n\nAnswers are C and D.\n\nC&D are correct\n\nAzure AI Content Safety is CORRECT because it is specifically designed to detect and filter out harmful or inappropriate content across various media types, including images. It provides built-in moderation capabilities that minimize the development effort needed to ensure compliance with safety guidelines, making it suitable for scenarios like social media apps where user-generated content needs to be monitored.\n\nAzure AI Vision is CORRECT because it includes capabilities for analyzing images, such as detecting objects, faces, and content features that may be inappropriate. It can be used to perform image analysis and integrate content moderation capabilities into applications with minimal custom development. While not a dedicated content safety tool, it can be configured to identify certain types of inappropriate content, such as explicit or offensive imagery.\n\nC and D are correct\n\nA, D \nhttps://learn.microsoft.com/en-us/azure/ai-services/computer-vision/concept-detecting-adult-content\n\nSorry C, D is correct\n\nCorrect answers are C and D, verified using CoPilot:\n\nThe two tools you can use to ensure inappropriate content is blocked while minimizing development effort are:\n\nC. Azure AI Content Safety and D. Azure AI Vision.\n\nAzure AI Content Safety provides advanced algorithms for processing images and text to detect and block harmful content. Azure AI Vision offers computer vision capabilities to analyze images and detect inappropriate content\n\nCD\nhttps://learn.microsoft.com/en-us/azure/ai-services/computer-vision/concept-detecting-adult-content\n\nAnswer is C & D\n\nAzure AI Vision & Content Safety",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 8,
+  "question_number": 3,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/149674-exam-ai-102-topic-8-question-3-discussion/"
+}

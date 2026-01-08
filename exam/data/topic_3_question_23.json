@@ -1,0 +1,23 @@
+{
+  "question_text": "You build a Conversational Language Understanding model by using the Language Services portal.<br/>You export the model as a JSON file as shown in the following sample.<br/><img class=\"in-exam-image\" src=\"images/ai-102_topic-3_question-23_html_1.png\"/><br/>To what does the Weather.Historic entity correspond in the utterance?<br/>",
+  "question_images": [
+    "images/ai-102_topic-3_question-23_question_1.png"
+  ],
+  "answers": {
+    "A": "by month",
+    "B": "chicago",
+    "C": "rain",
+    "D": "location"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "A"
+  ],
+  "correct_answer_images": [],
+  "discussion": "by month is CORRECT because the Weather.Historic entity, as indicated by the startPos of 23 and endPos of 30 in the JSON file, corresponds to the phrase \"by month\" in the sample utterance.\n\nAnswer is A\n\nIt should be \"last year\". Does the question creators get extra time to make these questions because english is not their native language?\n\nby month, basic math\n\nby month\n\n23 to 30 is by month.\n\non exam, by month\n\n\"by month\" seems correct\n\nby month means to check history in the past by each month, no doubt answer is A\n\nNo doubt, A checked by different AI: chatgpt, claude 2 and Google bard\n\ncorrect\n\ncorrect answer\n\ncorrect",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 23,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/85823-exam-ai-102-topic-3-question-23-discussion/"
+}

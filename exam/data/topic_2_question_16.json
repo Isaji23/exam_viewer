@@ -1,18 +1,23 @@
 {
-  "question_text": "HOTSPOT -<br/>You have a Fabric workspace.<br/>You are debugging a statement and discover the following issues:<br/>Sometimes, the statement fails to return all the expected rows.<br/>The PurchaseDate output column is NOT in the expected format of mmm dd, yy.<br/>You need to resolve the issues. The solution must ensure that the data types of the results are retained. The results can contain blank cells.<br/>How should you complete the statement? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><img src=\"images/dp-700_topic-2_question-16_html_1.png\" title=\"image54\"/>",
+  "question_text": "Your company uses an Azure Cognitive Services solution to detect faces in uploaded images. The method to detect the faces uses the following code.<br/><img class=\"in-exam-image\" src=\"images/ai-102_topic-2_question-16_html_1.png\"/><br/>You discover that the solution frequently fails to detect faces in blurred images and in images that contain sideways faces.<br/>You need to increase the likelihood that the solution can detect faces in blurred images and images that contain sideways faces.<br/>What should you do?<br/>",
   "question_images": [
-    "images/dp-700_topic-2_question-16_question_1.png"
+    "images/ai-102_topic-2_question-16_question_1.png"
   ],
-  "answers": {},
+  "answers": {
+    "A": "Use a different version of the Face API.",
+    "B": "Use the Computer Vision service instead of the Face service.",
+    "C": "Use the Identify method instead of the Detect method.",
+    "D": "Change the detection model."
+  },
   "answer_images": {},
-  "correct_answer": [],
-  "correct_answer_images": [
-    "images/dp-700_topic-2_question-16_correct_1.png"
+  "correct_answer": [
+    "D"
   ],
-  "discussion": "I'm curious how can people memorize the date format code for the exam lol.\n\nOf course I don't remember all the format codes, but in this specific case I remembered that 1xx codes generally refer to 4 digits years, so guessed 7\n\nfor me to remember I'm just adding the letters, I know it makes no sense but helps to remember :D mmmddyy\n\nYou're allowed to use documentation since a couple of years...\n\nFirst: try_cast(item_name as varchar(20))\nSecond: convert(varchar, purchase_date, 7)\n\nExplanation:\nI used pure SQL for testing, I assume it's very similar here, if not the same...\n\nWhen I execute the following commands on the SQL database,\nSELECT CONVERT(VARCHAR, GETDATE(), 7) AS PurchaseDate\nSELECT FORMAT(GETDATE(), 'MMM dd, yy') AS PurchaseDate\nI get this - both of commands give the same result:\nOct 10, 25\n\nThe other two give the following result:\nSELECT CONVERT(VARCHAR, GETDATE(), 109) AS PurchaseDate --> Oct 10 2025  9:48:40:933AM\nSELECT CONVERT(VARCHAR, GETDATE(), 112) AS PurchaseDate --> 20251010\n\nSo, I'm pretty sure the correct answer would be convert(varchar, purchase_date, 7)\nwhich is the same as what the format function gives us in the example mentioned above.\n\nSELECT \n  item_id AS ItemId,\n  TRY_CAST(item_name AS varchar(20)),\n  item_description AS ItemDescription,\n  CONVERT(varchar, purchase_date, 109)\nFROM Table1\nWHERE item_type = @itemType_parameter\n\ntry_cast\ntype 7: https://learn.microsoft.com/en-us/sql/t-sql/functions/cast-and-convert-transact-sql?view=sql-server-ver17#date-and-time-styles\n\n3rd and 1st. \nSELECT TRY_CAST('abc' AS INT) AS Result;          -- Returns NULL (no error)\nSELECT CONVERT(INT, 'abc') AS Result;             -- Throws an error!\nI think that is the reason for try_cast() in here\n\nAs a european I would not know it has to be 7, we never use that format and I do not know (or want to know) all formats by heart.....\n\ntry_cast: https://learn.microsoft.com/en-us/sql/t-sql/functions/try-cast-transact-sql?view=sql-server-ver16\n\nconvert: https://learn.microsoft.com/en-us/sql/t-sql/functions/cast-\nand-convert-transact-sql?view=sql-server-ver16\n\nBut 7 is a format smaller then 100 so the year-part =yy, so otherwise it would be yyyy",
-  "question_type": "image_only",
-  "exam": "dp-700",
+  "correct_answer_images": [],
+  "discussion": "D is correct answer : change the detection model.\n\nhttps://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/how-to/specify-detection-model#evaluate-different-models\n\nThe current detection model (detection_01) might not be the most suitable for detecting faces in challenging conditions such as blurred images or images with sideways faces. The Face API provides different detection models, such as detection_02 or detection_03, which may offer better accuracy for these scenarios.\n\nD is correct\n\nThats the type of question one could answer without knwoing anything. For B and C its unnecessary to even provide code snippets\n. From code we can see API and model. model seems more reasonable than API version.\n\nI say this answer is D.\n\nI use detection_02 or detection_03.\n\nit contains sideway faces, so change face API detection model 03\n\nanswer is correct\n\nD is the answer.\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/computer-vision/how-to/specify-detection-model#evaluate-different-models\nThe different face detection models are optimized for different tasks.\n- detection_02\nImproved accuracy on small, side-view, and blurry faces.",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
   "topic": 2,
   "question_number": 16,
-  "url": "https://www.examtopics.com/discussions/microsoft/view/155696-exam-dp-700-topic-2-question-16-discussion/"
+  "url": "https://www.examtopics.com/discussions/microsoft/view/77610-exam-ai-102-topic-2-question-16-discussion/"
 }

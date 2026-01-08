@@ -1,0 +1,21 @@
+{
+  "question_text": "You plan create an index for an Azure Cognitive Search service by using the Azure portal. The Cognitive Search service will connect to an Azure SQL database.<br/><br/>The Azure SQL database contains a table named UserMessages. Each row in UserMessages has a field named MessageCopy that contains the text of social media messages sent by a user.<br/><br/>Users will perform full text searches against the MessageCopy field, and the values of the field will be shown to the users.<br/><br/>You need to configure the properties of the index for the MessageCopy field to support the solution.<br/><br/>Which attributes should you enable for the field?",
+  "question_images": [],
+  "answers": {
+    "A": "Sortable and Retrievable",
+    "B": "Filterable and Retrievable",
+    "C": "Searchable and Facetable",
+    "D": "Searchable and Retrievable"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "D"
+  ],
+  "correct_answer_images": [],
+  "discussion": "D is the answer.\n\nhttps://learn.microsoft.com/en-us/rest/api/searchservice/create-index#-field-definitions-\n- retrievable\nIndicates whether the field can be returned in a search result.\n- searchable\nIndicates whether the field is full-text searchable and can be referenced in search queries.\n\nYou need the MessageCopy field to be full-text searchable so users can perform searches against its content, and retrievable so that the values of the field can be displayed to users.\n\nAnswer is D\n\nIt is obvious that D is the correct answer.\n\nD is right answer.\n\nonly option D meets the demand\n\ncorrect\n\nShould be correct.\n\nreference: https://learn.microsoft.com/en-us/azure/search/search-what-is-an-index",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 4,
+  "question_number": 14,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/109370-exam-ai-102-topic-4-question-14-discussion/"
+}

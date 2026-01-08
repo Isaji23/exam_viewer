@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You have an Azure subscription that contains an Azure AI Content Safety resource named CS1.<br/><br/>You need to use the SDK to call CS1 to identify requests that contain harmful content.<br/><br/>How should you complete the code? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-8_question-11_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-8_question-11_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-8_question-11_correct_1.png"
+  ],
+  "discussion": "Answer is ContentSafetyClient and AnalyzeTextOptions : https://learn.microsoft.com/en-us/azure/ai-services/content-safety/how-to/use-blocklist?tabs=windows%2Crest\n\nCorrect: \nContentSafetyClient\nAnalyzeTextOptions\n\nContentSafetyClient is CORRECT. This class is used to connect to the Azure AI Content Safety resource and perform operations such as analyzing text for harmful or objectionable content. By initializing the client with the correct endpoint and key, you can call the AnalyzeText method to assess the content.\n\nAnalyzeTextOptions is CORRECT. This class is used to configure the options for analyzing text, such as specifying the content to be evaluated for harmful or objectionable material. In this case, it is needed to create a request for the AnalyzeText method, which checks the input for content violations.",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 8,
+  "question_number": 11,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/149922-exam-ai-102-topic-8-question-11-discussion/"
+}

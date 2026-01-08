@@ -1,0 +1,20 @@
+{
+  "question_text": "You have a chatbot that was built by using Microsoft Bot Framework and deployed to Azure.<br/><br/>You need to configure the bot to support voice interactions. The solution must support multiple client apps.<br/><br/>Which type of channel should you use?",
+  "question_images": [],
+  "answers": {
+    "A": "Cortana",
+    "B": "Microsoft Teams",
+    "C": "Direct Line Speech"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "C"
+  ],
+  "correct_answer_images": [],
+  "discussion": "C is the answer.\n\nhttps://learn.microsoft.com/en-us/azure/bot-service/bot-service-channel-directline?view=azure-bot-service-4.0\nThe Bot Framework offers multiple channels with the Direct Line branding. It's important that you select the version that best fits the conversational AI experience you're designing.\n- Direct Line Speech. It provides text-to-speech and speech-to-text services within the channel. It allows a client to stream audio directly to the channel which will then be converted to text and sent to the bot. Direct Line Speech can also convert text messages from the bot into audio messages spoken by an AI-powered voice. Combined, this makes Direct Line Speech capable of having audio only conversations with clients.\n\nGotten this in Jul 2023 exam.\n\nDirect Line Speech is CORRECT because it allows your bot to handle voice interactions and supports multiple client applications. This channel is specifically designed for enabling speech capabilities in your bot, making it suitable for a variety of voice-enabled applications.\n\nC it is\n\nI say this answer is C\n\nC is answer.\n\nDesigned for Voice Interactions: ***Direct Line Speech*** is specifically designed to enable voice interactions for bots. It provides an integrated set of capabilities to convert speech to text (STT), perform natural language understanding, and then convert text back to speech (TTS). This is essential for creating a seamless voice interaction experience.\n\n***Cortana*** is tailored for interactions with Microsoft's virtual assistant and is limited to the Cortana ecosystem.\n***Microsoft Teams*** is focused on integrating bots within the Teams platform for collaboration and communication, but it's not specifically designed for voice-first experiences.\n\nAnswer seems correct\nhttps://learn.microsoft.com/en-us/azure/bot-service/directline-speech-bot?view=azure-bot-service-4.0\n\nQuoted from the link down below. Using DirectLine, not only can you define your own UI with your own features, but you can connect multiple applications to a registered Bot simultaneously. https://blog.botframework.com/2017/06/26/speech-to-text/\n\nhttps://learn.microsoft.com/en-us/azure/bot-service/directline-speech-bot?view=azure-bot-service-4.0\n\nDirect Line Speech is a robust, end-to-end solution for creating a flexible, extensible voice assistant. It is powered by the Bot Framework and its Direct Line Speech channel, that is optimized for voice-in, voice-out interaction with bots.\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/direct-line-speech",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 5,
+  "question_number": 36,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/107302-exam-ai-102-topic-5-question-36-discussion/"
+}

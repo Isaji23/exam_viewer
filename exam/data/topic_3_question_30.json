@@ -1,0 +1,21 @@
+{
+  "question_text": "You have the following data sources:<br/>✑ Finance: On-premises Microsoft SQL Server database<br/>✑ Sales: Azure Cosmos DB using the Core (SQL) API<br/>✑ Logs: Azure Table storage<br/>✑ HR: Azure SQL database<br/>You need to ensure that you can search all the data by using the Azure Cognitive Search REST API.<br/>What should you do?<br/>",
+  "question_images": [],
+  "answers": {
+    "A": "Migrate the data in HR to Azure Blob storage.",
+    "B": "Migrate the data in HR to the on-premises SQL server.",
+    "C": "Export the data in Finance to Azure Data Lake Storage.",
+    "D": "Ingest the data in Logs into Azure Sentinel."
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "C"
+  ],
+  "correct_answer_images": [],
+  "discussion": "C is the answer.\n\nhttps://learn.microsoft.com/en-us/azure/search/search-data-sources-gallery\n\nhttps://learn.microsoft.com/en-us/azure/search/search-indexer-overview#supported-data-sources\nIndexers crawl data stores on Azure and outside of Azure.\n- Azure Blob Storage\n- Azure Cosmos DB\n- Azure Data Lake Storage Gen2\n- Azure SQL Database\n- Azure Table Storage\n- Azure SQL Managed Instance\n- SQL Server on Azure Virtual Machines\n- Azure Files (in preview)\n- Azure MySQL (in preview)\n- SharePoint in Microsoft 365 (in preview)\n- Azure Cosmos DB for MongoDB (in preview)\n- Azure Cosmos DB for Apache Gremlin (in preview)\n\nthanks for the reference\n\ncredit to zellck for answer and link\n\nhttps://learn.microsoft.com/en-us/azure/search/search-data-sources-gallery\n\nAnswer is C\n\nC is answer.\n\non exam, C is correct.\n\nTrick question, make sure you read it well. All of the data but that from Finance is already in the cloud.\n\nFinance data stays on-premises now, it has to be migrated to Azure Cloud first in order to be indexed and searchable by Cognitive Service\n\nA modified version of this was in the exam today.\n\nhttps://learn.microsoft.com/en-us/azure/search/search-indexer-overview#supported-data-sources\n\nhttps://learn.microsoft.com/en-us/azure/search/search-indexer-overview",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 30,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/88196-exam-ai-102-topic-3-question-30-discussion/"
+}

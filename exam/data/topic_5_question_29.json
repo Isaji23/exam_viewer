@@ -1,0 +1,25 @@
+{
+  "question_text": "You create five bots by using Microsoft Bot Framework Composer.<br/><br/>You need to make a single bot available to users that combines the bots. The solution must support dynamic routing to the bots based on user input.<br/><br/>Which three actions should you perform? Each correct answer presents part of the solution.<br/><br/>NOTE: Each correct selection is worth one point.",
+  "question_images": [],
+  "answers": {
+    "A": "Create a composer extension.",
+    "B": "Change the Recognizer/Dispatch type.",
+    "C": "Create an Orchestrator model.",
+    "D": "Enable WebSockets.",
+    "E": "Create a custom recognizer JSON file.",
+    "F": "Install the Orchestrator package."
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "B",
+    "C",
+    "F"
+  ],
+  "correct_answer_images": [],
+  "discussion": "B. Change the Recognizer/Dispatch type: Adjusting the recognizer type to one that supports dispatching allows the bot to understand and route user input to the appropriate sub-bot.\n================================================\nC. Create an Orchestrator model: The Orchestrator is an AI-based component that helps in making decisions on routing the conversation to the most appropriate bot based on the user's intent.\n================================================\nF. Install the Orchestrator package: This is necessary to use the Orchestrator model within your bot, enabling it to dynamically route conversations to the correct bot based on the context and content of the user input.\n\nChange the Recognizer/Dispatch type is CORRECT because you need to set the recognizer type to dispatch or orchestrator to enable routing based on user input.\n\nCreate an Orchestrator model is CORRECT because the Orchestrator model is designed to handle dynamic routing and intent recognition across multiple bots.\n\nInstall the Orchestrator package is CORRECT because the Orchestrator package provides the necessary tools and libraries to use the Orchestrator model within the Bot Framework Composer.\n\nBCF it is\n\nI'm not sure whether the topic of bot is still included in the 2025 exam.\n\nRecognizer/Dispatch type\ndouble Orchestrator\n\nI say this answer is BCF.\n\nMemorize dispatch and Orchestrator.\n\nMemorize dispatch and Orchestrator.\n\nThe answer is correct\n\nBCF is the answer.\n\nhttps://learn.microsoft.com/en-us/composer/how-to-create-orchestrator-bot\n\nhttps://learn.microsoft.com/en-us/composer/how-to-create-orchestrator-bot#add-orchestrator-in-package-manager\nOrchestrator isn't a default feature in Composer. To use Orchestrator, first add the Orchestrator package to your bot. Composer will download the latest Orchestrator model and make it available to your bot.\n\nOn the Choose a recognizer type page, select Orchestrator (Intents only) and select Done to change the recognizer.\n\nChatGPT answers : \nTo make a single bot available to users that combines the bots and supports dynamic routing to the bots based on user input, the following three actions should be performed:\n\nB. Change the Recognizer/Dispatch type: The Recognizer/Dispatch type should be changed to enable the bot to recognize user input and dispatch it to the appropriate bot.\n\nC. Create an Orchestrator model: An Orchestrator model should be created to handle the routing of user input to the appropriate bot.\n\nF. Install the Orchestrator package: The Orchestrator package should be installed to provide the bot with the necessary functionality to route user input to the appropriate bot.\n\nTherefore, options B, C, and F are the correct answers.",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 5,
+  "question_number": 29,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/102800-exam-ai-102-topic-5-question-29-discussion/"
+}

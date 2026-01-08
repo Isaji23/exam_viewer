@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You have an Azure subscription that contains an Azure OpenAI resource named AI1.<br/><br/>You plan to develop a console app that will answer user questions.<br/><br/>You need to call AI1 and output the results to the console.<br/><br/>How should you complete the code? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-7_question-11_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-7_question-11_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-7_question-11_correct_1.png"
+  ],
+  "discussion": "GetCompletions is CORRECT because this method is used to get a completion response from the OpenAI model for a given prompt. In this case, the prompt is \"What is Microsoft Azure?\" and you want the model to generate a text response to this question.\n\n(response.Value.Choices[0].Text); is CORRECT because this property accesses the generated text response from the OpenAI model. This is what you need to print to the console to display the answer to the user's question.\n\n1. GetCompletions - this is the api for creating chat. \n2. (response.Value.Choises[0].Text) - this will output the text from top rated response object.\n\n1. GetCompletions\n2. (response.Value.Choises[0].Text);\n\nAgree answer is correct\n\nAnswer is correct.",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 7,
+  "question_number": 11,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/136128-exam-ai-102-topic-7-question-11-discussion/"
+}

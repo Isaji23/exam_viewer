@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT -<br/><br/>You have an Azure subscription that contains an Azure AI Document Intelligence resource named DI1.<br/><br/>You build an app named App1 that analyzes PDF files for handwritten content by using DI1.<br/><br/>You need to ensure that App1 will recognize the handwritten content.<br/><br/>How should you complete the code? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-4_question-30_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-4_question-30_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-4_question-30_correct_1.png"
+  ],
+  "discussion": "I Think field one should be \"prebuilt-read\" as this is a model suitable for OCR with handwritten documents according to ChatGPT.\n\nit's the same question that question 18 of topic 4 , but this time is in pyton instead C# , answers are the same : \nprebuilt-document\n0.75\n\nPrebuilt-read\nhttps://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/prebuilt/read?view=doc-intel-4.0.0&tabs=sample-code\n\nrepeat qn\n\nPrebuilt-read\n0.75\n\nPrebuilt-read\n0.75",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 4,
+  "question_number": 30,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/149783-exam-ai-102-topic-4-question-30-discussion/"
+}

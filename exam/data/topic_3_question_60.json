@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You are building a chatbot.<br/><br/>You need to use the Content Moderator API to identify aggressive and sexually explicit language.<br/><br/>Which three settings should you configure? To answer, select the appropriate settings in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-3_question-60_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-3_question-60_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-3_question-60_correct_1.png"
+  ],
+  "discussion": "The answers should be \nResource Name\nclassify\nocp-Apim-Subscription-Key\n\nautocorrect has nothing to do with the question\n\nhttps://westus.dev.cognitive.microsoft.com/docs/services/57cf753a3f9b070c105bd2c1/operations/57cf753a3f9b070868a1f66f\n\nhttps://learn.microsoft.com/en-us/training/modules/classify-and-moderate-text-with-azure-content-moderator/4-exercise-use-the-api-console\n\nResource Name is CORRECT. This specifies the name of the Content Moderator resource that you are using, ensuring that the API calls are directed to the correct resource.\n\nclassify is CORRECT. Setting this parameter to true enables the classification feature of the Content Moderator API, which is necessary to identify aggressive and sexually explicit language.\n\nOcp-Apim-Subscription-Key is CORRECT. This is the subscription key required to authenticate and authorize your API requests.\n\nResource Name\nclassify\nocp-Apim-Subscription-Key\n\nNagaoShingo 1 month, 1 week ago\n1. Resource name\n2. classify\n3. Ocp-Api-Suscription-Key\n\nResource Name: Provide the name of your Content Moderator resource.\nClassify: Set to true to enable classification of content.\nOcp-Apim-Subscription-Key: Provide your subscription key for authentication.\n\nAll other fields are not necessary to set.\n\n1. Resource name\n2. classify\n3. Ocp-Api-Suscription-Key\n\nResource name\nclassify\nOcp-Api-Suscription-Key",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 60,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/134937-exam-ai-102-topic-3-question-60-discussion/"
+}

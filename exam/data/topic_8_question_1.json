@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT -<br/>You build a QnA Maker resource to meet the chatbot requirements.<br/>Which RBAC role should you assign to each group? To answer, select the appropriate options in the answer area.<br/>NOTE: Each correct selection is worth one point.<br/>Hot Area:<br/><img class=\"in-exam-image\" src=\"images/ai-102_topic-8_question-1_html_1.png\"/><br/>",
+  "question_images": [
+    "images/ai-102_topic-8_question-1_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-8_question-1_correct_1.png"
+  ],
+  "discussion": "1. Cognitive Service User\n2. QnA Maker Editor\n3. QnA Maker Read\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/qnamaker/concepts/role-based-access-control#access-is-provided-by-a-defined-role\n- Cognitive Service User (read/write/publish)\n- QnA Maker Editor (read/write)\n- QnA Maker Read (read)\n\nChatbot requirements: Ensure that the members of a group named Management-Accountants can approve the FAQs. The role that can approve FAQs in a system leveraging Cognitive Services QnA Maker is likely the Cognitive Services QnA Maker Editor. This role typically allows users to create, edit, and manage content, including approving FAQs. Hence, 1. QnA Maker Editor\n\nChatbot Req: \"Management-Bookkeeper must define how to extract tables from financial documents.\" Which really seems like it agrees with you. Common sense tells me management shouldn't be doing anything technical; so I'm torn on their meaning of these. It defies common sense- thus maybe it doesn't imply direct \"approval\" of \"define how to extract table...\" Still I think Manager might need to have the QnA Maker Editor role like you say.\n\nmanagement account should use \"Cognitive Service User\" since only this role has permission to publish. Consultant should be able to edit and Agent should be only able to read\n\nCognitive Services User is CORRECT because it allows the Management-Accountants group to publish FAQs. This role provides the necessary permissions to use and manage the QnA Maker knowledge base, including publishing content, which aligns with the requirement for Management-Accountants to approve FAQs.\n\nCognitive Services QnA Maker Editor is CORRECT because it allows the Consultant-Accountants group to create and amend the FAQs. This role provides the necessary permissions to edit the QnA Maker knowledge base without providing excessive permissions such as those needed for managing the entire resource or publishing content.\n\nCognitive Services QnA Maker Read is CORRECT because it allows the Agent-CustomerServices group to browse and read the FAQs without making any modifications. This role provides read-only access to the QnA Maker knowledge base, which is appropriate for their requirement to browse FAQs.\n\nProvided answer is right\n\nThe dysfunctional Microsoft makes this question an English comprehension question. How much text to read and to check what knowledge, roles? How does the scenario become important.\n\ncorrect\n\nThe answer is correct, based on \nhttps://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/concepts/role-based-access-control",
+  "question_type": "hot_area",
+  "exam": "ai-102",
+  "topic": 8,
+  "question_number": 1,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/78040-exam-ai-102-topic-8-question-1-discussion/"
+}

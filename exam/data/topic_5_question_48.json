@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You have a chatbot.<br/><br/>You need to test the bot by using the Bot Framework Emulator. The solution must ensure that you are prompted for credentials when you sign in to the bot.<br/><br/>Which three settings should you configure? To answer, select the appropriate settings in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-5_question-48_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-5_question-48_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-5_question-48_correct_1.png"
+  ],
+  "discussion": "1. Enter the local path to ngrok.\n2. Enable Run ngrok when the Emulator starts up.\n3. Enable Use version 1.0 authentication tokens.\n\nhttps://learn.microsoft.com/en-us/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&tabs=csharp#using-authentication-tokens\n\nthanks for explanation\n\ncredit to zellck for answer and link\n\n1. Enter the local path to ngrok.\n2. Enable Run ngrok when the Emulator starts up.\n3. Enable Use version 1.0 authentication tokens.\n\nhttps://learn.microsoft.com/en-us/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&tabs=csharp#using-authentication-tokens\n\n1. Enter the local path to ngrok.\n2. Enable Run ngrok when the Emulator starts up.\n3. Enable Use version 1.0 authentication tokens.\n\nWhat is ngrok?\n\nngrok is a reverse proxy tool that creates a secure tunnel from a public endpoint to a locally running web service. It is widely used for testing local development versions of web applications, APIs, and bots, allowing them to be accessed over the internet. This is particularly useful for testing functionalities that require public accessibility, such as OAuth callbacks during authentication processes. By using ngrok, developers can simulate a production environment on their local machine, making it easier to test and debug features like sign-in flows that rely on external authentication services reaching the bot.\n\nThe answer seems correct.\nhttps://learn.microsoft.com/en-us/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&tabs=csharp\n\nNo.\n1st is OK.\n2nd is OK.\n3rd is \"Use a sing-in verification code for OAuthCard\"\n\n3rd should be enable \"Use version 1.0 authentication tokens\". \n\"Use a sing-in verification code for OAuthCard\" is the setting for \"Using a sign-in verification code\"",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 5,
+  "question_number": 48,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/112152-exam-ai-102-topic-5-question-48-discussion/"
+}

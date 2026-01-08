@@ -1,0 +1,21 @@
+{
+  "question_text": "You develop a Conversational Language Understanding model by using Language Studio.<br/><br/>During testing, users receive incorrect responses to requests that do NOT relate to the capabilities of the model.<br/><br/>You need to ensure that the model identifies spurious requests.<br/><br/>What should you do?",
+  "question_images": [],
+  "answers": {
+    "A": "Enable active learning.",
+    "B": "Add entities.",
+    "C": "Add examples to the None intent.",
+    "D": "Add examples to the custom intents."
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "C"
+  ],
+  "correct_answer_images": [],
+  "discussion": "C is the answer.\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/language-service/conversational-language-understanding/concepts/none-intent#adding-examples-to-the-none-intent\nThe None intent is also treated like any other intent in your project. If there are utterances that you want predicted as None, consider adding similar examples to them in your training data. For example, if you would like to categorize utterances that are not important to your project as None, such as greetings, yes and no answers, responses to questions such as providing a number, then add those utterances to your intent.\n\nYou should also consider adding false positive examples to the None intent. For example, in a flight booking project it is likely that the utterance \"I want to buy a book\" could be confused with a Book Flight intent. Adding \"I want to buy a book\" or \"I love reading books\" as None training utterances helps alter the predictions of those types of utterances towards the None intent instead of Book Flight.\n\nare you sure? active learning will not be the answer?\n\nNone intent is used to handle spurious or irrelevant requests that do not relate to the capabilities of the model. By adding examples of irrelevant requests to the None intent, you train the model to recognize and correctly categorize these types of queries, thereby improving the model's ability to identify spurious requests.\n\nAnswer is C\n\nC is answer.\n\nChatGPT says C but I've doubt on A\n\nIn a Conversational Language Understanding model, especially when using a tool like Language Studio, the \"None\" intent plays a crucial role in handling queries or requests that do not pertain to the defined capabilities of the model. Here's why adding examples to the None intent is the right approach:\n\nNone Intent: The None intent is designed to capture user inputs that fall outside of the other specified intents in your model. By training the None intent with examples of irrelevant or unrelated requests, you teach the model to recognize and appropriately handle spurious queries that do not align with its capabilities. This helps in reducing incorrect responses by ensuring that the model does not force these out-of-scope queries into one of the custom intents.\n\nC -  None intent.\nBecause of 'NOT' related utterances, and 'NOT' related utterances do not add value, hence 'Not active learning'. \nKeyword - 'NOT' related.\nDuring testing, users receive incorrect responses to requests that do NOT relate to the capabilities of the model.\n\nNone intent is where you place utterances not related to the model capabilities\n\nC.\n#22 topic3\n\nNow #19 topic 3",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 5,
+  "question_number": 43,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/112147-exam-ai-102-topic-5-question-43-discussion/"
+}

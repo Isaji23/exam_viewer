@@ -1,0 +1,23 @@
+{
+  "question_text": "You are building a chatbot by using the Microsoft Bot Framework Composer as shown in the exhibit. (Click the Exhibit tab.)<br/><img class=\"in-exam-image\" src=\"images/ai-102_topic-5_question-14_html_1.png\"/><br/>The chatbot contains a dialog named GetUserDetails. GetUserDetails contains a TextInput control that prompts users for their name.<br/>The user input will be stored in a property named name.<br/>You need to ensure that you can dispose of the property when the last active dialog ends.<br/>Which scope should you assign to name?<br/>",
+  "question_images": [
+    "images/ai-102_topic-5_question-14_question_1.png"
+  ],
+  "answers": {
+    "A": "dialog",
+    "B": "user",
+    "C": "turn",
+    "D": "conversation"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "A"
+  ],
+  "correct_answer_images": [],
+  "discussion": "A is the answer.\n\nhttps://learn.microsoft.com/en-us/composer/ref-memory-variables?tabs=v2x#the-scopes\n- Dialog\nProperties associated with the active dialog. Properties in the dialog scope are kept until the dialog ends.\n\nI think that it is \"Conversation\" because it must be retained until the \"last active dialog ends\". So the last dialog of the active conversation.\n\nCredit to zellck for the link provided\n\nAnswer is A\n\nA is answer.\n\nA is right answer.\n\nhttps://learn.microsoft.com/en-us/composer/concept-memory?tabs=v1x\n\nShouldn't it be USER? If Dialog is selected, one the last dialog is concluded, the information will be lost.\n\nDialog scope are retained until the \"last active dialog ends\".  That's what the question asked for.\nRef: Under \"Composer v1.x\" tab, https://docs.microsoft.com/en-us/composer/concept-memory?tabs=v2x\n\nAgreed. A. dialog\n\nSo it was true for v1.x, but not for v2.x? (The wording changed from \"dialog is associated with the dialog stack. Properties in the dialog scope are retained until the last active dialog ends.\" in v1 to \"The dialog scope associates properties with the active dialog. Properties in the dialog scope are retained until the dialog ends.\" in v2. My guess is that was a correction on the documentation because otherwise, the \"dialog\" scope would not make any sense. I'll go for \"conversation\".\n\nTrue, when it says \"when the dialog ends\", one could say that it means \"after the dialog ends\", or \"until\". Why are you so sure?",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 5,
+  "question_number": 14,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/75647-exam-ai-102-topic-5-question-14-discussion/"
+}

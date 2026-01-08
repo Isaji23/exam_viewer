@@ -1,0 +1,19 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You plan to provision Azure Cognitive Services resources by using the following method.<br/><br/>You need to create a Standard tier resource that will convert scanned receipts into text.<br/><br/><img src=\"images/ai-102_topic-4_question-16_html_1.png\"/><br/><br/>How should you call the method? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-4_question-16_html_2.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-4_question-16_question_1.png",
+    "images/ai-102_topic-4_question-16_question_2.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-4_question-16_correct_1.png"
+  ],
+  "discussion": "The current name for Form Recognizer (as of May 2024) is Document Intelligence.\n\n1. Document Intelligence(Form Recognizer)\n2. \"S0\", \"eastus\"\n\nhttps://azure.microsoft.com/en-us/pricing/details/ai-document-intelligence/\n\nFormRecognizer (now AI Document Intelligence) is CORRECT because it is specifically designed for extracting information from documents, including scanned receipts. This service uses optical character recognition (OCR) and other AI techniques to convert various types of documents into structured data. Given the requirement to convert scanned receipts into text, AI Document Intelligence is the most appropriate choice.\n\n\"S0\", \"eastus\" is CORRECT. We want to create standard-tier resources. AI Document Intelligence comes in 2 tiers: F0 and S0. F0 is for the free tier whereas S0 is for standard-tier resources and the location parameter to specify is “eastus”.\n\nIs it asking me to know it is eastus and not useast?? In this era this is important knowledge for Microsoft?\nWhat does knowing these things prove? Microsoft should do an internal audit and shutdown in shame\n\nTo be honest if you're a developer you notice one parameter missing (name). So the code is not valid. But for the sake of answer we go with tier before location,\n\n1. Document Intelligence (Form Recognizer)\n2. \"S0\", \"eastus\"\n\n1. FormRecognizer -> Document Intelligences service.\n2. S0, \"eastus\"\n\nForms recognizer comes in 2 tiers one is F0 and another is S0. Apologizes on listing out S1 Ties as it doesnt exists with Document Intelligences service. Sorry for the confusion\n\nTier: “S1”\nLocation: “eastus”\n\nTo create a Standard tier resource that converts scanned receipts into text using Form Recognizer, you should call the provision_resource method with the following parameters:\n\nResource Name: “res1”\nKind: FormRecognizer\n\nDocument Intelligence (formerly known as Form Recognizer) is an Azure AI service that specializes in extracting structured data from unstructured documents, including receipts.",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 4,
+  "question_number": 16,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/136922-exam-ai-102-topic-4-question-16-discussion/"
+}

@@ -1,0 +1,21 @@
+{
+  "question_text": "You have a Language service resource that performs the following:<br/><br/>• Sentiment analysis<br/>• Named Entity Recognition (NER)<br/>• Personally Identifiable Information (PII) identification<br/><br/>You need to prevent the resource from persisting input data once the data is analyzed.<br/><br/>Which query parameter in the Language service API should you configure?",
+  "question_images": [],
+  "answers": {
+    "A": "model-version",
+    "B": "piiCategories",
+    "C": "showStats",
+    "D": "loggingOptOut"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "D"
+  ],
+  "correct_answer_images": [],
+  "discussion": "The LoggingOptOut parameter is true by default for the PII and health feature endpoints.\nReference https://learn.microsoft.com/en-us/legal/cognitive-services/language-service/data-privacy\n\nChatGPT confirms : \nTo prevent the resource from persisting input data once the data is analyzed, you should configure the loggingOptOut query parameter in the Language service API. Setting the value of loggingOptOut to true will prevent the service from logging or storing the input data after analysis.\n\nTherefore, the correct answer is D. loggingOptOut.\n\nhttps://learn.microsoft.com/en-us/legal/cognitive-services/language-service/data-privacy\n\nloggingOptOut is correct because this query parameter can be set to true to ensure that input data is not logged or persisted by the Language service. This is essential for maintaining data privacy and compliance with regulations regarding the handling of sensitive information.\n\nD is the answer\n\nAnother of the Microsoft greatness in naming conventions. loggingOutput=false means it will keep the data, if it is true it will not keep the data. Now make sense of that. \nhttps://learn.microsoft.com/en-us/legal/cognitive-services/language-service/data-privacy#how-is-data-retained-and-what-customer-controls-are-available\n\n\"By default, this parameter is set to false for Language Detection, Key Phrase Extraction, Sentiment Analysis and Named Entity Recognition endpoints\"\n\nits not output in options rather OPTout\n\nD is answer.\n\nloggingOptOut Yes\n\nno doubt answer is D\n\nA modified version of this was in the exam today.\n\nHi @Gavlli, May  know how many simulation questions comes in AI 102 exam? also read through all the ET questions should be enough to clear  the exam?\n\nAnswer is correct\nhttps://learn.microsoft.com/en-us/legal/cognitive-services/language-service/data-privacy#how-is-data-retained-and-what-customer-controls-are-available",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 32,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/102570-exam-ai-102-topic-3-question-32-discussion/"
+}

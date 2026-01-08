@@ -1,0 +1,18 @@
+{
+  "question_text": "DRAG DROP -<br/>You are developing a solution for the Management-Bookkeepers group to meet the document processing requirements. The solution must contain the following components:<br/>✑ A From Recognizer resource<br/>✑ An Azure web app that hosts the Form Recognizer sample labeling tool<br/>The Management-Bookkeepers group needs to create a custom table extractor by using the sample labeling tool.<br/>Which three actions should the Management-Bookkeepers group perform in sequence? To answer, move the appropriate cmdlets from the list of cmdlets to the answer area and arrange them in the correct order.<br/>Select and Place:<br/><img class=\"in-exam-image\" src=\"images/ai-102_topic-10_question-1_html_1.png\"/><br/>",
+  "question_images": [
+    "images/ai-102_topic-10_question-1_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-10_question-1_correct_1.png"
+  ],
+  "discussion": "Answer is correct.\nCreate a project\nLabel the sample docs\nTrain the model\n\nhttps://docs.microsoft.com/en-us/azure/applied-ai-services/form-recognizer/label-tool#create-a-new-project\n\nAgree with you. Thanks for the reference\n\nStep 1) Create a new project and load sample documents is CORRECT because the first step in using the Azure AI Document Intelligence Studio is to create a new project and load the sample documents that will be used for training the model.\n\nStep 2) Label the sample documents is CORRECT because after creating the project and loading the documents, the next step is to label the sample documents. This involves marking the areas of the documents that contain the data to be extracted, which helps the model learn to recognize these areas in other documents.\n\nStep 3) Train a custom model is CORRECT because after labeling the sample documents, the next step is to train the model using the labeled data. This step involves using the labeled samples to teach the model how to recognize and extract the relevant data from similar documents.\n\nAnswer is correct\n\nThe answer is correct. The \"label tool\" is only available in the \"custom model\" model.\n\nThis question was in the test I took on August 2024\n\nGot this case study in the exam, Jun 2024.\n\nIs this question still available on May 21, 2024?\n\nIll report soon. Document Intelligence Studio makes the app obsolete so i wonder it this is still relevant.\n\nThe requireemnt has nothing to do with composite model given answer is correct\n\nA modified version of this was in the exam today.",
+  "question_type": "drag_drop",
+  "exam": "ai-102",
+  "topic": 10,
+  "question_number": 1,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/77636-exam-ai-102-topic-10-question-1-discussion/"
+}

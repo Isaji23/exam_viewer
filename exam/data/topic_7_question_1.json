@@ -1,0 +1,21 @@
+{
+  "question_text": "You are developing the chatbot.<br/>You create the following components:<br/>✑ A QnA Maker resource<br/>✑ A chatbot by using the Azure Bot Framework SDK<br/>You need to integrate the components to meet the chatbot requirements.<br/>Which property should you use?<br/>",
+  "question_images": [],
+  "answers": {
+    "A": "QnAMakerOptions.StrictFilters",
+    "B": "QnADialogResponseOptions.CardNoMatchText",
+    "C": "QnAMakerOptions.RankerType",
+    "D": "QnAMakerOptions.ScoreThreshold"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "D"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Answer should be D. QnAMakerOptions.ScoreThreshold\nTechnical Requirements says \"AI solution responses must have a confidence score that is equal to or greater than 70 percent\" and \"When the response confidence score is low, ensure that the chatbot can provide other response options to the customers\"\nhttps://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/concepts/confidence-score#set-threshold\n\nAnswer should be C. QnAMakerOptions.RankerType\n\nQnAMakerOptions.ScoreThreshold is CORRECT because this property allows you to set the threshold for the confidence score. By adjusting the ScoreThreshold, you can control the confidence level at which the bot considers a QnA match valid. This helps in ensuring that the bot only responds with answers that meet a certain confidence level, thus improving the accuracy of the chatbot's responses.\n\nAnswer is D\n\nD 100%\n\nQnAMakerOptions.ScoreThreshold, others make no sense\n\nSelected Answer: D\n\nI say this answer is D.\nI assume this question is part of the lab type question.\n\nD is the correct answer.\n\nD is correct\n\nD. QnAMakerOptions.ScoreThreshold\n\nThis property allows you to set a minimum confidence score for answers. If an answer's confidence score is below this threshold, you can trigger alternative actions, such as providing different response options or escalating to a human agent, directly addressing the specified chatbot requirements.\n\nQnAMakerOptions.ScoreThreshold is the property that controls the minimum confidence score required for a QnA Maker response to be considered valid. This directly addresses the requirement that AI responses must have a confidence score of at least 70%.\nBy setting QnAMakerOptions.ScoreThreshold to 0.7 (or 70%), you ensure that the chatbot only provides answers from QnA Maker that have a high level of confidence, meeting the specified requirement.\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/qnamaker/concepts/confidence-score\n\nComplete chatbot constraints from Case Study:\n\nContoso identifies the following requirements for the chatbot:\n* Provide customers with answers to the FAQs.\n* Ensure that the customers can chat to a customer service agent.\n* Ensure that the members of a group named Management-Accountants can approve the FAQs.\n* Ensure that the members of a group named Consultant-Accountants can create and amend the FAQs.\n* Ensure that the members of a group named the Agent-CustomerServices can browse the FAQs.\n* Ensure that access to the customer service agents is managed by using Omnichannel for Customer Service.\n* When the response confidence score is low. ensure that the chatbot can provide other response options to the customers.\n\n\"AI solution responses must have a confidence score that is equal to or greater than 70 percent.\" --> So choose \"D. QnAMakerOptions.ScoreThreshold\" . See https://learn.microsoft.com/en-us/dotnet/api/microsoft.bot.builder.ai.qna.qnamakeroptions.scorethreshold?view=botbuilder-dotnet-stable\n\nshould be D\n\nCorrect answer is D\n\nI'm going for answer D based on\nhttps://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/concepts/best-practices",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 7,
+  "question_number": 1,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/75514-exam-ai-102-topic-7-question-1-discussion/"
+}

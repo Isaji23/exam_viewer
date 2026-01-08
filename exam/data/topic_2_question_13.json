@@ -1,21 +1,18 @@
 {
-  "question_text": "You have a Fabric workspace that contains a lakehouse named Lakehouse1.<br/>In an external data source, you have data files that are 500 GB each. A new file is added every day.<br/>You need to ingest the data into Lakehouse1 without applying any transformations. The solution must meet the following requirements<br/>Trigger the process when a new file is added.<br/>Provide the highest throughput.<br/>Which type of item should you use to ingest the data?",
-  "question_images": [],
-  "answers": {
-    "A": "Eventstream",
-    "B": "Dataflow Gen2",
-    "C": "Streaming dataset",
-    "D": "Data pipeline"
-  },
-  "answer_images": {},
-  "correct_answer": [
-    "D"
+  "question_text": "DRAG DROP -<br/>You are developing a photo application that will find photos of a person based on a sample image by using the Face API.<br/>You need to create a POST request to find the photos.<br/>How should you complete the request? To answer, drag the appropriate values to the correct targets. Each value may be used once, more than once, or not at all.<br/>You may need to drag the split bar between panes or scroll to view content.<br/>NOTE: Each correct selection is worth one point.<br/>Select and Place:<br/><img class=\"in-exam-image\" src=\"images/ai-102_topic-2_question-13_html_1.png\"/><br/>",
+  "question_images": [
+    "images/ai-102_topic-2_question-13_question_1.png"
   ],
-  "correct_answer_images": [],
-  "discussion": "Eventstream is designed for ingesting real-time or streaming data from sources like IoT devices or logs. It’s not optimized for batch processing or large files.\n\nD. Data pipeline.\n\nData pipelines are designed to handle large volumes of data efficiently and can be configured to trigger the ingestion process automatically when new files are added to the external data source. They also provide high throughput, making them suitable for handling 500 GB files daily without applying any transformations.\n\nNotice that the same question is below (#14) and also as #16 topic 3. Comparing the answers, I would choose Dataflow Gen 2, the only answer that appears in each set with answers.\n\nI just took the exam. The options to choose from are different now:\nEventstream.\nDataflow\nActivator\nNotebook\n\nWich one do you guess is correct?\n\nActivator is the tool that alerts when a file has been added. It would then trigger a Data Pipeline to actually move the data. \nDepending on the new wording of the question, this it likely the correct answer.  Notebook is viable but overkill in effort.\n\nNotebook\n\nd is better for 500 GB files\n\nI would prefer using data pipeline although it is a preview feature. Eventstream and streaming data are designed for realtime events\n\nFor high-throughput, event-triggered ingestion of large files into a lakehouse without transformations, Data pipeline is the most appropriate and efficient item in Fabric.\n\nStreaming dataset is the only answer that ticks the requirements for storage trigger and high throughput.\nData Pipeline is not right as at 2025-Jan. The storage trigger is still in preview, so it doesn't satisfy the requirement. But it's probably the best option.",
-  "question_type": "multiple_choice",
-  "exam": "dp-700",
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-2_question-13_correct_1.png"
+  ],
+  "discussion": "Box 1 is \"findsimilars\", others do not match the given request body and make no sense anyway. https://docs.microsoft.com/en-us/rest/api/faceapi/face/find-similar\n\ncool. correct answer!\n\ndefinitely find-similar, as it is the only one whose body parameters correspond\n\nfindsimilars and matchPerson\n\nhttps://docs.microsoft.com/en-us/rest/api/faceapi/face/find-similar?tabs=HTTP#find-similar-results-example\n\n\"matchPerson\" is the default mode that it tries to find faces of the same person as possible by using internal same-person thresholds. It is useful to find a known person's other photos. Note that an empty list will be returned if no faces pass the internal thresholds. \n\n\"matchFace\" mode ignores same-person thresholds and returns ranked similar faces anyway, even the similarity is low. It can be used in the cases like searching celebrity-looking faces.\n\ncredit to zellck\n\n1. findsimilars\n2. matchPerson\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/computer-vision/how-to/find-similar-faces?tabs=rest#find-and-print-matches\n\nfind similar and matchperson\nmatchperson because it is identifying a specific person, not finding similar faces\n\n1. findsimilars\n2. matchPerson\n\n1. findsimilars\n2. matchPerson\n\n1. findsimilars\n2. matchPerson\n\n1. findsimilars\n2. matchPerson\n\nFinal Answer:\nfindsimilars and matchPerson\n\nBox 1 is findsimilars. Box 2 is matchPerson and the provided explanation is correct\n\n1. findsimilars\n2. matchPerson\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/computer-vision/how-to/find-similar-faces?tabs=rest#find-and-print-matches\nThe Find Similar operation does face matching between a target face and a set of candidate faces, finding a smaller set of faces that look similar to the target face. This is useful for doing a face search by image.\n\nBox 1: findsimilars\nBox 2: matchPerson\n\nhttps://dev.cognitive.azure.cn/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237\n\nFIRST BOX IDEBTIFY SECOND BOX NOTHING\nPOST {Endpoint}/face/v1.0/identify\nOcp-Apim-Subscription-Key: {API key}\n{\n  \"largePersonGroupId\": \"sample_group\",\n  \"faceIds\": [\n    \"c5c24a82-6845-4031-9d5d-978df9175426\",\n    \"65d083d4-9447-47d1-af30-b626144bf0fb\"\n  ],\n  \"maxNumOfCandidatesReturned\": 1,\n  \"confidenceThreshold\": 0.5\n}\n\nBox 1 - FindSimilar\nBox 2 - matchPerson (We have to find based on a sample photo)\n\nSeems FIND SIMILAR AND MATCHPERSON\n\nLooking at the ENTIRE document the answer has to be findsimilar: You cannot send the properties like faceListID and largeFaceListId to /detect\n\nThe Answer is correct. The question asks to \"find photos of a person based on a sample image\". Key is \"based on a sample image\". Only detect does this : https://docs.microsoft.com/en-us/rest/api/faceapi/face/detect-with-url.  Find Similars is used to search the similar-looking faces from a faceId array, a face list or a large face list\n\ndetect does not take faceid. Cannot be detect !",
+  "question_type": "drag_drop",
+  "exam": "ai-102",
   "topic": 2,
   "question_number": 13,
-  "url": "https://www.examtopics.com/discussions/microsoft/view/152972-exam-dp-700-topic-2-question-13-discussion/"
+  "url": "https://www.examtopics.com/discussions/microsoft/view/54793-exam-ai-102-topic-2-question-13-discussion/"
 }

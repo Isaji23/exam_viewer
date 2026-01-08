@@ -1,0 +1,24 @@
+{
+  "question_text": "You have an Azure subscription that contains an Azure AI Document Intelligence resource named DI1. DI1 uses the Standard S0 pricing tier.<br/><br/>You have the files shown in the following table.<br/><br/><img src=\"images/ai-102_topic-4_question-29_html_1.png\"/><br/><br/>Which files can you analyze by using DI1?",
+  "question_images": [
+    "images/ai-102_topic-4_question-29_question_1.png"
+  ],
+  "answers": {
+    "A": "File 1.pdf only",
+    "B": "File2.jpg only",
+    "C": "File3.tiff only",
+    "D": "File2.jpg and File3.tiff only",
+    "E": "File1.pdf, File2.jpg, and File3.tiff"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "C"
+  ],
+  "correct_answer_images": [],
+  "discussion": "File1 > 500 Mb so NO\nFile 2 <50x50 pixels so NO\nFile 3 YES\n\nHave a look on any of the prebuilt models and you will see File3.tiff is the only one that fits.\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/prebuilt/contract?view=doc-intel-4.0.0#input-requirements\n\nThe correct answer is:\n\nC. File3.tiffonly\n\nHere's why:\n\nFile1.pdf(800 MB): The Standard S0 pricing tier for Azure AI Document Intelligence has file size limits, and 800 MB exceeds the allowable limit for file analysis.\n\nFile2.jpg(1 KB, 25 x 25 pixels): This file is too small (both in terms of size and resolution) to be analyzed effectively. The minimum recommended resolution for analysis is typically higher, as such a low resolution might not provide enough data for meaningful results.\n\nFile3.tiff(5 MB, 5000 x 5000 pixels): This file is within the size and resolution limits for the Standard S0 tier. The system is capable of analyzing high-resolution images like this.\n\nFile3.tiff meets all the requirements for processing by the Azure AI Document Intelligence resource:\n\nThe file size is 5 MB, which is within the 500 MB limit for the Standard S0 tier. Its dimensions are 5000 x 5000 pixels, which are within the acceptable range of 50 x 50 pixels to 10,000 x 10,000 pixels.\n\nC for correct\n\nIn the Standard (S0) tier of Azure AI Document Intelligence, the key constraints you usually run into are:\n\nFile‐size limits of roughly 200 MB for PDFs and up to 420 MB for images (JPG/PNG/TIFF).\nImage dimension limits of up to around 10,000 × 10,000 pixels.\n\nFile1.pdf (800 MB) exceeds the typical 200 MB PDF limit, so it cannot be analyzed.\nFile2.jpg (1 KB, 25×25) is well below both the size and dimension limits for images, so it can be analyzed.\nFile3.tiff (5 MB, 5000×5000) is below the ~420 MB limit and within the 10,000×10,000 pixel limit, so it can be analyzed.\nTherefore, the files you can analyze in DI1 (S0 tier) are File2.jpg and File3.tiff.\n\nFile1.pdf (exceeds) the limit of 500MB not 200....\n\nImage dimensions must be between 50 pixels x 50 pixels and 10,000 pixels x 10,000 pixels. So the file2.jpg don't fit\n\nFile 3 only\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/prebuilt/read?view=doc-intel-4.0.0&tabs=sample-code\n\nBetween 50 x 50 pixels and 10,000 pixels x 10,000 pixels. So D\n\nWhat about the file size limitations? Are you sure that 25x25 is between 50x50 and 10,000x10,000? That's beyond my understanding.\n\nAccording to ChatGPT the max size for PDFs is 200 MB and for images 50 MB. so File 1 is ruled out. But then it also says that the max resolution for image files \"should\" not exceed 4200 x 4200 pixels. \n\nTherefore I would say answer B: \"File2.jpg only\" is correct.\n\nBetween 50 x 50 pixels and 10,000 pixels x 10,000 pixels. So E\n\nSo D is the answer",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 4,
+  "question_number": 29,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/149782-exam-ai-102-topic-4-question-29-discussion/"
+}

@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You are building a text-to-speech app that will use a custom neural voice.<br/><br/>You need to create an SSML file for the app. The solution must ensure that the voice profile meets the following requirements:<br/><br/>•\tExpresses a calm tone<br/>•\tImitates the voice of a young adult female<br/><br/>How should you complete the code? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-3_question-45_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-3_question-45_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-3_question-45_correct_1.png"
+  ],
+  "discussion": "1. role\n2. style\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/speech-synthesis-markup-voice#speaking-styles-and-roles\nBy default, neural voices have a neutral speaking style. You can adjust the speaking style, style degree, and role at the sentence level.\n\nThe following table has descriptions of each supported style attribute.\n- style=\"gentle\"\nExpresses a mild, polite, and pleasant tone, with lower pitch and vocal energy.\n\nThe following table has descriptions of each supported role attribute.\n- role=\"YoungAdultFemale\"\nThe voice imitates a young adult female.\n\ncorrect https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/speech-synthesis-markup-voice\n\nrole = \"YoungAdultFemale\" is CORRECT because this attribute is used in SSML to specify the intended role or persona of the voice. In this case, you want the voice to imitate a young adult female, so using role=\"YoungAdultFemale\" correctly specifies this persona.\n\nstyle = \"gentle\" is CORRECT because this attribute is used in SSML to specify the speaking style or tone. In this case, you want the voice to express a calm tone, so using style=\"gentle\" correctly specifies this speaking style.\n\n1. role\n2. style\n\n1. role\n2. style\n\n1. role\n2. style\n\non exam, role and style.\n\nrole and style\n\ncorrect answer\nhttps://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup-voice\n\nrole\n\nstyle\n\nsee role at https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup-voice#role-example . May styles at https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup-voice#speaking-styles-and-roles",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 45,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/108985-exam-ai-102-topic-3-question-45-discussion/"
+}

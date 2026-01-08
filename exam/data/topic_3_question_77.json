@@ -1,0 +1,21 @@
+{
+  "question_text": "You are developing an app that will use the Speech and Language APIs.<br/><br/>You need to provision resources for the app. The solution must ensure that each service is accessed by using a single endpoint and credential.<br/><br/>Which type of resource should you create?",
+  "question_images": [],
+  "answers": {
+    "A": "Azure AI Language",
+    "B": "Azure AI Speech",
+    "C": "Azure AI Services",
+    "D": "Azure AI Content Safety"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "C"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Azure AI Services since more than one services are used\n\nRepeat Qn of\n\nYou are developing an app that will use the Decision and Language APIs. You need to provision resources for the app. The solution must ensure that each service is accessed by using a single endpoint and credential. Which type of resource should you create?\n\nAnswer is C\n\nSelected answer C\n\nC 1000%",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 77,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/144085-exam-ai-102-topic-3-question-77-discussion/"
+}

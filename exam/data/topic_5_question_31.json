@@ -1,0 +1,19 @@
+{
+  "question_text": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.<br/><br/>After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.<br/><br/>You are building a chatbot that will use question answering in Azure Cognitive Service for Language.<br/><br/>You have a PDF named Doc1.pdf that contains a product catalogue and a price list.<br/><br/>You upload Doc1.pdf and train the model.<br/><br/>During testing, users report that the chatbot responds correctly to the following question: What is the price of <product>?<br/><br/>The chatbot fails to respond to the following question: How much does <product> cost?<br/><br/>You need to ensure that the chatbot responds correctly to both questions.<br/><br/>Solution: From Language Studio, you enable chit-chat, and then retrain and republish the model.<br/><br/>Does this meet the goal?\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</product></product>",
+  "question_images": [],
+  "answers": {
+    "A": "Yes",
+    "B": "No"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "B"
+  ],
+  "correct_answer_images": [],
+  "discussion": "No is CORRECT. Enabling chit-chat in Language Studio is designed to handle casual or informal conversations and is not specifically aimed at improving the chatbot's ability to understand different phrasings of the same question.\n\nno is correct\n\nclearly B, ChitChat is for pleasantries\n\nclearly B, ChitChat is for pleasantries\n\nPDF file use for training, it is not rationale.",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 5,
+  "question_number": 31,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/117064-exam-ai-102-topic-5-question-31-discussion/"
+}

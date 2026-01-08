@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You are building an app that will automatically translate speech from English to French, German, and Spanish by using Azure AI service.<br/><br/>You need to define the output languages and configure the Azure AI Speech service.<br/><br/>How should you complete the code? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-3_question-73_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-3_question-73_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-3_question-73_correct_1.png"
+  ],
+  "discussion": "Duplicate\n\n{\"fr\", \"de\", \"es\"} is CORRECT because this is the appropriate format for specifying the target languages (French, German, and Spanish) for the Azure Speech Translation service. When adding target languages using the Speech SDK, you provide a list of language codes representing the languages you want to translate to. In this case, the language codes for French (fr), German (de), and Spanish (es) are used.\n\nTranslationRecognizer is CORRECT because this class is specifically designed for translating spoken language into one or more target languages using the Azure Speech service. It allows the app to recognize speech and simultaneously translate it into the specified target languages (in this case, French, German, and Spanish).\n\n1. fr, de, es\n2. TranslationRecognizer\n\nSame Question 68\n\nThe answer options for this question are slightly different from question 68 on topic 3\n\nAnswer seems to be correct.",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 73,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/135148-exam-ai-102-topic-3-question-73-discussion/"
+}

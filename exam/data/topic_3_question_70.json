@@ -1,0 +1,21 @@
+{
+  "question_text": "You are designing a content management system.<br/><br/>You need to ensure that the reading experience is optimized for users who have reduced comprehension and learning differences, such as dyslexia. The solution must minimize development effort.<br/><br/>Which Azure service should you include in the solution?",
+  "question_images": [],
+  "answers": {
+    "A": "Azure AI Immersive Reader",
+    "B": "Azure AI Translator",
+    "C": "Azure AI Document Intelligence",
+    "D": "Azure AI Language"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "A"
+  ],
+  "correct_answer_images": [],
+  "discussion": "https://learn.microsoft.com/en-us/azure/ai-services/immersive-reader/overview\n\nthanks for the reference!\n\nAnswer is A because Immersive Reader is designed specifically to improve the reading experience for users with reduced comprehension and learning differences, such as dyslexia. It provides features like text-to-speech, word highlighting, and other tools to enhance reading comprehension.\n\nImmersive Reader\n\nA is answer.\ndyslexia user is good to use \"Immersive Reader\".\n\nImmersive AI improves accessibility.",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 70,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/135087-exam-ai-102-topic-3-question-70-discussion/"
+}

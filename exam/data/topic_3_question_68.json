@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You are developing a service that records lectures given in English (United Kingdom).<br/><br/>You have a method named append_to_transcript_file that takes translated text and a language identifier.<br/><br/>You need to develop code that will provide transcripts of the lectures to attendees in their respective language. The supported languages are English, French, Spanish, and German.<br/><br/>How should you complete the code? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-3_question-68_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-3_question-68_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-3_question-68_correct_1.png"
+  ],
+  "discussion": "The given answers are correct\n\n(['fr', 'de', 'es']) is CORRECT because this list represents the language codes for French, German, and Spanish. These are the target languages into which the lecture needs to be translated. The method add_target_language(language) requires language codes to configure the translation for the specified languages.\n\nTranslationRecognizer( is CORRECT because this class is specifically designed to recognize speech and translate it into the specified target languages. Given the requirement to provide transcripts in multiple languages, the TranslationRecognizer is the appropriate choice.\n\nWhy is that language assignment in brackets? \nWhat's Microsoft intending with useless code? Don't they get real python programmers and not re-trained .Net piece of xx\n\nfr,de,es \nTranslationRecognizer\n\nThe actual exam will choose between C# or Python programming languages; these types of questions, which seem to be duplicates in ET, differ in the programming language used. Please check.\n\nGiven answer is correct.\n\nfr,de,es and TranslationRecognizer",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 68,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/136760-exam-ai-102-topic-3-question-68-discussion/"
+}

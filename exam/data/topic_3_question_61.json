@@ -1,0 +1,21 @@
+{
+  "question_text": "You are developing an app that will use the Decision and Language APIs.<br/><br/>You need to provision resources for the app. The solution must ensure that each service is accessed by using a single endpoint and credential.<br/><br/>Which type of resource should you create?",
+  "question_images": [],
+  "answers": {
+    "A": "Language",
+    "B": "Speech",
+    "C": "Azure Cognitive Services",
+    "D": "Content Moderator"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "C"
+  ],
+  "correct_answer_images": [],
+  "discussion": "C is right answer, but now this service name changed \"Azure AI\".\n\nDeprecated question but might appear on exam in new form. Now bundled in Azure AI services multi-service account. Contains:\n- Decision -> Content Moderator\n- Language -> Language Understanding, Language, Translator\n- Speech -> S2T, T2S, Speech Translation\n- Vision -> Computer vision, Custom vision, Face\n- Document Intelligence -> Document intelligence (studio)\n\nAnswer to Q would be Azure AI (multi) services.\nEndpoint still is cognitive services.\n\nC for sure\n\nThis question is depricated. Azure Cognitive services is now Azure AI services. I can't find any info about the Decision API but Language API resides within the new AI Services.\n\nSo for the options:\nA) Part of Azure AI Services\nB) Part of Azure AI Services\nC) Renamed to Azure AI Services\nD) Part of Azure AI Services, but renamed to Content Safety\n\nI say this answer is C.\n\nC is answer.\n\nThe correct answer is C. Azure Cognitive Services.\n\nWhen you create an Azure Cognitive Services resource, you get access to a suite of services and APIs, including the Decision and Language APIs, under a single endpoint and credential. This simplifies the management of these services and enhances security by reducing the number of credentials you need to manage. Other options like Language, Speech, and Content Moderator are individual services within Azure Cognitive Services. They do not provide a single endpoint and credential for accessing multiple services. Therefore, they do not meet the requirement specified in the question\n\nA Cognitive Services multi-service resource allows you to access multiple Azure AI services with a single key and endpoint.",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 61,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/135625-exam-ai-102-topic-3-question-61-discussion/"
+}

@@ -1,0 +1,21 @@
+{
+  "question_text": "You are building a chatbot.<br/><br/>You need to configure the bot to guide users through a product setup process.<br/><br/>Which type of dialog should you use?",
+  "question_images": [],
+  "answers": {
+    "A": "component",
+    "B": "action",
+    "C": "waterfall",
+    "D": "adaptive"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "C"
+  ],
+  "correct_answer_images": [],
+  "discussion": "bot should be out of syllabus\n\nWaterfall Dialog is designed to guide users through a series of steps or questions in a defined sequence. This makes it ideal for processes like product setup, where each step depends on the input from the previous step.\n\nhttps://learn.microsoft.com/en-us/azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0#dialog-types\n\nAnswer is C\n\nI say this answer is C.\n\nC is the correct answer for this.\nJ'aime les gros seins.\n\nIt must be C.\nproduct setup process = Waterfall\n\nTo me the most suitable Dialog is Waterfall\n\nhttps://learn.microsoft.com/en-us/azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0#dialog-types\n\nSetting up a product might not be a straight linear process in my view. You might need component dialog to coordinate among multiple waterfalls dialogs which by design work within the context of a component dialog.   https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-concept-waterfall-dialogs?view=azure-bot-service-4.0\n\nQuote \"waterfall dialog: Defines a sequence of steps, allowing your bot to guide a user through a linear process. These are typically designed to work within the context of a component dialog.\" at https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0#dialog-types\n\nShouldn't it be component to work in a \"context of a component dialog\"?\n\nC is the answer.\n\nhttps://learn.microsoft.com/en-us/azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0#dialog-types\nThe dialogs library provides a few types of dialogs to make your bot's conversations easier to manage. \n- waterfall dialog\nDefines a sequence of steps, allowing your bot to guide a user through a linear process. These are typically designed to work within the context of a component dialog.\n\nC\nLike #22 Topic5",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 5,
+  "question_number": 35,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/111871-exam-ai-102-topic-5-question-35-discussion/"
+}

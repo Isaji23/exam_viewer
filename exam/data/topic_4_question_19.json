@@ -1,0 +1,21 @@
+{
+  "question_text": "You have an app named App1 that uses a custom Azure AI Document Intelligence model to recognize contract documents.<br/><br/>You need to ensure that the model supports an additional contract format. The solution must minimize development effort.<br/><br/>What should you do?",
+  "question_images": [],
+  "answers": {
+    "A": "Lower the confidence score threshold of App1.",
+    "B": "Create a new training set and add the additional contract format to the new training set. Create and train a new custom model.",
+    "C": "Add the additional contract format to the existing training set. Retrain the model.",
+    "D": "Lower the accuracy threshold of App1."
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "C"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Option C directly addresses the need to support an additional contract format without starting from scratch. By adding examples of the new contract format to the existing training set and retraining the model, you enhance the model's ability to recognize the new format while leveraging the already trained capabilities for existing formats. This minimizes development effort compared to creating and training a completely new model.\n\nC it is\n\nIt is obvious that C is the correct solution.\n\nIt must be C.\n\nGiven answer C is correct\n\nAdd the additional contract format to the existing training set and retrain the model: This is a more efficient solution. By augmenting the existing training data with the new format, you can fine-tune the model without starting from scratch. Retraining the model with the updated dataset should help it adapt to the additional format",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 4,
+  "question_number": 19,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/135947-exam-ai-102-topic-4-question-19-discussion/"
+}

@@ -1,0 +1,16 @@
+{
+  "question_text": "SIMULATION -<br/>Use the following login credentials as needed:<br/>To enter your username, place your cursor in the Sign in box and click on the username below.<br/>To enter your password, place your cursor in the Enter password box and click on the password below.<br/><br/>Azure Username: <a class=\"__cf_email__\" data-cfemail=\"fc9d98919592bc9d9e9fd29f9391\" href=\"/cdn-cgi/l/email-protection\">[email protected]</a> -<br/><br/>Azure Password: XXXXXXXXXXXX -<br/>The following information is for technical support purposes only:<br/><br/>Lab Instance: 12345678 -<br/><br/>Task -<br/>You need to create an Azure resource named solution12345678 that will index a sample database named realestate-us-sample. The solution must ensure that users can search the index in English for people, organizations, and locations.<br/>To complete this task, sign in to the Azure portal.<br/>",
+  "question_images": [],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-4_question-12_correct_1.png"
+  ],
+  "discussion": "1. Create the Cognitive Search Result\n2. Import data\n3. On Connect to your data choose Samples --> realestate_us_sample\n4.Add enrichments\n5. select Extract people, organization and location names\n6. Select English Microsoft for each one\n7. Create an indexer\n\nAre there simulation questions as of Nov 2024?\n\nSimulation questions will not appear on the actual exam as of May 26, 2024.\n\nIs there a source for this?\n\nAs of March 2024:\n1. Create an AI Search resource under Azure AI services.\n2. On the Overview page select Import data.\n3. Select Samples from the Data Source drop-down box and the realestate-us-sample.\n4. On the Customize target index page ensure Searchable is checked and the Analyzer language is English for the relevant fields.\n\nDo we get simulation question as of Feb 2024?",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 4,
+  "question_number": 12,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/125536-exam-ai-102-topic-4-question-12-discussion/"
+}

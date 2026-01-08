@@ -1,20 +1,18 @@
 {
-  "question_text": "You have a Fabric workspace that contains a lakehouse named Lakehouse1. Lakehouse1 contains a Delta table named Table1.<br/>You analyze Table1 and discover that Table1 contains 2,000 Parquet files of 1 MB each.<br/>You need to minimize how long it takes to query Table1.<br/>What should you do?",
-  "question_images": [],
-  "answers": {
-    "A": "Disable V-Order and run the OPTIMIZE command.",
-    "B": "Disable V-Order and run the VACUUM command.",
-    "C": "Run the OPTIMIZE and VACUUM commands."
-  },
-  "answer_images": {},
-  "correct_answer": [
-    "C"
+  "question_text": "HOTSPOT -<br/>You are developing a service that records lectures given in English (United Kingdom).<br/>You have a method named AppendToTranscriptFile that takes translated text and a language identifier.<br/>You need to develop code that will provide transcripts of the lectures to attendees in their respective language. The supported languages are English, French,<br/>Spanish, and German.<br/>How should you complete the code? To answer, select the appropriate options in the answer area.<br/>NOTE: Each correct selection is worth one point.<br/>Hot Area:<br/><img class=\"in-exam-image\" src=\"images/ai-102_topic-3_question-5_html_1.png\"/><br/>",
+  "question_images": [
+    "images/ai-102_topic-3_question-5_question_1.png"
   ],
-  "correct_answer_images": [],
-  "discussion": "OPTIMIZE: This will help compact the small Parquet files into larger files, improving the efficiency of queries. VACUUM: This will remove old versions of files that are no longer needed, freeing up storage and further optimizing performance.\n\nC is correct\n\nC is the correct\n\nOptimize command solves the \"small file\" problem and the \"VACUUM\" command erases the older versions of the parquet files thus optimizing on storage and better readability\n\nProvided answer C is correct",
-  "question_type": "multiple_choice",
-  "exam": "dp-700",
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-3_question-5_correct_1.png"
+  ],
+  "discussion": "Correct!\n\nSeems correct\nhttps://docs.microsoft.com/en-us/dotnet/api/microsoft.cognitiveservices.speech.translation.translationrecognizer?view=azure-dotnet\n\n(['fr', 'de', 'es']) is CORRECT because this list represents the language codes for French, German, and Spanish. These are the target languages into which the lecture needs to be translated. The method add_target_language(language) requires language codes to configure the translation for the specified languages.\n\nTranslationRecognizer is CORRECT because it is specifically designed to recognize speech and translate it into the specified target languages. Given the requirement to provide transcripts in multiple languages, the TranslationRecognizer is the appropriate choice.\n\nSo, they want to make it a trick by asking for english language as well, but it does not need to be passed. So, one point for the person who remembers it does not have to be passed? That knowledge proves they know Azure-AI?\n\nwas on exam 20.06.24\n\ncorrect\nhttps://learn.microsoft.com/en-us/azure/ai-services/speech-service/how-to-translate-speech?tabs=terminal&pivots=programming-language-csharp\n\ncorrect answer\nhttps://docs.microsoft.com/en-us/dotnet/api/microsoft.cognitiveservices.speech.translation.translationrecognizer?view=azure-dotnet\n\nCorrect,got this in Oct2023 exam\n\nAnswer is correct.\n\n(\"fr\",  \"de\",  \"es\")\nTranslationRecognizer",
+  "question_type": "hot_area",
+  "exam": "ai-102",
   "topic": 3,
   "question_number": 5,
-  "url": "https://www.examtopics.com/discussions/microsoft/view/153754-exam-dp-700-topic-3-question-5-discussion/"
+  "url": "https://www.examtopics.com/discussions/microsoft/view/56455-exam-ai-102-topic-3-question-5-discussion/"
 }

@@ -1,0 +1,21 @@
+{
+  "question_text": "You plan to perform predictive maintenance.<br/><br/>You collect IoT sensor data from 100 industrial machines for a year. Each machine has 50 different sensors that generate data at one-minute intervals. In total, you have 5,000 time series datasets.<br/><br/>You need to identify unusual values in each time series to help predict machinery failures.<br/><br/>Which Azure service should you use?",
+  "question_images": [],
+  "answers": {
+    "A": "Azure AI Computer Vision",
+    "B": "Cognitive Search",
+    "C": "Azure AI Document Intelligence",
+    "D": "Azure AI Anomaly Detector"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "D"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Azure AI Anomaly Detector is specifically designed to detect anomalies in time series data. It uses advanced machine learning models to identify unexpected patterns or behaviors in data, which is essential for predictive maintenance. With the ability to analyze and detect irregularities across multiple time series datasets, this service is ideal for monitoring IoT sensor data to predict machinery failures.\n\nAnswer is D\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/anomaly-detector/overview#multivariate-anomaly-detection\n\nD is OK.\n\nCorrect\nD. predict machinery failures is using Anomaly detector in azure AI service\n\nD. Azure AI Anomaly Detector\n\nAzure AI Anomaly Detector is an AI service that enables you to monitor and detect anomalies in your time series data with little machine learning knowledge, either batch validation or real-time inference.\n\nAnswer seems to be correct",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 1,
+  "question_number": 64,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/135071-exam-ai-102-topic-1-question-64-discussion/"
+}

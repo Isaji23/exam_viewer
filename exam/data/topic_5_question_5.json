@@ -1,0 +1,21 @@
+{
+  "question_text": "You are building a bot on a local computer by using the Microsoft Bot Framework. The bot will use an existing Language Understanding model.<br/>You need to translate the Language Understanding model locally by using the Bot Framework CLI.<br/>What should you do first?<br/>",
+  "question_images": [],
+  "answers": {
+    "A": "From the Language Understanding portal, clone the model.",
+    "B": "Export the model as an .lu file.",
+    "C": "Create a new Speech service.",
+    "D": "Create a new Language Understanding service."
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "B"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Save your time. Bot Framework is not part of AI-102 anymore\n\nhttps://trainingsupport.microsoft.com/en-us/mcp/forum/all/ai-102-practice-exam-questions/05c54cce-cd0d-42ae-8be2-b76fb41c60fa\n\nCorrect\n\nB is answer.\n\nB is right answer.\n\n\"B. Export the model as an .lu file.\n\nWhen you need to translate a Language Understanding (LUIS) model using the Microsoft Bot Framework CLI locally, the first step is to export the existing LUIS model as a .lu file. The .lu file format (Language Understanding file format) allows you to represent intents, entities, and other model components in a text-based form, enabling you to process, modify, or translate them using the Bot Framework CLI. This is a crucial step for working with and integrating LUIS models in a local environment.\"\n\nanswer and explanation seem correct\n\nCorrect\n\ncorrect",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 5,
+  "question_number": 5,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/56546-exam-ai-102-topic-5-question-5-discussion/"
+}

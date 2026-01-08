@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You have an Azure subscription that is linked to a Microsoft Entra tenant. The subscription ID is x1xx11x1-x111-xxxx-xxxx-x1111xxx11x1 and the tenant ID is 1y1y1yyy-1y1y-y1y1-yy11-y1y1y11111y1.<br/><br/>The subscription contains an Azure OpenAI resource named OpenAI1 that has a primary API key of 1111a111a11a111aaa11a1a1a11a11aa. OpenAI1 has a deployment named embeddings1 that uses the text-embedding-ada-002 model.<br/><br/>You need to query OpenAI1 and retrieve embeddings for text input.<br/><br/>How should you complete the code? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-7_question-14_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-7_question-14_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-7_question-14_correct_1.png"
+  ],
+  "discussion": "1 - API key\n2 - deployment name\n\nsee here: https://learn.microsoft.com/en-us/javascript/api/@azure/openai/openaiclient?view=azure-node-preview#@azure-openai-openaiclient-getembeddings\n\n1111a111a11a111aaa11a1a1a11a11aa is CORRECT because this value represents the primary API key required to authenticate your request when querying the Azure OpenAI resource. In the provided code, the AzureKeyCredential is initialized with this API key, allowing the OpenAIClient to authenticate and send requests to the OpenAI1 resource\n\nembeddings1 is CORRECT because it refers to the deployment created within the Azure OpenAI resource that uses the text-embedding-ada-002 model. When making API requests to generate embeddings, the deployment name is required to specify which instance of the model is being used.\n\n1. 1111a111a11a111aaa11a1a1a11a11aa\n2. embeddings1 \nno doubts\n\n1-APi key\n2-deploymentname\nThe name of the model deployment (when using Azure OpenAI) or model name (when using non-Azure OpenAI) to use for this request.\n\n1 - API key\n2 - text-embeddings-ada-002\n\nAgree, API key and the embedding model name\n\nwrong its 1 - API key\n2 - deployment name",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 7,
+  "question_number": 14,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/143924-exam-ai-102-topic-7-question-14-discussion/"
+}

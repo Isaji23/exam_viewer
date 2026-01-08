@@ -1,0 +1,23 @@
+{
+  "question_text": "You are building a multilingual chatbot.<br/>You need to send a different answer for positive and negative messages.<br/>Which two Language service APIs should you use? Each correct answer presents part of the solution.<br/>NOTE: Each correct selection is worth one point.<br/>",
+  "question_images": [],
+  "answers": {
+    "A": "Linked entities from a well-known knowledge base",
+    "B": "Sentiment Analysis",
+    "C": "Key Phrases",
+    "D": "Detect Language",
+    "E": "Named Entity Recognition"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "B",
+    "D"
+  ],
+  "correct_answer_images": [],
+  "discussion": "B. Sentiment Analysis   <-- different answer for positive and negative messages\nD. Detect Language  <-- multilingual chatbot\n\nSentiment Analysis is CORRECT because it allows you to determine whether a message is positive, neutral, or negative. This is essential for sending different responses based on the sentiment of the message.\n\nDetect Language is CORRECT because it helps identify the language of the incoming message, which is crucial for ensuring that the chatbot can respond in the appropriate language.\n\nBD for sure\n\nBD is the correct answer without any doubt\n\nBD is answer.\n\nB and D are correct answer.\n\ncorrect answer\n\nfor sure B but not sure why D? although other options are not useful either!\n\nYou are building a \"multilingual\" chatbot, and that is why D (Detect Language) is correct\n\nAgreed with B & D",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 5,
+  "question_number": 3,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/91978-exam-ai-102-topic-5-question-3-discussion/"
+}

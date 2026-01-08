@@ -1,0 +1,21 @@
+{
+  "question_text": "You have an Azure subscription that contains an Azure App Service app named App1.<br/><br/>You provision a multi-service Azure Cognitive Services resource named CSAccount1.<br/><br/>You need to configure App1 to access CSAccount1. The solution must minimize administrative effort.<br/><br/>What should you use to configure App1?",
+  "question_images": [],
+  "answers": {
+    "A": "a system-assigned managed identity and an X.509 certificate",
+    "B": "the endpoint URI and an OAuth token",
+    "C": "the endpoint URI and a shared access signature (SAS) token",
+    "D": "the endpoint URI and subscription key"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "D"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Azure Cognitive Services typically uses the endpoint URI and subscription key to authenticate and access the service. This method is straightforward and minimizes administrative effort as it involves using the keys provided when the Cognitive Services resource is created.\n\nAnswer is D\n\nD is right, but i sure hope that nobody uses keys anymore. its considered bad practice, use managed identities, rbac to do this.\n\nIt's 100% D. Confirmed by ChatGPT too\n\nI say this answer is D. Please hurry up and transport the meat.\n\nD is answer.\n\nD is right answer.\n\nIn general, you always need an endpoint and subscription key.\n\nBy providing the endpoint URI and subscription key in your application, you can seamlessly connect to CSAccount1 without additional complexities or setup. This approach minimizes administrative overhead and ensures secure communication between your app and the cognitive services.\n\nTherefore, the correct answer is D. the endpoint URI and subscription key.",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 63,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/135943-exam-ai-102-topic-3-question-63-discussion/"
+}

@@ -1,0 +1,21 @@
+{
+  "question_text": "You have an Azure subscription that contains an Azure AI Content Safety resource named CS1.<br/><br/>You plan to build an app that will analyze user-generated documents and identify obscure offensive terms.<br/><br/>You need to create a dictionary that will contain the offensive terms. The solution must minimize development effort.<br/><br/>What should you use?",
+  "question_images": [],
+  "answers": {
+    "A": "a text classifier",
+    "B": "language detection",
+    "C": "text moderation",
+    "D": "a blocklist"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "D"
+  ],
+  "correct_answer_images": [],
+  "discussion": "A blocklist allows you to define a custom list of offensive terms, including terms specific to local language dialects, to be flagged during content analysis. Blocklists are specifically designed for scenarios where predefined moderation models may not cover region-specific terms. Using a blocklist minimizes development effort as it integrates directly with Azure AI Content Safety.\n\nD is correct\n\nTo handle a custom dictionary of offensive terms in Azure AI Content Safety, the blocklist feature is designed for exactly that scenario. You can supply your own list of obscure or custom offensive terms as a blocklist, and Content Safety will flag or block content containing those terms.\n\nBlocklist is what you would use: https://learn.microsoft.com/en-us/azure/ai-services/content-safety/how-to/use-blocklist?tabs=windows%2Crest",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 8,
+  "question_number": 10,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/150483-exam-ai-102-topic-8-question-10-discussion/"
+}

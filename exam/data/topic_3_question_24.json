@@ -1,0 +1,23 @@
+{
+  "question_text": "You are examining the Text Analytics output of an application.<br/>The text analyzed is: `Our tour guide took us up the Space Needle during our trip to Seattle last week.`<br/>The response contains the data shown in the following table.<br/><img class=\"in-exam-image\" src=\"images/ai-102_topic-3_question-24_html_1.png\"/><br/>Which Text Analytics API is used to analyze the text?<br/>",
+  "question_images": [
+    "images/ai-102_topic-3_question-24_question_1.png"
+  ],
+  "answers": {
+    "A": "Entity Linking",
+    "B": "Named Entity Recognition",
+    "C": "Sentiment Analysis",
+    "D": "Key Phrase Extraction"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "B"
+  ],
+  "correct_answer_images": [],
+  "discussion": "B. Named Entity Recognition\n\nNamed Entity Recognition (NER) is a process in natural language processing that identifies and classifies named entities mentioned in text into predefined categories such as the names of persons, organizations, locations, expressions of times, quantities, monetary values, percentages, etc.\n\nEntity Linking typically involves linking entities to knowledge bases.\nSentiment Analysis is used to determine the sentiment expressed in the text.\nKey Phrase Extraction identifies the main points or topics in a text but does not categorize them into entity types like NER does.\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/language-service/named-entity-recognition/overview\n\nNamed Entity Recognition because the output table contains entities categorized into types such as PersonType, Location, Event, and DateTime along with their confidence scores. Named Entity Recognition is designed to identify and classify entities within a text.\n\nB is correct\n\nB is answer.\n\nNamed Entity Recognition a.k.a NER.\n\nNER is OK.\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/language-service/named-entity-recognition/overview\n\nTitle \"What is Named Entity Recognition (NER) in Azure AI Language?\" at https://learn.microsoft.com/en-us/azure/ai-services/language-service/named-entity-recognition/overview . NER\n\nB is the answer.\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/language-service/named-entity-recognition/overview\nNamed Entity Recognition (NER) is one of the features offered by Azure Cognitive Service for Language, a collection of machine learning and AI algorithms in the cloud for developing intelligent applications that involve written language. The NER feature can identify and categorize entities in unstructured text. For example: people, places, organizations, and quantities.\n\nB is correct\n\nFrom the link in the answer: \"The NER feature can identify and categorize entities in unstructured text. For example: people, places, organizations, and quantities.\"",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 24,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/87857-exam-ai-102-topic-3-question-24-discussion/"
+}

@@ -1,0 +1,21 @@
+{
+  "question_text": "You have an Azure OpenAI model.<br/><br/>You have 500 prompt-completion pairs that will be used as training data to fine-tune the model.<br/><br/>You need to prepare the training data.<br/><br/>Which format should you use for the training data file?",
+  "question_images": [],
+  "answers": {
+    "A": "CSV",
+    "B": "XML",
+    "C": "JSONL",
+    "D": "TSV"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "C"
+  ],
+  "correct_answer_images": [],
+  "discussion": "SONL is CORRECT because Azure OpenAI requires training data for fine-tuning to be in JSON Lines (JSONL) format. Each line in the file represents a prompt-completion pair in JSON format, which is the required structure for fine-tuning models with Azure OpenAI.\n\nAnswer is C\n\nkey word is \"pair\" , you know that's a key value format so JSONL\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/fine-tuning-functions\n\nThe correct answer is:\n\nC. JSONL\n\nReasoning:\nTo fine-tune an Azure OpenAI model, the training data needs to be in JSONL (JSON Lines) format. Each line in the file represents a separate prompt-completion pair in JSON format. This format is required to ensure that Azure OpenAI correctly interprets each pair as an individual training instance.\n\nJSONL.",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 7,
+  "question_number": 17,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/149920-exam-ai-102-topic-7-question-17-discussion/"
+}

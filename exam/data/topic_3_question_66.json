@@ -1,0 +1,19 @@
+{
+  "question_text": "HOTSPOT -<br/><br/>You are developing a text processing solution.<br/><br/>You have the function shown below.<br/><br/><img src=\"images/ai-102_topic-3_question-66_html_1.png\"/><br/><br/>For the second argument, you call the function and specify the following string.<br/><br/>Our tour of Paris included a visit to the Eiffel Tower<br/><br/>For each of the following statements, select Yes if the statement is true. Otherwise, select No.<br/><br/><img src=\"images/ai-102_topic-3_question-66_html_2.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-3_question-66_question_1.png",
+    "images/ai-102_topic-3_question-66_question_2.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-3_question-66_correct_1.png"
+  ],
+  "discussion": "Should by NYN.\nKey phrases would be (tested with API): Eiffel Tower, tour, Paris, visit\nEntities are: Eiffen Tower, Paris\n\nAnother repeat qn\n\nNo\nYes\nNo\n\nDuplicate question. The answer should be NYN.\n\nI ran this in my local, confirmed this is the output,\n\nKey Words:\n        Paris\n        Eiffel Tower\n\nSo it is N N N\n\nNYN are right answer.\n\nThere is a separate function to print key phrase to the console so the answer is NO. They are tricky you into thinking that key phrase is the same thing as key word which its not\n\nFinal Answer:\nN\nY\nN\n\nThe correct answers are NYY. The last one is yes because it will send info to the console as per the code snippet\n\nSame : Topic 3, Question 48. NYN.",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 66,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/135016-exam-ai-102-topic-3-question-66-discussion/"
+}

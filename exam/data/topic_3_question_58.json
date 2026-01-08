@@ -1,0 +1,18 @@
+{
+  "question_text": "DRAG DROP -<br/><br/>You develop a Python app named App1 that performs speech-to-speech translation.<br/><br/>You need to configure App1 to translate English to German.<br/><br/>How should you complete the SpeechTranslationConfig object? To answer, drag the appropriate values to the correct targets. Each value may be used once, more than once or not at all. You may need to drag the split bar between panes or scroll to view content.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-3_question-58_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-3_question-58_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-3_question-58_correct_1.png"
+  ],
+  "discussion": "Pretty sure the second one is add_target_language\n\nyou do speech-to-speech. so your output should be voice, but proposed answer is incomplete. You also need to specify the type of voice for the synthesizer\n\nAgree, the requirement should changed to translate from speech to text, look at the function name\n\nThe answer is WRONG! \nCorrect Answer is below:\ndef translate_speech_to_text():\n    translation_config = speechsdk.translation.SpeechTranslationConfig(subscription=speech_key, region=service_region)\n    translation_config.speech_recognition_language = \"en-US\"\n    translation_config.add_target_language(\"de\")\n\nrepeat qn\n\n1. speech_recognition_language\n2. add_target_language\n\nThere is a distinction between speech-to-speech translation and speech-to-text-to-speech translation. Some questions refer natural language processing (NLP) and this simple mention changes the approach completely. Based on my experience, speech-to-speech translation requires both SpeechRecognitionLanguage and SpeechSynthesisLanguage. However, when performing speech-to-text-to-speech translation—where NLP is implicitly involved, since the speech is first converted to text before translation—you also need to specify the AddTargetLanguage. In this particular case, the answer would be: SpeechRecognitionLanguage and SpeechSynthesisLanguage because there is no mention to NLP.\n\nRepeated question\n\n1. speech_recognition_language\n2. add_target_language\n\n1. speech_recognition_language\n2. add_target_language\n\nspeech_recognition_language\nadd_target_language\n\nIt MUST be translation_config.speech_recognition_language = \"en-US\" and translation_config.add_target_language(\"de\").\nWhat exactly have you studied? Memorization is not enough.\n\nSimilar with Question #40 (language is C#, not Python)\nI believe it's\n1.translation_config.speech_recognition_value = \"en-us\"\n2.translation_config.add_target_language(\"de\")\nthe second one is a method, not a property, thus the \"add\"\n\nHow is it even possible that ET provides us witth SO MANY wrong answers? I agree with rdemontis and jangotango, the second one is add_target_language\n\nrdemontis should be getting paid\n\nThe second is wrong. it should be add_target_language\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/speech-service/get-started-speech-translation?tabs=windows%2Cterminal&pivots=programming-language-python#translate-speech-from-a-microphone\n\nProof - https://learn.microsoft.com/en-us/azure/ai-services/speech-service/get-started-speech-translation?tabs=windows%2Cterminal&pivots=programming-language-python",
+  "question_type": "drag_drop",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 58,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/122483-exam-ai-102-topic-3-question-58-discussion/"
+}

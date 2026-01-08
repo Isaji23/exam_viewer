@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You are building an app by using the Speech SDK. The app will translate speech from French to German by using natural language processing.<br/><br/>You need to define the source language and the output language.<br/><br/>How should you complete the code? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-3_question-54_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-3_question-54_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-3_question-54_correct_1.png"
+  ],
+  "discussion": "SpeechRecognitionLanguage = \"fr\"\nAddTargetLanguage.(\"de\")\n\nSpeechRecognitionLanguage = \"fr\" is CORRECT because it sets the language for speech recognition, which is the source language (French in this case) that will be recognized and translated.\n\nAddTargetLanguage (\"de\") is CORRECT because it specifies the target language (German in this case) to which the recognized speech will be translated.\n\ne.v.i.l question. \n\nA person who worked with it will go fast and select recognition and synthesis as the answer. But Microsoft made the second one a function call and with their bad naming convention added a new term \"targetLanguage\". Now you have to remember that mistake of Microsoft\n\nSample answers are correct.\n\nLas respuestas son B y C\n\ncorrect\n\ncorrect\n\nAnswer is correct",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 54,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/123329-exam-ai-102-topic-3-question-54-discussion/"
+}

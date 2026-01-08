@@ -1,0 +1,18 @@
+{
+  "question_text": "DRAG DROP -<br/>You are building a Language Understanding model for purchasing tickets.<br/>You have the following utterance for an intent named PurchaseAndSendTickets.<br/>Purchase [2 audit business] tickets to [Paris] [next Monday] and send tickets to [<a class=\"__cf_email__\" data-cfemail=\"543139353d3814303b39353d3a7a373b39\" href=\"/cdn-cgi/l/email-protection\">[email protected]</a>]<br/>You need to select the entity types. The solution must use built-in entity types to minimize training data whenever possible.<br/>Which entity type should you use for each label? To answer, drag the appropriate entity types to the correct labels. Each entity type may be used once, more than once, or not at all.<br/>You may need to drag the split bar between panes or scroll to view content.<br/>Select and Place:<br/><img class=\"in-exam-image\" src=\"images/ai-102_topic-3_question-21_html_1.jpg\"/><br/>",
+  "question_images": [
+    "images/ai-102_topic-3_question-21_question_1.jpg"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-3_question-21_correct_1.jpg"
+  ],
+  "discussion": "THIS WAS ON EXAM 28/06\n\ncorrect answer\n\nParis --> GeographyV2 is CORRECT because it is a built-in entity type designed to recognize and extract geographical locations, such as cities, states, countries, and landmarks. Using this built-in entity type minimizes the need for additional training data. [email protected] --> Email is CORRECT because it is a built-in entity type designed to recognize and extract email addresses, minimizing the need for additional training data.\n\n2 audit business --> Machine learned is CORRECT because it is the preferred entity type for building Language Understanding (LUIS) applications, as it allows for more flexibility and accuracy in recognizing complex patterns and combinations of words. By training the model with a variety of examples, you can ensure it accurately recognizes and extracts entities like \"2 audit business\" from the utterances.\n\nParis: GeographyV2 [email protected] : Email\n2 audit business: Machine learned\n\nThe answer is correct\n\n1. GeographyV2 \n2. Email\n3. Machine learned\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/luis/luis-reference-prebuilt-geographyv2?tabs=V3\nThe prebuilt geographyV2 entity detects places. Because this entity is already trained, you do not need to add example utterances containing GeographyV2 to the application intents.\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/luis/luis-reference-prebuilt-email?tabs=V3\nEmail extraction includes the entire email address from an utterance. Because this entity is already trained, you do not need to add example utterances containing email to the application intents.\n\nAnswer is correct : \nGeography v2 : \nhttps://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-reference-prebuilt-geographyv2?tabs=V3\n\nEmail : \nhttps://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-reference-prebuilt-email?tabs=V3-verbose \n\nMachine Learned :\nhttps://docs.microsoft.com/en-us/azure/cognitive-services/luis/reference-entity-machine-learned-entity?tabs=V3\n\nhttps://docs.microsoft.com/en-us/azure/cognitive-services/luis/concepts/entities\n\nCorrect.\nhttps://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-reference-prebuilt-email?tabs=V3",
+  "question_type": "drag_drop",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 21,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/77006-exam-ai-102-topic-3-question-21-discussion/"
+}

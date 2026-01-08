@@ -1,21 +1,19 @@
 {
-  "question_text": "You have a Fabric workspace that contains a lakehouse named Lakehouse1.<br/>In an external data source, you have data files that are 500 GB each. A new file is added every day.<br/>You need to ingest the data into Lakehouse1 without applying any transformations. The solution must meet the following requirements<br/>Trigger the process when a new file is added.<br/>Provide the highest throughput.<br/>Which type of item should you use to ingest the data?",
-  "question_images": [],
-  "answers": {
-    "A": "Data pipeline",
-    "B": "Environment",
-    "C": "KQL queryset",
-    "D": "Dataflow Gen2"
-  },
-  "answer_images": {},
-  "correct_answer": [
-    "A"
+  "question_text": "HOTSPOT -<br/>You develop a test method to verify the results retrieved from a call to the Computer Vision API. The call is used to analyze the existence of company logos in images. The call returns a collection of brands named brands.<br/>You have the following code segment.<br/><img class=\"in-exam-image\" src=\"images/ai-102_topic-2_question-14_html_1.png\"/><br/>For each of the following statements, select Yes if the statement is true. Otherwise, select No.<br/>NOTE: Each correct selection is worth one point.<br/>Hot Area:<br/><img class=\"in-exam-image\" src=\"images/ai-102_topic-2_question-14_html_2.png\"/><br/>",
+  "question_images": [
+    "images/ai-102_topic-2_question-14_question_1.png",
+    "images/ai-102_topic-2_question-14_question_2.png"
   ],
-  "correct_answer_images": [],
-  "discussion": "For high-throughput, event-triggered ingestion of large files into a lakehouse without transformations, Data pipeline is the most appropriate and efficient item in Fabric.\n\nI just took the exam. The options to choose from are different now:\nEventstream.\nDataflow\nActivator\nNotebook\n\nWich one do you guess is correct?\n\nEventstream.\n\nstreaming event - Eventstream\nlarge file - DataFlow , I guess\n\nis the same previous question\n\nsame as the previous question\n\nData Pipeline is not right as at 2025-Jan as the storage trigger is still in preview, so it doesn't satisfy the requirement. But it's probably the best option.",
-  "question_type": "multiple_choice",
-  "exam": "dp-700",
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-2_question-14_correct_1.png"
+  ],
+  "discussion": "Y, Y, N\nhttps://learn.microsoft.com/en-us/azure/ai-services/computer-vision/how-to/shelf-analyze#bounding-box-api-model\nx\tLeft-coordinate of the top left point of the area, in pixels.\ny\tTop-coordinate of the top left point of the area, in pixels.\nw\tWidth measured from the top-left point of the area, in pixels.\nh\tHeight measured from the top-left point of the area, in pixels.\n\nthanks for posting the documentation\n\nMaybe I take it too literally, but I think the third one is \"NO\": the response returns Width and Height, which can be used to calculate the coordinates of bottom right corner, but it does not include them directly.\n\nYes is CORRECT because the code will display the name of each detected brand with a confidence equal to or higher than 75 percent. The if condition checks if brand.Confidence is greater than or equal to 0.75, and if so, it prints the brand name along with its coordinates\n\nYes is CORRECT. The properties brand.Rectangle.X and brand.Rectangle.Y represent the X and Y coordinates of the top-left point of the area, respectively.\n\nNo is CORRECT because the code does not directly display the coordinates for the bottom-right corner of the rectangle. It displays the coordinates for the top-left corner (brand.Rectangle.X, brand.Rectangle.Y) and the width (brand.Rectangle.W) and height (brand.Rectangle.H). The bottom-right corner coordinates are not explicitly calculated or displayed.\n\nyes yes no\n\nI cant see anythig related to corner position in the api. \nThen its Y, Y, Y\n\nNop , based on documentation its top left - so its Y Y N\n\nThe correct sequence is Yes Yes No.\n\nThis is the same question as Topic2 #29.\n\nYes Yes No\n\nYes Yes No\n\nThe brand_confidence variable is not declared in the snippet. Perhaps they meant brand.confidence? Same with rectangle_x . As it stands, the answers should be N,N,N.\n\nFinal Answer:\nYes\nYes\nNo\n\nThe code will return the name of each detected brand with a confidence equal to or higher than 75 percent.\nYes, the code will return the name of each detected brand with a confidence equal to or higher than 75 percent.\n\n2. The code will return coordinates for the top-left corner of the rectangle that contains the brand logo of the displayed brands.\nYes, the code will return the coordinates for the top-left corner of the rectangle that contains the brand logo of the displayed brands.\n\n3. The code will return coordinates for the bottom-right corner of the rectangle that contains the brand logo of the displayed brands.\nNo, the code will not return coordinates for the bottom-right corner of the rectangle that contains the brand logo of the displayed brands. The code is printing the width and height of the rectangle instead.\n\nit could be a trap : so yes, no (it is rectangle.x and not _x) , no (should be x + w as the service returns the width and top left corner : \n\nConsole.WriteLine(\"Brands:\");\nforeach (var brand in results.Brands)\n{\n    Console.WriteLine($\"Logo of {brand.Name} with confidence {brand.Confidence} at location {brand.Rectangle.X}, \" +\n      $\"{brand.Rectangle.X + brand.Rectangle.W}, {brand.Rectangle.Y}, {brand.Rectangle.Y + brand.Rectangle.H}\");\n}\nConsole.WriteLine();\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/computer-vision/how-to/call-analyze-image?tabs=csharp\n\nit is true, it is a trick.\nYes,No,No\n\nhope it is a typo. explanation is spot on\n\nits' yes\nyes\nno\nThe coordinates are always regarding the top left point of the rectangle\n\nY\nY\nY\nthe code will return the coordinates for any position\n\nyes\nyes\nyes\n\nWhat makes the third one \"yes\"?\n\nAccording to the microsoft Documetn, Ithought so. What makes yu think it is No ?\n\nif you look at the code it is _x and not .x\n\nI think that is a typo",
+  "question_type": "hot_area",
+  "exam": "ai-102",
   "topic": 2,
   "question_number": 14,
-  "url": "https://www.examtopics.com/discussions/microsoft/view/155411-exam-dp-700-topic-2-question-14-discussion/"
+  "url": "https://www.examtopics.com/discussions/microsoft/view/84342-exam-ai-102-topic-2-question-14-discussion/"
 }

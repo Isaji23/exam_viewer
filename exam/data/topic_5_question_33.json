@@ -1,0 +1,23 @@
+{
+  "question_text": "You have a Conversational Language Understanding model.<br/><br/>You export the model as a JSON file. The following is a sample of the file.<br/><br/><img src=\"images/ai-102_topic-5_question-33_html_1.png\"/><br/><br/>What represents the Weather.Historic entity in the sample utterance?",
+  "question_images": [
+    "images/ai-102_topic-5_question-33_question_1.png"
+  ],
+  "answers": {
+    "A": "last year",
+    "B": "by month",
+    "C": "amount of",
+    "D": "average"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "B"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Gotten this in Jul 2023 exam.\n\nSame as Topic 3 Question 23.\nhttps://www.examtopics.com/discussions/microsoft/view/77619-exam-ai-102-topic-3-question-23-discussion\n\nrepeat qn\n\nB\n\nRepeated question: \"by month\" again\n\nredundancy\n\nI don't think the other question had \"last year\" as an option. Gotta be a bit more careful here since the correct answer \"by month\" and wrong answer \"by year\" are both time related and could be historical.\n\nThe entity Weather.Historic in the sample utterance is represented by the string that starts at character position 23 and ends at character position 30. In the given text \"average amount of rain by month in Chicago last year\", the substring \"last year\" corresponds to those positions. Therefore, the entity Weather.Historic represents \"last year\".\n\ncorrect and repeated\n\n\"average amount of rain by month in Chicago last year\" . The question has mistake, should start position - end position are 23 - 31.\n\nB.\nSame #22Topic 3",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 5,
+  "question_number": 33,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/111870-exam-ai-102-topic-5-question-33-discussion/"
+}

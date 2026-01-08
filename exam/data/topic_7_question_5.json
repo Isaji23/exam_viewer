@@ -1,0 +1,23 @@
+{
+  "question_text": "You build a chatbot that uses the Azure OpenAI GPT 3.5 model.<br/><br/>You need to improve the quality of the responses from the chatbot. The solution must minimize development effort.<br/><br/>What are two ways to achieve the goal? Each correct answer presents a complete solution.<br/><br/>NOTE: Each correct answer is worth one point.",
+  "question_images": [],
+  "answers": {
+    "A": "Fine-tune the model.",
+    "B": "Provide grounding content.",
+    "C": "Add sample request/response pairs.",
+    "D": "Retrain the language model by using your own data.",
+    "E": "Train a custom large language model (LLM)."
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "B",
+    "C"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Here are two ways to improve the quality of the responses from the chatbot with minimal development effort:\n\n1. Provide grounding content: This involves feeding the chatbot with relevant domain-specific information and data. This can include documents, articles, FAQs, or any other content related to the chatbot's purpose. By providing this context, the chatbot can better understand the user's intent and respond in a more relevant and informative way.\n\n2. Add sample request/response pairs:  This technique involves providing the chatbot with a set of pre-defined questions and their corresponding answers. This helps the chatbot learn the conversation patterns and phrasing related to its specific domain. By analyzing these examples, the chatbot can improve its ability to generate natural and consistent responses to user queries.\n\nBoth options (A. Provide grounding content and C. Add sample request/response pairs) achieve the goal of improving response quality with minimal development effort, as they do not require extensive retraining or model building.\n\nTherefore, the two correct answers are:\n\nB. Provide grounding content.\nC. Add sample request/response pairs.\n\nRemember that while fine-tuning (A) and custom models (E) can yield high-quality results, they often require significant development effort and computational resources. In contrast, grounding content and sample pairs offer pragmatic improvements with minimal overhead\n\nProvide grounding content is CORRECT because grounding content helps to provide the model with specific context, facts, or knowledge it can use to generate more accurate and relevant responses. This can be done without modifying the model itself, thereby minimizing development effort.\n\nAdd sample request/response pairs is CORRECT because providing the model with examples of good interactions can help guide it towards generating higher-quality responses. This approach also does not require modifying or retraining the model, thus minimizing development effort.\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/fine-tuning-considerations\n\nBC is correct\n\nB and C because it is NOT talking about accuracy, instead is asking to improve the quality of the response\n\nLeast development effort is key here\n\nSelected Answer: BC\n\nAll 4 answers work, while Training a custom LLM is the highest effort, so that probably isn't it.\n\nI say this answer is B and C.\n\nBC is correct answer.\n\nB and C for me too\n\nB and C are right answer.\n\nMust be B & C\n\nGPT 4 Answered:\n\nB. Provide grounding content.\nC. Add sample request/response pairs.",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 7,
+  "question_number": 5,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/135054-exam-ai-102-topic-7-question-5-discussion/"
+}

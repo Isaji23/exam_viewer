@@ -1,0 +1,21 @@
+{
+  "question_text": "You build a conversational bot named bot1.<br/>You need to configure the bot to use a QnA Maker application.<br/>From the Azure Portal, where can you find the information required by bot1 to connect to the QnA Maker application?<br/>",
+  "question_images": [],
+  "answers": {
+    "A": "Access control (IAM)",
+    "B": "Properties",
+    "C": "Keys and Endpoint",
+    "D": "Identity"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "C"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Correct 👍\n\nGiven answer is correct!\n\nShould be C: keys and endpoints\n\nC is answer.\n\nWill this question still be asked on June 2, 2024?\n\nC. Keys and Endpoint\n\nWhen configuring a conversational bot named bot1 to use the QnA Maker application, you need to obtain specific information from the QnA Maker service to establish the connection. This includes the service's endpoint address and the key used for authentication. You can find these details in the \"Keys and Endpoint\" section of the QnA Maker service in the Azure portal. Here, you will find the endpoint address and key for API calls, crucial for the bot to access and retrieve information from the QnA Maker service securely. These details enable your bot to interact safely with the QnA Maker service and retrieve answers based on your knowledge base content.\n\ngiven answer is correct\n\nC is the correct answer : Keys and Endpoint.",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 5,
+  "question_number": 7,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/57089-exam-ai-102-topic-5-question-7-discussion/"
+}

@@ -1,0 +1,23 @@
+{
+  "question_text": "You are building a chatbot by using the Microsoft Bot Framework SDK. The bot will be used to accept food orders from customers and allow the customers to customize each food item.<br/><br/>You need to configure the bot to ask the user for additional input based on the type of item ordered. The solution must minimize development effort.<br/><br/>Which two types of dialogs should you use? Each correct answer presents part of the solution.<br/><br/>NOTE: Each correct selection is worth one point.",
+  "question_images": [],
+  "answers": {
+    "A": "adaptive",
+    "B": "action",
+    "C": "waterfall",
+    "D": "prompt",
+    "E": "input"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "C",
+    "D"
+  ],
+  "correct_answer_images": [],
+  "discussion": "=======Waterfall Dialogs===========:\nGuide users through a predefined, linear sequence of steps.\nEach step prompts the user for specific input, and the bot moves to the next step based on the user's response. Useful for structured conversations where the bot needs to collect information in a specific order.\nIdeal for gathering customization options for food items in a structured way.\n========Prompt Dialogs===========:\nSimple dialogs that present a prompt to the user and wait for their response.\nCan be used within waterfall dialogs or as standalone prompts.\nOffer flexibility in how you ask questions and collect user input.\n\nCan be incorporated within waterfall dialogs to ask for customization details for each item.\n\ncorrect\nhttps://learn.microsoft.com/en-us/azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0#dialog-types\n\nWaterfall is CORRECT because it allows you to define a sequence of steps (or dialogs) that the bot will execute one after the other. This is useful for guiding the user through a multi-step process, such as customizing a food order.\n\nPrompt is CORRECT because it is used to ask the user for specific input, such as a choice or text input. Prompts are essential for collecting additional details from the user about their order.\n\nCD it is\n\nCD is the correct answer for this.\n\nCD is answer.\n\nC and D are right answer.\n\nCorrect",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 5,
+  "question_number": 51,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/125138-exam-ai-102-topic-5-question-51-discussion/"
+}

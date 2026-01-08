@@ -1,21 +1,23 @@
 {
-  "question_text": "You have an Azure SQL database named DB1.<br/><br/>In a Fabric workspace, you deploy an eventstream named EventStreamDB1 to stream record changes from DB1 into a lakehouse.<br/><br/>You discover that events are NOT being propagated to EventStreamDB1.<br/><br/>You need to ensure that the events are propagated to EventStreamDB1.<br/><br/>What should you do?",
+  "question_text": "You are building an app that will share user images.<br/><br/>You need to configure the app to perform the following actions when a user uploads an image:<br/><br/>•\tCategorize the image as either a photograph or a drawing.<br/>•\tGenerate a caption for the image.<br/><br/>The solution must minimize development effort.<br/><br/>Which two services should you include in the solution? Each correct answer presents part of the solution.<br/><br/>NOTE: Each correct selection is worth one point.",
   "question_images": [],
   "answers": {
-    "A": "Create a read-only replica of DB1.",
-    "B": "Create an Azure Stream Analytics job.",
-    "C": "Enable Extended Events for DB1.",
-    "D": "Enable change data capture (CDC) for DB1."
+    "A": "object detection in Azure AI Computer Vision",
+    "B": "content tags in Azure AI Computer Vision",
+    "C": "image descriptions in Azure AI Computer Vision",
+    "D": "image type detection in Azure AI Computer Vision",
+    "E": "image classification in Azure AI Custom Vision"
   },
   "answer_images": {},
   "correct_answer": [
+    "C",
     "D"
   ],
   "correct_answer_images": [],
-  "discussion": "Correct, enable CDC\n\nD - Enable Change Data Capture (CDC) on DB1:\nFabric uses CDC to stream changes from Azure SQL.\n\nI guess D",
+  "discussion": "I think Categorize the image as either a photograph or a drawing should be Image type detection\nhttps://learn.microsoft.com/en-us/azure/ai-services/computer-vision/concept-detecting-image-types\n\nImage Categorization doesn't identify image as photograph or drawing: See this: https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/concept-categorizing-images\n\nCaptions are generated using image descriptions in V3.2. However in V4.0 it is image captions\nhttps://learn.microsoft.com/en-us/azure/ai-services/computer-vision/concept-describing-images\n\nthis is in Oct 2024 exam\n\nCD is the answer.\n\nimage descriptions and image type detection.\n\nIt must be C and D.\n\nA. Object detection in Azure AI Computer Vision\nC. Image descriptions in Azure AI Computer Vision\n\nExplanation:\n\nObject Detection (option A): This service in Azure AI Computer Vision can be used to detect objects within an image. By analyzing the content of the image, it can identify whether the image contains elements typically found in photographs (e.g., people, landscapes) or drawings (e.g., sketches, illustrations). This information can help categorize the image accordingly.\nImage Descriptions (option C): Azure AI Computer Vision can generate descriptions for images, providing textual summaries of the content. These descriptions can include details about the objects detected in the image, providing additional context that can aid in categorization and caption generation.\n\nMust be C & D\n\nCE, Categorize instantly becomes Classification\n\nCD imageType for photograph/drawing\n\nShould be CD",
   "question_type": "multiple_choice",
-  "exam": "dp-700",
+  "exam": "ai-102",
   "topic": 2,
   "question_number": 35,
-  "url": "https://www.examtopics.com/discussions/microsoft/view/302763-exam-dp-700-topic-2-question-35-discussion/"
+  "url": "https://www.examtopics.com/discussions/microsoft/view/134935-exam-ai-102-topic-2-question-35-discussion/"
 }

@@ -1,0 +1,21 @@
+{
+  "question_text": "You are building a chatbot.<br/><br/>You need to configure the chatbot to query a knowledge base.<br/><br/>Which dialog class should you use?",
+  "question_images": [],
+  "answers": {
+    "A": "QnAMakerDialog",
+    "B": "AdaptiveDialog",
+    "C": "SkillDialog",
+    "D": "ComponentDialog"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "A"
+  ],
+  "correct_answer_images": [],
+  "discussion": "A is the answer.\n\nhttps://learn.microsoft.com/en-us/azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0#dialog-types\nThe dialogs library provides a few types of dialogs to make your bot's conversations easier to manage. \n- QnA Maker dialog\nAutomates access to a QnA Maker knowledge base. This dialog is designed to also work as an action within Composer.\n\nGotten this in Jul 2023 exam.\n\nQnAMakerDialog is specifically designed to integrate with the QnA Maker service, which is used to create and query knowledge bases. This dialog class provides the necessary functionality to query a knowledge base and return answers based on the user's questions.\n\nA it is\n\nA is answer.\n\nA is correct answer.\n\nHere's why:\n\nQnAMakerDialog: This class is specifically designed for integration with QnA Maker, a cloud-based API service offered by Microsoft Azure that creates a question and answer layer over your data. QnAMakerDialog simplifies the process of querying a QnA Maker knowledge base and handling the responses within your chatbot. It manages the interaction pattern with the QnA Maker service, sending user queries and receiving answers that are then presented to the user.\n\nCorrect\n\nhttps://learn.microsoft.com/en-us/azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0#dialog-types\n\nA. QnAMakerDialog",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 5,
+  "question_number": 41,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/111875-exam-ai-102-topic-5-question-41-discussion/"
+}

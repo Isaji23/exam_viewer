@@ -1,21 +1,21 @@
 {
-  "question_text": "You have a Fabric workspace named Workspace1 that contains an Apache Spark job definition named Job1.<br/>You have an Azure SQL database named Source1 that has public internet access disabled.<br/>You need to ensure that Job1 can access the data in Source1.<br/>What should you create?",
+  "question_text": "You plan to perform predictive maintenance.<br/>You collect IoT sensor data from 100 industrial machines for a year. Each machine has 50 different sensors that generate data at one-minute intervals. In total, you have 5,000 time series datasets.<br/>You need to identify unusual values in each time series to help predict machinery failures.<br/>Which Azure service should you use?<br/>",
   "question_images": [],
   "answers": {
-    "A": "an on-premises data gateway",
-    "B": "a managed private endpoint",
-    "C": "an integration runtime",
-    "D": "a data management gateway"
+    "A": "Anomaly Detector",
+    "B": "Cognitive Search",
+    "C": "Form Recognizer",
+    "D": "Custom Vision"
   },
   "answer_images": {},
   "correct_answer": [
-    "B"
+    "A"
   ],
   "correct_answer_images": [],
-  "discussion": "To ensure that Job1 can access the data in Source1, you need to create a managed private endpoint. This will allow the Spark job to securely connect to the Azure SQL database without requiring public internet access.\n\ncorrect\nhttps://learn.microsoft.com/en-us/fabric/security/security-managed-private-endpoints-overview#supported-item-types\n\nCorrect\n\nB correct answer.\nManaged private endpoints are connections that workspace admins can create to access data sources that are behind a firewall or that are blocked from public internet access.\n\nB is correct\n\nProvided answer is correct",
+  "discussion": "A is the answer.\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/anomaly-detector/overview\nAnomaly Detector is an AI service with a set of APIs, which enables you to monitor and detect anomalies in your time series data with little machine learning (ML) knowledge, either batch validation or real-time inference.\n\nGotten this in Jul 2023 exam.\n\nAzure AI Anomaly Detector is CORRECT because it is specifically designed to detect anomalies in time series data. It uses advanced machine learning models to identify unexpected patterns or behaviors in data, which is essential for predictive maintenance. With the ability to analyze and detect irregularities across multiple time series datasets, this service is ideal for monitoring IoT sensor data to predict machinery failures.\n\nI don't think this question is still in the exam :\nStarting on the 20th of September, 2023 you won’t be able to create new Anomaly Detector resources. The Anomaly Detector service is being retired on the 1st of October, 2026.\n\nA is right.\n\nThe best Azure service to use in this scenario is A. Anomaly Detector1.\n\ncorrect Anomaly Detector\n\nAzure Anomaly Detector is the recommended Azure service to use for this scenario.\n\non my exam (2023-01-16 Passed)\n\nMy Answer:A\n\nAnomaly detection\n\nA is correct answer : Anomaly Detector.\n\nhttps://azure.microsoft.com/en-us/services/cognitive-services/anomaly-detector/\n\nWas on exam on 03-May-2022",
   "question_type": "multiple_choice",
-  "exam": "dp-700",
+  "exam": "ai-102",
   "topic": 1,
   "question_number": 17,
-  "url": "https://www.examtopics.com/discussions/microsoft/view/153605-exam-dp-700-topic-1-question-17-discussion/"
+  "url": "https://www.examtopics.com/discussions/microsoft/view/75106-exam-ai-102-topic-1-question-17-discussion/"
 }

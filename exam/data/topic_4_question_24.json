@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You are building a language learning solution.<br/><br/>You need to recommend which Azure services can be used to perform the following tasks:<br/><br/>•\tAnalyze lesson plans submitted by teachers and extract key fields, such as lesson times and required texts.<br/>•\tAnalyze learning content and provide students with pictures that represent commonly used words or phrases in the text.<br/><br/>The solution must minimize development effort.<br/><br/>Which Azure service should you recommend for each task? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-4_question-24_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-4_question-24_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-4_question-24_correct_1.png"
+  ],
+  "discussion": "Answer is correct.\nImmersive Reader can indeed provide pictures for commonly used words in text:\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/immersive-reader/overview#display-pictures-for-common-words\n\nplans: Azure AI Document Intelligence\ncontent: Immersive Reader\n\nconfirmed by ChatGPT\n\nAzure AI Document Intelligence is CORRECT because it is designed to analyze and extract key fields from documents, such as lesson plans. This service automates the process of identifying and extracting structured information from unstructured documents, minimizing the development effort required to implement this functionality.\n\nImmersive Reader is CORRECT because it is designed to enhance reading comprehension by providing visual aids and other tools to help users understand text better. It can automatically provide pictures or visual cues for commonly used words or phrases, making it an ideal solution for a language learning context with minimal development effort.",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 4,
+  "question_number": 24,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/143503-exam-ai-102-topic-4-question-24-discussion/"
+}

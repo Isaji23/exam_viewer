@@ -1,19 +1,23 @@
 {
-  "question_text": "HOTSPOT -<br/>You are building a data loading pattern for Fabric notebook workloads.<br/>You have the following code segment:<br/><img src=\"images/dp-700_topic-2_question-11_html_1.png\" title=\"image43\"/><br/>For each of the following statements, select Yes if the statement is true. Otherwise, select No.<br/>NOTE: Each correct selection is worth one point.<br/><img src=\"images/dp-700_topic-2_question-11_html_2.png\" title=\"image44\"/>",
-  "question_images": [
-    "images/dp-700_topic-2_question-11_question_1.png",
-    "images/dp-700_topic-2_question-11_question_2.png"
-  ],
-  "answers": {},
+  "question_text": "You use the Custom Vision service to build a classifier.<br/>After training is complete, you need to evaluate the classifier.<br/>Which two metrics are available for review? Each correct answer presents a complete solution.<br/>NOTE: Each correct selection is worth one point.<br/>",
+  "question_images": [],
+  "answers": {
+    "A": "recall",
+    "B": "F-score",
+    "C": "weighted accuracy",
+    "D": "precision",
+    "E": "area under the curve (AUC)"
+  },
   "answer_images": {},
-  "correct_answer": [],
-  "correct_answer_images": [
-    "images/dp-700_topic-2_question-11_correct_1.png"
+  "correct_answer": [
+    "A",
+    "D"
   ],
-  "discussion": "No No Yes.\nIf anything goes wrong writing the existing table or when writing a new table (.targettable) the merge will not be executed.\n\nNNY is correct\n\nN N Y, but the last Y is far stretched - you cannot 'switch' with a parameter to fully reload the table - this happens only if the first try fails and delta table isn't found, in other cases we merge on specified columns\n\nNo Yes Yes\nMerge operation always runs, the table is not overwritten if condition not matched\n\nfirst return statement only is in exception part. that means if target table is not exist it will try to create it and load data to it, if it's not successful then it get to raise part which is stop the function and never get to merge part. if it successfully create target_table with overwrite data then then return statment execute and will exit the function and will never get to Merge operation.So in short the first return will be happen if target_table is not exist and it created successfully with overwrrite data from source.  so the answer No,No,Yes is correct.\n\nNo; Yes: Yes\nMerge operation will always run, the matching_condition is part of the merge operation. But target table may not be overwritten if condition not met.\n\nEven though the match_condition is part of the MERGE logic, that logic is skipped on the very first load because of the return inside the except block.",
-  "question_type": "image_only",
-  "exam": "dp-700",
+  "correct_answer_images": [],
+  "discussion": "AD is the answer.\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier#evaluate-the-classifier\nAfter training has completed, the model's performance is estimated and displayed. The Custom Vision Service uses the images that you submitted for training to calculate precision and recall. Precision and recall are two different measurements of the effectiveness of a classifier:\n- Precision indicates the fraction of identified classifications that were correct. For example, if the model identified 100 images as dogs, and 99 of them were actually of dogs, then the precision would be 99%.\n- Recall indicates the fraction of actual classifications that were correctly identified. For example, if there were actually 100 images of apples, and the model identified 80 as apples, the recall would be 80%.\n\nA. recall\nD. precision\n\nrecall measures the ability of the classifier to find all the relevant instances in the dataset. It is a key metric for evaluating the effectiveness of a classifier in identifying relevant items.\n\nprecision measures the ability of the classifier to correctly identify only the relevant instances in the dataset. It is important for evaluating how many of the predicted positive instances are actually relevant.\n\nAD are the answers\n\nI say this answer is A and D.\n\nChat GPT and me: A + D\n\nA and D are right answer.\n\nZellck provided an excellent answer with precise documentation and interpretation of precision and recall metrics. Precision refers to the positive predictive value - the proportion of true positive results among all positively identified outcomes. Meanwhile, recall represents sensitivity - the proportion of actual positive cases that are correctly identified as such.\n\nPrecision and recall form a fundamental pair of performance indicators that entail an inherent trade-off. As one metric is optimized, the other typically suffers as a consequence. Specifically, as the precision rate increases, the recall rate often correspondingly decreases. The optimal balance between precision and recall depends on the business context and specific needs of the use case. By clearly explaining the definitions and relationship between these two metrics, Zellck thoroughly addressed the concepts with clarity and accuracy.\n\nAnswer is correct\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier#evaluate-the-classifier\n\nAppeared on Oct/29/2023.\n\nSame as Question 2.\nhttps://www.examtopics.com/discussions/microsoft/view/55211-exam-ai-102-topic-2-question-2-discussion\n\nPrecision and Recall:  https://learn.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier#evaluate-the-classifier\n\nA and D are correct answers - as per PHD_CHENG\nhttps://docs.microsoft.com/en-us/learn/modules/cv-classify-bird-species/4-understand-results-test\n\nWas on exam 7 Jun 2022\n\nAnswer is correct.  You can find the metrics from Microsoft link https://docs.microsoft.com/en-us/learn/modules/cv-classify-bird-species/4-understand-results-test",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
   "topic": 2,
   "question_number": 11,
-  "url": "https://www.examtopics.com/discussions/microsoft/view/155370-exam-dp-700-topic-2-question-11-discussion/"
+  "url": "https://www.examtopics.com/discussions/microsoft/view/75223-exam-ai-102-topic-2-question-11-discussion/"
 }

@@ -1,0 +1,21 @@
+{
+  "question_text": "You are building a bot by using Microsoft Bot Framework.<br/><br/>You need to configure the bot to respond to spoken requests. The solution must minimize development effort.<br/><br/>What should you do?",
+  "question_images": [],
+  "answers": {
+    "A": "Deploy the bot to Azure and register the bot with a Direct Line Speech channel.",
+    "B": "Integrate the bot with Cortana by using the Bot Framework SDK.",
+    "C": "Create an Azure function that will call the Speech service and connect the bot to the function.",
+    "D": "Deploy the bot to Azure and register the bot with a Microsoft Teams channel."
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "A"
+  ],
+  "correct_answer_images": [],
+  "discussion": "A. Deploy the bot to Azure and register the bot with a Direct Line Speech channel.\n\nTo enable the bot to respond to spoken requests with minimal development effort, you should deploy the bot to Azure and register the bot with a Direct Line Speech channel. Direct Line Speech provides an integrated speech and bot experience without requiring additional development. It combines both the speech-to-text and text-to-speech capabilities with the bot's logic to handle spoken requests and generate spoken responses.\n\nA is the answer.\n\nhttps://learn.microsoft.com/en-us/azure/bot-service/bot-service-channel-directline?view=azure-bot-service-4.0\nThe Bot Framework offers multiple channels with the Direct Line branding. It's important that you select the version that best fits the conversational AI experience you're designing.\n- Direct Line Speech. It provides text-to-speech and speech-to-text services within the channel. It allows a client to stream audio directly to the channel which will then be converted to text and sent to the bot. Direct Line Speech can also convert text messages from the bot into audio messages spoken by an AI-powered voice. Combined, this makes Direct Line Speech capable of having audio only conversations with clients.\n\nRepeat qn\n\nAnswer is A\n\nanswer is 100% A\n\nI say this answer is A.\n\nA is answer.\n\nchecked with documentation and the answer is A\n\nDirect Line Speech Channel: This channel is specifically designed to handle voice interactions. It provides integrated speech recognition and text-to-speech capabilities, which are essential for handling spoken requests. By using this channel, you can leverage Azure's built-in capabilities without the need for extensive custom development.\n\nIMHO the correct answer is A.\nhttps://learn.microsoft.com/en-us/azure/bot-service/bot-service-channel-directline?view=azure-bot-service-4.0\n\nCheck the link here https://blog.botframework.com/2017/06/26/speech-to-text/ and then decide the answer yourself. The direct line speech channel the development effort is not trivial.\n\nA. Deploy the bot to Azure and register the bot with a Direct Line Speech channel.\n\nThe Direct Line Speech channel in Azure Bot Service provides an integrated speech and bot experience. It combines the Bot Framework's Direct Line and Speech services into a single service that enables your bot to speak and listen to users. This is the simplest way to enable your bot to respond to spoken requests, as it doesn't require additional coding or integration with other services.\n\nB. Cortana.\n\nUsing Direct Line Speech needs more work because we still need to develop the speech recognition. however, cortana has some built in features already but is not going to be as flexible as Direct line speech\n\nkail85 is correct.\n\nB. Cortana.\n\nUsing Direct Line Speech needs more work because we still need to develop the speech recognition. however, cortana has some built in features already but is not going to be as flexible as Direct line speech\n\nminimize development effort ->  Cortana (we can connect the Cortana channel and integrate a Bot Application to Cortana)",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 5,
+  "question_number": 37,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/107309-exam-ai-102-topic-5-question-37-discussion/"
+}

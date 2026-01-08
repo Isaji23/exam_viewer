@@ -1,0 +1,21 @@
+{
+  "question_text": "You are building a chatbot.<br/><br/>You need to ensure that the bot will recognize the names of your company’s products and codenames. The solution must minimize development effort.<br/><br/>Which Azure Cognitive Service for Language service should you include in the solution?",
+  "question_images": [],
+  "answers": {
+    "A": "custom text classification",
+    "B": "entity linking",
+    "C": "custom Named Entity Recognition (NER)",
+    "D": "key phrase extraction"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "C"
+  ],
+  "correct_answer_images": [],
+  "discussion": "NER allows you to train a model to recognize and categorize specific entities, such as your company’s products and codenames. This minimizes development effort by leveraging Azure's capabilities to build a custom model for your specific needs.\n\nC for correct\n\nI say this answer is C.\n\nC is answer.\n\nC for me and ChatGPT too\n\nNER is right answer.\n\nNamed Entity Recognition (NER) identifies and categorizes specific names or terms in text, such as names of people, organizations, places, and more. By customizing NER, you can tailor it to recognize your company-specific entities, making it an efficient solution for your chatbot’s needs45.\n\nSo, the correct answer is C. custom Named Entity Recognition (NER).\n\nC. custom Named Entity Recognition (NER)\nCustom NER allows you to train a model to recognize specific terms relevant to your business, such as product names and codenames. https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/concept-shelf-analysis",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 62,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/135626-exam-ai-102-topic-3-question-62-discussion/"
+}

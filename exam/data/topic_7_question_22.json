@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You have a chatbot that uses Azure OpenAI to generate responses.<br/><br/>You need to upload company data by using Chat playground. The solution must ensure that the chatbot uses the data to answer user questions.<br/><br/>How should you complete the code? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-7_question-22_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-7_question-22_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-7_question-22_correct_1.png"
+  ],
+  "discussion": "ChatCompletion\nAzureCognitiveSearch\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/openai/use-your-data-quickstart?tabs=command-line%2Cjavascript-keyless%2Ctypescript-keyless%2Cpython&pivots=programming-language-python\n\ncompletion = client.chat.completions.create(\n    model=deployment,\n    messages=[\n        {\n            \"role\": \"user\",\n            \"content\": \"What are my available health plans?\",\n        },\n    ],\n    extra_body={\n        \"data_sources\":[\n            {\n                \"type\": \"azure_search\",\n\nAzure Document Intelligence for second, imho\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/openai/use-your-data-quickstart?tabs=command-line%2Cjavascript-keyless%2Ctypescript-keyless%2Cpython&pivots=programming-language-python\n\nIt is AzureCognitiveSearch after all",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 7,
+  "question_number": 22,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/149575-exam-ai-102-topic-7-question-22-discussion/"
+}

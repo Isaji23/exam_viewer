@@ -1,21 +1,21 @@
 {
-  "question_text": "You have a Fabric workspace that contains a warehouse named Warehouse1.<br/><br/>You have an on-premises Microsoft SQL Server database named Database1 that is accessed by using an on-premises data gateway.<br/><br/>You need to copy data from Database1 to Warehouse1.<br/><br/>Which item should you use?",
+  "question_text": "You have a 20-GB video file named File1.avi that is stored on a local drive.<br/><br/>You need to index File1.avi by using the Azure Video Indexer website.<br/><br/>What should you do first?",
   "question_images": [],
   "answers": {
-    "A": "a data pipeline",
-    "B": "an Apache Spark job definition",
-    "C": "a streaming dataflow",
-    "D": "a notebook"
+    "A": "Upload File1.avi to an Azure Storage queue.",
+    "B": "Upload File1.avi to the Azure Video Indexer website.",
+    "C": "Upload File1.avi to Microsoft OneDrive.",
+    "D": "Upload File1.avi to the www.youtube.com webpage."
   },
   "answer_images": {},
   "correct_answer": [
-    "A"
+    "C"
   ],
   "correct_answer_images": [],
-  "discussion": "A. Data Pipeline - correct\nB. Apache Spark job definition\tDesigned for data processing and transformation, not optimized for moving data via gateway.\nC. Streaming dataflow\tUsed for real-time streaming data, not batch data movement from SQL Server.\nD. Notebook\tCan connect using JDBC/ODBC, but it doesn't support the gateway natively. Also requires more code and less suitable for production data movement.\n\nA is correct\n\nthis question again? both add 1 point in the test?\n\nduplicate question\n\nData Pipeline",
+  "discussion": "This question is part of free assessment given by Microsoft and the answer in that was C.\n\nbecause that is the correct option\n\nUpload file size and video duration\nIf uploading a file from your device, the file size limit is 2 GB.\nIf the video is uploaded from a URL, the file size limit is 30 GB. The URL must lead to an online media file with a media file extension (for example myvideo.MP4) and not a webpage such as https://www.youtube.com.\n\nThe file duration limit is 4 hours.\n\nhttps://learn.microsoft.com/en-us/azure/azure-video-indexer/avi-support-matrix\n\nOption C because direct upload to Azure Video Indexer is limited to 2GB.\n\ngot this in Oct 2024 exam\n\ndid you get any labs/simulations?\n\nmax size for direct upload is 2GB so tou have to have it uploaded somewhere else.\n\nChatGPT says, \"The correct option is B. Upload File1.avi to the Azure Video Indexer website. This is the appropriate first step to index your video file using Azure Video Indexer.\"\n\nAnswer C: For large files, Azure Video Indexer supports uploading through a linked storage service like OneDrive.\n\nsee if you can spot this one C.\n\nC is right answer.\n\nMax file size for direct upload is 2 GB . 30 GB is through url.so answer C\n\nB. Upload File1.avi to the Azure Video Indexer website.\n\nExplanation:\n\nThe Azure Video Indexer website is specifically designed to analyze and index video files, extracting insights such as keywords, faces, sentiments, and more.\nUploading File1.avi directly to the Azure Video Indexer website allows the platform to process the video file and generate the necessary metadata and insights.\nOptions A, C, and D are not relevant for indexing File1.avi using the Azure Video Indexer website. Uploading to Azure Storage queue (option A) is not appropriate for indexing videos. Microsoft OneDrive (option C) is a cloud storage service and doesn't provide video indexing capabilities like the Azure Video Indexer. Uploading to YouTube (option D) is also not relevant as the task is to index the video using the Azure Video Indexer website. Therefore, option B is the correct choice.\n\nC is correct\n\nFinal Answer:\nC\n\nLooks like C is correct due to the large size of the file being 20GB in the question.  See article here: https://learn.microsoft.com/en-us/azure/azure-video-indexer/odrv-download\n\nDoesn't that article clearly state that the file size can't be bigger than 2 GB, if you upload via URL? See section -> Troubleshoot uploading issuses, second from bottom.\n\nB is correct and B\n\nThe first step is to upload the video file directly to the Azure Video Indexer website. Azure Video Indexer will process the video, extract metadata, and generate insights.\n\nBy uploading the video file to the Azure Video Indexer website, you initiate the indexing process, which allows the service to analyze and create an index of the content in the video.\n\nC: There is a max byte array of 2gb when uploading direct to the indexer so it has to be via a url\n\nhttps://learn.microsoft.com/en-us/azure/azure-video-indexer/considerations-when-use-at-scale",
   "question_type": "multiple_choice",
-  "exam": "dp-700",
+  "exam": "ai-102",
   "topic": 2,
   "question_number": 33,
-  "url": "https://www.examtopics.com/discussions/microsoft/view/302468-exam-dp-700-topic-2-question-33-discussion/"
+  "url": "https://www.examtopics.com/discussions/microsoft/view/122636-exam-ai-102-topic-2-question-33-discussion/"
 }

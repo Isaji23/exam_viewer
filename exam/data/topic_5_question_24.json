@@ -1,0 +1,21 @@
+{
+  "question_text": "You create a bot by using the Microsoft Bot Framework SDK.<br/><br/>You need to configure the bot to respond to events by using custom text responses.<br/><br/>What should you use?",
+  "question_images": [],
+  "answers": {
+    "A": "a dialog",
+    "B": "an activity handler",
+    "C": "an adaptive card",
+    "D": "a skill"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "B"
+  ],
+  "correct_answer_images": [],
+  "discussion": "B is the correct answer as explained by ChatGPT :\nB. An activity handler is the correct choice for configuring the bot to respond to events by using custom text responses.\n\nAn activity handler is a class in the Bot Framework SDK that processes incoming activities (e.g., messages, events, etc.) from the user and generates outgoing activities (e.g., replies). By overriding the OnMessageActivityAsync method of the activity handler, you can provide custom logic for responding to user messages.\n\nAn activity handler is designed to handle various types of activities in the Microsoft Bot Framework, including events. You can use an activity handler to respond to events and send custom text responses based on the type of activity received.\n\nhttps://learn.microsoft.com/en-us/azure/bot-service/bot-activity-handler-concept?view=azure-bot-service-4.0&tabs=csharp\n\nAnswer is B\n\nSelected Answer: B\n\nAzure Bot Service has been removed from the exam since oct 2023.\n\nB is answer.\n\nTo configure the bot to respond to events using custom text responses, you should use B. an activity handler. Activity handlers allow you to manage and respond to different types of activities and events in a bot's conversation, such as messages from users, with customized logic and responses.\n\ncorrect\n\ncorrect\nhttps://learn.microsoft.com/en-us/azure/bot-service/bot-activity-handler-concept?view=azure-bot-service-4.0&tabs=csharp",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 5,
+  "question_number": 24,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/102798-exam-ai-102-topic-5-question-24-discussion/"
+}

@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You are building an Azure web app named App1 that will translate text from English to Spanish.<br/><br/>You need to use the Text Translation REST API to perform the translation. The solution must ensure that you have data sovereignty in the United States.<br/><br/>How should you complete the URI? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-3_question-49_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-3_question-49_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-3_question-49_correct_1.png"
+  ],
+  "discussion": "1. api-nam.cognitive.microsofttranslator.com\n2. translate\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/Translator/reference/v3-0-reference#base-urls\nRequests to Translator are, in most cases, handled by the datacenter that is closest to where the request originated. If there's a datacenter failure when using the global endpoint, the request may be routed outside of the geography.\n\nTo force the request to be handled within a specific geography, use the desired geographical endpoint. All requests are processed among the datacenters within the geography.\n- United States\napi-nam.cognitive.microsofttranslator.com\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/translator/reference/rest-api-guide\n- translate\nTranslate specified source language text into the target language text.\n\nThank you for your valuable contribution.\n\nthanks for your contribution\n\nhttps://eastus.api.cognitive.microsoft.com/translate?api-version=3.0&to=es\n\napi.cognitive.microsofttranslator.com <-- this is a Global endpoints / multi-geo front doors\napi-nam.cognitive.microsofttranslator.com <-- this is a Global endpoints / multi-geo front doors\napi-nam.cognitiveservices.azure.com <-- this is a Global endpoints / multi-geo front doors\n\nThese are global front door endpoints, which:\n- Do not guarantee single-region processing\n- Route internally based on load/performance\n- Are not compliant with strict data sovereignty requirements\n\nWhile eastus.api.cognitive.microsoft.com <-- Region-specific endpoint which \n✔ Guarantee regional data processing\n✔ Required for data residency / sovereignty\n\nRepeated more than 5 times in the question bank.\n\n1. api-nam.cognitive.microsofttranslator.com\n2. translate\n\napi-nam.cognitive.microsofttranslator.com\ntranslate\n\nWhy not api-nam.cognitiveservice.azure.com/translate?\n\nnam=North America\n\nThe response is correct\n1. api-nam.cognitive.microsofttranslator.com\n2. translate\n\nIt is true.",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 49,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/112137-exam-ai-102-topic-3-question-49-discussion/"
+}

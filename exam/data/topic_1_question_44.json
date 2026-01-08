@@ -1,19 +1,16 @@
 {
-  "question_text": "HOTSPOT<br/> -<br/><br/>You are building a data orchestration pattern by using a Fabric data pipeline named Dynamic Data Copy as shown in the exhibit. (Click the Exhibit tab.)<br/><br/><img src=\"images/dp-700_topic-1_question-44_html_1.png\"/><br/><br/>Dynamic Data Copy does NOT use parametrization.<br/><br/>You need to configure the ForEach activity to receive the list of tables to be copied.<br/><br/>How should you complete the pipeline expression? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/dp-700_topic-1_question-44_html_2.png\"/>",
-  "question_images": [
-    "images/dp-700_topic-1_question-44_question_1.png",
-    "images/dp-700_topic-1_question-44_question_2.png"
-  ],
+  "question_text": "SIMULATION -<br/>Use the following login credentials as needed:<br/>To enter your username, place your cursor in the Sign in box and click on the username below.<br/>To enter your password, place your cursor in the Enter password box and click on the password below.<br/><br/>Azure Username: <a class=\"__cf_email__\" data-cfemail=\"f392979e9a9db3929190dd909c9e\" href=\"/cdn-cgi/l/email-protection\">[email protected]</a> -<br/><br/>Azure Password: XXXXXXXXXXXX -<br/>The following information is for technical support purposes only:<br/><br/>Lab Instance: 12345678 -<br/><br/>Task -<br/>You need to ensure that a user named <a class=\"__cf_email__\" data-cfemail=\"e081848d898ea0818283ce838f8d\" href=\"/cdn-cgi/l/email-protection\">[email protected]</a> can regenerate the subscription keys of AAA12345678. The solution must use the principle of least privilege.<br/>To complete this task, sign in to the Azure portal.<br/>",
+  "question_images": [],
   "answers": {},
   "answer_images": {},
   "correct_answer": [],
   "correct_answer_images": [
-    "images/dp-700_topic-1_question-44_correct_1.png"
+    "images/ai-102_topic-1_question-44_correct_1.png"
   ],
-  "discussion": "i agree.\nLookup Schema and Table\noutput.value\n\nThe answer is correct:\nLookup Schema and Table\noutput.value\n\nYour activity output always has a .value attribute. Use that.\n\ncorrect\n\n@activity('Lookup Schema and Table').output\n\nTried this and it worked. Also, to be fair output.value works juts as well, but why add the value part when it's not needed?\n\nCorrect",
-  "question_type": "image_only",
-  "exam": "dp-700",
+  "discussion": "Cognitive Services Contributor\nLets you create, read, update, delete and manage keys of Cognitive Services.\n\nagree with you\n\nThis type of simulation question was not included in the real exam, which was taken on 12 June.\n\nSimulation questions will not appear on the actual exam as of May 25, 2024; ET should remove this type of question.\n\nhttps://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal\n\nhttps://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#cognitive-services-user\nClassic Storage Account Key Operator Service Role: \nClassic Storage Account Key Operators are allowed to list and regenerate keys on Classic Storage Accounts\n\n1.\tSign in to the Azure portal (https://portal.azure.com/) using your account credentials.\n2.\tIn the left-hand navigation menu, click on \"All services\" and search for \"Subscriptions.\" Click on the \"Subscriptions\" service to open the list of your Azure subscriptions.\n3.\tFind the subscription with the ID \"AAA12345678\" and click on it to open the subscription details page.\n4.\tIn the left-hand navigation menu of the subscription details page, click on \"Access control (IAM).\"\n5.\tClick on the \"+ Add\" button to add a new role assignment. This will open the \"Add role assignment\" pane.\n6.\tIn the \"Role\" dropdown menu, search for and select the \"User Access Administrator\" role. This role allows a user to manage access to Azure resources, including the ability to manage subscription keys, while adhering to the principle of least privilege.\n7.\tIn the \"Select\" field, type \" [email protected] \" and select the user from the list of suggestions.\n8.\tClick on the \"Save\" button to complete the role assignment process.\n\nNEVER! this question asks for principle of least privilege.\nyou do not apply the RBAC IAM role at the subscription level. \nyou need to drill down past the resource group and directly on the resource, go to IAM > and add the user account as a Cognitive Services Contributor\n\nuser access administrator does not allow you to regenerate keys. but it allows you to add users\n\nCognitive Services Contributor\nLets you create, read, update, delete and manage keys of Cognitive Services.",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
   "topic": 1,
   "question_number": 44,
-  "url": "https://www.examtopics.com/discussions/microsoft/view/302632-exam-dp-700-topic-1-question-44-discussion/"
+  "url": "https://www.examtopics.com/discussions/microsoft/view/106675-exam-ai-102-topic-1-question-44-discussion/"
 }

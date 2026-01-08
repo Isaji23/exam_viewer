@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT -<br/>You are developing an application that includes language translation.<br/>The application will translate text retrieved by using a function named get_text_to_be_translated. The text can be in one of many languages. The content of the text must remain within the Americas Azure geography.<br/>You need to develop code to translate the text to a single language.<br/>How should you complete the code? To answer, select the appropriate options in the answer area.<br/>NOTE: Each correct selection is worth one point.<br/>Hot Area:<br/><img class=\"in-exam-image\" src=\"images/ai-102_topic-3_question-29_html_1.png\"/><br/>",
+  "question_images": [
+    "images/ai-102_topic-3_question-29_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-3_question-29_correct_1.png"
+  ],
+  "discussion": "1.api-nam.cognitive.microsofttranslator.com\n2. /translate?to=en\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/Translator/reference/v3-0-reference#base-urls\nRequests to Translator are, in most cases, handled by the datacenter that is closest to where the request originated. If there's a datacenter failure when using the global endpoint, the request may be routed outside of the geography.\n\nTo force the request to be handled within a specific geography, use the desired geographical endpoint. All requests are processed among the datacenters within the geography.\n- United States\napi-nam.cognitive.microsofttranslator.com\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/translator/reference/rest-api-guide\n- translate\nTranslate specified source language text into the target language text.\n\nagree with you, answer is correct\n\nrepeat qn\n\n1.api-nam.cognitive.microsofttranslator.com\n2. /translate?to=en\n\n1.api-nam.cognitive.microsofttranslator.com\n2. /translate?to=en\n\napi-nam.cognitive.microsofttranslator.com\ntranslate?to=en\n\n\"api-apc.cognitive.microsofttranslator.com\" refers to the Asia Pacific endpoint. Using this endpoint will route requests to Azure data centers located in Asia Pacific for processing.\n\n\"api-nam.cognitive.microsofttranslator.com\" refers to the North America endpoint. Using this endpoint will route requests to Azure data centers located in North America for processing.\n\nSo in summary:\n\n\"api-apc.cognitive.microsofttranslator.com\" - Asia Pacific endpoint\n\"api-nam.cognitive.microsofttranslator.com\" - North America endpoint\n\nA modified version of this was in the exam today.\n\nI feel like the second one should be /detect?to=en since the input can be multiple unspecified languages.\n\nanswer is correct\n\nThe answer seems correct to me. api.nam would keep it within the US.",
+  "question_type": "hot_area",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 29,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/83483-exam-ai-102-topic-3-question-29-discussion/"
+}

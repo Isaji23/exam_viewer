@@ -1,0 +1,16 @@
+{
+  "question_text": "SIMULATION -<br/>You need to create and publish a bot that will use Language Understanding and QnA Maker. The bot must be named bot12345678. You must publish the bot by using the <a class=\"__cf_email__\" data-cfemail=\"ebbe988e99dac6dad9d8dfdedddcd3ab8a8988c5888486\" href=\"/cdn-cgi/l/email-protection\">[email protected]</a> account.<br/>NOTE: Complete this task first. It may take several minutes to complete the required deployment steps. While this is taking place, you can complete tasks 2-6 in this lab during the deployment.<br/>To complete this task, use the Microsoft Bot Framework Composer.<br/>",
+  "question_images": [],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-5_question-18_correct_1.png"
+  ],
+  "discussion": "QnA Maker service is being retired on 31st March, 2025. A newer version of this capability is now available as a part of Azure AI service for Language called question answering. To use this service, you need to provision a Language resource. For question answering capability within the Language service, see question answering and its pricing page. You can't create new QnA Maker resources anymore. For information on migrating your existing QnA Maker knowledge bases to question answering, consult the migration guide.",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 5,
+  "question_number": 18,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/200012-exam-ai-102-topic-5-question-18-discussion/"
+}

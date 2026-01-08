@@ -1,19 +1,18 @@
 {
-  "question_text": "HOTSPOT<br/> -<br/><br/>You are building a data loading pattern for Fabric notebook workloads.<br/><br/>You have the following code segment.<br/><br/><img src=\"images/dp-700_topic-2_question-40_html_1.png\"/><br/><br/>For each of the following statements, select Yes if the statement is true. Otherwise, select No.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/dp-700_topic-2_question-40_html_2.png\"/>",
+  "question_text": "HOTSPOT<br/> -<br/><br/>You are developing an app that will use the Azure AI Vision API to analyze an image.<br/><br/>You need configure the request that will be used by the app to identify whether an image is clipart or a line drawing.<br/><br/>How should you complete the request? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-2_question-40_html_1.png\"/>",
   "question_images": [
-    "images/dp-700_topic-2_question-40_question_1.png",
-    "images/dp-700_topic-2_question-40_question_2.png"
+    "images/ai-102_topic-2_question-40_question_1.png"
   ],
   "answers": {},
   "answer_images": {},
   "correct_answer": [],
   "correct_answer_images": [
-    "images/dp-700_topic-2_question-40_correct_1.png"
+    "images/ai-102_topic-2_question-40_correct_1.png"
   ],
-  "discussion": "So... it's very simple:\n\n\"The target table will always be overwritten.\"\n-> No. Because it will only overwrite everything/create the table when it doesn't already exist. So it will TRY to get the delta table, and if it doesn't, then it will create the table.\n\n2. The merge operation will always run.\n-> No, this is basic python. \"In your code, any raised exceptions trigger the associated except clause. Note that where you have multiple except clauses, your program will run only the first one that triggers and then ignore the rest.\" So if your first exception is triggered, the second one will not succeed.\n\n3. The code supports incremental loading and the initial table creation.\n-> Yes. If the first try succeeds (and the first exception isn't triggered) it will execute the second try. In the second try, it will merge. The initial creation of the table is done when the first except is triggered (and the table doesn't exist).\n\nHope this helps more rather than some simple combination shouting\n\nN N Y is correct\n\nNo \nNo\nYes\n\nN, Y, Y\n\nI think it is Y Y N",
+  "discussion": "POST, imagetype\nhttps://learn.microsoft.com/en-us/rest/api/computervision/analyze-image/analyze-image?view=rest-computervision-v3.2&tabs=HTTP\n\nPost\nimageType\n\nPOST is CORRECT because the Azure AI Vision API requires a POST request to analyze an image. The POST method is used to submit data to be processed to a specified resource, which in this case is the Vision API endpoint. This allows the API to perform the image analysis and return the results.\n\nimageType is CORRECT because this value is used in the Azure AI Vision API to identify whether an image is clipart or a line drawing. The imageType visual feature provides information about the type of image being analyzed, including whether it is clipart, a line drawing, or a regular photograph.\n\nPOST + imageType, for me and ChatGPT too",
   "question_type": "image_only",
-  "exam": "dp-700",
+  "exam": "ai-102",
   "topic": 2,
   "question_number": 40,
-  "url": "https://www.examtopics.com/discussions/microsoft/view/304593-exam-dp-700-topic-2-question-40-discussion/"
+  "url": "https://www.examtopics.com/discussions/microsoft/view/145640-exam-ai-102-topic-2-question-40-discussion/"
 }

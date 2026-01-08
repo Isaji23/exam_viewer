@@ -1,0 +1,21 @@
+{
+  "question_text": "You have a file share that contains 5,000 images of scanned invoices.<br/><br/>You need to analyze the images. The solution must extract the following data:<br/><br/>•\tInvoice items<br/>•\tSales amounts<br/>•\tCustomer details<br/><br/>What should you use?",
+  "question_images": [],
+  "answers": {
+    "A": "Custom Vision",
+    "B": "Azure AI Computer Vision",
+    "C": "Azure AI Immersive Reader",
+    "D": "Azure AI Document Intelligence"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "D"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Azure AI Document Intelligence is specifically designed to analyze and extract structured data from documents, including invoices. It can accurately extract invoice items, sales amounts, and customer details, minimizing development effort and providing reliable results.\n\nAnswer is D\n\nD, because invoice model type can \"Extract customer and vendor details\".\n\nI'm pretty sure it's D\n\nI say this answer is D. Please hurry up and transport the meat.\n\nCopilot says \n\nB. Azure AI Computer Vision\n\nExplanation:\n\nAzure AI Computer Vision's Read API is designed to extract printed and handwritten text from images and documents. It uses Optical Character Recognition (OCR) to extract text and structure from your images, which can be used to extract invoice items, sales amounts, and customer details from the scanned invoices.\n\nYou see, \n\n• Invoice items\n• Sales amounts\n• Customer details\n\nso, we use \"Azure AI Document Intelligence \".\nD is answer.\n\nFor Azure Document Intelligence, Ability to use pre-built models for specific forms such as invoices, contracts, ID cards, insurance cards, credit cards, business cards, etc.\nAzure AI Computer Vision has similar functionality, but his case we need more sophisticated document analysis, use Azure AI Document Intelligence.\n\nFor Azure Document Intelligence, Ability to use pre-built models for specific forms such as invoices, contracts, ID cards, insurance cards, credit cards, business cards, etc.\nAzure AI Computer Vision has similar functionality, but his case we need more sophisticated document analysis, use Azure AI Document Intelligence.\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/?view=doc-intel-4.0.0\nTo deal with this type of question, it is good to understand Microsoft's AI services in a nutshell. It is tough to do so by rote memorization.\n\nTo efficiently extract data from scanned invoices, including invoice items, sales amounts, and customer details, you should use Azure AI Document Intelligence. Therefore, the correct answer is D.\n\nD. Azure AI Document Intelligence\nThis service is specifically designed for tasks like automated invoice processing and can extract key information from documents.\n\nAnswer seems to be correct\n\nAnswer is correct",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 65,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/134971-exam-ai-102-topic-3-question-65-discussion/"
+}

@@ -1,0 +1,19 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You are building an app that will provide users with definitions of common AI terms.<br/><br/>You create the following Python code.<br/><br/><img src=\"images/ai-102_topic-7_question-23_html_1.png\"/><br/><br/>For each of the following statements, select Yes if the statement is true. Otherwise, select No.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-7_question-23_html_2.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-7_question-23_question_1.png",
+    "images/ai-102_topic-7_question-23_question_2.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-7_question-23_correct_1.png"
+  ],
+  "discussion": "The given Answer is correct. Try it in Chat Playground => N,Y,Y\n\nFrom top to bottom\n\nNo is CORRECT because the response content and its degree of certainty depend on the specific model deployed (engine=deployment_name) and how it has been fine-tuned. While the OpenAI ChatCompletions API generates responses based on a trained model, it does not inherently guarantee a high degree of certainty or accuracy in its explanation of large language models (LLMs). The output quality is influenced by the model's training data and deployment configuration.\n\nYes is CORRECT because changing the prompt from \"What is an LLM?\" to \"What is an LLM in the context of AI models?\" provides more context, guiding the model to generate a more relevant and accurate response. The additional specificity in the prompt helps the model focus on large language models in the field of AI, increasing the likelihood of producing the intended response.\n\nYes is CORRECT because changing the system message to \"You must answer only within the context of AI language models.\" provides explicit instructions to the model, constraining its responses to the specified domain. This ensures the model generates answers that are more focused and relevant to AI language models, increasing the likelihood of producing the intended response.\n\nchat GPT : N,Y,Y\nMS copilot : Y,Y,Y\nRider copilot : YYY \n\nY,Y,Y democracy wins.\n\nI believe this is Y,Y,N",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 7,
+  "question_number": 23,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/149739-exam-ai-102-topic-7-question-23-discussion/"
+}

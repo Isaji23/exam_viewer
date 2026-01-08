@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT -<br/><br/>You are building an app that will answer customer calls about the status of an order. The app will query a database for the order details and provide the customers with a spoken response.<br/><br/>You need to identify which Azure AI service APIs to use. The solution must minimize development effort.<br/><br/>Which object should you use for each requirement? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-3_question-71_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-3_question-71_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-3_question-71_correct_1.png"
+  ],
+  "discussion": "SpeechRecognizer / SpeechSynthesizer\ndoesn't say anything about translation recognizer, which needs more code\n\nAgreed\nhttps://learn.microsoft.com/en-us/azure/ai-services/speech-service/get-started-speech-to-text?tabs=windows%2Cterminal&pivots=programming-language-csharp\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/speech-service/how-to-speech-synthesis?tabs=browserjs%2Cterminal&pivots=programming-language-csharp\n\nTo convert customer calls into text queries, you should use the SpeechRecognizer object. This is part of the Speech service in Azure Cognitive Services and it converts spoken language into written text.\n\nTo provide customers with the order details in a spoken response, you should use the SpeechSynthesizer object. This service converts text into lifelike speech, which can be used to deliver information to customers in a more interactive way.\n\nSo, the answer is:\n\nConvert customer calls into text queries: SpeechRecognizer\nProvide customers with the order details: SpeechSynthesizer\n\nconverting customer calls into text queries --> SpeechRecognizer is CORRECT because it is specifically designed to convert spoken language into text. This service can listen to customer calls and transcribe their spoken queries into text, which can then be used to query the database for order details.\n\nprovide customers with the order details --> SpeechSynthesizer is CORRECT because it is designed to convert text into spoken language. This service can take the order details retrieved from the database and convert them into speech, providing the customer with a spoken response.\n\nSpeechRecognizer\n2. SpeechSynthesizer\n\n1. SpeechRecognizer\n2. SpeechSynthesizer\n\n1. SpeechRecognizer\n2. SpeechSynthesizer\n\nIt must be SpeechRecognizer and SpeechSynthesizer.\n\nSpeechRecognizer / SpeechSynthesizer\n\nFinal Answer;\n1. SpeechRecognizer \n2. SpeechSynthesizer",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 71,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/135018-exam-ai-102-topic-3-question-71-discussion/"
+}

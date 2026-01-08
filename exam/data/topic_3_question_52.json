@@ -1,0 +1,18 @@
+{
+  "question_text": "DRAG DROP<br/> -<br/><br/>You have a question answering project in Azure Cognitive Service for Language.<br/><br/>You need to move the project to a Language service instance in a different Azure region.<br/><br/>Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.<br/><br/><img src=\"images/ai-102_topic-3_question-52_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-3_question-52_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-3_question-52_correct_1.png"
+  ],
+  "discussion": "1. From original instance, export existing project.\n2. From new instance, import the project file.\n3. From new instance, train and publish model.\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/language-service/question-answering/how-to/migrate-knowledge-base\n\n1) From the original Language service instance, export the existing project: Exporting the project from the original instance creates a project file that contains all the necessary configurations and data. This file is needed to import the project into the new instance.\n\n2) From the new Language service instance, import the project file: Importing the project file into the new instance sets up the project in the new region with the same configurations and data as the original.\n\n3) From the new Language service instance, train and publish the project: After importing the project, you need to train and publish it in the new instance to ensure it is fully functional and available for use.\n\noptions are wrong last one should be train and publish model instead train and publish the project . Fix that.\n\n1. From original instance, export existing project.\n2. From new instance, import the project file.\n3. From new instance, train and publish model.\n\nGot this in the exam, Jun 2024.\n\n1. From original instance, export existing project.\n2. From new instance, import the project file.\n3. From new instance, train and publish model.\n\noriginal, export existing project.\nnew, import the project file.\nnew, train and publish model.\n\nAnswer is correct\nfirst from the source instance, export the source project;\nat the new instance, import the exported source project;\nto deploy, one has to train and publish the model from imported project, the training is needed before the model can work in new project from different Azure region\n\nthe answer seems correct:\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/language-service/question-answering/how-to/migrate-knowledge-base\nhttps://learn.microsoft.com/en-us/azure/ai-services/qnamaker/quickstarts/create-publish-knowledge-base#publish-the-knowledge-base\n\nIt is true.",
+  "question_type": "drag_drop",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 52,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/112143-exam-ai-102-topic-3-question-52-discussion/"
+}

@@ -1,0 +1,18 @@
+{
+  "question_text": "DRAG DROP<br/> -<br/><br/>You have a Language Understanding solution that runs in a Docker container.<br/><br/>You download the Language Understanding container image from the Microsoft Container Registry (MCR).<br/><br/>You need to deploy the container image to a host computer.<br/><br/>Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.<br/><br/><img src=\"images/ai-102_topic-3_question-44_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-3_question-44_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-3_question-44_correct_1.png"
+  ],
+  "discussion": "1. From portal, export solution as package file.\n2. From host computer, move package file to Docker input directory.\n3. From host computer, run container and specify input directory.\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/luis/luis-container-howto?tabs=v3#how-to-use-the-container\n- Export package for container from LUIS portal or LUIS APIs.\n- Move package file into the required input directory on the host computer. Do not rename, alter, overwrite, or decompress the LUIS package file.\n- Run the container, with the required input mount and billing settings.\n\n@zellck: You’re a role model for contributing to community discussions, love this style! Well-documented answers, plus the corresponding links to follow-up and form an opinion independently!\n\nthanks for explanation\n\n1) From the Language Understanding portal, export the solution as a package file is CORRECT. This step is necessary to export the trained model from the portal, which will be used as a package file to be deployed within the Docker container.\n\n2) From the host computer, move the package file to the Docker input directory is CORRECT. After exporting the solution as a package file, the next step is to move the file to the Docker input directory where it will be accessed by the container.\n\n3) From the host computer, run the container and specify the input directory is CORRECT. Running the container and specifying the input directory ensures that the model package can be loaded and executed properly within the container.\n\nexport\nmove\nrun\n\nExport the LUIS application as a package file from the Azure portal: This involves downloading the LUIS model you've developed and want to run locally in a container.\n\nMove the exported package file to the Docker input directory on the host computer: This step involves transferring the downloaded LUIS application package to a specific directory that the Docker container will use as its input source.\n\nRun the Docker container and specify the input directory: This involves using Docker commands to start the container with the necessary parameters, including the location of the LUIS application package file in the input directory.\n\nRetraining the model is not mentioned as a step for deploying the container image to a host computer because the model should already be trained and exported from the LUIS portal before deployment.\n\nThe answer seems correct.\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/luis/luis-container-howto?tabs=v3\n\nNo.\nExport,Docker,Output directory.\n\nanswer is correct",
+  "question_type": "drag_drop",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 44,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/111250-exam-ai-102-topic-3-question-44-discussion/"
+}

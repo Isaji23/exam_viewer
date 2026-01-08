@@ -1,0 +1,19 @@
+{
+  "question_text": "HOTSPOT -<br/><br/>You are developing a text processing solution.<br/><br/>You develop the following method.<br/><br/><img src=\"images/ai-102_topic-3_question-67_html_1.png\"/><br/><br/>You call the method by using the following code.<br/><br/>get_key_phrases(text_analytics_client, \"the cat sat on the mat\")<br/><br/>For each of the following statements, select Yes if the statement is true. Otherwise, select No.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-3_question-67_html_2.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-3_question-67_question_1.png",
+    "images/ai-102_topic-3_question-67_question_2.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-3_question-67_correct_1.png"
+  ],
+  "discussion": "Should be YNN\n\nRefer: https://learn.microsoft.com/en-us/azure/ai-services/language-service/key-phrase-extraction/quickstart?pivots=programming-language-csharp\n\nYNN is right answer.\n\nFrom top to bottom\n\nYes is CORRECT. The Key Phrase Extraction API evaluates unstructured text, and for each JSON document, returns a list of key phrases. As defined in the section print(‘{keyphrase}’)function it prints the key phrases extracted from the input string to the console.\n\nNo is CORRECT. The function is designed to extract key phrases only and here in the options we have “the”, “on” which are not the key phrase but the general words. Therefore, it is unlikely it includes \"the\" and \"on\". The output might include \"cat\" and \"mat\" depending on how exactly the function is implemented.\n\nNo is CORRECT. In the function defined we are not stating anywhere specifically to print the confidence level. If we want to extract the confidence level we can utilize Named Entity Recognition.\n\nShould be YNN\n\nFinal Answer :\nYNN\n\nNo se evidencia en el codigo que se muestre la confiabilidad de ninguna manera. YNN.\n\nY-N-N for sure\n\nShould by YNN. Seriously, where should the confidence level come from. keyphase is a string",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 67,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/135017-exam-ai-102-topic-3-question-67-discussion/"
+}

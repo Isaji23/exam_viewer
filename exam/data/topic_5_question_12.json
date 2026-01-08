@@ -1,0 +1,19 @@
+{
+  "question_text": "HOTSPOT -<br/>You are building a bot and that will use Language Understanding.<br/>You have a LUDown file that contains the following content.<br/><img class=\"in-exam-image\" src=\"images/ai-102_topic-5_question-12_html_1.png\"/><br/>Use the drop-down menus to select the answer choice that completes each statement based on the information presented in the graphic.<br/>NOTE: Each correct selection is worth one point.<br/>Hot Area:<br/><img class=\"in-exam-image\" src=\"images/ai-102_topic-5_question-12_html_2.png\"/><br/>",
+  "question_images": [
+    "images/ai-102_topic-5_question-12_question_1.png",
+    "images/ai-102_topic-5_question-12_question_2.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-5_question-12_correct_1.png"
+  ],
+  "discussion": "Answer is correct. From the link provided:\nSelectItem is the intent, and each item below it are example utterances that capture ways users can express this intent. Entities in .lu files are denoted using {<entityName>=<labeled value>} notation. Taking from our sample code once again, you can find the bottom left entity within the following utterance: choose the {DirectionalReference=bottom left}.\n\n1. intent\n2. utterance\n\nhttps://learn.microsoft.com/en-us/azure/bot-service/file-format/bot-builder-lu-file-format?view=azure-bot-service-4.0#defining-intents-using-sample-utterances\nIntents with their sample utterances are declared in the following way:\n# <intent-name>\n    - <utterance1>\n    - <utterance2>\n# <intent-name> describes a new intent definition section. Each line after the intent definition are example utterances that describe that intent using the - <utterance> format.\n\nSelectItem is an intent because in the context of Language Understanding (LUIS), intents represent actions that users want to perform. The phrases under \"SelectItem\" (e.g., \"choose last\", \"choose the {DirectionalReference=bottom left}\") are examples of user utterances that map to the action of selecting an item, indicating that \"SelectItem\" is the intent.\n\nChoose {@DirectionalReference=top right} is an utterance because it is a specific example of what a user might say to invoke the \"SelectItem\" intent. In Language Understanding (LUIS), utterances are the individual phrases that users might say, which are then mapped to a corresponding intent for processing.\n\n1. intent\n2. utterance\n\ncorrect answer and explanation. The provided reference demonstrates it\n\nAnswer is correct. \nThe LUIS model begins with categories of user intentions called intents. Each intent needs examples of user utterances (something a user should say). Each utterance can provide a variety of data that needs to be extracted with entities.\n\nIntent\nUtterance.\n\na trick stolen from previous questions\n(U) (S) A, Utterance Statement\n(E)(n)gland, Entity Noun\n(I)(v)ory Coast, Intent Verb\n\nAnswer is correct\n\nBased on the reference, it should be entity for the second question",
+  "question_type": "hot_area",
+  "exam": "ai-102",
+  "topic": 5,
+  "question_number": 12,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/62325-exam-ai-102-topic-5-question-12-discussion/"
+}

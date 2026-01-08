@@ -1,21 +1,18 @@
 {
-  "question_text": "You have a Fabric workspace named Workspace1.<br/><br/>Your company acquires GitHub licenses.<br/><br/>You need to configure source control for Workpace1 to use GitHub. The solution must follow the principle of least privilege.<br/><br/>Which permissions do you require to ensure that you can commit code to GitHub?",
-  "question_images": [],
-  "answers": {
-    "A": "Actions (Read and write) and Contents (Read and write)",
-    "B": "Actions (Read and write) only",
-    "C": "Contents (Read and write) only",
-    "D": "Contents (Read) and Commit statuses (Read and write)"
-  },
-  "answer_images": {},
-  "correct_answer": [
-    "C"
+  "question_text": "DRAG DROP<br/> -<br/><br/>You have a Custom Vision service project that performs object detection. The project uses the General domain for classification and contains a trained model.<br/><br/>You need to export the model for use on a network that is disconnected from the internet.<br/><br/>Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.<br/><br/><img src=\"images/ai-102_topic-1_question-47_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-1_question-47_question_1.png"
   ],
-  "correct_answer_images": [],
-  "discussion": "Contents (Read and write):\nAllows reading repository content.\nAllows pushing commits, creating branches, updating files — everything you need to commit code.\n\nTo commit code to GitHub from a Microsoft Fabric workspace, you need a GitHub fine-grained personal access token with:\n\nContents → Read and Write permission\nThis allows you to:\nView repository content\nCommit changes\nSync updates\nYou do not need Actions or Commit statuses permissions for basic commit operations from Fabric.\nSee https://learn.microsoft.com/en-us/fabric/cicd/git-integration/git-integration-process?tabs=GitHub%2Cgithub\nGIT Roles / GitHub Repos tab / Commit workspace changes to Git\n\nC- Contents (Read and write) only\n\nThese permissions are necessary because:\nActions (Read and write): This permission allows you to interact with GitHub Actions, which might be necessary for automated workflows related to your commits.\nContents (Read and write): This permission allows you to read and write repository contents, which is essential for committing code.",
-  "question_type": "multiple_choice",
-  "exam": "dp-700",
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-1_question-47_correct_1.png"
+  ],
+  "discussion": "The provided answer is correct. As reported here \nhttps://learn.microsoft.com/en-us/azure/cognitive-services/Custom-Vision-Service/export-your-model\nthe model must be retrained after changing the domain to compact.\n\ncorrect answer and tested!\n\n1. Change Domains to General (compact)\n2. Retain model\n3. Export model\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/export-your-model\n- In the Domains section, select one of the compact domains. Select Save Changes to save the changes.\n- From the top of the page, select Train to retrain using the new domain.\n- Go to the Performance tab and select Export.\n\nStep 1) Change Domains to General (compact) is CORRECT because the General (compact) domain is optimized for running on devices with limited resources and can be exported for offline use.\n\nStep 2) Retrain the model is CORRECT because after changing the domain, you need to retrain the model to ensure it works effectively within the new domain.\n\nStep 3) Export the model is CORRECT because, after retraining, you can export the model for use on a network that is disconnected from the internet.\n\n1. Change domain to General(Compact) domain\n2. Retrain model using new domain\n3. Export model to desired export format\n\non exam today 24/05/2024, zellck's response I selected as well. general compact, retrain, export\n\nThis was in 2-Mar-24 exam\n\nwas on november exam\n\nCorrect sequence of answer is:\n1. Change domain to General(Compact) domain\n2. Retrain model using new domain\n3. Export model to desired export format\n\nRef: https://learn.microsoft.com/en-us/azure/ai-services/custom-vision-service/export-your-model\n\nThis appeared in the exam 28/06\n\nThis sequence of actions is not correct. Changing the domain to General (compact) before retraining the model may result in reduced accuracy and performance, as the model would not be optimized for the specific domain it is intended to be used in.\n\nTherefore, the correct sequence of actions should start with retraining the model to optimize it for the intended use case, followed by changing the domain to General (compact) to create a more compact version of the model, and then exporting it for use on a disconnected network.\n\nSo the correct sequence is:\n\nRetrain the model\nChange Domains to General (compact)\nExport the model\n\nUnlikely. \n1 - the model is already trained and 2 - after changing the domain you have to retrain the model see jimbo's link above...\n\nIn Jimbo's link, the retraining is the last sub step in the 'Convert to a compact domain' step. The step before that is Changing domains. So the answer given by ExamTopics is correct.",
+  "question_type": "drag_drop",
+  "exam": "ai-102",
   "topic": 1,
   "question_number": 47,
-  "url": "https://www.examtopics.com/discussions/microsoft/view/302440-exam-dp-700-topic-1-question-47-discussion/"
+  "url": "https://www.examtopics.com/discussions/microsoft/view/102671-exam-ai-102-topic-1-question-47-discussion/"
 }

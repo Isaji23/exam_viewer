@@ -1,0 +1,21 @@
+{
+  "question_text": "You are building a retail kiosk system that will use a custom neural voice.<br/><br/>You acquire audio samples and consent from the voice talent.<br/><br/>You need to create a voice talent profile.<br/><br/>What should you upload to the profile?",
+  "question_images": [],
+  "answers": {
+    "A": "a .zip file that contains 10-second .wav files and the associated transcripts as .txt files",
+    "B": "a five-minute .flac audio file and the associated transcript as a .txt file",
+    "C": "a .wav or .mp3 file of the voice talent consenting to the creation of a synthetic version of their voice",
+    "D": "a five-minute .wav or .mp3 file of the voice talent describing the kiosk system"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "C"
+  ],
+  "correct_answer_images": [],
+  "discussion": "The question is about the profile, not data.\n\na .wav or .mp3 file of the voice talent consenting to the creation of a synthetic version of their voice is CORRECT because creating a custom neural voice requires explicit consent from the voice talent, which should be recorded and uploaded to ensure compliance with ethical and legal standards. This consent recording is necessary to create the voice talent profile.\n\nAnswer is C\n\nA. a .zip file that contains 10-second .wav files and the associated transcripts as .txt files\n\nExplanation:\nThis option aligns with the typical requirements for creating a custom neural voice. The system needs short, segmented audio samples along with their corresponding transcripts to accurately train the model and generate the synthetic voice.\n\nBy providing multiple short audio files and their transcripts, you ensure that the voice model can learn the nuances of the voice talent's speech and generate a high-quality custom voice.\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/speech-service/record-custom-voice-samples\n\nuploaded testing data must be A collection (.zip) of either .wave +.txt (if samples and transcripts are available)or .wave/.mp3 (if samples only available)\nin both cases must be .zip\n\nwrong answer \nas per https://learn.microsoft.com/en-us/azure/ai-services/speech-service/professional-voice-create-consent?pivots=speech-studio\nfile should be .wave or .mp3\n\nanwser is C, see here - https://learn.microsoft.com/en-us/azure/ai-services/speech-service/professional-voice-create-consent?pivots=speech-studio\n\nBoth me and ChatGPT agree with A\n\na .zip file that contains 10-second .wav files and the associated transcripts as .txt files\n\nI say this answer is C.\n\nC is answer.\n\nC is correct answer.\n\nC is the correct answer\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/speech-service/how-to-custom-voice-talent\n\nBased on the Azure AI documentation, the correct option for creating a voice talent profile for a custom neural voice is:\n\nC. a .wav or .mp3 file of the voice talent consenting to the creation of a synthetic version of their voice.\n\nThis is because the documentation specifies the need for a recording of the voice talent's consent statement, acknowledging the use of their voice recordings by a specified company to create and use a synthetic version of their voice\n\nC is the correct answer as only wav & mp3 formats are allowed. Zip is not allowed.\n\nhere we are requested to add a new voice talent profile. So a consent statement is needed.\nhttps://learn.microsoft.com/en-us/azure/ai-services/speech-service/how-to-custom-voice-talent\n\nI initially thought A, but now think it is C\nhttps://learn.microsoft.com/en-us/azure/ai-services/speech-service/how-to-custom-voice-talent",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 43,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/108161-exam-ai-102-topic-3-question-43-discussion/"
+}

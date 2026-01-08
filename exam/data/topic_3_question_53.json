@@ -1,0 +1,18 @@
+{
+  "question_text": "DRAG DROP<br/> -<br/><br/>You are building a customer support chatbot.<br/><br/>You need to configure the bot to identify the following:<br/><br/>•\tCode names for internal product development<br/>•\tMessages that include credit card numbers<br/><br/>The solution must minimize development effort.<br/><br/>Which Azure Cognitive Service for Language feature should you use for each requirement? To answer, drag the appropriate features to the correct requirements. Each feature may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-3_question-53_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-3_question-53_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-3_question-53_correct_1.png"
+  ],
+  "discussion": "1. Custom NER\n2. PII detection\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/language-service/custom-named-entity-recognition/overview\nCustom NER enables users to build custom AI models to extract domain-specific entities from unstructured text, such as contracts or financial documents. By creating a Custom NER project, developers can iteratively label data, train, evaluate, and improve model performance before making it available for consumption. The quality of the labeled data greatly impacts model performance.\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/language-service/personally-identifiable-information/overview\nPII detection is one of the features offered by Azure Cognitive Service for Language, a collection of machine learning and AI algorithms in the cloud for developing intelligent applications that involve written language. The PII detection feature can identify, categorize, and redact sensitive information in unstructured text. For example: phone numbers, email addresses, and forms of identification.\n\nthank you for your great contribution\n\nCode names for internal product development --> Custom named entity recognition (NER) is CORRECT because it allows you to train the model to recognize specific entities, such as code names for internal product development, which are not covered by the pre-built NER models. This feature provides the flexibility to identify custom entities relevant to your specific use case, minimizing development effort.\n\nMessages that include credit card numbers --> Personally Identifiable Information (PII) detection is CORRECT because it is specifically designed to identify sensitive personal information such as credit card numbers, social security numbers, and other PII in text. This feature directly addresses the requirement to detect messages that include credit card numbers with minimal development effort.\n\n1. Custom NER\n2. PII detection\n\nNER + PII\n\nIt's custom NER\n\n1. Custom NER\n2. PII\n\nNER and PII.\n\nseems correct.\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/language-service/overview\n\nIt is true.",
+  "question_type": "drag_drop",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 53,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/112145-exam-ai-102-topic-3-question-53-discussion/"
+}

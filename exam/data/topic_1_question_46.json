@@ -1,22 +1,21 @@
 {
-  "question_text": "You have a Fabric workspace named Workspace1 that contains the following items:<br/><br/>•\tA Microsoft Power BI report named Report1<br/>•\tA Power BI dashboard named Dashboard1<br/>•\tA semantic model named Model1<br/>•\tA lakehouse name Lakehouse1<br/><br/>Your company requires that specific governance processes be implemented for the items.<br/><br/>Which items can you endorse in Fabric?",
+  "question_text": "You have an app that analyzes images by using the Computer Vision API.<br/><br/>You need to configure the app to provide an output for users who are vision impaired. The solution must provide the output in complete sentences.<br/><br/>Which API call should you perform?",
   "question_images": [],
   "answers": {
-    "A": "Lakehouse1, Model1, and Dashboard1 only",
-    "B": "Lakehouse1, Model1, Report1 and Dashboard1",
-    "C": "Report1 and Dashboard1 only",
-    "D": "Model1, Report1, and Dashboard1 only",
-    "E": "Lakehouse1, Model1, and Report1 only"
+    "A": "readInStreamAsync",
+    "B": "analyzeImagesByDomainInStreamAsync",
+    "C": "tagImageInStreamAsync",
+    "D": "describeImageInStreamAsync"
   },
   "answer_images": {},
   "correct_answer": [
-    "E"
+    "D"
   ],
   "correct_answer_images": [],
-  "discussion": "All Fabric items and Power BI items except Power BI dashboards can be promoted or certified.\n\nDashboard cannot be endorsed\n\nE\nDashboard cannot be endorsed\n\nE is correct\n\nPower BI dashboards cannot be promoted or certified.\n\nAll can be endorsed as a Master data\nhttps://learn.microsoft.com/en-us/fabric/governance/endorsement-overview#types-of-items-that-can-be-endorsed",
+  "discussion": "The API call you should perform to provide an output in complete sentences for users who are vision impaired is describeImageInStreamAsync.\n\nThe describe feature of the Computer Vision API generates a human-readable sentence to describe the contents of an image. This is particularly useful for accessibility purposes, as it allows visually impaired users to understand what is in an image without needing to see it. The describe feature can also be customized to provide additional details or context, if desired.\n\nTherefore, the correct answer is D. describeImageInStreamAsync.\n\nD is the answer because this API call generates a description of the image in complete sentences, which is suitable for providing detailed and accessible information to users who are vision impaired. The description typically includes sentences that convey the content of the image, making it easy to understand.\n\nD. describeImageInStreamAsync.\nThe describeImageInStreamAsync method in the Computer Vision API is designed to generate descriptions of an image in complete sentences, which is ideal for providing information to vision-impaired users. It outputs human-readable descriptions that convey the content of the image in a way that can be converted to audio or other accessible formats.\nA. readInStreamAsync is used for extracting text from images (OCR).\nB. analyzeImagesByDomainInStreamAsync is for domain-specific image analysis (like celebrities or landmarks).\nC. tagImageInStreamAsync provides tags for the image but not in complete sentences, which is less useful for accessibility purposes.\n\nsee if you can spot this D.\n\nD. describeImageInStreamAsync is right answer.\n\nAnswer is D. describeImageInStreamAsync.\n\nThe correct answer is D. describeImageInStreamAsync.\nTo configure an app that provides output in complete sentences for users who are vision impaired, using the Computer Vision API, you should use the describeImageInStreamAsync call. This API call analyzes an image and provides a description in natural, human-readable language.\n\nTo provide output in complete sentences for users who are vision-impaired, you should perform the following API call:\n\nD. describeImageInStreamAsync\n\nThe describeImageInStreamAsync API call is specifically designed to provide a description of the image content in a textual format that can be read aloud to users with visual impairments. This API call will generate a description of the image, making it accessible to those who rely on screen readers or other assistive technologies. (ChatGPT)\n\nAppeared on Oct/29/2023.\n\nSee sample source code\n\nusing (Stream imageStream = File.OpenRead(imagePath)) {\n    ImageDescription descriptions = await computerVision.DescribeImageInStreamAsync(imageStream);\n    Console.WriteLine(imagePath);\n    DisplayDescriptions(descriptions);\n}\n\nat https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/blob/master/samples/ComputerVision/DescribeImage/Program.cs#L75C20-L75C20\n\nD is the answer.\n\nhttps://learn.microsoft.com/en-us/rest/api/computervision/3.1/describe-image-in-stream/describe-image-in-stream?tabs=HTTP\nThis operation generates a description of an image in human readable language with complete sentences. The description is based on a collection of content tags, which are also returned by the operation. More than one description can be generated for each image. Descriptions are ordered by their confidence score. Descriptions may include results from celebrity and landmark domain models, if applicable. Two input methods are supported -- (1) Uploading an image or (2) specifying an image URL. A successful response will be returned in JSON. If the request failed, the response will contain an error code and a message to help understand what went wrong.",
   "question_type": "multiple_choice",
-  "exam": "dp-700",
+  "exam": "ai-102",
   "topic": 1,
   "question_number": 46,
-  "url": "https://www.examtopics.com/discussions/microsoft/view/302436-exam-dp-700-topic-1-question-46-discussion/"
+  "url": "https://www.examtopics.com/discussions/microsoft/view/102672-exam-ai-102-topic-1-question-46-discussion/"
 }

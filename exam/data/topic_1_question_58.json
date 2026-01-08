@@ -1,21 +1,18 @@
 {
-  "question_text": "You have a Fabric warehouse named DW1. DW1 contains a table that stores sales data and is used by multiple sales representatives.<br/><br/>You plan to implement row-level security (RLS).<br/><br/>You need to ensure that the sales representatives can see only their respective data.<br/><br/>Which warehouse object do you require to implement RLS?",
-  "question_images": [],
-  "answers": {
-    "A": "SECURITY POLICY",
-    "B": "TABLE",
-    "C": "TRIGGER",
-    "D": "STORED PROCEDURE"
-  },
-  "answer_images": {},
-  "correct_answer": [
-    "A"
+  "question_text": "HOTSPOT<br/> -<br/><br/>You plan to deploy an Azure OpenAI resource by using an Azure Resource Manager (ARM) template.<br/><br/>You need to ensure that the resource can respond to 600 requests per minute.<br/><br/>How should you complete the template? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-1_question-58_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-1_question-58_question_1.png"
   ],
-  "correct_answer_images": [],
-  "discussion": "Function and Security Policy is used. So as per the options available it is Security Policy.\n\nWithout a SECURITY POLICY, the filtering logic won't be applied, even if the function exists.",
-  "question_type": "multiple_choice",
-  "exam": "dp-700",
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-1_question-58_correct_1.png"
+  ],
+  "discussion": "Answer is correct:\nAzure OpenAI allows you to manage how frequently your application can make inferencing requests. Your rate limits are based on Tokens-per-Minute (TPM). For example, if you have a capacity of 1, this equals 1,000 TPM, and the rate limit of requests you can make per minute (RPM) is calculated using a ratio. For every 1,000 TPM, you can make 6 RPM.\n\nSo, if you need to process 600 requests every minute, you'll require a TPM that supports that many RPM. Using the ratio, for 600 RPM, you need 100,000 TPM (because 600 divided by 6 equals 100, and 100 multiplied by 1,000 equals 100,000). In this scenario, you would set the capacity to 100, since each capacity unit equals 1,000 TPM.\n\nAnswer is correct\nFrom here https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/quota?tabs=rest\nWhen a deployment is created, the assigned TPM will directly map to the tokens-per-minute rate limit enforced on its inferencing requests. A Requests-Per-Minute (RPM) rate limit will also be enforced whose value is set proportionally to the TPM assignment using the following ratio:\n\n6 RPM per 1000 TPM.\n\nFrom here:\nhttps://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/quota?tabs=rest\ncapacity\tinteger\tThis represents the amount of quota you are assigning to this deployment. A value of 1 equals 1,000 Tokens per Minute (TPM). A value of 10 equals 10k Tokens per Minute (TPM).\n\nSo the math is 600 RPM needs 100000 TPM which translates to capacity 100\n\nThis was in 2-Mar-24 exam\n\n\"capacity\" is CORRECT because it specifies the scale unit of the deployment, which determines the number of requests the resource can handle per minute. Setting the appropriate capacity value ensures that the resource can respond to 600 requests per minute.\n\n100 is CORRECT because a throughput of 600 requests per minute requires the ability to process a substantial number of tokens per minute. Each capacity unit supports 1,000 tokens per minute (TPM). For a typical request, assuming it processes up to 100 tokens per request (input + output), the capacity required is 600 requests * 100 tokens = 60,000 TPM. Setting the capacity to 100 ensures the resource can handle up to 100,000 TPM, meeting the 600 requests per minute requirement with sufficient buffer.\n\n1. capacity\n2. 100\n\nParameter\tType\tDescription\nsku\tSku\tThe resource model definition representing SKU.\ncapacity\tinteger\tThis represents the amount of quota you are assigning to this deployment. A value of 1 equals 1,000 Tokens per Minute (TPM). A value of 10 equals 10k Tokens per Minute (TPM).\n\ncapacity and 100.\n\ncapacity and 100.\nFrom Takedajuku perspective, if you study for 4 days and spend 2 days reviewing, you will have a better chance of passing the exam.\n\non exam today 24/05/2024, I selected capacity and 600\n\nThe accurate capacity value to meet the requirement of processing 600 requests per minute is indeed 100. I apologize for any confusion caused earlier\n\nIn the provided options, the correct choice is:\n\n\"capacity\" : 600\n\nThe capacity parameter in the SKU configuration of an Azure OpenAI resource specifies the maximum number of requests per minute (RPM) that the resource can handle. By setting \"capacity\": 600, you are configuring the resource to handle up to 600 requests per minute.",
+  "question_type": "image_only",
+  "exam": "ai-102",
   "topic": 1,
   "question_number": 58,
-  "url": "https://www.examtopics.com/discussions/microsoft/view/304635-exam-dp-700-topic-1-question-58-discussion/"
+  "url": "https://www.examtopics.com/discussions/microsoft/view/134922-exam-ai-102-topic-1-question-58-discussion/"
 }

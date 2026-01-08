@@ -1,0 +1,25 @@
+{
+  "question_text": "You are developing the smart e-commerce project.<br/>You need to implement autocompletion as part of the Cognitive Search solution.<br/>Which three actions should you perform? Each correct answer presents part of the solution.<br/>NOTE: Each correct selection is worth one point.<br/>",
+  "question_images": [],
+  "answers": {
+    "A": "Make API queries to the autocomplete endpoint and include suggesterName in the body.",
+    "B": "Add a suggester that has the three product name fields as source fields.",
+    "C": "Make API queries to the search endpoint and include the product name fields in the searchFields query parameter.",
+    "D": "Add a suggester for each of the three product name fields.",
+    "E": "Set the searchAnalyzer property for the three product name variants.",
+    "F": "Set the analyzer property for the three product name variants."
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "A",
+    "B",
+    "F"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Let us eliminate the wrong answers:\nC. Make API queries to the search endpoint and include the product name fields in the searchFields query parameter. - as we need autocomplete endpoint, we rule this one out as this is for a search endpoint\nD. Add a suggester for each of the three product name fields. - we cannot have 3 suggesters.\nE. Set the searchAnalyzer property for the three product name variants. - searchAnalyzer helps in search not in autocomplete.\n\nSo A, B, F\n\nA , B , F\n\nB. Add a suggester that has the three product name fields as source fields\nF. Set the analyzer property for the three product name variants.\nA. Make API queries to the autocomplete endpoint and include suggesterName in the body.\n\nhttps://docs.microsoft.com/en-us/azure/search/index-add-suggesters\nhttps://docs.microsoft.com/en-us/azure/search/search-add-autocomplete-suggestions\n\nMake API queries to the autocomplete endpoint and include suggesterName in the body is CORRECT because it specifies which suggester to use for autocompletion. This is essential for retrieving relevant suggestions based on user input, making the autocomplete functionality effective.\n\nAdd a suggester that has the three product name fields as source fields is CORRECT because a suggester is needed to define the fields from which autocomplete suggestions will be generated. By including all relevant product name fields, the system can provide comprehensive suggestions that account for different ways products might be named or referred to.\n\nSet the analyzer property for the three product name variants is CORRECT because it ensures that the text is processed correctly, considering the specific language or custom processing required. This helps in generating accurate autocomplete suggestions by applying the correct text analysis to the product name fields.\n\nABF\n\nABF is the correct answer.\n\nIs this question still available on May 21, 2024?\n\nlet me explain why C D E are incorrect:\n\nC.  This action is more relevant to refining search results based on specific fields rather than implementing autocompletion. For autocompletion, the focus is on the autocomplete endpoint, not the search endpoint.\n\nD. - Typically, you would add a single suggester that includes multiple fields as source fields rather than creating a separate suggester for each field. Therefore, this action is not as efficient or necessary if you can accomplish your goal with one suggester that encompasses all relevant fields.\n\nE. Set the searchAnalyzer property for the three product name variants. - Setting the searchAnalyzer property is relevant for controlling how text is analyzed during search queries.  it's not directly involved in setting up autocompletion.\n\nprovided answer and explanation are correct\n\nABF is the answer.\n\nhttps://learn.microsoft.com/en-us/azure/search/index-add-suggesters#use-a-suggester\nFirst, as with all queries, the operation is against the documents collection of an index and the query includes a \"search\" parameter, which in this case provides the partial query. Second, you must add \"suggesterName\" to the request. If a suggester isn't defined in the index, a call to autocomplete or suggestions will fail.\n\nhttps://learn.microsoft.com/en-us/azure/search/index-add-suggesters#choose-analyzers\n\non my exam. (2023-01-16 passed)\nMy Answer:ABF\n\nA, B and F are correct answers.",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 13,
+  "question_number": 1,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/66853-exam-ai-102-topic-13-question-1-discussion/"
+}

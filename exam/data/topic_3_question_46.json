@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You have a collection of press releases stored as PDF files.<br/><br/>You need to extract text from the files and perform sentiment analysis.<br/><br/>Which service should you use for each task? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-3_question-46_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-3_question-46_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-3_question-46_correct_1.png"
+  ],
+  "discussion": "AI Document Intelligence and AI Language\n\nUpdated version of topic 3 question 46.\nSo according to the discussion in that question the correct answer is:\nAI Vision\nAI Language\n\nService should you use to extract text is Azure AI Document Intelligence because it is specifically designed to extract structured and unstructured text from documents, including PDF files. This service uses advanced AI and machine learning models to accurately extract text, tables, and other data from various document formats, making it the ideal solution for extracting text from your collection of press releases.\n\nService should you use to perform sentiment analysis is Azure AI Language because it includes sentiment analysis capabilities specifically designed to analyze the sentiment of text data. By extracting the text from your PDF files and then using the sentiment analysis feature of Azure AI Language, you can accurately assess the sentiment of the content in your press releases.\n\nAI Document Intelligence and AI Language\n\nAI Vision\nAI Language\n\nIt can't be Document Intelligence. We don't know how the Press Releases are going to look like, if they have the same format and we don't need to extract anything specific, just text. And that you can achieve with AI Vision.\n\nnvm you also have to do sentiment analysis and document intelligence has also just OCR\n\nFormat is not required when using Read API in document intelligence\n\n1. AI Document Intelligence\n2. AI Language\n\n1. AI Document Intelligence\n2. AI Language\n\nFor extracting text from PDF files, Azure Document Intelligence would be the better choice. It’s specifically optimized for text-heavy documents like PDFs and includes features such as higher-resolution scanning and paragraph detection. In addition, Azure Computer Vision API does not have direct PDF integration, and you would need to convert PDFs to images before text extraction, which adds an extra step to the process.\n\nSentiment Analysis = AI Language\n\nthe key word to answer this question is press release which implies computer vision\n\nExtract Text = AI Vision\n\nI disagree, the Computer Vision for text extraction is best suited for unstructured documents\nIDP is the right choice\n\nDocument Intelligence also does text extraction:\n\"Document Intelligence Read Optical Character Recognition (OCR) model runs at a higher resolution than Azure AI Vision Read and extracts print and handwritten text from PDF documents and scanned images.\"\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/concept-read?view=doc-intel-4.0.0\n\nAnswer seems to be correct.",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 46,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/135062-exam-ai-102-topic-3-question-75-discussion/"
+}

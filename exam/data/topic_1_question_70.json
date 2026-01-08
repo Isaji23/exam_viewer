@@ -1,0 +1,21 @@
+{
+  "question_text": "You have an Azure DevOps pipeline named Pipeline1 that is used to deploy an app. Pipeline1 includes a step that will create an Azure AI services account.<br/><br/>You need to add a step to Pipeline1 that will identify the created Azure AI services account. The solution must minimize development effort.<br/><br/>Which Azure Command-Line Interface (CLI) command should you run?",
+  "question_images": [],
+  "answers": {
+    "A": "az resource link",
+    "B": "az cognitiveservices account network-rule",
+    "C": "az cognitiveservices account show",
+    "D": "az account list"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "C"
+  ],
+  "correct_answer_images": [],
+  "discussion": "az cognitiveservices account show is CORRECT because it retrieves detailed information about an Azure Cognitive Services account, including its name, resource group, and configuration. This command identifies the created Azure AI services account in the pipeline efficiently, minimizing development effort by providing a direct solution to fetch the required details.\n\nC is correct\n\nPretty simple\n\nCorrect, answer is C, here the chatGPT explanation ->\n\nThe correct answer is C. az cognitiveservices account show.\n\nExplanation:\n\nThe az cognitiveservices account show command retrieves details about a specified Azure Cognitive Services account, including its properties and settings. By using this command in the Azure DevOps pipeline, you can identify and confirm the details of the Azure AI services account that was created in a previous step.",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 1,
+  "question_number": 70,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/150682-exam-ai-102-topic-1-question-70-discussion/"
+}

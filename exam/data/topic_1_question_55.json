@@ -1,19 +1,18 @@
 {
-  "question_text": "HOTSPOT<br/> -<br/><br/>You have a Fabric workspace that contains a warehouse named Warehouse1. Warehouse1 contains a table named Customer. Customer contains the following data.<br/><br/><img src=\"images/dp-700_topic-1_question-55_html_1.png\"/><br/><br/>You have an internal Microsoft Entra user named User1 that has an email address of <a class=\"__cf_email__\" data-cfemail=\"087d7b6d7a39486b67667c677b67266b6765\" href=\"/cdn-cgi/l/email-protection\">[email protected]</a>.<br/><br/>You need to provide User1 with access to the Customer table. The solution must prevent User1 from accessing the CreditCard column.<br/><br/>How should you complete the statement? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/dp-700_topic-1_question-55_html_2.png\"/>",
+  "question_text": "HOTSPOT<br/> -<br/><br/>You have an Azure subscription that has the following configurations:<br/><br/>•\tSubscription ID: 8d3591aa-96b8-4737-ad09-00f9b1ed35ad<br/>•\tTenant ID: 3edfe572-cb54-3ced-ae12-c5c177f39a12<br/><br/>You plan to create a resource that will perform sentiment analysis and optical character recognition (OCR).<br/><br/>You need to use an HTTP request to create the resource in the subscription. The solution must use a single key and endpoint.<br/><br/>How should you complete the request? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-1_question-55_html_1.png\"/>",
   "question_images": [
-    "images/dp-700_topic-1_question-55_question_1.png",
-    "images/dp-700_topic-1_question-55_question_2.png"
+    "images/ai-102_topic-1_question-55_question_1.png"
   ],
   "answers": {},
   "answer_images": {},
   "correct_answer": [],
   "correct_answer_images": [
-    "images/dp-700_topic-1_question-55_correct_1.png"
+    "images/ai-102_topic-1_question-55_correct_1.png"
   ],
-  "discussion": "answer should be GRANT SELECT ON Customers(CustomerID, FirstName, LastName, Phone) TO [ [email protected] ]\n\nhttps://learn.microsoft.com/en-us/fabric/data-warehouse/column-level-security\n\nGRANT SELECT ON Customers(CustomerID, FirstName, LastName, Phone) TO [ [email protected] ] is corrected. I tested\n\nGRANT SELECT\nmust be the complete email address [email protected]\n\nanswer should be GRANT SELECT ON Customers(CustomerID, FirstName, LastName, Phone) TO [ [email protected] ]\n\nCorrect, since Entra user: https://learn.microsoft.com/en-us/fabric/data-warehouse/column-level-security\n\nCorrect.\nGRANT SELECT ON Customers(CustomerID, FirstName, LastName, Phone) TO [User1]\nAlternatively:\nDENY SELECT ON Customers(CreditCard) TO [User1]",
+  "discussion": "1. subscriptions/8d3591aa-96b8-4737-ad09-00f9b1ed35ad\n2. Microsoft.CognitiveServices\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Canomaly-detector%2Clanguage-service%2Ccomputer-vision%2Cwindows#types-of-cognitive-services-resources\nYou can access Azure Cognitive Services through two different resources: A multi-service resource, or a single-service one.\n- Multi-service resource:\nAccess multiple Azure Cognitive Services with a single key and endpoint.\nConsolidates billing from the services you use.\n\nGotten this in Jul 2023 exam.\n\nsubscriptions/8d3591aa-96b8-4737-ad09-00f9b1ed35ad is CORRECT because it is the correct format for specifying the subscription ID in the URL when making an HTTP request to create a resource in an Azure subscription. The subscription ID uniquely identifies the subscription under which the resource will be created.\n\nMicrosoft.CognitiveServices is CORRECT because it is the appropriate provider for creating resources related to sentiment analysis and optical character recognition (OCR) within Azure Cognitive Services.\n\ncorrect answer\n\nThe solution must use a single key and endpoint. - Cognitive Services\nYou need to use an HTTP request to create the resource in the subscription. - obviously subscription\n\nThe answer is correct. https://learn.microsoft.com/en-us/rest/api/resources/resources/create-or-update\n\nIt is true.",
   "question_type": "image_only",
-  "exam": "dp-700",
+  "exam": "ai-102",
   "topic": 1,
   "question_number": 55,
-  "url": "https://www.examtopics.com/discussions/microsoft/view/302458-exam-dp-700-topic-1-question-55-discussion/"
+  "url": "https://www.examtopics.com/discussions/microsoft/view/112134-exam-ai-102-topic-1-question-55-discussion/"
 }

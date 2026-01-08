@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You have a chatbot that uses Azure OpenAI to generate responses.<br/><br/>You need to upload company data by using Chat playground. The solution must ensure that the chatbot uses the data to answer user questions.<br/><br/>How should you complete the code? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-7_question-13_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-7_question-13_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-7_question-13_correct_1.png"
+  ],
+  "discussion": "first one is chatCompletionsOptions()\nsecond one is AzureChatExtensionConfiguration - see link here https://learn.microsoft.com/en-us/java/api/com.azure.ai.openai.models.azurechatextensionconfiguration?view=azure-java-preview. This details AzureChatExtensionConfiguration & ChatCompletionsOptions() the other methods just dont exist on the SDK\n\nNo.AzureExtensionsOptions: A general container for extension configurations.\nExtensions: A property within AzureExtensionsOptions that specifies the actual extensions to use (e.g., AzureCognitiveSearchChatExtensionConfiguration).\n\nRight answer is:\nAzureCognitiveSearchChatExtensionConfiguration\n\nnastolgia is right. See :\nhttps://azuresdkdocs.blob.core.windows.net/$web/dotnet/Azure.AI.OpenAI/1.0.0-beta.8/index.html#use-your-own-data-with-azure-openai\n\nanswer is correct\n\nAzureChatExtentionsOptions is the rights answer\n\nChatCompletionsOptions() is CORRECT. This class is used to configure options for generating chat completions in the Azure OpenAI service, such as setting the input messages and extensions (like using Azure Cognitive Search for integrating company data). In this case, you are configuring a chat completion to ensure the chatbot responds to user questions using the provided company data.\n\nAzureCognitiveSearchChatExtensionConfiguration is CORRECT. This class is specifically designed to integrate Azure Cognitive Search with Azure OpenAI, allowing the chatbot to use data from an Azure Cognitive Search index to answer user questions. In the context of the solution, it configures the search endpoint, key, and index name, ensuring that the chatbot can use the company data during chat interactions.\n\nThis was based on the beta version. Now with 2.1.0, the second selection would be completely different:\nhttps://azuresdkdocs.blob.core.windows.net/$web/dotnet/Azure.AI.OpenAI/2.1.0/index.html#use-your-own-data-with-azure-openai\n\noptions.AddDataSource(new AzureSearchChatDataSource()\n{\n    Endpoint = new Uri(\"https://your-search-resource.search.windows.net\"),\n    IndexName = \"contoso-products-index\",\n    Authentication = DataSourceAuthentication.FromApiKey(\n        Environment.GetEnvironmentVariable(\"OYD_SEARCH_KEY\")),\n});\n\nSeems correct answer",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 7,
+  "question_number": 13,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/143505-exam-ai-102-topic-7-question-13-discussion/"
+}

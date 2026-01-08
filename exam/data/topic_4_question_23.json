@@ -1,0 +1,21 @@
+{
+  "question_text": "You are building an app that will process scanned expense claims and extract and label the following data:<br/><br/>•\tMerchant information<br/>•\tTime of transaction<br/>•\tDate of transaction<br/>•\tTaxes paid<br/>•\tTotal cost<br/><br/>You need to recommend an Azure AI Document Intelligence model for the app. The solution must minimize development effort.<br/><br/>What should you use?",
+  "question_images": [],
+  "answers": {
+    "A": "the prebuilt Read model",
+    "B": "a custom template model",
+    "C": "a custom neural model",
+    "D": "the prebuilt receipt model"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "D"
+  ],
+  "correct_answer_images": [],
+  "discussion": "https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/overview?view=doc-intel-4.0.0\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/concept-receipt?view=doc-intel-4.0.0\n\nAnswer is D\n\nd for sure\n\nObviously D\n\nD looks correct, Copilot confirms it\n\nLooks like D is the correct answer",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 4,
+  "question_number": 23,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/143494-exam-ai-102-topic-4-question-23-discussion/"
+}

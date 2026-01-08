@@ -1,0 +1,16 @@
+{
+  "question_text": "SIMULATION -<br/>You need to add a question pair to the published knowledge base used by a QnA Maker service named QNA12345678. The question must be: `What will be the next version of Windows?`<br/>The answer must be: `Windows 11`.<br/>To complete this task, sign in to the QnA Maker portal.<br/>",
+  "question_images": [],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-5_question-20_correct_1.png"
+  ],
+  "discussion": "Simulation question will not appear on the actual exam as of May 26 2024.\n\nQnAMaker is no longer in the syllabus of Exam AI-102\n\nThe given answer is deprecated.\nThis question follows on from pre-built question 5.19,\ngo back to  your project QNA12345678 in language studio > edit knowledge base > + Add > \nselect the url as source > add your given q and a from the question > done > save > \nedit knowledge base > click on test icon > select use deployed kb > paste your new question > What will be the next version of Windows? > scroll down to find a bold font Windows 11 answer\nAll done :)\n\nNow you need to use Language Studio https://language.cognitive.azure.com",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 5,
+  "question_number": 20,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/125599-exam-ai-102-topic-5-question-20-discussion/"
+}

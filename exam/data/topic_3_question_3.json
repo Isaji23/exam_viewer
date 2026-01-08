@@ -1,19 +1,25 @@
 {
-  "question_text": "DRAG DROP -<br/>You have a Fabric eventhouse that contains a KQL database. The database contains a table named TaxiData. The following is a sample of the data in TaxiData.<br/><br/><img src=\"images/dp-700_topic-3_question-3_html_1.png\" title=\"image71\"/><br/>You need to build two KQL queries. The solution must meet the following requirements:<br/>One of the queries must partition RunningTotalAmount by VendorID.<br/><br/>The other query must create a column named FirstPickupDateTime that shows the first value of each hour from tpep_pickup_datetime partitioned by payment_type.<br/>How should you complete each query? To answer, drag the appropriate values the correct targets. Each value may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content.<br/>NOTE: Each correct selection is worth one point.<br/><img src=\"images/dp-700_topic-3_question-3_html_2.png\" title=\"image72\"/>",
-  "question_images": [
-    "images/dp-700_topic-3_question-3_question_1.png",
-    "images/dp-700_topic-3_question-3_question_2.png"
-  ],
-  "answers": {},
+  "question_text": "You are developing a method for an application that uses the Translator API.<br/>The method will receive the content of a webpage, and then translate the content into Greek (el). The result will also contain a transliteration that uses the Roman alphabet.<br/>You need to create the URI for the call to the Translator API.<br/>You have the following URI.<br/>https://api.cognitive.microsofttranslator.com/translate?api-version=3.0<br/>Which three additional query parameters should you include in the URI? Each correct answer presents part of the solution.<br/>NOTE: Each correct selection is worth one point.<br/>",
+  "question_images": [],
+  "answers": {
+    "A": "toScript=Cyrl",
+    "B": "from=el",
+    "C": "textType=html",
+    "D": "to=el",
+    "E": "textType=plain",
+    "F": "toScript=Latn"
+  },
   "answer_images": {},
-  "correct_answer": [],
-  "correct_answer_images": [
-    "images/dp-700_topic-3_question-3_correct_1.png"
+  "correct_answer": [
+    "C",
+    "D",
+    "F"
   ],
-  "discussion": "The answers are correct!\nrow_cumsum\nrow_window_session\n\nRow_cumsum \nRow_windows_session\n\nis ok\nRow_cumsum\nRow_windows_session\n\nTaxiData\n| sort by VendorID asc\n| extend RunningTotalAmount = row_cumsum(total_amount, VendorID != prev(VendorID))\n\nTaxiData\n| sort by tpep_pickup_datetime asc, payment_type asc\n| extend FirstPickupDateTime = row_window_session(tpep_pickup_datetime, 1h, 0m, payment_type != prev(payment_type))\n\nwhy not row_rank_min?\n\nthe reason is row_rank_min only has one parameter but question give 3 parameters. Only row_window_session can match it.",
-  "question_type": "drag_drop",
-  "exam": "dp-700",
+  "correct_answer_images": [],
+  "discussion": "C, D and F are correct answers. \ntextType=html\nto=el\ntoScript=Latn\n\nhttps://docs.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-translate#translate-with-transliteration\n\nTHIS WAS ON EXAM 28/06\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-translate\n\ntextType=html is CORRECT because the content of a webpage is typically in HTML format. Specifying textType=html ensures that the Translator API correctly interprets and processes the HTML content.\n\nto=el is CORRECT because you need to specify the target language for translation. to=el indicates that the content should be translated into Greek.\n\ntoScript=Latn is CORRECT because you want the transliteration to use the Roman alphabet. toScript=Latn specifies that the transliteration should be in the Latin script.\n\nCDF are correct\n\nwow, microsoft wants me to know webpage is html, roman=latn. \nAlthough I never understood why microsoft expects people to remember the .net class names or method names or api parameter names. But this knowledge is beyond anything. I'm guessing the people creating the questions are not from this area. They just look at the documentation and think what can I ask so that the people cannot remember what is the right answer.\n\nI'll bump it up, so CDF is the answer.\n\ntextType=html\nto=el\ntoScript=Latn\n\ncorrect answer\n\nhttps://api.cognitive.microsofttranslator.com/translate?api-version=3.0&textType=html&to=el&toScript=Latn\n\ncorrect answer and explanation\n\nSame as Question 3.\nhttps://www.examtopics.com/discussions/microsoft/view/56391-exam-ai-102-topic-3-question-3-discussion\n\nCDF is the answer.\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/translator/reference/v3-0-translate\n- to\nSpecifies the language of the output text. The target language must be one of the supported languages included in the translation scope. For example, use to=de to translate to German.\nIt's possible to translate to multiple languages simultaneously by repeating the parameter in the query string. For example, use to=de&to=it to translate to German and Italian.\n- textType\nDefines whether the text being translated is plain text or HTML text. Any HTML needs to be a well-formed, complete element. Possible values are: plain (default) or html.\n\nCorrect!\n\nAgreed",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
   "topic": 3,
   "question_number": 3,
-  "url": "https://www.examtopics.com/discussions/microsoft/view/155698-exam-dp-700-topic-3-question-3-discussion/"
+  "url": "https://www.examtopics.com/discussions/microsoft/view/77617-exam-ai-102-topic-3-question-14-discussion/"
 }

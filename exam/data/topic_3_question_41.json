@@ -1,0 +1,21 @@
+{
+  "question_text": "You have an Azure subscription that contains an Azure Cognitive Service for Language resource.<br/><br/>You need to identify the URL of the REST interface for the Language service.<br/><br/>Which blade should you use in the Azure portal?",
+  "question_images": [],
+  "answers": {
+    "A": "Identity",
+    "B": "Keys and Endpoint",
+    "C": "Networking",
+    "D": "Properties"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "B"
+  ],
+  "correct_answer_images": [],
+  "discussion": "It is B.\n\nThe blade contains the necessary information to access the REST interface, including the endpoint URL and the keys required for authentication.\n\nB is the answer\n\nI say this answer is B.\n\nB is answer.\n\nB is right answer.\n\nB. Keys and Endpoint blade in the Azure portal.\n\nThis blade provides the endpoint URL needed to access the Cognitive Services API, along with the keys required for authentication. The endpoint URL is essential for making API calls to the service, including those for Language features such as sentiment analysis, key phrase extraction, named entity recognition, and more.\n\ncorrect\n\nans correct",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 41,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/111850-exam-ai-102-topic-3-question-41-discussion/"
+}

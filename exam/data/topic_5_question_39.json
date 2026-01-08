@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You are building a chatbot.<br/><br/>You need to use the Content Moderator service to identify messages that contain sexually explicit language.<br/><br/>Which section in the response from the service will contain the category score, and which category will be assigned to the message? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-5_question-39_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-5_question-39_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-5_question-39_correct_1.png"
+  ],
+  "discussion": "1. Classification\n2. 1\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/content-moderator/text-moderation-api#classification\nContent Moderator's machine-assisted text classification feature supports English only, and helps detect potentially undesired content. The flagged content may be assessed as inappropriate depending on context. It conveys the likelihood of each category. The feature uses a trained model to identify possible abusive, derogatory or discriminatory language. This includes slang, abbreviated words, offensive, and intentionally misspelled words.\n\nCategory1 refers to potential presence of language that may be considered sexually explicit or adult in certain situations.\n\nthanks for explanation\n\nIn the Content Moderator service response, the classification section can include different category scores that represent various types of content. Here's a summary of what each category generally signifies:\n\nCategory 1: Typically represents sexually explicit content. This includes images, text, or videos that contain nudity or sexual activities.\n\nCategory 2: Usually denotes sexually suggestive content. While not explicit, this content has sexual undertones or risqué material that might not be suitable for all audiences.\n\nCategory 3: Often related to offensive content. This can cover a broad range of materials, from language that might be considered profane or derogatory, to content that includes hate speech, violence, or other types of content that could be offensive or disturbing to some viewers.\n\nClassification is CORRECT because this section of the response from the Content Moderator service includes scores that indicate the likelihood of different categories of content, including sexually explicit language. The scores help determine if a message contains inappropriate content.\n\n1 is CORRECT because in the Content Moderator service, category 1 is typically assigned to messages that contain sexually explicit language. This classification helps in identifying and filtering out inappropriate content.\n\n1. Classification\n2. 1\n\nCategory1 refers to potential presence of language that may be considered sexually explicit or adult in certain situations.\nCategory2 refers to potential presence of language that may be considered sexually suggestive or mature in certain situations.\nCategory3 refers to potential presence of language that may be considered offensive in certain situations.\n\nThis was in the exam today.\n\nCorrect\n\nRef: https://learn.microsoft.com/en-us/azure/cognitive-services/content-moderator/text-moderation-api#classification",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 5,
+  "question_number": 39,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/106151-exam-ai-102-topic-5-question-39-discussion/"
+}

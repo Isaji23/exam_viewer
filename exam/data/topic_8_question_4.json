@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You have an Azure subscription that contains an Azure AI Content Safety resource named CS1.<br/><br/>You need to call CS1 to identify whether a user request contains hateful language.<br/><br/>How should you complete the command? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-8_question-4_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-8_question-4_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-8_question-4_correct_1.png"
+  ],
+  "discussion": "contentsafety/ is CORRECT because Azure AI Content Safety is specifically designed to analyze text for harmful or unsafe content, including hateful language. Using contentsafety/ in the endpoint ensures that the appropriate API is called to evaluate the user request against predefined safety categories, such as hate speech.\n\ntext:analyze is CORRECT because it is used to evaluate the input text against safety categories like hate speech, violence, and other harmful content. This endpoint enables detailed analysis of the input text, identifying whether it contains hateful language or violates safety standards.\n\nAnswer is correct to  https://learn.microsoft.com/en-us/azure/ai-services/content-safety/how-to/use-blocklist?tabs=windows%2Crest Blocklist is used in the http body as blocklistnames\n\ntext:analyze - > https://learn.microsoft.com/en-us/azure/ai-services/content-safety/quickstart-text?tabs=visual-studio%2Cwindows&pivots=programming-language-rest#analyze-text-content\n\nI think it's correct, contentsafety and then text:analyze\n\n2nd shloud be text/blocklists : https://learn.microsoft.com/en-us/azure/ai-services/content-safety/how-to/use-blocklist?tabs=windows%2Crest\n\nNo, you need the text analyze service.",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 8,
+  "question_number": 4,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/149966-exam-ai-102-topic-8-question-4-discussion/"
+}

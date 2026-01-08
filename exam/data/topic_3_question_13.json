@@ -1,21 +1,21 @@
 {
-  "question_text": "You have a Fabric workspace that contains a semantic model named Model1.<br/><br/>You need to monitor the refresh history of Model1 and visualize the refresh history in a chart.<br/><br/>What should you use?",
+  "question_text": "You need to upload speech samples to a Speech Studio project for use in training.<br/>How should you upload the samples?<br/>",
   "question_images": [],
   "answers": {
-    "A": "the refresh history from the settings of Model1",
-    "B": "a notebook",
-    "C": "a Dataflow Gen2 dataflow",
-    "D": "a data pipeline"
+    "A": "Combine the speech samples into a single audio file in the .wma format and upload the file.",
+    "B": "Upload a .zip file that contains a collection of audio files in the .wav format and a corresponding text transcript file.",
+    "C": "Upload individual audio files in the FLAC format and manually upload a corresponding transcript in Microsoft Word format.",
+    "D": "Upload individual audio files in the .wma format."
   },
   "answer_images": {},
   "correct_answer": [
     "B"
   ],
   "correct_answer_images": [],
-  "discussion": "the question asks for visualize it in a chart. How can you do that with option A? I will go with B.\n\nThe answer is B. We can't visualize the refresh hitory of model 1 in the settings only in a notebook. (Or in FUAM)\n\nThe correct option is option A, notebooks are used to manipulate data and write code, a pipeline does not directly store or visualize the update history of semantic models, and the data flow is to transform data.\n\nNo it is a Microsoft sugestion, look at the end of this Learn:  https://learn.microsoft.com/en-us/power-bi/connect-data/refresh-data\n\nNotebook\n\nuse a notebook to pull in the data, process it, and create visualizations\n\nthe request is \"visualize it in a chart\". The setting option just show a table\n\nTo monitor the refresh history of a semantic model (such as Model1) in Microsoft Fabric (similar to Power BI models):\n\nYou can view the refresh history directly from the model's settings within the workspace.\n\nThis includes detailed logs such as refresh time, duration, status (success/failure), and error messages if any.\n\nThis is the most straightforward and built-in option for tracking model refreshes.\n\nFrom there, if you need to visualize the refresh metrics (e.g., in a chart), you can export the refresh logs (manually or via API) and then load them into a report for visualization. -- ChatGPT\n\nA. the refresh history from the settings of Model1\n\nOption\tReason\nB. A notebook\tNot designed for refresh tracking; better for ad hoc analysis or transformation.\nC. Dataflow Gen2\tUsed for data prep, not model refresh monitoring.\nD. A data pipeline\tHelps trigger refreshes, but doesn’t track refresh history or show charts.\n\nA is correct in the link below\n\nThe correct answer is A, because Semantic models in Fabric (Power BI models) include a built-in refresh history feature accessible through their settings.\nThis view provides detailed logs of past refresh operations, including:\n\t•\tStatus (Succeeded/Failed)\n\t•\tDuration\n\t•\tStart and end times\nYou can export this history (e.g., to Excel or Power BI) to create charts and visualizations.\n\nrequested \"visualize it in a chart\". Export to create a chart is not correct\n\nhttps://learn.microsoft.com/en-us/power-bi/connect-data/refresh-data\n\nThe correct answer is A\n\nThe correct answer should be B",
+  "discussion": ", the best option is B. Upload a .zip file that contains a collection of audio files in the .wav format and a corresponding text transcript file. This method provides a balance of audio quality (with .wav files) and organization (having audio and transcripts together), which is essential for efficient and accurate training of speech recognition models.\n\nA modified version of this was in the exam today.\n\nhttps://learn.microsoft.com/en-us/azure/ai-services/speech-service/how-to-custom-voice-training-data#types-of-training-data\n\nUploading a zip file s the standard method for uploading training data to Speech Studio. The .wav format is commonly used for high-quality audio, and pairing the audio files with a text transcript allows the Speech Studio to use the data for training models effectively.\n\nB is correct\n\nB is answer.\n\nFor me and ChatGPT: B\n\nwav zip\n\nB is correct\n\nAnswer is correct\n\nAnswer is correct:\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/how-to-custom-voice-training-data#types-of-training-data\n\nB is the Answer. Got this in Oct2023 exam\n\njust want to confirm, theres no labs included right?\n\nSame as Question 2.\nhttps://www.examtopics.com/discussions/microsoft/view/55251-exam-ai-102-topic-3-question-2-discussion\n\nB is the answer.\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/how-to-custom-voice-training-data#types-of-training-data\nA voice training dataset includes audio recordings, and a text file with the associated transcriptions. Each audio file should contain a single utterance (a single sentence or a single turn for a dialog system), and be less than 15 seconds long.\n\n- Individual utterances + matching transcript\nA collection (.zip) of audio files (.wav) as individual utterances. Each audio file should be 15 seconds or less in length, paired with a formatted transcript (.txt).\n\nthanks for explanation\n\nB is correct answer.\n\nhttps://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/how-to-custom-speech-test-and-train",
   "question_type": "multiple_choice",
-  "exam": "dp-700",
+  "exam": "ai-102",
   "topic": 3,
   "question_number": 13,
-  "url": "https://www.examtopics.com/discussions/microsoft/view/302546-exam-dp-700-topic-3-question-13-discussion/"
+  "url": "https://www.examtopics.com/discussions/microsoft/view/77612-exam-ai-102-topic-3-question-13-discussion/"
 }

@@ -1,21 +1,18 @@
 {
-  "question_text": "You have a Fabric workspace that contains an eventstream named Eventstream1. Eventstream1 processes data from a thermal sensor by using event stream processing, and then stores the data in a lakehouse.<br/>You need to modify Eventstream1 to include the standard deviation of the temperature.<br/>Which transform operator should you include in the Eventstream1 logic?",
-  "question_images": [],
-  "answers": {
-    "A": "Expand",
-    "B": "Group by",
-    "C": "Union",
-    "D": "Aggregate"
-  },
-  "answer_images": {},
-  "correct_answer": [
-    "B"
+  "question_text": "HOTSPOT -<br/>You are building a model that will be used in an iOS app.<br/>You have images of cats and dogs. Each image contains either a cat or a dog.<br/>You need to use the Custom Vision service to detect whether the images is of a cat or a dog.<br/>How should you configure the project in the Custom Vision portal? To answer, select the appropriate options in the answer area.<br/>NOTE: Each correct selection is worth one point.<br/>Hot Area:<br/><img class=\"in-exam-image\" src=\"images/ai-102_topic-2_question-9_html_1.jpg\"/><br/>",
+  "question_images": [
+    "images/ai-102_topic-2_question-9_question_1.jpg"
   ],
-  "correct_answer_images": [],
-  "discussion": "The Group by transform operator contains the Standard deviation aggregation. The Aggregate transform operator only contains Average, Max, Min and Sum aggregation.\n\nhttps://learn.microsoft.com/en-us/fabric/real-time-intelligence/event-streams/process-events-using-event-processor-editor?pivots=standard-capabilities#group-by\n\nIn Fabric Eventstream transform events,  Standard Deviation is an option under GroupBy. In Aggregation you just have Average, Minimum, Maximum and SUM. I have checked in Fabric.\n\nLooking in Fabric Eventstream transform events. \nI can confirm Standard Deviation is an option under GroupBy. \nIt is not under Aggregate.\n\nThe correct answer is: D. Aggregate\n\nTo include the standard deviation of the temperature in your event stream logic in Microsoft Fabric, you need to use the Aggregate transform operator. This operator allows you to perform statistical calculations such as:\n\nAverage\nCount\nMin/Max\nSum\nStandard deviation\nHere's a quick breakdown of the other options and why they don't apply:\n\nA. Expand: Used to flatten nested data structures, not for statistical calculations.\nB. Group by Most Voted: Used to group data based on the most frequent value, not for computing standard deviation.\nC. Union: Combines multiple streams, but doesn’t perform calculations.\nD. Aggregate: ✅ Correct — used for computing metrics like standard deviation.\nWould you like help modifying the Eventstream1 logic to include this transformation?\n\n\"Group By\" is for grouping data but calculates is realized by some \"aggregation\".\n\nStandard Deviation is only available in Group by, not Aggregate operator\n\nwhile Group by is useful for creating groups, it does not provide the full range of aggregate functions that Aggregate does, including the standard deviation. This is why the Aggregate operator is the correct choice.\n\nChanged to B",
-  "question_type": "multiple_choice",
-  "exam": "dp-700",
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-2_question-9_correct_1.jpg"
+  ],
+  "discussion": "The third choice should be General compact, in other that the model can be exported to be used in iOS device\n\nagree with you\n\nit seems the general compact is for edge device not ios.\nhttps://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/select-domain#image-classification\n\nSo general compact is correct since ios device is an edge device.\n\nClassification\nMulticlass\nGeneral (compact)\n\nClassification is the CORRECT choice because it is used to identify the content of an image and classify it into predefined categories, such as \"cat\" or \"dog.\" In this scenario, each image contains either a cat or a dog, and the goal is to classify each image as one of these two categories.\n\nMulticlass (Single tag per image) is CORRECT because each image contains either a cat or a dog, which means only one tag should be assigned to each image, making it a multiclass classification problem.\n\nGeneral (compact) is CORRECT because it is a versatile and optimized domain suitable for a wide range of image classification tasks, including distinguishing between cats and dogs, and is designed to be efficient for deployment on devices with limited resources, such as an iOS app.\n\nI chose:\nClassification\nMulticlass\ngeneral (compact)\n\nClassification\nMulticlass\nGeneral (compact)\n\nclassification\nmulticlass\nGeneral (compact): Since the model will be used in an iOS app, a compact model is preferred for performance and size reasons. The \"General (compact)\" domain is suitable for a wide range of image classification tasks and is optimized for mobile and edge devices.\n\n1. Classification\n2. Multiclass\n3. General (compact)\n\n1. Classification\n2. Multiclass\n3. General (compact)\n\n1. Classification\n2. Multiclass\n3. General (compact)\n\nFinal Answer:\nClassification\nMulticlass\nGeneral (compact)\n\n1. Classification\n2. Multiclass\n3. General (compact)\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier\n- Select Classification under Project Types. Then, under Classification Types, choose either Multilabel or Multiclass, depending on your use case. Multilabel classification applies any number of your tags to an image (zero or more), while multiclass classification sorts images into single categories (every image you submit will be sorted into the most likely tag). You'll be able to change the classification type later if you want to.\n\n- Next, select one of the available domains. Each domain optimizes the model for specific types of images, as described in the following table. You can change the domain later if you wish.\n-- Generic\nOptimized for a broad range of image classification tasks. If none of the other domains are appropriate, or you're unsure of which domain to choose, select the Generic domain.\n-- Compact domains\nOptimized for the constraints of real-time classification on mobile devices. The models generated by compact domains can be exported to run locally.\n\nI also think that General(compact) https://docs.microsoft.com/en-us/azure/cognitive-services/custom-vision-service/export-your-model \n1. It can be running offline\n2. Real time locally\n\nCorrect",
+  "question_type": "hot_area",
+  "exam": "ai-102",
   "topic": 2,
   "question_number": 9,
-  "url": "https://www.examtopics.com/discussions/microsoft/view/153727-exam-dp-700-topic-2-question-9-discussion/"
+  "url": "https://www.examtopics.com/discussions/microsoft/view/74741-exam-ai-102-topic-2-question-9-discussion/"
 }

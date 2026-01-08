@@ -1,0 +1,21 @@
+{
+  "question_text": "You are building an app named App1 that will use Azure AI Document Intelligence to extract the following data from scanned documents:<br/><br/>•\tShipping address<br/>•\tBilling address<br/>•\tCustomer ID<br/>•\tAmount due<br/>•\tDue date<br/>•\tTotal tax<br/>•\tSubtotal<br/><br/>You need to identify which model to use for App1. The solution must minimize development effort.<br/><br/>Which model should you use?",
+  "question_images": [],
+  "answers": {
+    "A": "custom extraction model",
+    "B": "contract",
+    "C": "invoice",
+    "D": "general document"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "C"
+  ],
+  "correct_answer_images": [],
+  "discussion": "Azure AI Document Intelligence provides a pre-built model specifically designed for extracting common fields from invoices, such as shipping address, billing address, customer ID, amount due, due date, total tax, and subtotal. Using this pre-built model minimizes development effort as it is already trained to recognize and extract these specific fields from invoices.\n\nC for sure\n\nThis question has nothing to do with AI, but asking me what those list of data elements belong to. What does it prove if I know they are from invoice. In real life I will know it is invoice and select an invoice model\n\nI think is C\n\nC is answer.\n\nC \"invoice\" is right answer.\n\nTo extract the specified data from scanned documents with minimal development effort, you should use the invoice model. The invoice model is specifically designed to handle structured information commonly found in invoices, including shipping and billing addresses, customer IDs, amounts due, due dates, total taxes, and subtotal. Therefore, the correct choice for App1 is C. invoice\n\nReference: https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/concept-invoice?view=doc-intel-4.0.0#field-extraction",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 4,
+  "question_number": 21,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/136704-exam-ai-102-topic-4-question-21-discussion/"
+}

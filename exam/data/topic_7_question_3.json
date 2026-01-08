@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You build a chatbot by using Azure OpenAI Studio.<br/><br/>You need to ensure that the responses are more deterministic and less creative.<br/><br/>Which two parameters should you configure? To answer, select the appropriate parameters in the answer area.<br/><br/>NOTE: Each correct answer is worth one point.<br/><br/><img src=\"images/ai-102_topic-7_question-3_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-7_question-3_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-7_question-3_correct_1.png"
+  ],
+  "discussion": "Given answers are correct\n\nI would have picked Top P and Temperature as well.. but the recommendation is to configure one and leave the other as default value.\n\nTemperature is CORRECT because it controls the randomness of the model's responses. Lowering the temperature makes the responses more deterministic and less creative by reducing the likelihood of generating different variations.\n\n\n\nTop P is CORRECT because it determines the nucleus sampling for the responses. Lowering the Top P value limits the model to consider only the top probability choices, making the responses more deterministic.\n\nanswer are correct\n\nwas on exam 20.06.24\n\ntemperature controls the \"creativity\" of the generated text, between 0 and 2. A higher temperature will result in more diverse and unexpected responses, while a lower temperature will result in more conservative and predictable responses. The default value for temperature is 1.0, but you can experiment with different values to see what works best for your use case. Higher values means the model will take more risks. Try 0.9 for more creative applications, and 0 (argmax sampling) for ones with a well-defined answer. We generally recommend altering this or top_p but not both.\n\ntop_p - An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. 1 is the default value. So 0.1 means only the tokens comprising the top 10% probability mass are considered. We generally recommend altering this or temperature but not both.\n\n1. Temperature\n2. Top P\n\nTemperature\nTop P\n\nTo make the responses more deterministic and less creative, it is recommended to lower the values of Temperature and TopP.",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 7,
+  "question_number": 3,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/134944-exam-ai-102-topic-7-question-3-discussion/"
+}

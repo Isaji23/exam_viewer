@@ -1,0 +1,21 @@
+{
+  "question_text": "You are developing the knowledgebase by using Azure Cognitive Search.<br/>You need to meet the knowledgebase requirements for searching equivalent terms.<br/>What should you include in the solution?<br/>",
+  "question_images": [],
+  "answers": {
+    "A": "synonym map",
+    "B": "a suggester",
+    "C": "a custom analyzer",
+    "D": "a built-in key phrase extraction skill"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "A"
+  ],
+  "correct_answer_images": [],
+  "discussion": "I wrote this exam on 25 Dec 2024\nNo simulation \nand this was one for the question I got in Case study.\n\nScore 805 (all I did was study this and revise from number 1 to 333 for 6hours) memorize the case study question and answers too.\n\nIn all Pray for God's direction.\nJesus Christ is Lord and our guide\n\nfor 6 hours?\n\nThis question was in the test I took in August 2024\n\nSynonym map allows the search index to recognize equivalent terms, ensuring that searches for different but related terms return the same results.\n\nhttps://learn.microsoft.com/en-us/azure/search/search-synonyms\n\nA for answer\n\nA is right answer.\nFrom Takedajuku perspective, if you study for 4 days and spend 2 days reviewing, you will have a better chance of passing the exam.\n\nIs this question still available on May 21, 2024?\n\nA is correct\n\ncorrect\nhttps://learn.microsoft.com/en-us/azure/search/search-synonyms\n\nQuote \"In Azure Cognitive Search, a synonym map contains a list of rules for expanding or rewriting a search query to equivalent terms.\" at https://learn.microsoft.com/en-us/rest/api/searchservice/create-synonym-map .\n\nA is the answer.\n\nhttps://learn.microsoft.com/en-us/azure/search/search-synonyms\nWithin a search service, synonym maps are a global resource that associate equivalent terms, expanding the scope of a query without the user having to actually provide the term. For example, assuming \"dog\", \"canine\", and \"puppy\" are mapped synonyms, a query on \"canine\" will match on a document containing \"dog\".\n\nGotten this in Jul 2023 exam.\n\nA is correct answer. \n\nSynonym maps are a global resource that associate equivalent terms, expanding the scope of a query without the user having to actually provide the term.\nYou might create multiple synonym maps for different languages, such as English and French versions, or lexicons if your content includes technical or obscure terminology.\nhttps://docs.microsoft.com/en-us/azure/search/search-synonyms",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 14,
+  "question_number": 4,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/77728-exam-ai-102-topic-14-question-4-discussion/"
+}

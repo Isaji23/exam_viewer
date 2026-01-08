@@ -1,0 +1,21 @@
+{
+  "question_text": "You are building a chatbot for a travel agent. The bot will ask users for a destination and must repeat the question until a valid input is received, or the user closes the conversation.<br/><br/>Which type of dialog should you use?",
+  "question_images": [],
+  "answers": {
+    "A": "prompt",
+    "B": "input",
+    "C": "adaptive",
+    "D": "QnA Maker"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "A"
+  ],
+  "correct_answer_images": [],
+  "discussion": "A is the answer.\n\nhttps://learn.microsoft.com/en-us/azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0#dialog-types\nThe dialogs library provides a few types of dialogs to make your bot's conversations easier to manage.\n- prompt dialogs\nAsk the user for input and return the result. A prompt will repeat until it gets valid input or it's canceled. They're designed to work with waterfall dialogs.\n\nGotten this in Jul 2023 exam.\n\nPrompts are designed to ask users for specific pieces of information and can include validation logic to ensure the response meets certain criteria. In this case, you can use a TextPrompt to repeatedly ask for the destination until a valid input is provided or the user closes the conversation.\n\nA is correct\n\nA is answer.\n\nA is right answer.\n\nAccording to Windows Copilot:\nI understand your reasoning, but option A is not the best choice for this scenario. A prompt dialog can validate the user’s input, but it cannot handle complex conversational flows, such as interruptions, validations, and conditional logic. For example, if the user wants to change their destination, or ask for more information, or cancel the conversation, a prompt dialog cannot adapt to these situations. A prompt dialog can only ask the user for a single piece of information and return it to the parent dialog.\n\nAn adaptive dialog, on the other hand, can dynamically adjust to the user’s input and context. It can handle multiple inputs, interruptions, validations, and conditional logic. It can also use language generation templates to create natural and varied responses. An adaptive dialog can provide a better user experience and a more robust chatbot for a travel agent.\n\nI hope this clarifies why option C is the correct answer.\n\nIn this scenario, where a chatbot needs to ask users for a destination and must repeat the question until a valid input is received, the most appropriate type of dialog to use is a \"prompt\" dialog. Here's why:\n\nPrompt Dialog: The prompt dialog is specifically designed to obtain user input and can be configured to validate this input and reprompt the user if necessary. In the Microsoft Bot Framework, prompts are used to handle various types of user input such as text, numbers, dates, and confirmations. For your requirement, you can use a text prompt that keeps asking the user for a destination until a valid one is provided or the user exits the conversation.\n\ncorrect\n\nhttps://learn.microsoft.com/en-us/azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0#dialog-types\n\nanswer seems correct.\nhttps://learn.microsoft.com/en-us/training/modules/create-bot-with-bot-framework-composer/4-dialogs\n\nA. prompt",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 5,
+  "question_number": 40,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/111874-exam-ai-102-topic-5-question-40-discussion/"
+}

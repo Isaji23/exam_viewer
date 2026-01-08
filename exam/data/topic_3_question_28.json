@@ -1,0 +1,21 @@
+{
+  "question_text": "You need to measure the public perception of your brand on social media by using natural language processing.<br/>Which Azure service should you use?<br/>",
+  "question_images": [],
+  "answers": {
+    "A": "Language service",
+    "B": "Content Moderator",
+    "C": "Computer Vision",
+    "D": "Form Recognizer"
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "A"
+  ],
+  "correct_answer_images": [],
+  "discussion": "A for sure\n\nLanguage Service to detect the sentiment\n\nThe answer is A, although it may not make sense for a moment. Please read the explanation carefully.\n\nIt must be A.\n\nA the only meaningful\n\nno doubt A\n\ncorrect, sentiment analysis is the feature to use in this case\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/language-service/sentiment-opinion-mining/overview\n\nA is the answer.\n\nhttps://learn.microsoft.com/en-us/azure/cognitive-services/language-service/sentiment-opinion-mining/overview\nSentiment analysis and opinion mining are features offered by Azure Cognitive Service for Language, a collection of machine learning and AI algorithms in the cloud for developing intelligent applications that involve written language. These features help you find out what people think of your brand or topic by mining text for clues about positive or negative sentiment, and can associate them with specific aspects of the text.\n\nText Analytics, sentiment analysis: https://azure.microsoft.com/en-us/products/cognitive-services/text-analytics/#features",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 28,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/88194-exam-ai-102-topic-3-question-28-discussion/"
+}

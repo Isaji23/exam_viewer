@@ -1,0 +1,21 @@
+{
+  "question_text": "You build a bot by using the Microsoft Bot Framework SDK.<br/><br/>You start the bot on a local computer.<br/><br/>You need to validate the functionality of the bot.<br/><br/>What should you do before you connect to the bot?",
+  "question_images": [],
+  "answers": {
+    "A": "Run the Bot Framework Emulator.",
+    "B": "Run the Bot Framework Composer.",
+    "C": "Register the bot with Azure Bot Service.",
+    "D": "Run Windows Terminal."
+  },
+  "answer_images": {},
+  "correct_answer": [
+    "A"
+  ],
+  "correct_answer_images": [],
+  "discussion": "The answer looks correct:\n\nhttps://learn.microsoft.com/en-us/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&tabs=csharp\n\nBOT Framework is now out of scope of exam, please check before you waste any time\n\nBot Framework Emulator is a desktop application that allows you to test and debug your bot locally. It provides a way to connect to your locally running bot and interact with it as if it were deployed in a live environment, enabling you to validate its functionality.\n\nAnswer is A\n\nA is right.\n\nA. Run the Bot Framework Emulator.\n\nThe Bot Framework Emulator allows you to connect to and test your bot locally before deploying it. You don't need to register the bot with Azure Bot Service for local testing, and the Emulator is designed specifically for this purpose.\n\nA is good answer.\n\nA is right.\n\nCorrect answer.\n\nBefore connecting to the bot and validating its functionality, you should run the Bot Framework Emulator. The Bot Framework Emulator is a powerful tool that allows you to test and debug your bot locally\n\nAnswer seems to be correct",
+  "question_type": "multiple_choice",
+  "exam": "ai-102",
+  "topic": 1,
+  "question_number": 61,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/135070-exam-ai-102-topic-1-question-61-discussion/"
+}

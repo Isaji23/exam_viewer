@@ -1,0 +1,18 @@
+{
+  "question_text": "HOTSPOT<br/> -<br/><br/>You are developing a streaming Speech to Text solution that will use the Speech SDK and MP3 encoding.<br/><br/>You need to develop a method to convert speech to text for streaming MP3 data.<br/><br/>How should you complete the code? To answer, select the appropriate options in the answer area.<br/><br/>NOTE: Each correct selection is worth one point.<br/><br/><img src=\"images/ai-102_topic-3_question-59_html_1.png\"/>",
+  "question_images": [
+    "images/ai-102_topic-3_question-59_question_1.png"
+  ],
+  "answers": {},
+  "answer_images": {},
+  "correct_answer": [],
+  "correct_answer_images": [
+    "images/ai-102_topic-3_question-59_correct_1.png"
+  ],
+  "discussion": "first one has to configure the format as MP3, so \"AudioStreamFormat\" option is chosen. Second, since it is speech to text, the SpeechRecognition option is needed.\nThe answer is CORRECT\n\n1) AudioStreamFormat because it specifies the format of the audio stream, which in this case is MP3. The AudioStreamFormat class allows you to define the specific format of the audio data being streamed.\n\n2) SpeechRecognizer because it is used for converting speech to text. The SpeechRecognizer class is designed to recognize speech from audio streams and convert it into text.\n\n1. AudioStreamFormat\n2. SpeechRecognizer\n\nSame as question 18 in topic 1\n\n1. AudioStreamFormat\n2. SpeechRecognizer\n\nAudioStreamFormat\nSpeechRecognizer\n\naudio_format = speechsdk.audio.AudioStreamFormat(compressed_stream_format=speechsdk.AudioStreamContainerFormat.MP3)\nrecognizer = speechsdk.SpeechRecognizer(speech_config, audio_config)\n\nthis question is same as Topic 1 Q18 but with different answer, which is correct?\n\nThe answers are the same. Both chosen are AudioStreamFormat and SpeechRecognizer, but in question 18 there is an additional method for AudioStreamFormat (GetCompressedFormat).\n\ncorrect\n\nAnswer correct\nhttps://github.com/Azure-Samples/cognitive-services-speech-sdk/blob/master/samples/python/console/speech_sample.py",
+  "question_type": "image_only",
+  "exam": "ai-102",
+  "topic": 3,
+  "question_number": 59,
+  "url": "https://www.examtopics.com/discussions/microsoft/view/122496-exam-ai-102-topic-3-question-59-discussion/"
+}
