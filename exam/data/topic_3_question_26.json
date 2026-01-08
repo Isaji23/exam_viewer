@@ -1,5 +1,5 @@
 {
-  "question_text": "SIMULATION -<br/>You need to configure bot12345678 support the French (FR-FR) language.<br/>Export the bot to C:\\Resources\\Bot\\Bot1.zip.<br/>To complete this task, use the Microsoft Bot Framework Composer.<br/>",
+  "question_text": "SIMULATION -<br/>You need to configure and publish bot12345678 to answer questions by using the frequently asked questions (FAQ) located at https://docs.microsoft.com/en-us/ azure/bot-service/bot-service-resources-bot-framework-faq. The solution must use bot%@lab.LabInstance.Id-qna-qna%.<br/>To complete this task, use the Microsoft Bot Framework Composer.<br/>",
   "question_images": [],
   "answers": {},
   "answer_images": {},
@@ -7,10 +7,10 @@
   "correct_answer_images": [
     "images/ai-102_topic-3_question-26_correct_1.png"
   ],
-  "discussion": "I saw in the Microsoft question and answer that this question will not be asked, Mr. Big Tits.\n\nSimulation question will not appear on the actual exam as of May 29, 2024. Sonata Arctica\n\nSelect the Configure page from the left and then select the Localization tab. Select Manage bot language to choose your bot's languages.\n\nThe answer is incorrect. The instructions in the following link should be used to add multi-language support to a bot:\nhttps://learn.microsoft.com/en-us/composer/how-to-use-multiple-language?tabs=v2x#update-language-settings",
+  "discussion": "",
   "question_type": "multiple_choice",
   "exam": "ai-102",
   "topic": 3,
   "question_number": 26,
-  "url": "https://www.examtopics.com/discussions/microsoft/view/88019-exam-ai-102-topic-3-question-26-discussion/"
+  "url": "https://www.examtopics.com/discussions/microsoft/view/199999-exam-ai-102-topic-3-question-26-discussion/"
 }
